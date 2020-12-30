@@ -63,21 +63,21 @@ style = {
           text-align: left;
           font-size: 36;
         }
+
+        div {
+          width: 100%;
+          height: 100%;
+
+          background:url("resources/invitation.jpg") no-repeat center center ;
+
+          -webkit-background-size: contain !important;
+          -moz-background-size: contain !important;
+          -o-background-size: contain !important;
+          background-size: contain !important;
+        }
         ''',
 
-    'desires': '''
-          background:url("resources/background.jpg") no-repeat center center ;
-          vertical-align: center;
-          text-align: center;
-          font-size: 72;
-        }
-
-        p {
-          font-size: 24;
-        }
-        ''',
-
-    'backs': '''
+    'characters': '''
         }
 
         div {
@@ -90,46 +90,139 @@ style = {
           background-size: contain !important;
         }
 
-        #default {
-          background:url("resources/cardBack.jpg") no-repeat center center ;
-        }
-
         #anna {
-          background:url("resources/Anna.png") no-repeat center center ;
+          background:url("resources/Anna.jpg") no-repeat center center ;
         }
 
         #john {
-          background:url("resources/John.png") no-repeat center center ;
+          background:url("resources/John.jpg") no-repeat center center ;
         }
 
         #penelope {
-          background:url("resources/Penelope.png") no-repeat center center ;
+          background:url("resources/Penelope.jpg") no-repeat center center ;
         }
 
         #rose {
-          background:url("resources/Rose.png") no-repeat center center ;
+          background:url("resources/Rose.jpg") no-repeat center center ;
         }
 
         #sarah {
-          background:url("resources/Sarah.png") no-repeat center center ;
+          background:url("resources/Sarah.jpg") no-repeat center center ;
         }
 
         #thomas {
-          background:url("resources/Thomas.png") no-repeat center center ;
+          background:url("resources/Thomas.jpg") no-repeat center center ;
         }
 
         #victor {
-          background:url("resources/Victor.png") no-repeat center center ;
+          background:url("resources/Victor.jpg") no-repeat center center ;
         }
 
         #william {
-          background:url("resources/William.png") no-repeat center center ;
+          background:url("resources/William.jpg") no-repeat center center ;
+        }
+
+        #independence {
+          background:url("resources/independent.jpg") no-repeat center center ;
+        }
+        ''',
+
+    'invitations': '''
+        }
+
+        div {
+          width: 100%;
+          height: 100%;
+
+          -webkit-background-size: contain !important;
+          -moz-background-size: contain !important;
+          -o-background-size: contain !important;
+          background-size: contain !important;
+        }
+
+        #anna {
+          background:url("resources/AnnaInvite.jpg") no-repeat center center ;
+        }
+
+        #john {
+          background:url("resources/JohnInvite.jpg") no-repeat center center ;
+        }
+
+        #penelope {
+          background:url("resources/PenelopeInvite.jpg") no-repeat center center ;
+        }
+
+        #rose {
+          background:url("resources/RoseInvite.jpg") no-repeat center center ;
+        }
+
+        #sarah {
+          background:url("resources/SarahInvite.jpg") no-repeat center center ;
+        }
+
+        #thomas {
+          background:url("resources/ThomasInvite.jpg") no-repeat center center ;
+        }
+
+        #victor {
+          background:url("resources/VictorInvite.jpg") no-repeat center center ;
+        }
+
+        #william {
+          background:url("resources/WilliamInvite.jpg") no-repeat center center ;
+        }
+        ''',
+
+    'proposals': '''
+        }
+
+        div {
+          width: 100%;
+          height: 100%;
+
+          -webkit-background-size: contain !important;
+          -moz-background-size: contain !important;
+          -o-background-size: contain !important;
+          background-size: contain !important;
+        }
+
+        #anna {
+          background:url("resources/AnnaPropose.jpg") no-repeat center center ;
+        }
+
+        #john {
+          background:url("resources/JohnPropose.jpg") no-repeat center center ;
+        }
+
+        #penelope {
+          background:url("resources/PenelopePropose.jpg") no-repeat center center ;
+        }
+
+        #rose {
+          background:url("resources/RosePropose.jpg") no-repeat center center ;
+        }
+
+        #sarah {
+          background:url("resources/SarahPropose.jpg") no-repeat center center ;
+        }
+
+        #thomas {
+          background:url("resources/ThomasPropose.jpg") no-repeat center center ;
+        }
+
+        #victor {
+          background:url("resources/VictorPropose.jpg") no-repeat center center ;
+        }
+
+        #william {
+          background:url("resources/WilliamPropose.jpg") no-repeat center center ;
         }
         '''
 }
 
-def writeCards(cards, deck):
+def writeCards(originalCards, deck):
     pages = []
+    cards = originalCards[:]
 
     #  Fill sheet with blanks
     cards.extend([''] * (sheetCount - (len(cards) % sheetCount)))
@@ -153,29 +246,33 @@ cards = []
 traitPlus = '{plus}{{}}{{}}<br>{minus}{{}}'.format(plus=plus, minus=minus)
 traitMinus = '{plus}{{}}<br>{minus}{{}}{{}}'.format(plus=plus, minus=minus)
 
+plusCombos = []
+minusCombos = []
+
 # Generate combinations
 for pairs in combinations(suits, 2):
     for spare in suits.difference(set(pairs)):
         cards.append(traitPlus.format(pairs[0], pairs[1], spare))
         cards.append(traitMinus.format(spare, pairs[0], pairs[1]))
 
+        # For generating a csv page of the emojis
+        plusCombos.append('{}{}'.format(pairs[0], pairs[1]))
+        plusCombos.append('{}'.format(spare))
+        minusCombos.append('{}'.format(spare))
+        minusCombos.append('{}{}'.format(pairs[0], pairs[1]))
+
+# For generating a csv page of the emojis
+with open('traits-csv.html', 'w') as f:
+    for i in range(len(plusCombos)):
+        f.write('{},{}<br>'.format(plusCombos[i], minusCombos[i]))
+
+# Add one last card for card back (Will need to be separated out in GIMP)
+cards.append('<div></div>')
+
 writeCards(cards, 'traits')
 
-# Generate desires deck
-cards = []
-
-desirePlus = '<p>Looking for...<br></p>{plus}{{}}'.format(plus=plus, minus=minus)
-desireMinus = '<p>Looking for<br></p>{minus}{{}}'.format(plus=plus, minus=minus)
-
-for suit in suits:
-    cards.append(desirePlus.format(suit))
-    cards.append(desireMinus.format(suit))
-
-writeCards(cards, 'desires')
-
-# Generate deck backs
+# Generate characters deck
 cards = [
-    '<div id="default"></div>',
     '<div id="anna"></div>',
     '<div id="john"></div>',
     '<div id="penelope"></div>',
@@ -183,7 +280,13 @@ cards = [
     '<div id="sarah"></div>',
     '<div id="thomas"></div>',
     '<div id="victor"></div>',
-    '<div id="william"></div>',
+    '<div id="william"></div>'
 ]
 
-writeCards(cards, 'backs')
+writeCards(cards, 'invitations')
+
+writeCards(cards, 'proposals')
+
+cards.append('<div id="independence"></div>')
+
+writeCards(cards, 'characters')
