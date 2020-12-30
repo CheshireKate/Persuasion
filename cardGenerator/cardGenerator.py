@@ -61,7 +61,7 @@ style = {
           background:url("resources/background.jpg") no-repeat center center ;
           vertical-align: top;
           text-align: left;
-          font-size: 36;
+          font-size: 72;
         }
 
         div {
@@ -277,6 +277,12 @@ cards = [
     '<div id="john"></div>',
     '<div id="penelope"></div>',
     '<div id="rose"></div>',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
     '<div id="sarah"></div>',
     '<div id="thomas"></div>',
     '<div id="victor"></div>',
