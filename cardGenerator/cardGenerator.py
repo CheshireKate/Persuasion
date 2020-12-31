@@ -1,10 +1,6 @@
 from itertools import combinations
 from math import floor
 
-sheetRows = 5
-sheetColumns = 10
-sheetCount = sheetColumns * sheetRows
-
 plus = '&#xFF0B'
 minus = '&#xFF0D'
 suits = set(['&#x1F48E', '&#x1F451', '&#x1F5E1', '&#x1F339', '&#x1F64F'])
@@ -12,32 +8,32 @@ suits = set(['&#x1F48E', '&#x1F451', '&#x1F5E1', '&#x1F339', '&#x1F64F'])
 html = '''<html>
 <head>
     <style>
-        @font-face {{{{
+        @font-face {{
             font-family: Symbola;
             src: url('resources/Symbola.otf');
-        }}}}
+        }}
 
-        body {{{{
+        body {{
           border: 0px !important;
           margin: 0px !important;
           padding: 0px !important;
-        }}}}
+        }}
 
-        table {{{{
+        table {{
           page-break-before: always;
           page-break-after: always;
           width: 100%;
           height: 100%;
-        }}}}
+        }}
 
-        table, tr, td {{{{
+        table, tr, td {{
           font-family: Symbola;
           border: none;
           margin: none;
           padding: none;
-        }}}}
+        }}
 
-        td {{{{
+        td {{
           border: 1px;
           -webkit-background-size: cover;
           -moz-background-size: cover;
@@ -48,13 +44,13 @@ html = '''<html>
           height: {}%;
 
           /* Custom Styling */
-        {{}}
+        {}
     </style>
 </head>
 <body>
-{{}}
+{}
 </body>
-'''.format(floor(100 / sheetColumns), floor(100 / sheetRows))
+'''
 
 style = {
     'traits': '''
@@ -74,6 +70,14 @@ style = {
           -moz-background-size: contain !important;
           -o-background-size: contain !important;
           background-size: contain !important;
+        }
+        ''',
+
+    'plusSide': '''
+          background:url("resources/background.jpg") no-repeat center center ;
+          vertical-align: middle;
+          text-align: center;
+          font-size: 288;
         }
         ''',
 
@@ -121,8 +125,9 @@ style = {
         #william {
           background:url("resources/William.jpg") no-repeat center center ;
         }
+        ''',
 
-        #independence {
+    'independence': '''
           background:url("resources/independent.jpg") no-repeat center center ;
         }
         ''',
@@ -220,7 +225,13 @@ style = {
         '''
 }
 
-def writeCards(originalCards, deck):
+style['minusSide'] = style['plusSide']
+
+def writeCards(originalCards, deck, sheetColumns=10, sheetRows=5):
+    sheetCount = sheetColumns * sheetRows
+    cell = '<td>{}</td>'
+    row = '        <tr>{}</tr>'.format(cell * sheetColumns)
+    page = '    <table>{}</table>'.format(row * sheetRows)
     pages = []
     cards = originalCards[:]
 
@@ -231,14 +242,8 @@ def writeCards(originalCards, deck):
         pages.append(page.format(*cards[pageNum * sheetCount:((pageNum + 1) * sheetCount)]))
 
     with open('{}.html'.format(deck), 'w') as f:
-        f.write(html.format(style[deck], ''.join(pages)))
+        f.write(html.format(floor(100 / sheetColumns), floor(100 / sheetRows), style[deck], ''.join(pages)))
 
-cell = '<td>{}</td>'
-row = '        <tr>{}</tr>'.format(cell * sheetColumns)
-page = '''    <table>
-{}
-    </table>
-'''.format(row * sheetRows)
 
 # Generate traits deck
 cards = []
@@ -293,6 +298,20 @@ writeCards(cards, 'invitations')
 
 writeCards(cards, 'proposals')
 
-cards.append('<div id="independence"></div>')
-
 writeCards(cards, 'characters')
+
+cards = [''] * (14);
+
+writeCards(cards, 'independence')
+
+for modifier in [(plus, 'plusSide'), (minus, 'minusSide')]:
+    cards = []
+    for i, suit in enumerate(suits):
+        print(i)
+        print(suit)
+        cards.append('{}{}'.format(modifier[0], suit))
+        if i == 2:
+            print(cards)
+            cards.extend([''] * 2)
+
+    writeCards(cards, modifier[1], 5, 4)
