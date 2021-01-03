@@ -6,7 +6,7 @@ cardCount = 60
 base = {
     'deckID': 1,
     'name': 'Desire',
-    'description': 'Win if you marry a player with a sum of symbols matching these!\n\n{}'.format(traitDescription),
+    'description': 'Win if you marry a player with a sum of symbols matching these!\\n\\n{}'.format(traitDescription),
     'face': 'http://cloud-3.steamusercontent.com/ugc/1656728318303212718/D99C13F05CEDC7DEEFFF72A19EA4F8E86EB2EE93/',
     'back': 'http://cloud-3.steamusercontent.com/ugc/1656728318303082524/9DB5207068847C958622BEC0325573DBA445BC72/'
 }
@@ -215,8 +215,8 @@ card = '''{{
             "scaleY": 1.0,
             "scaleZ": 1.0
           }},
-          "Nickname": "Desire",
-          "Description": "Win if you marry a player with a sum of symbols matching these!",
+          "Nickname": "{name}",
+          "Description": "{description}",
           "GMNotes": "",
           "ColorDiffuse": {{
             "r": 0.713235259,
