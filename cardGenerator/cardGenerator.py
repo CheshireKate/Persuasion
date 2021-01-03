@@ -1,16 +1,27 @@
 from itertools import combinations
-from math import floor
+from math import floor, ceil
 
 plus = '&#xFF0B'
 minus = '&#xFF0D'
 suits = set(['&#x1F48E', '&#x1F451', '&#x1F5E1', '&#x1F339', '&#x1F64F'])
+
+crests = {
+    'black': '#000000',
+    'blue': '#332288',
+    'green': '#117733',
+    'teal': '#88CCEE',
+    'yellow': '#DDCC77',
+    'pink': '#FF7C92',
+    'purple': '#BD1CA3',
+    'white': '#FFFFFF'
+}
 
 html = '''<html>
 <head>
     <style>
         @font-face {{
             font-family: Symbola;
-            src: url('resources/Symbola.otf');
+            src: url('dependencies/Symbola.otf');
         }}
 
         body {{
@@ -28,13 +39,12 @@ html = '''<html>
 
         table, tr, td {{
           font-family: Symbola;
-          border: none;
-          margin: none;
-          padding: none;
+          border: 0px;
+          margin: 0px;
+          padding: 0px;
         }}
 
         td {{
-          border: 1px;
           -webkit-background-size: cover;
           -moz-background-size: cover;
           -o-background-size: cover;
@@ -52,39 +62,45 @@ html = '''<html>
 </body>
 '''
 
-style = {
-    'traits': '''
-          background:url("resources/background.jpg") no-repeat center center ;
-          vertical-align: top;
-          text-align: left;
-          font-size: 72;
-        }
+crestCards = ['Ring', 'Mail']
 
-        div {
+crestSection = '''
+        #{0} {{
+          background:url("resources/{0}{1}.jpg") no-repeat center center ;
+        }}
+'''
+
+styles = {
+    'traits': '''
+          width: calc(10% - 10px);
+          height: calc(10% - 10px);
+          padding: 10px;
+          background-color: {};
+        }}
+
+        div {{
           width: 100%;
           height: 100%;
 
-          background:url("resources/invitation.jpg") no-repeat center center ;
-
-          -webkit-background-size: contain !important;
-          -moz-background-size: contain !important;
-          -o-background-size: contain !important;
-          background-size: contain !important;
-        }
+          background:url("resources/traitFront.jpg") no-repeat center center ;
+          vertical-align: top;
+          text-align: left;
+          font-size: 72;
+        }}
         ''',
 
-    'plusSide': '''
-          background:url("resources/background.jpg") no-repeat center center ;
+    'markers': '''
+          background:url("resources/marker.jpg") no-repeat center center ;
           vertical-align: middle;
           text-align: center;
           font-size: 288;
         }
         ''',
 
-    'characters': '''
-        }
+    'crests': '''
+        }}
 
-        div {
+        div {{
           width: 100%;
           height: 100%;
 
@@ -92,142 +108,16 @@ style = {
           -moz-background-size: contain !important;
           -o-background-size: contain !important;
           background-size: contain !important;
-        }
+        }}
 
-        #anna {
-          background:url("resources/Anna.jpg") no-repeat center center ;
-        }
-
-        #john {
-          background:url("resources/John.jpg") no-repeat center center ;
-        }
-
-        #penelope {
-          background:url("resources/Penelope.jpg") no-repeat center center ;
-        }
-
-        #rose {
-          background:url("resources/Rose.jpg") no-repeat center center ;
-        }
-
-        #sarah {
-          background:url("resources/Sarah.jpg") no-repeat center center ;
-        }
-
-        #thomas {
-          background:url("resources/Thomas.jpg") no-repeat center center ;
-        }
-
-        #victor {
-          background:url("resources/Victor.jpg") no-repeat center center ;
-        }
-
-        #william {
-          background:url("resources/William.jpg") no-repeat center center ;
-        }
-        ''',
-
-    'independence': '''
-          background:url("resources/independent.jpg") no-repeat center center ;
-        }
-        ''',
-
-    'invitations': '''
-        }
-
-        div {
-          width: 100%;
-          height: 100%;
-
-          -webkit-background-size: contain !important;
-          -moz-background-size: contain !important;
-          -o-background-size: contain !important;
-          background-size: contain !important;
-        }
-
-        #anna {
-          background:url("resources/AnnaInvite.jpg") no-repeat center center ;
-        }
-
-        #john {
-          background:url("resources/JohnInvite.jpg") no-repeat center center ;
-        }
-
-        #penelope {
-          background:url("resources/PenelopeInvite.jpg") no-repeat center center ;
-        }
-
-        #rose {
-          background:url("resources/RoseInvite.jpg") no-repeat center center ;
-        }
-
-        #sarah {
-          background:url("resources/SarahInvite.jpg") no-repeat center center ;
-        }
-
-        #thomas {
-          background:url("resources/ThomasInvite.jpg") no-repeat center center ;
-        }
-
-        #victor {
-          background:url("resources/VictorInvite.jpg") no-repeat center center ;
-        }
-
-        #william {
-          background:url("resources/WilliamInvite.jpg") no-repeat center center ;
-        }
-        ''',
-
-    'proposals': '''
-        }
-
-        div {
-          width: 100%;
-          height: 100%;
-
-          -webkit-background-size: contain !important;
-          -moz-background-size: contain !important;
-          -o-background-size: contain !important;
-          background-size: contain !important;
-        }
-
-        #anna {
-          background:url("resources/AnnaPropose.jpg") no-repeat center center ;
-        }
-
-        #john {
-          background:url("resources/JohnPropose.jpg") no-repeat center center ;
-        }
-
-        #penelope {
-          background:url("resources/PenelopePropose.jpg") no-repeat center center ;
-        }
-
-        #rose {
-          background:url("resources/RosePropose.jpg") no-repeat center center ;
-        }
-
-        #sarah {
-          background:url("resources/SarahPropose.jpg") no-repeat center center ;
-        }
-
-        #thomas {
-          background:url("resources/ThomasPropose.jpg") no-repeat center center ;
-        }
-
-        #victor {
-          background:url("resources/VictorPropose.jpg") no-repeat center center ;
-        }
-
-        #william {
-          background:url("resources/WilliamPropose.jpg") no-repeat center center ;
-        }
+        {}
         '''
 }
 
-style['minusSide'] = style['plusSide']
+def writeCards(originalCards, name, style=None, sheetColumns=10, sheetRows=5):
+    if style == None:
+        style = styles[name]
 
-def writeCards(originalCards, deck, sheetColumns=10, sheetRows=5):
     sheetCount = sheetColumns * sheetRows
     cell = '<td>{}</td>'
     row = '        <tr>{}</tr>'.format(cell * sheetColumns)
@@ -235,24 +125,25 @@ def writeCards(originalCards, deck, sheetColumns=10, sheetRows=5):
     pages = []
     cards = originalCards[:]
 
+    if len(cards) <= sheetColumns:
+        split = ceil(len(cards) / 2)
+        cards = cards[:split] + [''] * (sheetColumns - split) + cards[split:]
+
     #  Fill sheet with blanks
     cards.extend([''] * (sheetCount - (len(cards) % sheetCount)))
 
     for pageNum in range(len(cards) // sheetCount):
         pages.append(page.format(*cards[pageNum * sheetCount:((pageNum + 1) * sheetCount)]))
 
-    with open('{}.html'.format(deck), 'w') as f:
-        f.write(html.format(floor(100 / sheetColumns), floor(100 / sheetRows), style[deck], ''.join(pages)))
+    with open('{}.html'.format(name), 'w') as f:
+        f.write(html.format(floor(100 / sheetColumns), floor(100 / sheetRows), style, ''.join(pages)))
 
 
 # Generate traits deck
 cards = []
 
-traitPlus = '{plus}{{}}{{}}<br>{minus}{{}}'.format(plus=plus, minus=minus)
-traitMinus = '{plus}{{}}<br>{minus}{{}}{{}}'.format(plus=plus, minus=minus)
-
-plusCombos = []
-minusCombos = []
+traitPlus = '<div>{plus}{{}}{{}}<br>{minus}{{}}</div>'.format(plus=plus, minus=minus)
+traitMinus = '<div>{plus}{{}}<br>{minus}{{}}{{}}</div>'.format(plus=plus, minus=minus)
 
 # Generate combinations
 for pairs in combinations(suits, 2):
@@ -260,58 +151,28 @@ for pairs in combinations(suits, 2):
         cards.append(traitPlus.format(pairs[0], pairs[1], spare))
         cards.append(traitMinus.format(spare, pairs[0], pairs[1]))
 
-        # For generating a csv page of the emojis
-        plusCombos.append('{}{}'.format(pairs[0], pairs[1]))
-        plusCombos.append('{}'.format(spare))
-        minusCombos.append('{}'.format(spare))
-        minusCombos.append('{}{}'.format(pairs[0], pairs[1]))
+# Generate trait cards with borders for each player
+for color, hex in crests.items():
+    style = styles['traits'].format(hex)
 
-# For generating a csv page of the emojis
-with open('traits-csv.html', 'w') as f:
-    for i in range(len(plusCombos)):
-        f.write('{},{}<br>'.format(plusCombos[i], minusCombos[i]))
+    writeCards(cards, 'traits-{}'.format(color), style=style)
 
-# Add one last card for card back (Will need to be separated out in GIMP)
-cards.append('<div></div>')
+cards = ['<div id="{}"></div>'.format(color) for color in crests.keys()]
 
-writeCards(cards, 'traits')
+for crestType in crestCards:
+    styleSections = []
+    for color, hex in crests.items():
+        styleSections.append(crestSection.format(color, crestType))
 
-# Generate characters deck
-cards = [
-    '<div id="anna"></div>',
-    '<div id="john"></div>',
-    '<div id="penelope"></div>',
-    '<div id="rose"></div>',
-    '',
-    '',
-    '',
-    '',
-    '',
-    '',
-    '<div id="sarah"></div>',
-    '<div id="thomas"></div>',
-    '<div id="victor"></div>',
-    '<div id="william"></div>'
-]
+    style = styles['crests'].format(''.join(styleSections))
 
-writeCards(cards, 'invitations')
-
-writeCards(cards, 'proposals')
-
-writeCards(cards, 'characters')
-
-cards = [''] * (14);
-
-writeCards(cards, 'independence')
+    writeCards(cards, crestType, style=style)
 
 for modifier in [(plus, 'plusSide'), (minus, 'minusSide')]:
     cards = []
     for i, suit in enumerate(suits):
-        print(i)
-        print(suit)
         cards.append('{}{}'.format(modifier[0], suit))
         if i == 2:
-            print(cards)
             cards.extend([''] * 2)
 
-    writeCards(cards, modifier[1], 5, 4)
+    writeCards(cards, modifier[1], style=styles['markers'], sheetColumns=5, sheetRows=4)
