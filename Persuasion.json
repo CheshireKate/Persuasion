@@ -1,7 +1,7 @@
 {
-  "SaveName": "PersuationB02",
+  "SaveName": "PersuasionB02",
   "GameMode": "Persuasion",
-  "Date": "1/3/2021 11:33:18 AM",
+  "Date": "1/3/2021 11:44:38 AM",
   "Gravity": 0.5,
   "PlayArea": 0.5,
   "GameType": "Game",
@@ -87,9 +87,9 @@
           "rotX": 0.0,
           "rotY": 135.000015,
           "rotZ": 0.0,
-          "scaleX": 11.6701269,
-          "scaleY": 9.177214,
-          "scaleZ": 4.87799263
+          "scaleX": 11.6703606,
+          "scaleY": 9.177259,
+          "scaleZ": 4.87809849
         }
       },
       {
@@ -101,9 +101,9 @@
           "rotX": 0.0,
           "rotY": 270.0,
           "rotZ": 0.0,
-          "scaleX": 11.6758852,
-          "scaleY": 9.177214,
-          "scaleZ": 4.88068438
+          "scaleX": 11.6762114,
+          "scaleY": 9.177259,
+          "scaleZ": 4.880835
         }
       },
       {
@@ -115,9 +115,9 @@
           "rotX": 0.0,
           "rotY": 224.999985,
           "rotZ": 0.0,
-          "scaleX": 11.6705627,
-          "scaleY": 9.177214,
-          "scaleZ": 4.877722
+          "scaleX": 11.6707935,
+          "scaleY": 9.177259,
+          "scaleZ": 4.877823
         }
       },
       {
@@ -130,7 +130,7 @@
           "rotY": 0.0,
           "rotZ": 0.0,
           "scaleX": 11.6554279,
-          "scaleY": 9.177215,
+          "scaleY": 9.17726,
           "scaleZ": 4.87125063
         }
       },
@@ -144,7 +144,7 @@
           "rotY": 180.0,
           "rotZ": 0.0,
           "scaleX": 11.6554279,
-          "scaleY": 9.177214,
+          "scaleY": 9.177259,
           "scaleZ": 4.871582
         }
       },
@@ -158,7 +158,7 @@
           "rotY": 315.0,
           "rotZ": 0.0,
           "scaleX": 11.6580639,
-          "scaleY": 9.177214,
+          "scaleY": 9.177259,
           "scaleZ": 4.87181854
         }
       },
@@ -171,9 +171,9 @@
           "rotX": 0.0,
           "rotY": 90.0,
           "rotZ": 0.0,
-          "scaleX": 11.674243,
-          "scaleY": 9.177215,
-          "scaleZ": 4.88078642
+          "scaleX": 11.6745424,
+          "scaleY": 9.17726,
+          "scaleZ": 4.880937
         }
       },
       {
@@ -186,7 +186,7 @@
           "rotY": 45.0000038,
           "rotZ": 0.0,
           "scaleX": 11.655426,
-          "scaleY": 9.177215,
+          "scaleY": 9.17726,
           "scaleZ": 4.871237
         }
       }
@@ -342,11 +342,11 @@
       "Name": "Bag",
       "Transform": {
         "posX": -10.975256,
-        "posY": 0.7795663,
+        "posY": 0.779566169,
         "posZ": -17.2403965,
         "rotX": 359.722137,
-        "rotY": 0.00073080865,
-        "rotZ": 2.35410153E-05,
+        "rotY": 0.000730691361,
+        "rotZ": 2.240404E-05,
         "scaleX": 1.0,
         "scaleY": 1.0,
         "scaleZ": 1.0
@@ -380,12 +380,12 @@
         {
           "Name": "Deck",
           "Transform": {
-            "posX": -11.599391,
-            "posY": 3.088972,
-            "posZ": -16.6614552,
-            "rotX": 0.290232152,
-            "rotY": 180.027771,
-            "rotZ": 180.28038,
+            "posX": -10.5997791,
+            "posY": 3.08900476,
+            "posZ": -16.7018833,
+            "rotX": 359.476959,
+            "rotY": 179.998962,
+            "rotZ": 180.279,
             "scaleX": 1.0,
             "scaleY": 1.0,
             "scaleZ": 1.0
@@ -412,14 +412,14 @@
           "Hands": false,
           "SidewaysCard": false,
           "DeckIDs": [
-            3404,
-            3403,
-            3402,
-            3401,
-            3400
+            4004,
+            4003,
+            4002,
+            4001,
+            4000
           ],
           "CustomDeck": {
-            "34": {
+            "40": {
               "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1656728318306830792/3E0AFAC5221EC5015985DD0647F80D4F5AE605D2/",
               "BackURL": "http://cloud-3.steamusercontent.com/ugc/1656728318306831405/CF3EB25695B6C38D4FDBAC3E2A2B4A643943DFA6/",
               "NumWidth": 3,
@@ -466,7 +466,7 @@
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": true,
-              "CardID": 3404,
+              "CardID": 4004,
               "SidewaysCard": false,
               "CustomDeck": {
                 "34": {
@@ -517,7 +517,7 @@
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": true,
-              "CardID": 3403,
+              "CardID": 4003,
               "SidewaysCard": false,
               "CustomDeck": {
                 "34": {
@@ -568,7 +568,7 @@
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": true,
-              "CardID": 3402,
+              "CardID": 4002,
               "SidewaysCard": false,
               "CustomDeck": {
                 "34": {
@@ -619,7 +619,7 @@
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": true,
-              "CardID": 3401,
+              "CardID": 4001,
               "SidewaysCard": false,
               "CustomDeck": {
                 "34": {
@@ -670,7 +670,7 @@
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": true,
-              "CardID": 3400,
+              "CardID": 4000,
               "SidewaysCard": false,
               "CustomDeck": {
                 "34": {
@@ -690,6 +690,57 @@
             }
           ],
           "GUID": "cf845c"
+        },
+        {
+          "Name": "Card",
+          "Transform": {
+            "posX": -9.705864,
+            "posY": 3.04951549,
+            "posZ": -16.38752,
+            "rotX": 359.4645,
+            "rotY": 225.010559,
+            "rotZ": 0.17240715,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Cyan Shield Ring Sleeve",
+          "Description": "Change the state of a trait card to sleeve as a ring card.  This card is so you can claim independence.",
+          "GMNotes": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 3203,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "32": {
+              "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1656728318306793141/41CE1081F96379ABC77EA2DC0CC555E7F106EA63/",
+              "BackURL": "http://cloud-3.steamusercontent.com/ugc/1656728318306793672/CE2D1E60EAAFD8810A26D40AF21E89AF89F71303/",
+              "NumWidth": 4,
+              "NumHeight": 2,
+              "BackIsHidden": true,
+              "UniqueBack": false,
+              "Type": 0
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "GUID": "77472e"
         }
       ],
       "GUID": "ac84bf"
@@ -708,7 +759,7 @@
         "scaleZ": 1.0
       },
       "Nickname": "Tabletop Sim Tips",
-      "Description": "*  Keep all your cards in your hand, and put unused cards into bags to keep the table clean!\n*  When setting an intention, flip the mailbox card of your recipient face down, pick up with left click, then while holding the card, right click on the trait you wish to share.\n*  To resleeve cards, right click, select State.\n*  I'd love to hear your thoughts!\n     https://forms.gle/pun699tz6csBdgc17",
+      "Description": "*  To resleeve cards, right click, select State.\n*  Keep all your cards in your hand.\n*  When setting an intention, flip the mailbox card of your recipient face down, pick up with left click, then while holding the card, right click on the trait you wish to share.\n*  There is a card in your bag for independence.\n*  I'd love to hear your thoughts!\n     https://forms.gle/pun699tz6csBdgc17",
       "GMNotes": "",
       "ColorDiffuse": {
         "r": 1.0,
@@ -733,422 +784,14 @@
       "GUID": "be46c4"
     },
     {
-      "Name": "Card",
-      "Transform": {
-        "posX": -20.0456429,
-        "posY": 0.9777174,
-        "posZ": 0.02405302,
-        "rotX": 0.153356135,
-        "rotY": 269.978271,
-        "rotZ": 0.000946384738,
-        "scaleX": 1.0,
-        "scaleY": 1.0,
-        "scaleZ": 1.0
-      },
-      "Nickname": "Black Dog Ring Sleeve",
-      "Description": "Change the state of a trait card to sleeve as a ring card.  This card is so you can claim independence.",
-      "GMNotes": "",
-      "ColorDiffuse": {
-        "r": 0.713235259,
-        "g": 0.713235259,
-        "b": 0.713235259
-      },
-      "Locked": false,
-      "Grid": true,
-      "Snap": true,
-      "IgnoreFoW": false,
-      "MeasureMovement": false,
-      "DragSelectable": true,
-      "Autoraise": true,
-      "Sticky": true,
-      "Tooltip": true,
-      "GridProjection": false,
-      "HideWhenFaceDown": true,
-      "Hands": true,
-      "CardID": 3200,
-      "SidewaysCard": false,
-      "CustomDeck": {
-        "32": {
-          "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1656728318306793141/41CE1081F96379ABC77EA2DC0CC555E7F106EA63/",
-          "BackURL": "http://cloud-3.steamusercontent.com/ugc/1656728318306793672/CE2D1E60EAAFD8810A26D40AF21E89AF89F71303/",
-          "NumWidth": 4,
-          "NumHeight": 2,
-          "BackIsHidden": true,
-          "UniqueBack": false,
-          "Type": 0
-        }
-      },
-      "LuaScript": "",
-      "LuaScriptState": "",
-      "XmlUI": "",
-      "GUID": "2531a9"
-    },
-    {
-      "Name": "Card",
-      "Transform": {
-        "posX": 13.9770441,
-        "posY": 0.977979064,
-        "posZ": 14.264307,
-        "rotX": 0.09155634,
-        "rotY": 45.0256271,
-        "rotZ": 359.898,
-        "scaleX": 1.0,
-        "scaleY": 1.0,
-        "scaleZ": 1.0
-      },
-      "Nickname": "Blue Lion Ring Sleeve",
-      "Description": "Change the state of a trait card to sleeve as a ring card.  This card is so you can claim independence.",
-      "GMNotes": "",
-      "ColorDiffuse": {
-        "r": 0.713235259,
-        "g": 0.713235259,
-        "b": 0.713235259
-      },
-      "Locked": false,
-      "Grid": true,
-      "Snap": true,
-      "IgnoreFoW": false,
-      "MeasureMovement": false,
-      "DragSelectable": true,
-      "Autoraise": true,
-      "Sticky": true,
-      "Tooltip": true,
-      "GridProjection": false,
-      "HideWhenFaceDown": true,
-      "Hands": true,
-      "CardID": 3201,
-      "SidewaysCard": false,
-      "CustomDeck": {
-        "32": {
-          "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1656728318306793141/41CE1081F96379ABC77EA2DC0CC555E7F106EA63/",
-          "BackURL": "http://cloud-3.steamusercontent.com/ugc/1656728318306793672/CE2D1E60EAAFD8810A26D40AF21E89AF89F71303/",
-          "NumWidth": 4,
-          "NumHeight": 2,
-          "BackIsHidden": true,
-          "UniqueBack": false,
-          "Type": 0
-        }
-      },
-      "LuaScript": "",
-      "LuaScriptState": "",
-      "XmlUI": "",
-      "GUID": "a1c32e"
-    },
-    {
-      "Name": "Card",
-      "Transform": {
-        "posX": -0.0806160346,
-        "posY": 0.977861464,
-        "posZ": 20.064167,
-        "rotX": 0.07848235,
-        "rotY": 359.9889,
-        "rotZ": 0.114267319,
-        "scaleX": 1.0,
-        "scaleY": 1.0,
-        "scaleZ": 1.0
-      },
-      "Nickname": "Green Tree Ring Sleeve",
-      "Description": "Change the state of a trait card to sleeve as a ring card.  This card is so you can claim independence.w",
-      "GMNotes": "",
-      "ColorDiffuse": {
-        "r": 0.713235259,
-        "g": 0.713235259,
-        "b": 0.713235259
-      },
-      "Locked": false,
-      "Grid": true,
-      "Snap": true,
-      "IgnoreFoW": false,
-      "MeasureMovement": false,
-      "DragSelectable": true,
-      "Autoraise": true,
-      "Sticky": true,
-      "Tooltip": true,
-      "GridProjection": false,
-      "HideWhenFaceDown": true,
-      "Hands": true,
-      "CardID": 3202,
-      "SidewaysCard": false,
-      "CustomDeck": {
-        "32": {
-          "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1656728318306793141/41CE1081F96379ABC77EA2DC0CC555E7F106EA63/",
-          "BackURL": "http://cloud-3.steamusercontent.com/ugc/1656728318306793672/CE2D1E60EAAFD8810A26D40AF21E89AF89F71303/",
-          "NumWidth": 4,
-          "NumHeight": 2,
-          "BackIsHidden": true,
-          "UniqueBack": false,
-          "Type": 0
-        }
-      },
-      "LuaScript": "",
-      "LuaScriptState": "",
-      "XmlUI": "",
-      "GUID": "92b8dd"
-    },
-    {
-      "Name": "Card",
-      "Transform": {
-        "posX": -14.4230738,
-        "posY": 0.9819071,
-        "posZ": -14.0552444,
-        "rotX": 0.0127079831,
-        "rotY": 224.998062,
-        "rotZ": 0.00653019547,
-        "scaleX": 1.0,
-        "scaleY": 1.0,
-        "scaleZ": 1.0
-      },
-      "Nickname": "Cyan Shield Ring Sleeve",
-      "Description": "Change the state of a trait card to sleeve as a ring card.  This card is so you can claim independence.",
-      "GMNotes": "",
-      "ColorDiffuse": {
-        "r": 0.713235259,
-        "g": 0.713235259,
-        "b": 0.713235259
-      },
-      "Locked": false,
-      "Grid": true,
-      "Snap": true,
-      "IgnoreFoW": false,
-      "MeasureMovement": false,
-      "DragSelectable": true,
-      "Autoraise": true,
-      "Sticky": true,
-      "Tooltip": true,
-      "GridProjection": false,
-      "HideWhenFaceDown": true,
-      "Hands": true,
-      "CardID": 3203,
-      "SidewaysCard": false,
-      "CustomDeck": {
-        "32": {
-          "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1656728318306793141/41CE1081F96379ABC77EA2DC0CC555E7F106EA63/",
-          "BackURL": "http://cloud-3.steamusercontent.com/ugc/1656728318306793672/CE2D1E60EAAFD8810A26D40AF21E89AF89F71303/",
-          "NumWidth": 4,
-          "NumHeight": 2,
-          "BackIsHidden": true,
-          "UniqueBack": false,
-          "Type": 0
-        }
-      },
-      "LuaScript": "",
-      "LuaScriptState": "",
-      "XmlUI": "",
-      "GUID": "77472e"
-    },
-    {
-      "Name": "Card",
-      "Transform": {
-        "posX": -14.2427149,
-        "posY": 0.9811419,
-        "posZ": 14.0247393,
-        "rotX": -0.00121351669,
-        "rotY": 314.974274,
-        "rotZ": 359.959442,
-        "scaleX": 1.0,
-        "scaleY": 1.0,
-        "scaleZ": 1.0
-      },
-      "Nickname": "Yellow Sun Ring Sleeve",
-      "Description": "Change the state of a trait card to sleeve as a ring card.  This card is so you can claim independence.",
-      "GMNotes": "",
-      "ColorDiffuse": {
-        "r": 0.713235259,
-        "g": 0.713235259,
-        "b": 0.713235259
-      },
-      "Locked": false,
-      "Grid": true,
-      "Snap": true,
-      "IgnoreFoW": false,
-      "MeasureMovement": false,
-      "DragSelectable": true,
-      "Autoraise": true,
-      "Sticky": true,
-      "Tooltip": true,
-      "GridProjection": false,
-      "HideWhenFaceDown": true,
-      "Hands": true,
-      "CardID": 3204,
-      "SidewaysCard": false,
-      "CustomDeck": {
-        "32": {
-          "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1656728318306793141/41CE1081F96379ABC77EA2DC0CC555E7F106EA63/",
-          "BackURL": "http://cloud-3.steamusercontent.com/ugc/1656728318306793672/CE2D1E60EAAFD8810A26D40AF21E89AF89F71303/",
-          "NumWidth": 4,
-          "NumHeight": 2,
-          "BackIsHidden": true,
-          "UniqueBack": false,
-          "Type": 0
-        }
-      },
-      "LuaScript": "",
-      "LuaScriptState": "",
-      "XmlUI": "",
-      "GUID": "131586"
-    },
-    {
-      "Name": "Card",
-      "Transform": {
-        "posX": 14.3425016,
-        "posY": 0.98188144,
-        "posZ": -13.8996086,
-        "rotX": -0.0005877352,
-        "rotY": 134.971817,
-        "rotZ": 0.00953279249,
-        "scaleX": 1.0,
-        "scaleY": 1.0,
-        "scaleZ": 1.0
-      },
-      "Nickname": "Pink Horn Ring Sleeve",
-      "Description": "Change the state of a trait card to sleeve as a ring card.  This card is so you can claim independence.",
-      "GMNotes": "",
-      "ColorDiffuse": {
-        "r": 0.713235259,
-        "g": 0.713235259,
-        "b": 0.713235259
-      },
-      "Locked": false,
-      "Grid": true,
-      "Snap": true,
-      "IgnoreFoW": false,
-      "MeasureMovement": false,
-      "DragSelectable": true,
-      "Autoraise": true,
-      "Sticky": true,
-      "Tooltip": true,
-      "GridProjection": false,
-      "HideWhenFaceDown": true,
-      "Hands": true,
-      "CardID": 3205,
-      "SidewaysCard": false,
-      "CustomDeck": {
-        "32": {
-          "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1656728318306793141/41CE1081F96379ABC77EA2DC0CC555E7F106EA63/",
-          "BackURL": "http://cloud-3.steamusercontent.com/ugc/1656728318306793672/CE2D1E60EAAFD8810A26D40AF21E89AF89F71303/",
-          "NumWidth": 4,
-          "NumHeight": 2,
-          "BackIsHidden": true,
-          "UniqueBack": false,
-          "Type": 0
-        }
-      },
-      "LuaScript": "",
-      "LuaScriptState": "",
-      "XmlUI": "",
-      "GUID": "308c5b"
-    },
-    {
-      "Name": "Card",
-      "Transform": {
-        "posX": 19.4600353,
-        "posY": 0.9736043,
-        "posZ": 0.3500982,
-        "rotX": -9.04222048E-08,
-        "rotY": 89.9624252,
-        "rotZ": -2.29559055E-06,
-        "scaleX": 1.0,
-        "scaleY": 1.0,
-        "scaleZ": 1.0
-      },
-      "Nickname": "Purple Clover Ring Sleeve",
-      "Description": "Change the state of a trait card to sleeve as a ring card.  This card is so you can claim independence.",
-      "GMNotes": "",
-      "ColorDiffuse": {
-        "r": 0.713235259,
-        "g": 0.713235259,
-        "b": 0.713235259
-      },
-      "Locked": false,
-      "Grid": true,
-      "Snap": true,
-      "IgnoreFoW": false,
-      "MeasureMovement": false,
-      "DragSelectable": true,
-      "Autoraise": true,
-      "Sticky": true,
-      "Tooltip": true,
-      "GridProjection": false,
-      "HideWhenFaceDown": true,
-      "Hands": true,
-      "CardID": 3206,
-      "SidewaysCard": false,
-      "CustomDeck": {
-        "32": {
-          "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1656728318306793141/41CE1081F96379ABC77EA2DC0CC555E7F106EA63/",
-          "BackURL": "http://cloud-3.steamusercontent.com/ugc/1656728318306793672/CE2D1E60EAAFD8810A26D40AF21E89AF89F71303/",
-          "NumWidth": 4,
-          "NumHeight": 2,
-          "BackIsHidden": true,
-          "UniqueBack": false,
-          "Type": 0
-        }
-      },
-      "LuaScript": "",
-      "LuaScriptState": "",
-      "XmlUI": "",
-      "GUID": "f4f817"
-    },
-    {
-      "Name": "Card",
-      "Transform": {
-        "posX": 0.241461024,
-        "posY": 0.9816721,
-        "posZ": -19.4687176,
-        "rotX": 0.158561051,
-        "rotY": 179.999084,
-        "rotZ": 359.7972,
-        "scaleX": 1.0,
-        "scaleY": 1.0,
-        "scaleZ": 1.0
-      },
-      "Nickname": "White Horse Ring Sleeve",
-      "Description": "Change the state of a trait card to sleeve as a ring card.  This card is so you can claim independence.",
-      "GMNotes": "",
-      "ColorDiffuse": {
-        "r": 0.713235259,
-        "g": 0.713235259,
-        "b": 0.713235259
-      },
-      "Locked": false,
-      "Grid": true,
-      "Snap": true,
-      "IgnoreFoW": false,
-      "MeasureMovement": false,
-      "DragSelectable": true,
-      "Autoraise": true,
-      "Sticky": true,
-      "Tooltip": true,
-      "GridProjection": false,
-      "HideWhenFaceDown": true,
-      "Hands": true,
-      "CardID": 3207,
-      "SidewaysCard": false,
-      "CustomDeck": {
-        "32": {
-          "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1656728318306793141/41CE1081F96379ABC77EA2DC0CC555E7F106EA63/",
-          "BackURL": "http://cloud-3.steamusercontent.com/ugc/1656728318306793672/CE2D1E60EAAFD8810A26D40AF21E89AF89F71303/",
-          "NumWidth": 4,
-          "NumHeight": 2,
-          "BackIsHidden": true,
-          "UniqueBack": false,
-          "Type": 0
-        }
-      },
-      "LuaScript": "",
-      "LuaScriptState": "",
-      "XmlUI": "",
-      "GUID": "6d8ad9"
-    },
-    {
       "Name": "Deck",
       "Transform": {
-        "posX": -0.130055442,
-        "posY": 1.01977408,
-        "posZ": 16.8295536,
-        "rotX": 0.192528263,
-        "rotY": 0.013081464,
-        "rotZ": 1.97765276E-05,
+        "posX": -0.0799770653,
+        "posY": 1.01895583,
+        "posZ": 20.0641747,
+        "rotX": 1.95830653E-05,
+        "rotY": 0.0130170137,
+        "rotZ": 359.771027,
         "scaleX": 1.0,
         "scaleY": 1.0,
         "scaleZ": 1.0
@@ -1561,12 +1204,12 @@
     {
       "Name": "Deck",
       "Transform": {
-        "posX": 11.6421356,
-        "posY": 1.01462913,
-        "posZ": 11.94962,
-        "rotX": -5.711174E-06,
-        "rotY": 44.9789848,
-        "rotZ": -1.06526995E-05,
+        "posX": 13.9772558,
+        "posY": 1.01844275,
+        "posZ": 14.2645674,
+        "rotX": 0.142697275,
+        "rotY": 44.9790764,
+        "rotZ": -1.37404622E-05,
         "scaleX": 1.0,
         "scaleY": 1.0,
         "scaleZ": 1.0
@@ -1979,12 +1622,12 @@
     {
       "Name": "Deck",
       "Transform": {
-        "posX": 16.1770554,
-        "posY": 1.02293181,
-        "posZ": 0.346919745,
-        "rotX": 359.843567,
-        "rotY": 90.030365,
-        "rotZ": 0.2181769,
+        "posX": 19.4600334,
+        "posY": 1.02282727,
+        "posZ": 0.35000968,
+        "rotX": 0.00236791465,
+        "rotY": 90.03071,
+        "rotZ": 359.986023,
         "scaleX": 1.0,
         "scaleY": 1.0,
         "scaleZ": 1.0
@@ -2397,12 +2040,12 @@
     {
       "Name": "Deck",
       "Transform": {
-        "posX": -11.98055,
-        "posY": 1.02304864,
-        "posZ": 11.7877817,
-        "rotX": 359.882263,
-        "rotY": 314.98233,
-        "rotZ": 359.8578,
+        "posX": -14.2424707,
+        "posY": 1.01819348,
+        "posZ": 14.02497,
+        "rotX": 3.16563273E-05,
+        "rotY": 314.981659,
+        "rotZ": 359.811371,
         "scaleX": 1.0,
         "scaleY": 1.0,
         "scaleZ": 1.0
@@ -2815,12 +2458,12 @@
     {
       "Name": "Deck",
       "Transform": {
-        "posX": 0.283741266,
-        "posY": 1.02077985,
-        "posZ": -16.2036266,
-        "rotX": 0.03020963,
-        "rotY": 180.011871,
-        "rotZ": 359.717041,
+        "posX": 0.241500065,
+        "posY": 1.01862335,
+        "posZ": -19.4683819,
+        "rotX": 359.850464,
+        "rotY": 180.0118,
+        "rotZ": -1.9252434E-06,
         "scaleX": 1.0,
         "scaleY": 1.0,
         "scaleZ": 1.0
@@ -3233,12 +2876,12 @@
     {
       "Name": "Deck",
       "Transform": {
-        "posX": -16.84145,
-        "posY": 1.01854527,
-        "posZ": 0.038419228,
-        "rotX": 0.149485186,
-        "rotY": 270.0133,
-        "rotZ": 359.9887,
+        "posX": -20.0455818,
+        "posY": 1.01854432,
+        "posZ": 0.0246903971,
+        "rotX": 1.28799757E-05,
+        "rotY": 270.013153,
+        "rotZ": 359.792725,
         "scaleX": 1.0,
         "scaleY": 1.0,
         "scaleZ": 1.0
@@ -3651,12 +3294,12 @@
     {
       "Name": "Deck",
       "Transform": {
-        "posX": -11.9946756,
-        "posY": 1.01849341,
-        "posZ": -11.7613153,
-        "rotX": -1.06054695E-05,
-        "rotY": 224.993713,
-        "rotZ": 359.7954,
+        "posX": -14.42336,
+        "posY": 1.02323651,
+        "posZ": -14.0551558,
+        "rotX": 359.983276,
+        "rotY": 224.993546,
+        "rotZ": 359.984131,
         "scaleX": 1.0,
         "scaleY": 1.0,
         "scaleZ": 1.0
@@ -4069,12 +3712,12 @@
     {
       "Name": "Deck",
       "Transform": {
-        "posX": 12.05241,
-        "posY": 1.01883292,
-        "posZ": -11.5462751,
-        "rotX": 0.07467323,
-        "rotY": 134.998459,
-        "rotZ": 0.116965376,
+        "posX": 14.3423853,
+        "posY": 1.02261186,
+        "posZ": -13.8995676,
+        "rotX": 359.8729,
+        "rotY": 134.995651,
+        "rotZ": 0.242805764,
         "scaleX": 1.0,
         "scaleY": 1.0,
         "scaleZ": 1.0
@@ -4488,11 +4131,11 @@
       "Name": "Bag",
       "Transform": {
         "posX": -19.9374676,
-        "posY": 0.7800181,
+        "posY": 0.780014,
         "posZ": -4.440009,
-        "rotX": 6.78497236E-06,
-        "rotY": -0.000529869343,
-        "rotZ": 0.32812196,
+        "rotX": 8.037851E-06,
+        "rotY": -0.0005300658,
+        "rotZ": 0.328121752,
         "scaleX": 1.0,
         "scaleY": 1.0,
         "scaleZ": 1.0
@@ -4836,6 +4479,57 @@
             }
           ],
           "GUID": "cf845c"
+        },
+        {
+          "Name": "Card",
+          "Transform": {
+            "posX": -20.14096,
+            "posY": 3.05369043,
+            "posZ": -3.74232078,
+            "rotX": 0.11078088,
+            "rotY": 269.97757,
+            "rotZ": 359.118256,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Black Dog Ring Sleeve",
+          "Description": "Change the state of a trait card to sleeve as a ring card.  This card is so you can claim independence.",
+          "GMNotes": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 3200,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "32": {
+              "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1656728318306793141/41CE1081F96379ABC77EA2DC0CC555E7F106EA63/",
+              "BackURL": "http://cloud-3.steamusercontent.com/ugc/1656728318306793672/CE2D1E60EAAFD8810A26D40AF21E89AF89F71303/",
+              "NumWidth": 4,
+              "NumHeight": 2,
+              "BackIsHidden": true,
+              "UniqueBack": false,
+              "Type": 0
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "GUID": "2531a9"
         }
       ],
       "GUID": "310d06"
@@ -4844,11 +4538,11 @@
       "Name": "Bag",
       "Transform": {
         "posX": -17.3426361,
-        "posY": 0.779802561,
+        "posY": 0.7797985,
         "posZ": 10.8798447,
-        "rotX": 1.25456118E-05,
-        "rotY": -0.00165703287,
-        "rotZ": 0.3140619,
+        "rotX": 1.25232082E-05,
+        "rotY": -0.001656766,
+        "rotZ": 0.314062357,
         "scaleX": 1.0,
         "scaleY": 1.0,
         "scaleZ": 1.0
@@ -5192,6 +4886,57 @@
             }
           ],
           "GUID": "cf845c"
+        },
+        {
+          "Name": "Card",
+          "Transform": {
+            "posX": -17.28391,
+            "posY": 3.062564,
+            "posZ": 11.1954212,
+            "rotX": 0.26589334,
+            "rotY": 314.9733,
+            "rotZ": 359.545563,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Yellow Sun Ring Sleeve",
+          "Description": "Change the state of a trait card to sleeve as a ring card.  This card is so you can claim independence.",
+          "GMNotes": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 3204,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "32": {
+              "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1656728318306793141/41CE1081F96379ABC77EA2DC0CC555E7F106EA63/",
+              "BackURL": "http://cloud-3.steamusercontent.com/ugc/1656728318306793672/CE2D1E60EAAFD8810A26D40AF21E89AF89F71303/",
+              "NumWidth": 4,
+              "NumHeight": 2,
+              "BackIsHidden": true,
+              "UniqueBack": false,
+              "Type": 0
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "GUID": "131586"
         }
       ],
       "GUID": "64180e"
@@ -5200,11 +4945,11 @@
       "Name": "Bag",
       "Transform": {
         "posX": -4.37478638,
-        "posY": 0.779181,
+        "posY": 0.7791807,
         "posZ": 20.0335789,
-        "rotX": 0.250874519,
-        "rotY": 0.0007469035,
-        "rotZ": -7.611262E-06,
+        "rotX": 0.2508754,
+        "rotY": 0.000747190439,
+        "rotZ": -7.59729E-06,
         "scaleX": 1.0,
         "scaleY": 1.0,
         "scaleZ": 1.0
@@ -5548,6 +5293,57 @@
             }
           ],
           "GUID": "cf845c"
+        },
+        {
+          "Name": "Card",
+          "Transform": {
+            "posX": -3.444703,
+            "posY": 3.052055,
+            "posZ": 20.0064583,
+            "rotX": 7.22950645E-05,
+            "rotY": 359.988831,
+            "rotZ": 359.229645,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Green Tree Ring Sleeve",
+          "Description": "Change the state of a trait card to sleeve as a ring card.  This card is so you can claim independence.w",
+          "GMNotes": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 3202,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "32": {
+              "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1656728318306793141/41CE1081F96379ABC77EA2DC0CC555E7F106EA63/",
+              "BackURL": "http://cloud-3.steamusercontent.com/ugc/1656728318306793672/CE2D1E60EAAFD8810A26D40AF21E89AF89F71303/",
+              "NumWidth": 4,
+              "NumHeight": 2,
+              "BackIsHidden": true,
+              "UniqueBack": false,
+              "Type": 0
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "GUID": "92b8dd"
         }
       ],
       "GUID": "f18002"
@@ -5556,11 +5352,11 @@
       "Name": "Bag",
       "Transform": {
         "posX": 11.1498919,
-        "posY": 0.780181,
+        "posY": 0.78018,
         "posZ": 17.1408443,
-        "rotX": 0.310014218,
-        "rotY": -0.000262838323,
-        "rotZ": 1.90558512E-05,
+        "rotX": 0.310015321,
+        "rotY": -0.000262954418,
+        "rotZ": 1.80516818E-05,
         "scaleX": 1.0,
         "scaleY": 1.0,
         "scaleZ": 1.0
@@ -5904,6 +5700,57 @@
             }
           ],
           "GUID": "cf845c"
+        },
+        {
+          "Name": "Card",
+          "Transform": {
+            "posX": 11.6164379,
+            "posY": 3.05473065,
+            "posZ": 16.6498413,
+            "rotX": 0.00850572,
+            "rotY": 45.0258141,
+            "rotZ": 359.102234,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Blue Lion Ring Sleeve",
+          "Description": "Change the state of a trait card to sleeve as a ring card.  This card is so you can claim independence.",
+          "GMNotes": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 3201,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "32": {
+              "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1656728318306793141/41CE1081F96379ABC77EA2DC0CC555E7F106EA63/",
+              "BackURL": "http://cloud-3.steamusercontent.com/ugc/1656728318306793672/CE2D1E60EAAFD8810A26D40AF21E89AF89F71303/",
+              "NumWidth": 4,
+              "NumHeight": 2,
+              "BackIsHidden": true,
+              "UniqueBack": false,
+              "Type": 0
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "GUID": "a1c32e"
         }
       ],
       "GUID": "28d0fd"
@@ -5912,11 +5759,11 @@
       "Name": "Bag",
       "Transform": {
         "posX": 4.674579,
-        "posY": 0.781543434,
+        "posY": 0.781543553,
         "posZ": -19.3824081,
         "rotX": 359.929535,
-        "rotY": 0.0019268312,
-        "rotZ": 0.3511357,
+        "rotY": 0.00192719616,
+        "rotZ": 0.351134628,
         "scaleX": 1.0,
         "scaleY": 1.0,
         "scaleZ": 1.0
@@ -5950,12 +5797,12 @@
         {
           "Name": "Deck",
           "Transform": {
-            "posX": -11.599391,
-            "posY": 3.088972,
-            "posZ": -16.6614552,
-            "rotX": 0.290232152,
-            "rotY": 180.027771,
-            "rotZ": 180.28038,
+            "posX": 4.090589,
+            "posY": 3.09044981,
+            "posZ": -18.77366,
+            "rotX": 359.5614,
+            "rotY": 180.001968,
+            "rotZ": 179.6882,
             "scaleX": 1.0,
             "scaleY": 1.0,
             "scaleZ": 1.0
@@ -5982,14 +5829,14 @@
           "Hands": false,
           "SidewaysCard": false,
           "DeckIDs": [
-            3404,
-            3403,
-            3402,
-            3401,
-            3400
+            3804,
+            3803,
+            3802,
+            3801,
+            3800
           ],
           "CustomDeck": {
-            "34": {
+            "38": {
               "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1656728318306830792/3E0AFAC5221EC5015985DD0647F80D4F5AE605D2/",
               "BackURL": "http://cloud-3.steamusercontent.com/ugc/1656728318306831405/CF3EB25695B6C38D4FDBAC3E2A2B4A643943DFA6/",
               "NumWidth": 3,
@@ -6006,12 +5853,12 @@
             {
               "Name": "Card",
               "Transform": {
-                "posX": -0.797903955,
-                "posY": 1.01833463,
-                "posZ": 6.120784,
-                "rotX": 0.0007833202,
-                "rotY": 179.999847,
-                "rotZ": 180.003571,
+                "posX": 1.763517,
+                "posY": 1.07143867,
+                "posZ": -15.20413,
+                "rotX": 0.000380228768,
+                "rotY": 179.9999,
+                "rotZ": 180.003387,
                 "scaleX": 1.0,
                 "scaleY": 1.0,
                 "scaleZ": 1.0
@@ -6036,10 +5883,10 @@
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": true,
-              "CardID": 3404,
+              "CardID": 3804,
               "SidewaysCard": false,
               "CustomDeck": {
-                "34": {
+                "38": {
                   "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1656728318306830792/3E0AFAC5221EC5015985DD0647F80D4F5AE605D2/",
                   "BackURL": "http://cloud-3.steamusercontent.com/ugc/1656728318306831405/CF3EB25695B6C38D4FDBAC3E2A2B4A643943DFA6/",
                   "NumWidth": 3,
@@ -6087,7 +5934,7 @@
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": true,
-              "CardID": 3403,
+              "CardID": 3803,
               "SidewaysCard": false,
               "CustomDeck": {
                 "34": {
@@ -6138,7 +5985,7 @@
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": true,
-              "CardID": 3402,
+              "CardID": 3802,
               "SidewaysCard": false,
               "CustomDeck": {
                 "34": {
@@ -6189,7 +6036,7 @@
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": true,
-              "CardID": 3401,
+              "CardID": 3801,
               "SidewaysCard": false,
               "CustomDeck": {
                 "34": {
@@ -6240,7 +6087,7 @@
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": true,
-              "CardID": 3400,
+              "CardID": 3800,
               "SidewaysCard": false,
               "CustomDeck": {
                 "34": {
@@ -6260,6 +6107,57 @@
             }
           ],
           "GUID": "cf845c"
+        },
+        {
+          "Name": "Card",
+          "Transform": {
+            "posX": 5.055807,
+            "posY": 3.05912066,
+            "posZ": -18.94226,
+            "rotX": 359.635132,
+            "rotY": 179.998657,
+            "rotZ": 0.671806931,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "White Horse Ring Sleeve",
+          "Description": "Change the state of a trait card to sleeve as a ring card.  This card is so you can claim independence.",
+          "GMNotes": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 3207,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "32": {
+              "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1656728318306793141/41CE1081F96379ABC77EA2DC0CC555E7F106EA63/",
+              "BackURL": "http://cloud-3.steamusercontent.com/ugc/1656728318306793672/CE2D1E60EAAFD8810A26D40AF21E89AF89F71303/",
+              "NumWidth": 4,
+              "NumHeight": 2,
+              "BackIsHidden": true,
+              "UniqueBack": false,
+              "Type": 0
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "GUID": "6d8ad9"
         }
       ],
       "GUID": "199a6c"
@@ -6268,11 +6166,11 @@
       "Name": "Bag",
       "Transform": {
         "posX": 17.5768623,
-        "posY": 0.7793414,
-        "posZ": -10.5618715,
+        "posY": 0.7793357,
+        "posZ": -10.5618734,
         "rotX": 359.7354,
-        "rotY": 0.00140186644,
-        "rotZ": 2.5946536E-05,
+        "rotY": 0.00140217331,
+        "rotZ": 2.5945832E-05,
         "scaleX": 1.0,
         "scaleY": 1.0,
         "scaleZ": 1.0
@@ -6616,6 +6514,57 @@
             }
           ],
           "GUID": "cf845c"
+        },
+        {
+          "Name": "Card",
+          "Transform": {
+            "posX": 17.0541077,
+            "posY": 3.01150632,
+            "posZ": -11.2822838,
+            "rotX": 0.2799424,
+            "rotY": 134.920074,
+            "rotZ": 357.192078,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Pink Horn Ring Sleeve",
+          "Description": "Change the state of a trait card to sleeve as a ring card.  This card is so you can claim independence.",
+          "GMNotes": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 3205,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "32": {
+              "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1656728318306793141/41CE1081F96379ABC77EA2DC0CC555E7F106EA63/",
+              "BackURL": "http://cloud-3.steamusercontent.com/ugc/1656728318306793672/CE2D1E60EAAFD8810A26D40AF21E89AF89F71303/",
+              "NumWidth": 4,
+              "NumHeight": 2,
+              "BackIsHidden": true,
+              "UniqueBack": false,
+              "Type": 0
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "GUID": "308c5b"
         }
       ],
       "GUID": "8c9c41"
@@ -6624,10 +6573,10 @@
       "Name": "Bag",
       "Transform": {
         "posX": 19.32927,
-        "posY": 0.7797301,
+        "posY": 0.7797271,
         "posZ": 4.67595863,
-        "rotX": -1.33065378E-05,
-        "rotY": 0.00155544782,
+        "rotX": -1.33502417E-05,
+        "rotY": 0.00155531464,
         "rotZ": 359.7049,
         "scaleX": 1.0,
         "scaleY": 1.0,
@@ -6972,6 +6921,57 @@
             }
           ],
           "GUID": "cf845c"
+        },
+        {
+          "Name": "Card",
+          "Transform": {
+            "posX": 19.1263943,
+            "posY": 3.05050063,
+            "posZ": 3.666451,
+            "rotX": 359.915344,
+            "rotY": 89.97336,
+            "rotZ": 359.198334,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Purple Clover Ring Sleeve",
+          "Description": "Change the state of a trait card to sleeve as a ring card.  This card is so you can claim independence.",
+          "GMNotes": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 3206,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "32": {
+              "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1656728318306793141/41CE1081F96379ABC77EA2DC0CC555E7F106EA63/",
+              "BackURL": "http://cloud-3.steamusercontent.com/ugc/1656728318306793672/CE2D1E60EAAFD8810A26D40AF21E89AF89F71303/",
+              "NumWidth": 4,
+              "NumHeight": 2,
+              "BackIsHidden": true,
+              "UniqueBack": false,
+              "Type": 0
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "GUID": "f4f817"
         }
       ],
       "GUID": "4e4317"
@@ -6979,12 +6979,12 @@
     {
       "Name": "Bag",
       "Transform": {
-        "posX": 0.021671962,
-        "posY": 0.7825409,
+        "posX": 0.0216718242,
+        "posY": 0.782536268,
         "posZ": 3.280308,
-        "rotX": 0.450926155,
-        "rotY": 0.000722490251,
-        "rotZ": 0.00180660887,
+        "rotX": 0.4509267,
+        "rotY": 0.0007226256,
+        "rotZ": 0.001805415,
         "scaleX": 1.0,
         "scaleY": 1.0,
         "scaleZ": 1.0
@@ -7373,12 +7373,12 @@
     {
       "Name": "Deck",
       "Transform": {
-        "posX": -0.028386293,
-        "posY": 1.27388251,
-        "posZ": 0.09963247,
-        "rotX": 9.633725E-05,
-        "rotY": 179.999222,
-        "rotZ": 179.782333,
+        "posX": -0.0271928553,
+        "posY": 1.26977253,
+        "posZ": 0.09963184,
+        "rotX": 1.88745E-06,
+        "rotY": 179.999008,
+        "rotZ": 180.0,
         "scaleX": 1.0,
         "scaleY": 1.0,
         "scaleZ": 1.0
@@ -59636,7 +59636,7 @@
         "z": 20.064106
       },
       "Rotation": {
-        "x": 8.452537E-05,
+        "x": 8.452542E-05,
         "y": 0.285156518,
         "z": 0.221752927
       }
@@ -59660,7 +59660,7 @@
         "z": -19.4687653
       },
       "Rotation": {
-        "x": 0.04209711,
+        "x": 0.0420971178,
         "y": 180.00145,
         "z": 0.350697041
       }
@@ -59696,7 +59696,7 @@
         "z": 14.2644424
       },
       "Rotation": {
-        "x": 0.127807051,
+        "x": 0.127807066,
         "y": 44.9991875,
         "z": -0.00159093423
       }
