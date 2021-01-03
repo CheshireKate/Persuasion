@@ -71,16 +71,22 @@ crestSection = '''
 '''
 
 styles = {
+    'desires': '''
+          background:url("resources/traitFront.jpg") no-repeat center center ;
+          vertical-align: top;
+          text-align: left;
+          font-size: 72;
+        }}
+        ''',
+
     'traits': '''
-          width: calc(10% - 10px);
-          height: calc(10% - 10px);
-          padding: 10px;
           background-color: {};
         }}
 
         div {{
-          width: 100%;
-          height: 100%;
+          width: 94%;
+          height: 96%;
+          margin: auto;
 
           background:url("resources/traitFront.jpg") no-repeat center center ;
           vertical-align: top;
@@ -150,6 +156,9 @@ for pairs in combinations(suits, 2):
     for spare in suits.difference(set(pairs)):
         cards.append(traitPlus.format(pairs[0], pairs[1], spare))
         cards.append(traitMinus.format(spare, pairs[0], pairs[1]))
+
+# Generate desires without border
+writeCards(cards, 'desires')
 
 # Generate trait cards with borders for each player
 for color, hex in crests.items():
