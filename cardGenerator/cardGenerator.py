@@ -62,7 +62,7 @@ html = '''<html>
 </body>
 '''
 
-crestCards = ['Ring', 'Mail']
+crestCards = ['Ring', 'Mail', 'Address']
 
 crestSection = '''
         #{0} {{
@@ -100,6 +100,11 @@ styles = {
           vertical-align: middle;
           text-align: center;
           font-size: 288;
+        }
+        ''',
+
+    'postbox': '''
+          background:url("resources/postbox.jpg") no-repeat center center ;
         }
         ''',
 
