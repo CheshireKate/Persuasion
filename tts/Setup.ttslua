@@ -103,21 +103,29 @@ function setupTraits()
   local deck = getObjectFromGUID(deckGUID)
   local players = getSeatedPlayers()
   local i = 1
+  local count = #players
+
+  -- Deal cards based on number of players
+  if count == 3 then
+    deck.deal(10)
+  elseif count == 4 then
+    deck.deal(9)
+  elseif count == 5 then
+    deck.deal(8)
+  elseif count == 6 then
+    deck.deal(7)
+  elseif count == 7 then
+    deck.deal(6)
+  elseif count == 8 then
+    deck.deal(5)
+  end
+
+  -- Iterate through all players and grab other players crest trackers
   while players[i] != nil do
     local color = players[i]
     local player = Player[color]
     local playerHand = player.getPlayerHand()
 
-    -- Grab traits and store to change state later
-    for j=1,traitCount do
-      trait = deck.dealToColorWithOffset({0, 0, 0}, true, color)
-      traits[color][#traits[color] + 1] = trait
-      -- table.insert(traits[color], trait)
-
-      --trait.setState(crests[color]["SleeveState"])
-    end
-
-    -- Iterate through all other players to grab address cards
     local j = 1
     local offset = 1
     while players[j] != nil do
@@ -128,14 +136,12 @@ function setupTraits()
             playerHand.pos_y + playerHand.trigger_forward_y * trackerForward + playerHand.trigger_right_y * (trackerRight + offset * trackerOffset),
             playerHand.pos_z + playerHand.trigger_forward_z * trackerForward + playerHand.trigger_right_z * (trackerRight + offset * trackerOffset)
           })
-        trackerStack.setRotation({ playerHand.rot_x, playerHand.rot_y * 180, playerHand.rot_z })
+        -- trackerStack.setRotation({ playerHand.rot_x, playerHand.rot_y * 180, playerHand.rot_z })
         crests[players[j]]["TrackerIndex"] = crests[players[j]]["TrackerIndex"] + 1
         offset = offset + 1
       end
       j = j + 1
     end
-
-    desire = deck.dealToColorWithOffset({0, 0, 0}, true, color)
 
     i = i + 1
   end
@@ -143,7 +149,7 @@ function setupTraits()
   Wait.frames(sleeveCards, 200)
 end
 
--- Fix Hand Orientation
+-- Sleeve cards then draw desires card
 function sleeveCards()
   local players = getSeatedPlayers()
   local i = 1
@@ -151,19 +157,21 @@ function sleeveCards()
     local color = players[i]
     local cards = Player[color].getHandObjects()
     local playerHand = Player[color].getPlayerHand()
-    -- Iterate through hand objects
+
+    -- Sleeve all unsleeve cards in hand
     local j = 1
     while cards[j] != nil do
-      cards[j].setRotation({0, 180, 0})
-      -- cards[j].setRotation({playerHand.rot_x, playerHand.rot_y * 180, playerHand.rot_z})
-      j = j + 1
-    end
-
-    j = 1
-    while traits[color][j] != nil do
-      traits[color][j].setState(crests[color]["SleeveState"])
+      if cards[j].getName() == "Desire" then
+        cards[j].setState(crests[color]["SleeveState"])
+      end
       j = j + 1
     end
     i = i + 1
   end
+
+  -- Deal one desire card afterwards
+  getObjectFromGUID(deckGUID).deal(1)
+
+  -- Remove button afterwards
+  self.destruct()
 end
