@@ -1,0 +1,169 @@
+crests = {
+  White = {
+    Name = "White Horse",
+    SleeveState = 16,
+    ProposeState = 17,
+    TrackerIndex = 1,
+    TrackerStacks = {"e98c5a", "b2deb6", "a932e6", "09d69a", "8edafd", "cf2c94", "62a5fc"}
+  },
+  Pink = {
+    Name = "Pink Horn",
+    SleeveState = 12,
+    ProposeState = 13,
+    TrackerIndex = 1,
+    TrackerStacks = {"19bd3c", "19aad4", "1c6d19", "657fbe", "cfbabc", "4e167f", "6577a9"}
+  },
+  Purple = {
+    Name = "Purple Clover",
+    SleeveState = 14,
+    ProposeState = 15,
+    TrackerIndex = 1,
+    TrackerStacks = {"db7ab8", "aa4ef2", "3367de", "22fcf4", "442da1", "6e9757", "d88ba8"}
+  },
+  Blue = {
+    Name = "Blue Lion",
+    SleeveState = 4,
+    ProposeState = 5,
+    TrackerIndex = 1,
+    TrackerStacks = {"841aa1", "767dd5", "921e85", "9ae86f", "5edb67", "598c26", "78174c"}
+  },
+  Green = {
+    Name = "Green Tree",
+    SleeveState = 6,
+    ProposeState = 7,
+    TrackerIndex = 1,
+    TrackerStacks = {"ecbd47", "bc3fc6", "8a77b1", "5d46d6", "987dce", "bb13ff", "21567e"}
+  },
+  Yellow = {
+    Name = "Yellow Lion",
+    SleeveState = 10,
+    ProposeState = 11,
+    TrackerIndex = 1,
+    TrackerStacks = {"60209b", "f86110", "7297ba", "ebc86b", "3b6a5f", "8588b2", "a9a3cc"}
+  },
+  Brown = {
+    Name = "Black Dog",
+    SleeveState = 2,
+    ProposeState = 3,
+    TrackerIndex = 1,
+    TrackerStacks = {"ca3a92", "0e5f1d", "257679", "30f8da", "33642d", "faefb3", "ce9c8d"}
+  },
+  Teal = {
+    Name = "Cyan Shield",
+    SleeveState = 8,
+    ProposeState = 9,
+    TrackerIndex = 1,
+    TrackerStacks = {"01bdba", "f8ad83", "1b7610", "a93442", "06526d", "2412ea", "1f8e33"}
+  }
+}
+
+deckGUID = "100000"
+traitCount = 5
+trackerForward = 8
+trackerRight = -2.6
+trackerOffset = 0.7
+
+traits = {
+  White = {},
+  Pink = {},
+  Purple = {},
+  Blue = {},
+  Green = {},
+  Yellow = {},
+  Brown = {},
+  Teal = {}
+}
+
+function onLoad()
+  params = {
+    click_function = "setupTraits",
+    function_owner = self,
+    label          = "Setup",
+    position       = {0, 1, 0},
+    rotation       = {0, 180, 0},
+    width          = 800,
+    height         = 400,
+    font_size      = 340,
+    color          = {0.5, 0.5, 0.5},
+    font_color     = {1, 1, 1},
+    tooltip        = "Setup Persuasion for all seated players!",
+  }
+  self.createButton(params)
+end
+
+-- Start by dealing traits
+function setupStart()
+  local deck = getObjectFromGUID(deckGUID)
+  deck.deal(5)
+  -- Wait for cards to arrive in hand
+  Wait.frames(setupTraits, 10)
+end
+
+function setupTraits()
+  local deck = getObjectFromGUID(deckGUID)
+  local players = getSeatedPlayers()
+  local i = 1
+  while players[i] != nil do
+    local color = players[i]
+    local player = Player[color]
+    local playerHand = player.getPlayerHand()
+
+    -- Grab traits and store to change state later
+    for j=1,traitCount do
+      trait = deck.dealToColorWithOffset({0, 0, 0}, true, color)
+      traits[color][#traits[color] + 1] = trait
+      -- table.insert(traits[color], trait)
+
+      --trait.setState(crests[color]["SleeveState"])
+    end
+
+    -- Iterate through all other players to grab address cards
+    local j = 1
+    local offset = 1
+    while players[j] != nil do
+      if players[j] != color then
+        local trackerStack = getObjectFromGUID(crests[players[j]]["TrackerStacks"][crests[players[j]]["TrackerIndex"]])
+        trackerStack.setPosition({
+            playerHand.pos_x + playerHand.trigger_forward_x * trackerForward + playerHand.trigger_right_x * (trackerRight + offset * trackerOffset),
+            playerHand.pos_y + playerHand.trigger_forward_y * trackerForward + playerHand.trigger_right_y * (trackerRight + offset * trackerOffset),
+            playerHand.pos_z + playerHand.trigger_forward_z * trackerForward + playerHand.trigger_right_z * (trackerRight + offset * trackerOffset)
+          })
+        trackerStack.setRotation({ playerHand.rot_x, playerHand.rot_y * 180, playerHand.rot_z })
+        crests[players[j]]["TrackerIndex"] = crests[players[j]]["TrackerIndex"] + 1
+        offset = offset + 1
+      end
+      j = j + 1
+    end
+
+    desire = deck.dealToColorWithOffset({0, 0, 0}, true, color)
+
+    i = i + 1
+  end
+
+  Wait.frames(sleeveCards, 200)
+end
+
+-- Fix Hand Orientation
+function sleeveCards()
+  local players = getSeatedPlayers()
+  local i = 1
+  while players[i] != nil do
+    local color = players[i]
+    local cards = Player[color].getHandObjects()
+    local playerHand = Player[color].getPlayerHand()
+    -- Iterate through hand objects
+    local j = 1
+    while cards[j] != nil do
+      cards[j].setRotation({0, 180, 0})
+      -- cards[j].setRotation({playerHand.rot_x, playerHand.rot_y * 180, playerHand.rot_z})
+      j = j + 1
+    end
+
+    j = 1
+    while traits[color][j] != nil do
+      traits[color][j].setState(crests[color]["SleeveState"])
+      j = j + 1
+    end
+    i = i + 1
+  end
+end
