@@ -1,3 +1,4 @@
+import csv
 from itertools import combinations
 from math import floor, ceil
 
@@ -62,7 +63,7 @@ html = '''<html>
 </body>
 '''
 
-crestCards = ['Ring', 'Mail', 'Address']
+crestCards = ['Ring']
 
 crestSection = '''
         #{0} {{
@@ -71,27 +72,31 @@ crestSection = '''
 '''
 
 styles = {
-    'desires': '''
-          background:url("resources/traitFront.jpg") no-repeat center center ;
-          vertical-align: top;
-          text-align: left;
-          font-size: 72;
-        }}
-        ''',
-
     'traits': '''
           background-color: {};
         }}
 
-        div {{
-          width: 94%;
-          height: 96%;
+        .container {{
+          width: {};
+          height: {};
           margin: auto;
 
           background:url("resources/traitFront.jpg") no-repeat center center ;
+        }}
+
+        .symbols {{
           vertical-align: top;
           text-align: left;
           font-size: 72;
+        }}
+
+        .title {{
+          font-family: Gentium Book Basic;
+          font-style: italic;
+          font-weight: bold;
+          vertical-align: top;
+          text-align: center;
+          font-size: 48;
         }}
         ''',
 
@@ -146,31 +151,31 @@ def writeCards(originalCards, name, style=None, sheetColumns=10, sheetRows=5):
     for pageNum in range(len(cards) // sheetCount):
         pages.append(page.format(*cards[pageNum * sheetCount:((pageNum + 1) * sheetCount)]))
 
-    with open('{}.html'.format(name), 'w') as f:
+    with open('{}.html'.format(name), 'w', encoding="utf-8") as f:
         f.write(html.format(floor(100 / sheetColumns), floor(100 / sheetRows), style, ''.join(pages)))
-
 
 # Generate traits deck
 cards = []
 
-traitPlus = '<div>{plus}{{}}{{}}<br>{minus}{{}}</div>'.format(plus=plus, minus=minus)
-traitMinus = '<div>{plus}{{}}<br>{minus}{{}}{{}}</div>'.format(plus=plus, minus=minus)
+traitCard = '''<div class="container">
+    <div class="symbols">{plus}{{}}<br>{minus}{{}}</div>
+    <div class="title">{{}}</div>
+</div>'''.format(plus=plus, minus=minus)
 
-# Generate combinations
-for pairs in combinations(suits, 2):
-    for spare in suits.difference(set(pairs)):
-        cards.append(traitPlus.format(pairs[0], pairs[1], spare))
-        cards.append(traitMinus.format(spare, pairs[0], pairs[1]))
+# Convert CSV to cards
+with open('resources/Persuasion - Trait Effects.csv', 'r', encoding="utf-8") as input:
+    cardDetails = csv.DictReader(input)
+    for row in cardDetails:
+        cards.append(traitCard.format(row['＋'], row['－'], row['Name']))
 
 # Generate desires without border
-writeCards(cards, 'desires')
+writeCards(cards, 'traits-desires', style=styles['traits'].format('None', '100%', '100%'))
 
 # Generate trait cards with borders for each player
 for color, hex in crests.items():
-    style = styles['traits'].format(hex)
+    writeCards(cards, 'traits-{}'.format(color), style=styles['traits'].format(hex, '94%', '96%'))
 
-    writeCards(cards, 'traits-{}'.format(color), style=style)
-
+# Generate suited one offs (Rings)
 cards = ['<div id="{}"></div>'.format(color) for color in crests.keys()]
 
 for crestType in crestCards:
@@ -179,9 +184,9 @@ for crestType in crestCards:
         styleSections.append(crestSection.format(color, crestType))
 
     style = styles['crests'].format(''.join(styleSections))
-
     writeCards(cards, crestType, style=style)
 
+# Generate symbol markers
 for modifier in [(plus, 'plusSide'), (minus, 'minusSide')]:
     cards = []
     for i, suit in enumerate(suits):
