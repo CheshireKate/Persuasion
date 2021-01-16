@@ -93,13 +93,6 @@ function onLoad()
 end
 
 -- Start by dealing traits
-function setupStart()
-  local deck = getObjectFromGUID(deckGUID)
-  deck.deal(5)
-  -- Wait for cards to arrive in hand
-  Wait.frames(setupTraits, 10)
-end
-
 function setupTraits()
   local deck = getObjectFromGUID(deckGUID)
   local players = getSeatedPlayers()
