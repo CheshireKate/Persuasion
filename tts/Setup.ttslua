@@ -75,6 +75,7 @@ traits = {
 }
 
 function onLoad()
+  getObjectFromGUID(deckGUID).shuffle()
   params = {
     click_function = "setupTraits",
     function_owner = self,
