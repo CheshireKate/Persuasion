@@ -4,64 +4,84 @@ crests = {
     SleeveState = 16,
     ProposeState = 17,
     TrackerIndex = 1,
-    TrackerStacks = {"e98c5a", "b2deb6", "a932e6", "09d69a", "8edafd", "cf2c94", "62a5fc"}
+    TrackerStacks = {"e98c5a", "b2deb6", "a932e6", "09d69a", "8edafd", "cf2c94", "62a5fc"},
+    SuitabilityBoard = "b8922a",
+    LetterboxBoard = "aafa0f"
   },
   Pink = {
     Name = "Pink Horn",
     SleeveState = 12,
     ProposeState = 13,
     TrackerIndex = 1,
-    TrackerStacks = {"19bd3c", "19aad4", "1c6d19", "657fbe", "cfbabc", "4e167f", "6577a9"}
+    TrackerStacks = {"19bd3c", "19aad4", "1c6d19", "657fbe", "cfbabc", "4e167f", "6577a9"},
+    SuitabilityBoard = "824ff6",
+    LetterboxBoard = "8ad41c"
   },
   Purple = {
     Name = "Purple Clover",
     SleeveState = 14,
     ProposeState = 15,
     TrackerIndex = 1,
-    TrackerStacks = {"db7ab8", "aa4ef2", "3367de", "22fcf4", "442da1", "6e9757", "d88ba8"}
+    TrackerStacks = {"db7ab8", "aa4ef2", "3367de", "22fcf4", "442da1", "6e9757", "d88ba8"},
+    SuitabilityBoard = "404c17",
+    LetterboxBoard = "14d618"
   },
   Blue = {
     Name = "Blue Lion",
     SleeveState = 4,
     ProposeState = 5,
     TrackerIndex = 1,
-    TrackerStacks = {"841aa1", "767dd5", "921e85", "9ae86f", "5edb67", "598c26", "78174c"}
+    TrackerStacks = {"841aa1", "767dd5", "921e85", "9ae86f", "5edb67", "598c26", "78174c"},
+    SuitabilityBoard = "7b89fc",
+    LetterboxBoard = "baa942"
   },
   Green = {
     Name = "Green Tree",
     SleeveState = 6,
     ProposeState = 7,
     TrackerIndex = 1,
-    TrackerStacks = {"ecbd47", "bc3fc6", "8a77b1", "5d46d6", "987dce", "bb13ff", "21567e"}
+    TrackerStacks = {"ecbd47", "bc3fc6", "8a77b1", "5d46d6", "987dce", "bb13ff", "21567e"},
+    SuitabilityBoard = "b725ca",
+    LetterboxBoard = "c9aade"
   },
   Yellow = {
     Name = "Yellow Lion",
     SleeveState = 10,
     ProposeState = 11,
     TrackerIndex = 1,
-    TrackerStacks = {"60209b", "f86110", "7297ba", "ebc86b", "3b6a5f", "8588b2", "a9a3cc"}
+    TrackerStacks = {"60209b", "f86110", "7297ba", "ebc86b", "3b6a5f", "8588b2", "a9a3cc"},
+    SuitabilityBoard = "875bb3",
+    LetterboxBoard = "05f0b7"
   },
   Brown = {
     Name = "Black Dog",
     SleeveState = 2,
     ProposeState = 3,
     TrackerIndex = 1,
-    TrackerStacks = {"ca3a92", "0e5f1d", "257679", "30f8da", "33642d", "faefb3", "ce9c8d"}
+    TrackerStacks = {"ca3a92", "0e5f1d", "257679", "30f8da", "33642d", "faefb3", "ce9c8d"},
+    SuitabilityBoard = "62705e",
+    LetterboxBoard = "1e45d5"
   },
   Teal = {
     Name = "Cyan Shield",
     SleeveState = 8,
     ProposeState = 9,
     TrackerIndex = 1,
-    TrackerStacks = {"01bdba", "f8ad83", "1b7610", "a93442", "06526d", "2412ea", "1f8e33"}
+    TrackerStacks = {"01bdba", "f8ad83", "1b7610", "a93442", "06526d", "2412ea", "1f8e33"},
+    SuitabilityBoard = "74a578",
+    LetterboxBoard = "21ea2e"
   }
 }
 
 deckGUID = "100000"
 traitCount = 5
-trackerForward = 8
+trackerForward = 2.7
 trackerRight = -2.6
 trackerOffset = 0.7
+suitabilityForward = 5
+suitabilityRight = 0
+letterboxForward = 10
+letterboxRight = 0
 
 traits = {
   White = {},
@@ -90,6 +110,27 @@ function onLoad()
     tooltip        = "Setup Persuasion for all seated players!",
   }
   self.createButton(params)
+end
+
+function positionBoards()
+  for color, data in pairs(crests) do
+    local playerHand = Player[color].getPlayerHand()
+    local suitabilityBoard = getObjectFromGUID(data["SuitabilityBoard"])
+    local letterboxBoard = getObjectFromGUID(data["LetterboxBoard"])
+
+    suitabilityBoard.setPosition({
+        playerHand.pos_x + playerHand.trigger_forward_x * suitabilityForward + playerHand.trigger_right_x * suitabilityRight,
+        playerHand.pos_y + playerHand.trigger_forward_y * suitabilityForward + playerHand.trigger_right_y * suitabilityRight,
+        playerHand.pos_z + playerHand.trigger_forward_z * suitabilityForward + playerHand.trigger_right_z * suitabilityRight
+      })
+    letterboxBoard.setPosition({
+        playerHand.pos_x + playerHand.trigger_forward_x * letterboxForward + playerHand.trigger_right_x * letterboxRight,
+        playerHand.pos_y + playerHand.trigger_forward_y * letterboxForward + playerHand.trigger_right_y * letterboxRight,
+        playerHand.pos_z + playerHand.trigger_forward_z * letterboxForward + playerHand.trigger_right_z * letterboxRight
+      })
+    suitabilityBoard.setRotation({playerHand.rot_x, playerHand.rot_y + 180, playerHand.rot_z})
+    letterboxBoard.setRotation({playerHand.rot_x, playerHand.rot_y + 180, playerHand.rot_z})
+  end
 end
 
 -- Start by dealing traits
