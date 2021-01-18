@@ -2,9 +2,7 @@ import csv
 from itertools import combinations
 from math import floor, ceil
 
-plus = '&#xFF0B'
-minus = '&#xFF0D'
-suits = set(['&#x1F48E', '&#x1F451', '&#x1F5E1', '&#x1F339', '&#x1F64F'])
+suits = set(['💎', '👑', '🙏', '🌹', '🗡'])
 
 crests = {
     'black': '#000000',
@@ -31,7 +29,7 @@ html = '''<html>
           padding: 0px !important;
         }}
 
-        table {{
+        .page {{
           page-break-before: always;
           page-break-after: always;
           width: 100%;
@@ -43,6 +41,11 @@ html = '''<html>
           border: 0px;
           margin: 0px;
           padding: 0px;
+          border-spacing: 0px;
+          border-color: transparent;
+
+          vertical-align: top;
+          text-align: left;
         }}
 
         td {{
@@ -71,9 +74,41 @@ crestSection = '''
         }}
 '''
 
+traitCard = '''<div class="container">
+    <table class="innerTrait">
+        <tr>
+            <td rowspan="5" class="contents">
+                <table class="symbols">
+                    <tr>
+                        <td class="desires">{desires}</td>
+                        <td rowspan="2" class="modifiers">{modifiers}</td>
+                    </tr>
+                    <tr>
+                        <td class="extra">{extras}</td>
+                    </tr>
+                </table>
+                <div class="title">{title}</div>
+            </td>
+            <td class="symbolCell"><div class="symbolCalc">{💎}</div></td>
+        </tr>
+        <tr><td class="symbolCell"><div class="symbolCalc">{👑}</div></td></tr>
+        <tr><td class="symbolCell"><div class="symbolCalc">{🙏}</div></td></tr>
+        <tr><td class="symbolCell"><div class="symbolCalc">{🌹}</div></td></tr>
+        <tr><td class="symbolCell"><div class="symbolCalc">{🗡}</div></td></tr>
+    </table>
+</div>'''
+
+
 styles = {
     'traits': '''
           background-color: {};
+        }}
+
+        .innerTrait {{
+          width: 100%;
+          height: 100%;
+          vertical-align: top;
+          text-align: left;
         }}
 
         .container {{
@@ -85,6 +120,8 @@ styles = {
         }}
 
         .symbols {{
+          height: auto;
+          width: 100%;
           vertical-align: top;
           text-align: left;
           font-size: 72;
@@ -97,6 +134,57 @@ styles = {
           vertical-align: top;
           text-align: center;
           font-size: 48;
+        }}
+
+        .contents {{
+          height: 100%;
+          width: 95%;
+        }}
+
+        .desires {{
+          width: 60%;
+          vertical-align: top;
+          text-align: left;
+        }}
+
+        .modifiers {{
+          width: 40%;
+          vertical-align: top;
+          text-align: left;
+        }}
+
+        .extra {{
+          vertical-align: top;
+          text-align: left;
+        }}
+
+        .desiresText {{
+          border-bottom: 1px solid black;
+        }}
+
+        .extrasText {{
+
+        }}
+
+        .symbolColumn {{
+          width: 5%;
+          height: 100%;
+        }}
+
+        .symbolCell {{
+          height: 20%;
+          vertical-align: middle;
+          text-align: center;
+        }}
+
+        .symbolCalc {{
+          font-family: Symbola;
+          vertical-align: middle;
+
+          text-align: center;
+          font-size: 12;
+
+          transform: rotate(90deg);
         }}
         ''',
 
@@ -137,7 +225,7 @@ def writeCards(originalCards, name, style=None, sheetColumns=10, sheetRows=5):
     sheetCount = sheetColumns * sheetRows
     cell = '<td>{}</td>'
     row = '        <tr>{}</tr>'.format(cell * sheetColumns)
-    page = '    <table>{}</table>'.format(row * sheetRows)
+    page = '    <table class="page">{}</table>'.format(row * sheetRows)
     pages = []
     cards = originalCards[:]
 
@@ -157,16 +245,43 @@ def writeCards(originalCards, name, style=None, sheetColumns=10, sheetRows=5):
 # Generate traits deck
 cards = []
 
-traitCard = '''<div class="container">
-    <div class="symbols">{plus}{{}}<br>{minus}{{}}</div>
-    <div class="title">{{}}</div>
-</div>'''.format(plus=plus, minus=minus)
-
 # Convert CSV to cards
 with open('resources/Persuasion - Trait Effects.csv', 'r', encoding="utf-8") as input:
     cardDetails = csv.DictReader(input)
     for row in cardDetails:
-        cards.append(traitCard.format(row['＋'], row['－'], row['Name']))
+        params = {
+            'desires': '',
+            'modifiers': '',
+            'extras': '',
+            'title': row['Name'],
+            '💎': '',
+            '👑': '',
+            '🙏': '',
+            '🌹': '',
+            '🗡': ''
+        }
+        first = True
+        for symbol in row['＋']:
+            val = "＋" + symbol
+            val = "+" + symbol
+            params[symbol] = val
+            if first:
+                first = False
+                params['desires'] = val
+            else:
+                params['extras'] = val
+        first = True
+        for symbol in row['－']:
+            val = "－" + symbol
+            val = "-" + symbol
+            params[symbol] = val
+            if first:
+                first = False
+                params['desires'] = params['desires'] + val
+            else:
+                params['extras'] = val
+
+        cards.append(traitCard.format(**params))
 
 # Generate desires without border
 writeCards(cards, 'traits-desires', style=styles['traits'].format('None', '100%', '100%'))
@@ -187,7 +302,7 @@ for crestType in crestCards:
     writeCards(cards, crestType, style=style)
 
 # Generate symbol markers
-for modifier in [(plus, 'plusSide'), (minus, 'minusSide')]:
+for modifier in [('＋', 'plusSide'), ('－', 'minusSide')]:
     cards = []
     for i, suit in enumerate(suits):
         cards.append('{}{}'.format(modifier[0], suit))
