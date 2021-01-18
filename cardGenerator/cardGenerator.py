@@ -29,13 +29,6 @@ html = '''<html>
           padding: 0px !important;
         }}
 
-        .page {{
-          page-break-before: always;
-          page-break-after: always;
-          width: 100%;
-          height: 100%;
-        }}
-
         table, tr, td {{
           font-family: Symbola;
           border: 0px;
@@ -49,6 +42,20 @@ html = '''<html>
           text-align: left;
         }}
 
+        .page {{
+          page-break-before: always;
+          page-break-after: always;
+          width: 100%;
+          height: 100%;
+          vertical-align: middle;
+          text-align: center;
+        }}
+
+        .cardRow {{
+          vertical-align: middle;
+          text-align: center;
+        }}
+
         .card {{
           -webkit-background-size: cover;
           -moz-background-size: cover;
@@ -57,6 +64,9 @@ html = '''<html>
 
           width: {}%;
           height: {}%;
+
+          vertical-align: middle;
+          text-align: center;
 
           /* Custom Styling */
         {}
@@ -204,7 +214,7 @@ def writeCards(originalCards, name, style=None, sheetColumns=10, sheetRows=5):
 
     sheetCount = sheetColumns * sheetRows
     cell = '<td class="card">{}</td>'
-    row = '        <tr>{}</tr>'.format(cell * sheetColumns)
+    row = '        <tr class="cardRow">{}</tr>'.format(cell * sheetColumns)
     page = '    <table class="page">{}</table>'.format(row * sheetRows)
     pages = []
     cards = originalCards[:]
@@ -252,9 +262,9 @@ with open('resources/Persuasion - Trait Effects.csv', 'r', encoding="utf-8") as 
                 params[symbol] = val
                 if first:
                     first = False
-                    params['desires'] = val
+                    params['desires'] += val
                 else:
-                    params['extras'] = val
+                    params['extras'] += val
                 symbolMap[i].append(val)
 
         cards.append(traitCard.format(**params))
