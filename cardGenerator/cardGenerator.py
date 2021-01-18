@@ -225,10 +225,15 @@ def writeCards(originalCards, name, style=None, sheetColumns=10, sheetRows=5):
 # Generate traits deck
 cards = []
 
+symbolMap = []
+
 # Convert CSV to cards
 with open('resources/Persuasion - Trait Effects.csv', 'r', encoding="utf-8") as input:
     cardDetails = csv.DictReader(input)
-    for row in cardDetails:
+    for i, row in enumerate(cardDetails):
+        if i == 60:
+            break
+        symbolMap.append([])
         params = {
             'desires': '',
             'modifiers': '',
@@ -240,26 +245,23 @@ with open('resources/Persuasion - Trait Effects.csv', 'r', encoding="utf-8") as 
             '🌹': '',
             '🗡': ''
         }
-        first = True
-        for symbol in row['＋']:
-            val = "＋" + symbol
-            params[symbol] = val
-            if first:
-                first = False
-                params['desires'] = val
-            else:
-                params['extras'] = val
-        first = True
-        for symbol in row['－']:
-            val = "－" + symbol
-            params[symbol] = val
-            if first:
-                first = False
-                params['desires'] = params['desires'] + val
-            else:
-                params['extras'] = val
+        for sign in ["＋", "－"]:
+            first = True
+            for symbol in row[sign]:
+                val = sign + symbol
+                params[symbol] = val
+                if first:
+                    first = False
+                    params['desires'] = val
+                else:
+                    params['extras'] = val
+                symbolMap[i].append(val)
 
         cards.append(traitCard.format(**params))
+
+# Write a lua object mapping cards to their desires characters
+with open('symbolMap.lua', 'w', encoding="utf-8") as f:
+    f.write('symbolMap = {\n  {"' + '"},\n  {"'.join(['", "'.join(x) for x in symbolMap]) + '"}\n}')
 
 # Generate desires without border
 writeCards(cards, 'traits-desires', style=styles['traits'].format('None', '100%', '100%'))

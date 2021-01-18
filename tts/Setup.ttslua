@@ -210,3 +210,30 @@ function sleeveCards()
   -- Remove button afterwards
   self.destruct()
 end
+
+-- Calculate player dominant symbols based on cards in hand.
+function generateDominantSymbols()
+  local players = getSeatedPlayers()
+  local i = 1
+  while players[i] != nil do
+    local color = players[i]
+    local cards = Player[color].getHandObjects()
+    local playerHand = Player[color].getPlayerHand()
+
+    -- Add up all symbols, ignoring desires
+    local j = 1
+    while cards[j] != nil do
+      if cards[j].getName() == "Desire" then
+        -- TODO:  Count here
+      end
+      j = j + 1
+    end
+    i = i + 1
+  end
+
+  -- Deal one desire card afterwards
+  getObjectFromGUID(deckGUID).deal(1)
+
+  -- Remove button afterwards
+  self.destruct()
+end
