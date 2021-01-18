@@ -43,12 +43,13 @@ html = '''<html>
           padding: 0px;
           border-spacing: 0px;
           border-color: transparent;
+          border-collapse: collapse;
 
           vertical-align: top;
           text-align: left;
         }}
 
-        td {{
+        .card {{
           -webkit-background-size: cover;
           -moz-background-size: cover;
           -o-background-size: cover;
@@ -78,15 +79,8 @@ traitCard = '''<div class="container">
     <table class="innerTrait">
         <tr>
             <td rowspan="5" class="contents">
-                <table class="symbols">
-                    <tr>
-                        <td class="desires">{desires}</td>
-                        <td rowspan="2" class="modifiers">{modifiers}</td>
-                    </tr>
-                    <tr>
-                        <td class="extra">{extras}</td>
-                    </tr>
-                </table>
+                <div class="symbols"><span class="desiresText">{desires}</span></div>
+                <div class="symbols"><span class="extrasText">{extras}</span></div>
                 <div class="title">{title}</div>
             </td>
             <td class="symbolCell"><div class="symbolCalc">{💎}</div></td>
@@ -141,48 +135,34 @@ styles = {
           width: 95%;
         }}
 
-        .desires {{
-          width: 60%;
-          vertical-align: top;
-          text-align: left;
-        }}
-
-        .modifiers {{
-          width: 40%;
-          vertical-align: top;
-          text-align: left;
-        }}
-
-        .extra {{
-          vertical-align: top;
-          text-align: left;
-        }}
-
         .desiresText {{
-          border-bottom: 1px solid black;
         }}
 
         .extrasText {{
-
         }}
 
         .symbolColumn {{
           width: 5%;
-          height: 100%;
+          height: 95%;
+          margin-top: 5%;
         }}
 
         .symbolCell {{
           height: 20%;
+          width: 100%;
           vertical-align: middle;
           text-align: center;
         }}
 
         .symbolCalc {{
+          margin-left: -100px;
+          margin-right: -80px;
+          margin-top: 30px;
           font-family: Symbola;
           vertical-align: middle;
 
           text-align: center;
-          font-size: 12;
+          font-size: 32;
 
           transform: rotate(90deg);
         }}
@@ -223,7 +203,7 @@ def writeCards(originalCards, name, style=None, sheetColumns=10, sheetRows=5):
         style = styles[name]
 
     sheetCount = sheetColumns * sheetRows
-    cell = '<td>{}</td>'
+    cell = '<td class="card">{}</td>'
     row = '        <tr>{}</tr>'.format(cell * sheetColumns)
     page = '    <table class="page">{}</table>'.format(row * sheetRows)
     pages = []
@@ -263,7 +243,6 @@ with open('resources/Persuasion - Trait Effects.csv', 'r', encoding="utf-8") as 
         first = True
         for symbol in row['＋']:
             val = "＋" + symbol
-            val = "+" + symbol
             params[symbol] = val
             if first:
                 first = False
@@ -273,7 +252,6 @@ with open('resources/Persuasion - Trait Effects.csv', 'r', encoding="utf-8") as 
         first = True
         for symbol in row['－']:
             val = "－" + symbol
-            val = "-" + symbol
             params[symbol] = val
             if first:
                 first = False
