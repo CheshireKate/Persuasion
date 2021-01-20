@@ -282,7 +282,7 @@ with open('resources/Persuasion - Trait Effects.csv', 'r', encoding="utf-8") as 
 
 # Write a lua object mapping cards to their desires characters
 with open('symbolMap.lua', 'w', encoding="utf-8") as f:
-    f.write('symbolMap = {\n  {\n    ' + '\n  },\n  {\n    '.join([',\n    '.join(x) for x in symbolMap]) + '\n  }\n}')
+    f.write('symbolMap = { { ' + ' }, { '.join([', '.join(x) for x in symbolMap]) + ' } }')
 
 # Generate desires without border
 writeCards(cards, 'traits-desires', style=styles['traits'].format('None', '100%', '100%'))
