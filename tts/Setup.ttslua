@@ -286,19 +286,15 @@ function generateDominantSymbols()
         end
       end
       local offset = 1
-      print("Player " .. color .. " got:")
       for symbol, total in pairs(symbols) do
-        print("  " .. symbol .. " = " .. total)
         marker = getObjectFromGUID(crests[color][symbol])
         if total > 0 then
-            side = 0;
+          side = 180;
         elseif total < 0 then
-            side = 180;
+          side = 0;
         end
 
-        if total == 0 then
-            marker.destruct()
-        else
+        if total != 0 then
           marker.setPosition({
             playerHand.pos_x + playerHand.trigger_forward_x * markerForward + playerHand.trigger_right_x * (markerRight + offset * markerOffset),
             playerHand.pos_y + playerHand.trigger_forward_y * markerForward + playerHand.trigger_right_y * (markerRight + offset * markerOffset),
@@ -309,7 +305,6 @@ function generateDominantSymbols()
           offset = offset + 1
         end
       end
-      print(symbols)
       j = j + 1
     end
     i = i + 1
