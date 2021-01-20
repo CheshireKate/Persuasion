@@ -1,3 +1,5 @@
+-- symbolMap here
+
 crests = {
   White = {
     Name = "White Horse",
@@ -6,7 +8,12 @@ crests = {
     TrackerIndex = 1,
     TrackerStacks = {"e98c5a", "b2deb6", "a932e6", "09d69a", "8edafd", "cf2c94", "62a5fc"},
     SuitabilityBoard = "b8922a",
-    LetterboxBoard = "aafa0f"
+    LetterboxBoard = "aafa0f",
+    💎 = "",
+    👑 = "",
+    🙏 = "",
+    🌹 = "",
+    🗡 = ""
   },
   Pink = {
     Name = "Pink Horn",
@@ -15,7 +22,12 @@ crests = {
     TrackerIndex = 1,
     TrackerStacks = {"19bd3c", "19aad4", "1c6d19", "657fbe", "cfbabc", "4e167f", "6577a9"},
     SuitabilityBoard = "824ff6",
-    LetterboxBoard = "8ad41c"
+    LetterboxBoard = "8ad41c",
+    💎 = "",
+    👑 = "",
+    🙏 = "",
+    🌹 = "",
+    🗡 = ""
   },
   Purple = {
     Name = "Purple Clover",
@@ -24,7 +36,12 @@ crests = {
     TrackerIndex = 1,
     TrackerStacks = {"db7ab8", "aa4ef2", "3367de", "22fcf4", "442da1", "6e9757", "d88ba8"},
     SuitabilityBoard = "404c17",
-    LetterboxBoard = "14d618"
+    LetterboxBoard = "14d618",
+    💎 = "",
+    👑 = "",
+    🙏 = "",
+    🌹 = "",
+    🗡 = ""
   },
   Blue = {
     Name = "Blue Lion",
@@ -33,7 +50,12 @@ crests = {
     TrackerIndex = 1,
     TrackerStacks = {"841aa1", "767dd5", "921e85", "9ae86f", "5edb67", "598c26", "78174c"},
     SuitabilityBoard = "7b89fc",
-    LetterboxBoard = "baa942"
+    LetterboxBoard = "baa942",
+    💎 = "",
+    👑 = "",
+    🙏 = "",
+    🌹 = "",
+    🗡 = ""
   },
   Green = {
     Name = "Green Tree",
@@ -42,7 +64,12 @@ crests = {
     TrackerIndex = 1,
     TrackerStacks = {"ecbd47", "bc3fc6", "8a77b1", "5d46d6", "987dce", "bb13ff", "21567e"},
     SuitabilityBoard = "b725ca",
-    LetterboxBoard = "c9aade"
+    LetterboxBoard = "c9aade",
+    💎 = "",
+    👑 = "",
+    🙏 = "",
+    🌹 = "",
+    🗡 = ""
   },
   Yellow = {
     Name = "Yellow Lion",
@@ -51,7 +78,12 @@ crests = {
     TrackerIndex = 1,
     TrackerStacks = {"60209b", "f86110", "7297ba", "ebc86b", "3b6a5f", "8588b2", "a9a3cc"},
     SuitabilityBoard = "875bb3",
-    LetterboxBoard = "05f0b7"
+    LetterboxBoard = "05f0b7",
+    💎 = "",
+    👑 = "",
+    🙏 = "",
+    🌹 = "",
+    🗡 = ""
   },
   Brown = {
     Name = "Black Dog",
@@ -60,7 +92,12 @@ crests = {
     TrackerIndex = 1,
     TrackerStacks = {"ca3a92", "0e5f1d", "257679", "30f8da", "33642d", "faefb3", "ce9c8d"},
     SuitabilityBoard = "62705e",
-    LetterboxBoard = "1e45d5"
+    LetterboxBoard = "1e45d5",
+    💎 = "",
+    👑 = "",
+    🙏 = "",
+    🌹 = "",
+    🗡 = ""
   },
   Teal = {
     Name = "Cyan Shield",
@@ -69,17 +106,29 @@ crests = {
     TrackerIndex = 1,
     TrackerStacks = {"01bdba", "f8ad83", "1b7610", "a93442", "06526d", "2412ea", "1f8e33"},
     SuitabilityBoard = "74a578",
-    LetterboxBoard = "21ea2e"
+    LetterboxBoard = "21ea2e",
+    💎 = "",
+    👑 = "",
+    🙏 = "",
+    🌹 = "",
+    🗡 = ""
   }
 }
 
 deckGUID = "100000"
 traitCount = 5
+
 trackerForward = 2.7
 trackerRight = -2.6
 trackerOffset = 0.7
+
+markerForward = 2.7
+markerRight = -2.6
+markerOffset = 0.7
+
 suitabilityForward = 5
 suitabilityRight = 0
+
 letterboxForward = 10
 letterboxRight = 0
 
@@ -219,13 +268,44 @@ function generateDominantSymbols()
     local color = players[i]
     local cards = Player[color].getHandObjects()
     local playerHand = Player[color].getPlayerHand()
+    local symbols = {
+        💎 = 0,
+        👑 = 0,
+        🙏 = 0,
+        🌹 = 0,
+        🗡 = 0
+    }
 
     -- Add up all symbols, ignoring desires
     local j = 1
     while cards[j] != nil do
-      if cards[j].getName() == "Desire" then
-        -- TODO:  Count here
+      local card = cards[j]
+      if card.getName() != "Desire" then
+        for symbol, val in pairs(symbolMap[card.getGUID() % 100]) do
+            symbols[symbol] = symbols[symbol] + val
+        end
       end
+      for symbol, total in pairs(symbols) do
+        marker = getObjectFromGUID(crests[color][symbol])
+        if total > 0 then
+            side = 0;
+        elseif total < 0 then
+            side = 180;
+        end
+
+        if total == 0 then
+            marker.destruct()
+        else
+          marker.setPosition({
+            playerHand.pos_x + playerHand.trigger_forward_x * markerForward + playerHand.trigger_right_x * (markerRight + offset * markerOffset),
+            playerHand.pos_y + playerHand.trigger_forward_y * markerForward + playerHand.trigger_right_y * (markerRight + offset * markerOffset),
+            playerHand.pos_z + playerHand.trigger_forward_z * markerForward + playerHand.trigger_right_z * (markerRight + offset * markerOffset)
+          })
+          marker.setRotation({playerHand.rot_x, playerHand.rot_y + 180, playerHand.rot_z + side})
+          marker.setLock(true)
+        end
+      end
+      print(symbols)
       j = j + 1
     end
     i = i + 1
