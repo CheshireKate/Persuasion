@@ -1,3 +1,5 @@
+symbolMap = { { title = 1, passion = 1, faith = -1 }, { faith = 1, passion = -1, title = -1 }, { title = 1, passion = 1, wealth = -1 }, { wealth = 1, passion = -1, title = -1 }, { title = 1, passion = 1, daring = -1 }, { daring = 1, title = -1, passion = -1 }, { title = 1, faith = 1, passion = -1 }, { passion = 1, title = -1, faith = -1 }, { faith = 1, title = 1, wealth = -1 }, { wealth = 1, faith = -1, title = -1 }, { title = 1, faith = 1, daring = -1 }, { daring = 1, faith = -1, title = -1 }, { title = 1, daring = 1, faith = -1 }, { faith = 1, daring = -1, title = -1 }, { title = 1, daring = 1, passion = -1 }, { passion = 1, daring = -1, title = -1 }, { title = 1, daring = 1, wealth = -1 }, { wealth = 1, daring = -1, title = -1 }, { wealth = 1, title = 1, faith = -1 }, { faith = 1, wealth = -1, title = -1 }, { title = 1, wealth = 1, passion = -1 }, { passion = 1, title = -1, wealth = -1 }, { wealth = 1, title = 1, daring = -1 }, { daring = 1, title = -1, wealth = -1 }, { faith = 1, passion = 1, wealth = -1 }, { wealth = 1, faith = -1, passion = -1 }, { faith = 1, passion = 1, title = -1 }, { title = 1, passion = -1, faith = -1 }, { passion = 1, faith = 1, daring = -1 }, { daring = 1, passion = -1, faith = -1 }, { passion = 1, daring = 1, faith = -1 }, { faith = 1, passion = -1, daring = -1 }, { passion = 1, daring = 1, wealth = -1 }, { wealth = 1, daring = -1, passion = -1 }, { daring = 1, passion = 1, title = -1 }, { title = 1, daring = -1, passion = -1 }, { wealth = 1, passion = 1, faith = -1 }, { faith = 1, passion = -1, wealth = -1 }, { wealth = 1, passion = 1, title = -1 }, { title = 1, passion = -1, wealth = -1 }, { wealth = 1, passion = 1, daring = -1 }, { daring = 1, passion = -1, wealth = -1 }, { faith = 1, daring = 1, wealth = -1 }, { wealth = 1, daring = -1, faith = -1 }, { faith = 1, daring = 1, passion = -1 }, { passion = 1, daring = -1, faith = -1 }, { faith = 1, daring = 1, title = -1 }, { title = 1, daring = -1, faith = -1 }, { wealth = 1, faith = 1, passion = -1 }, { passion = 1, faith = -1, wealth = -1 }, { faith = 1, wealth = 1, title = -1 }, { title = 1, faith = -1, wealth = -1 }, { wealth = 1, faith = 1, daring = -1 }, { daring = 1, faith = -1, wealth = -1 }, { wealth = 1, daring = 1, faith = -1 }, { faith = 1, daring = -1, wealth = -1 }, { wealth = 1, daring = 1, passion = -1 }, { passion = 1, daring = -1, wealth = -1 }, { wealth = 1, daring = 1, title = -1 }, { title = 1, daring = -1, wealth = -1 } }
+
 crests = {
   White = {
     Name = "White Horse",
@@ -6,7 +8,12 @@ crests = {
     TrackerIndex = 1,
     TrackerStacks = {"e98c5a", "b2deb6", "a932e6", "09d69a", "8edafd", "cf2c94", "62a5fc"},
     SuitabilityBoard = "b8922a",
-    LetterboxBoard = "aafa0f"
+    LetterboxBoard = "aafa0f",
+    wealth  = "c1c04f",
+    title   = "f07491",
+    faith   = "384a14",
+    passion = "776155",
+    daring  = "fa968d"
   },
   Pink = {
     Name = "Pink Horn",
@@ -15,7 +22,12 @@ crests = {
     TrackerIndex = 1,
     TrackerStacks = {"19bd3c", "19aad4", "1c6d19", "657fbe", "cfbabc", "4e167f", "6577a9"},
     SuitabilityBoard = "824ff6",
-    LetterboxBoard = "8ad41c"
+    LetterboxBoard = "8ad41c",
+    wealth  = "e47bd7",
+    title   = "6bc44d",
+    faith   = "ecfdb5",
+    passion = "ecb31d",
+    daring  = "e0de38"
   },
   Purple = {
     Name = "Purple Clover",
@@ -24,7 +36,12 @@ crests = {
     TrackerIndex = 1,
     TrackerStacks = {"db7ab8", "aa4ef2", "3367de", "22fcf4", "442da1", "6e9757", "d88ba8"},
     SuitabilityBoard = "404c17",
-    LetterboxBoard = "14d618"
+    LetterboxBoard = "14d618",
+    wealth  = "7cd61c",
+    title   = "bcc104",
+    faith   = "fb954a",
+    passion = "ec8b33",
+    daring  = "de9abb"
   },
   Blue = {
     Name = "Blue Lion",
@@ -33,7 +50,12 @@ crests = {
     TrackerIndex = 1,
     TrackerStacks = {"841aa1", "767dd5", "921e85", "9ae86f", "5edb67", "598c26", "78174c"},
     SuitabilityBoard = "7b89fc",
-    LetterboxBoard = "baa942"
+    LetterboxBoard = "baa942",
+    wealth  = "96fa02",
+    title   = "e345ba",
+    faith   = "25d94c",
+    passion = "0e3b43",
+    daring  = "d7055a"
   },
   Green = {
     Name = "Green Tree",
@@ -42,7 +64,12 @@ crests = {
     TrackerIndex = 1,
     TrackerStacks = {"ecbd47", "bc3fc6", "8a77b1", "5d46d6", "987dce", "bb13ff", "21567e"},
     SuitabilityBoard = "b725ca",
-    LetterboxBoard = "c9aade"
+    LetterboxBoard = "c9aade",
+    wealth  = "af762b",
+    title   = "6e497d",
+    faith   = "213881",
+    passion = "5993a3",
+    daring  = "7aef30"
   },
   Yellow = {
     Name = "Yellow Lion",
@@ -51,16 +78,26 @@ crests = {
     TrackerIndex = 1,
     TrackerStacks = {"60209b", "f86110", "7297ba", "ebc86b", "3b6a5f", "8588b2", "a9a3cc"},
     SuitabilityBoard = "875bb3",
-    LetterboxBoard = "05f0b7"
+    LetterboxBoard = "05f0b7",
+    wealth  = "b62dae",
+    title   = "268774",
+    faith   = "e0f2dc",
+    passion = "caa75e",
+    daring  = "e7d95c"
   },
   Brown = {
     Name = "Black Dog",
     SleeveState = 2,
     ProposeState = 3,
     TrackerIndex = 1,
-    TrackerStacks = {"0f22e8", "0e5f1d", "257679", "30f8da", "33642d", "faefb3", "ce9c8d"},
+    TrackerStacks = {"ca3a92", "0e5f1d", "257679", "30f8da", "33642d", "faefb3", "ce9c8d"},
     SuitabilityBoard = "62705e",
-    LetterboxBoard = "1e45d5"
+    LetterboxBoard = "1e45d5",
+    wealth  = "7909f8",
+    title   = "ff2b04",
+    faith   = "3ef015",
+    passion = "1f435d",
+    daring  = "9d9de1"
   },
   Teal = {
     Name = "Cyan Shield",
@@ -69,17 +106,29 @@ crests = {
     TrackerIndex = 1,
     TrackerStacks = {"01bdba", "f8ad83", "1b7610", "a93442", "06526d", "2412ea", "1f8e33"},
     SuitabilityBoard = "74a578",
-    LetterboxBoard = "21ea2e"
+    LetterboxBoard = "21ea2e",
+    wealth  = "2a7db3",
+    title   = "e8e336",
+    faith   = "c73809",
+    passion = "e9635a",
+    daring  = "744b5a"
   }
 }
 
 deckGUID = "100000"
 traitCount = 5
+
 trackerForward = 2.7
 trackerRight = -2.6
 trackerOffset = 0.7
+
+markerForward = 4.7
+markerRight = -2.6
+markerOffset = 1.1
+
 suitabilityForward = 5
 suitabilityRight = 0
+
 letterboxForward = 10
 letterboxRight = 0
 
@@ -97,9 +146,9 @@ traits = {
 function onLoad()
   getObjectFromGUID(deckGUID).shuffle()
   params = {
-    click_function = "setupTraits",
+    click_function = "generateDominantSymbols",
     function_owner = self,
-    label          = "Setup",
+    label          = "End Game",
     position       = {0, 1, 0},
     rotation       = {0, 180, 0},
     width          = 800,
@@ -107,7 +156,7 @@ function onLoad()
     font_size      = 340,
     color          = {0.5, 0.5, 0.5},
     font_color     = {1, 1, 1},
-    tooltip        = "Setup Persuasion for all seated players!",
+    tooltip        = "Automatically calculate dominant symbols for Matrimony!\n\nMake sure all your cards are in your hand at the end of the game for this to work!",
   }
   self.createButton(params)
 end
@@ -209,4 +258,55 @@ function sleeveCards()
 
   -- Remove button afterwards
   self.destruct()
+end
+
+-- Calculate player dominant symbols based on cards in hand.
+function generateDominantSymbols()
+  local players = getSeatedPlayers()
+  local i = 1
+  while players[i] != nil do
+    local color = players[i]
+    local cards = Player[color].getHandObjects()
+    local playerHand = Player[color].getPlayerHand()
+    local symbols = {
+        wealth = 0,
+        title = 0,
+        faith = 0,
+        passion = 0,
+        daring = 0
+    }
+
+    -- Add up all symbols, ignoring desires
+    local j = 1
+    while cards[j] != nil do
+      local card = cards[j]
+      if card.getName() != "Desire" then
+        for symbol, val in pairs(symbolMap[(card.getGUID() % 100) + 1]) do
+            symbols[symbol] = symbols[symbol] + val
+        end
+      end
+      j = j + 1
+    end
+    local offset = 1
+    for symbol, total in pairs(symbols) do
+      marker = getObjectFromGUID(crests[color][symbol])
+      if total > 0 then
+        side = 180;
+      elseif total < 0 then
+        side = 0;
+      end
+
+      if total != 0 then
+        marker.setPosition({
+          playerHand.pos_x + playerHand.trigger_forward_x * markerForward + playerHand.trigger_right_x * (markerRight + offset * markerOffset),
+          playerHand.pos_y + playerHand.trigger_forward_y * markerForward + playerHand.trigger_right_y * (markerRight + offset * markerOffset),
+          playerHand.pos_z + playerHand.trigger_forward_z * markerForward + playerHand.trigger_right_z * (markerRight + offset * markerOffset)
+        })
+        marker.setRotation({playerHand.rot_x, playerHand.rot_y + 180, playerHand.rot_z + side})
+        marker.setLock(true)
+        offset = offset + 1
+      end
+    end
+    i = i + 1
+  end
 end
