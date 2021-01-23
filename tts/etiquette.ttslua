@@ -90,7 +90,7 @@ crests = {
     SleeveState = 2,
     ProposeState = 3,
     TrackerIndex = 1,
-    TrackerStacks = {"ca3a92", "0e5f1d", "257679", "30f8da", "33642d", "faefb3", "ce9c8d"},
+    TrackerStacks = {"0f22e8", "0e5f1d", "257679", "30f8da", "33642d", "faefb3", "ce9c8d"},
     SuitabilityBoard = "62705e",
     LetterboxBoard = "1e45d5",
     wealth  = "7909f8",
@@ -196,6 +196,11 @@ function setupTraits()
     local offset = 1
     while players[j] != nil do
       if players[j] != color then
+        print(players[j])
+        print(crests)
+        print(crests[players[j]])
+        print(crests[players[j]]["TrackerStacks"])
+        print(crests[players[j]]["TrackerStacks"])
         local trackerStack = getObjectFromGUID(crests[players[j]]["TrackerStacks"][crests[players[j]]["TrackerIndex"]])
         trackerStack.setPosition({
             playerHand.pos_x + playerHand.trigger_forward_x * trackerForward + playerHand.trigger_right_x * (trackerRight + offset * trackerOffset),
