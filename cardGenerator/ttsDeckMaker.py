@@ -5,6 +5,7 @@ cardCount = 60
 
 base = {
     'deckID': 1,
+    'tts_color': "None",
     'name': 'Desire',
     'description': 'Win if you marry a player with a sum of symbols matching these!\\n\\n{}'.format(traitDescription),
     'face': 'http://cloud-3.steamusercontent.com/ugc/1763690300926687774/00AAB5731322E6ACE25AF538B851C0450F87A764/',
@@ -14,6 +15,7 @@ base = {
 decks = [
     {
         'deckID': 2,
+        'tts_color': "Brown",
         'name': 'Black Dog Trait',
         'description': traitDescription,
         'face': 'http://cloud-3.steamusercontent.com/ugc/1763690300926688118/64D59B76B6869DC60A4F28737B26F455E1E02B88/',
@@ -21,6 +23,7 @@ decks = [
     },
     {
         'deckID': 3,
+        'tts_color': "Brown",
         'name': 'Black Dog Proposal Trait',
         'description': proposalDescription.format('Black Dog'),
         'face': 'http://cloud-3.steamusercontent.com/ugc/1763690300926688118/64D59B76B6869DC60A4F28737B26F455E1E02B88/',
@@ -28,6 +31,7 @@ decks = [
     },
     {
         'deckID': 4,
+        'tts_color': "Blue",
         'name': 'Blue Lion Trait',
         'description': traitDescription,
         'face': 'http://cloud-3.steamusercontent.com/ugc/1763690300926688462/16D2C9016910A8165D9593F7A4A1C7102281B167/',
@@ -35,6 +39,7 @@ decks = [
     },
     {
         'deckID': 5,
+        'tts_color': "Blue",
         'name': 'Blue Lion Proposal Trait',
         'description': proposalDescription.format('Blue Lion'),
         'face': 'http://cloud-3.steamusercontent.com/ugc/1763690300926688462/16D2C9016910A8165D9593F7A4A1C7102281B167/',
@@ -42,6 +47,7 @@ decks = [
     },
     {
         'deckID': 6,
+        'tts_color': "Green",
         'name': 'Green Tree Trait',
         'description': traitDescription,
         'face': 'http://cloud-3.steamusercontent.com/ugc/1763690300926688844/C41B289DA5CE2A7B4FDA0B143055495EC2FA2655/',
@@ -49,6 +55,7 @@ decks = [
     },
     {
         'deckID': 7,
+        'tts_color': "Green",
         'name': 'Green Tree Proposal Trait',
         'description': proposalDescription.format('Green Tree'),
         'face': 'http://cloud-3.steamusercontent.com/ugc/1763690300926688844/C41B289DA5CE2A7B4FDA0B143055495EC2FA2655/',
@@ -56,6 +63,7 @@ decks = [
     },
     {
         'deckID': 8,
+        'tts_color': "Teal",
         'name': 'Cyan Shield Trait',
         'description': traitDescription,
         'face': 'http://cloud-3.steamusercontent.com/ugc/1763690300926690289/F260A17C84D42A9F6B0FCEC89E86342C4DAC50CB/',
@@ -63,6 +71,7 @@ decks = [
     },
     {
         'deckID': 9,
+        'tts_color': "Teal",
         'name': 'Cyan Shield Proposal Trait',
         'description': proposalDescription.format('Cyan Shield'),
         'face': 'http://cloud-3.steamusercontent.com/ugc/1763690300926690289/F260A17C84D42A9F6B0FCEC89E86342C4DAC50CB/',
@@ -70,6 +79,7 @@ decks = [
     },
     {
         'deckID': 10,
+        'tts_color': "Yellow",
         'name': 'Yellow Sun Trait',
         'description': traitDescription,
         'face': 'http://cloud-3.steamusercontent.com/ugc/1763690300926691211/24306E64697B1D2F4BB824AF8088C99F9CCADC0C/',
@@ -77,6 +87,7 @@ decks = [
     },
     {
         'deckID': 11,
+        'tts_color': "Yellow",
         'name': 'Yellow Sun Proposal Trait',
         'description': proposalDescription.format('Yellow Sun'),
         'face': 'http://cloud-3.steamusercontent.com/ugc/1763690300926691211/24306E64697B1D2F4BB824AF8088C99F9CCADC0C/',
@@ -84,6 +95,7 @@ decks = [
     },
     {
         'deckID': 12,
+        'tts_color': "Pink",
         'name': 'Pink Horn Trait',
         'description': traitDescription,
         'face': 'http://cloud-3.steamusercontent.com/ugc/1763690300926689273/FA0AAD3297B2155EB532837F6773BF8DF260F051/',
@@ -91,6 +103,7 @@ decks = [
     },
     {
         'deckID': 13,
+        'tts_color': "Pink",
         'name': 'Pink Horn Proposal Trait',
         'description': proposalDescription.format('Pink Horn'),
         'face': 'http://cloud-3.steamusercontent.com/ugc/1763690300926689273/FA0AAD3297B2155EB532837F6773BF8DF260F051/',
@@ -98,6 +111,7 @@ decks = [
     },
     {
         'deckID': 14,
+        'tts_color': "Purple",
         'name': 'Purple Clover Trait',
         'description': traitDescription,
         'face': 'http://cloud-3.steamusercontent.com/ugc/1763690300926689762/C4024A3EB125DE1896E8D375F952D2C250C3AC9D/',
@@ -105,6 +119,7 @@ decks = [
     },
     {
         'deckID': 15,
+        'tts_color': "Purple",
         'name': 'Purple Clover Proposal Trait',
         'description': proposalDescription.format('Purple Clover'),
         'face': 'http://cloud-3.steamusercontent.com/ugc/1763690300926689762/C4024A3EB125DE1896E8D375F952D2C250C3AC9D/',
@@ -112,6 +127,7 @@ decks = [
     },
     {
         'deckID': 16,
+        'tts_color': "White",
         'name': 'White Horse Trait',
         'description': traitDescription,
         'face': 'http://cloud-3.steamusercontent.com/ugc/1763690300926690835/3C0BD8A5E589ED85DFE69246C3247156196BB8FE/',
@@ -119,6 +135,7 @@ decks = [
     },
     {
         'deckID': 17,
+        'tts_color': "White",
         'name': 'White Horse Proposal Trait',
         'description': proposalDescription.format('White Horse'),
         'face': 'http://cloud-3.steamusercontent.com/ugc/1763690300926690835/3C0BD8A5E589ED85DFE69246C3247156196BB8FE/',
@@ -217,7 +234,7 @@ card = '''{{
           }},
           "Nickname": "{name}",
           "Description": "{description}",
-          "GMNotes": "",
+          "GMNotes": "{tts_color}",
           "ColorDiffuse": {{
             "r": 0.713235259,
             "g": 0.713235259,
@@ -273,7 +290,7 @@ state = '''"{deckID:d}": {{
               }},
               "Nickname": "{name}",
               "Description": "{description}",
-              "GMNotes": "",
+              "GMNotes": "{tts_color}",
               "ColorDiffuse": {{
                 "r": 0.713235259,
                 "g": 0.713235259,

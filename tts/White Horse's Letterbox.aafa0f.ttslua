@@ -1,0 +1,46 @@
+wait_id = 0
+color = "White"
+
+function onLoad(save_state)
+    self.createButton({
+      click_function = "nothing",
+      function_owner = self,
+      label = '0',
+      position = {-0.75, 1.1, 0.25},
+      scale = {1.5, 1.5, 1.5},
+      width = 0,
+      height = 0,
+      font_size = 120
+    })
+    wait_id = Wait.time(sortMail, 1, -1)
+end
+
+function onDestroy()
+    Wait.stop(wait_id)
+end
+
+function nothing()
+end
+
+function sortMail()
+    items = Physics.cast({
+        origin       = self.positionToWorld({1.00, 0.2, 0.1}),
+        direction    = self.getTransformUp(),
+        type         = 3,
+        size         = {1, 0.1, 1},
+        max_distance = 0.2,
+    })
+    takeParams = {
+        position = self.positionToWorld({2.20, 0.2, 0.1})
+    }
+    for _, item in ipairs(items) do
+        if item.hit_object.tag == "Deck" then
+            for _, card in ipairs(item.hit_object.getObjects()) do
+                if card.gm_notes == color then
+                    takeParams["guid"] = card.guid
+                    item.hit_object.takeObject(takeParams)
+                end
+            end
+        end
+    end
+end
