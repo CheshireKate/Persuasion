@@ -244,6 +244,18 @@ symbolNames = {
     '🌹': 'passion',
     '🗡': 'daring'
 }
+desireCount = {
+    '＋💎': 0,
+    '＋👑': 0,
+    '＋🙏': 0,
+    '＋🌹': 0,
+    '＋🗡': 0,
+    '－💎': 0,
+    '－👑': 0,
+    '－🙏': 0,
+    '－🌹': 0,
+    '－🗡': 0
+}
 
 # Convert CSV to cards
 with open('resources/Persuasion - Trait Effects.csv', 'r', encoding="utf-8") as input:
@@ -271,6 +283,7 @@ with open('resources/Persuasion - Trait Effects.csv', 'r', encoding="utf-8") as 
                 if first:
                     first = False
                     params['desires'] += val
+                    desireCount[val] += 1
                 else:
                     params['extras'] += val
                 if sign == "＋":
@@ -283,6 +296,11 @@ with open('resources/Persuasion - Trait Effects.csv', 'r', encoding="utf-8") as 
 # Write a lua object mapping cards to their desires characters
 with open('symbolMap.lua', 'w', encoding="utf-8") as f:
     f.write('symbolMap = { { ' + ' }, { '.join([', '.join(x) for x in symbolMap]) + ' } }')
+
+# Write a lua object mapping cards to their desires characters
+with open('desireTotal.csv', 'w', encoding="utf-8") as f:
+    for symbol, count in sorted(desireCount.items(), key=lambda x: x[1], reverse=True):
+        f.write(symbol + ',' + str(count) + '\n')
 
 # Generate desires without border
 writeCards(cards, 'traits-desires', style=styles['traits'].format('None', '100%', '100%'))
