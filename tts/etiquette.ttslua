@@ -196,11 +196,6 @@ function setupTraits()
     local offset = 1
     while players[j] != nil do
       if players[j] != color then
-        print(players[j])
-        print(crests)
-        print(crests[players[j]])
-        print(crests[players[j]]["TrackerStacks"])
-        print(crests[players[j]]["TrackerStacks"])
         local trackerStack = getObjectFromGUID(crests[players[j]]["TrackerStacks"][crests[players[j]]["TrackerIndex"]])
         trackerStack.setPosition({
             playerHand.pos_x + playerHand.trigger_forward_x * trackerForward + playerHand.trigger_right_x * (trackerRight + offset * trackerOffset),
@@ -299,35 +294,45 @@ function generateDominantSymbols()
 end
 
 function sortMail(owner)
-    items = Physics.cast({
-        origin       = self.positionToWorld({1.00, 0.2, 0.1}),
-        direction    = self.getTransformUp(),
-        type         = 3,
-        size         = {1, 0.1, 1},
-        max_distance = 0.2,
-    })
-    takeParams = {
-        position = self.positionToWorld({0.70, 0.2, 0.1}),
-        smooth = false
-    }
-    stillLast = true
-    for _, item in ipairs(items) do
-        if item.hit_object.tag == "Deck" then
-            cards = item.hit_object.getObjects()
-            for i = #cards, 1, -1 do
-                card = cards[i]
-                if card.gm_notes != owner and stillLast then
-                    stillLast = false
-                elseif card.gm_notes == owner and not stillLast then
-                    takeParams["guid"] = card.guid
-                    item.hit_object.takeObject(takeParams)
-                    item.hit_object.setPosition(self.positionToWorld({0.70, 0.3, 0.1}))
-                    break
-                end
-            end
+  local items = Physics.cast({
+      origin       = self.positionToWorld({1.00, 0.2, 0.1}),
+      direction    = self.getTransformUp(),
+      type         = 3,
+      size         = {1, 0.1, 1},
+      max_distance = 0.2,
+  })
+  local takeParams = {
+    position = self.positionToWorld({0.70, 0.2, 0.1}),
+      smooth = false
+  }
+  local stillLast = true
+  local otherCard = nil
+  for _, item in ipairs(items) do
+    if item.hit_object.tag == "Deck" then
+      local cards = item.hit_object.getObjects()
+      for i = #cards, 1, -1 do
+        local card = cards[i]
+        if card.gm_notes != owner and stillLast then
+          if #cards == 2 then
+            otherCard = card.guid
+          end
+          stillLast = false
+        elseif card.gm_notes == owner and not stillLast then
+          if otherCard == nil then
+            takeParams["guid"] = card.guid
+            item.hit_object.takeObject(takeParams)
+            item.hit_object.setPosition(self.positionToWorld({0.70, 0.3, 0.1}))
+          else
+            takeParams["guid"] = otherCard
+            takeParams["position"] = self.positionToWorld({0.70, 0.3, 0.1})
+            item.hit_object.takeObject(takeParams)
+          end
+          break
         end
-        if not stillLast then
-            break
-        end
+      end
     end
+    if not stillLast then
+      break
+    end
+  end
 end
