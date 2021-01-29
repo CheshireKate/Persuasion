@@ -205,7 +205,16 @@ styles = {
         }}
 
         {}
-        '''
+        ''',
+
+    'distribution': '''
+          font-size: 72;
+        }
+
+        span {
+          font-weight: bold;
+        }
+    '''
 }
 
 def writeCards(originalCards, name, style=None, sheetColumns=10, sheetRows=5):
@@ -246,14 +255,14 @@ symbolNames = {
 }
 desireCount = {
     '＋💎': 0,
-    '＋👑': 0,
-    '＋🙏': 0,
-    '＋🌹': 0,
-    '＋🗡': 0,
     '－💎': 0,
+    '＋👑': 0,
     '－👑': 0,
+    '＋🙏': 0,
     '－🙏': 0,
+    '＋🌹': 0,
     '－🌹': 0,
+    '＋🗡': 0,
     '－🗡': 0
 }
 
@@ -297,17 +306,28 @@ with open('resources/Persuasion - Trait Effects.csv', 'r', encoding="utf-8") as 
 with open('symbolMap.lua', 'w', encoding="utf-8") as f:
     f.write('symbolMap = { { ' + ' }, { '.join([', '.join(x) for x in symbolMap]) + ' } }')
 
-# Write a lua object mapping cards to their desires characters
-with open('desireTotal.csv', 'w', encoding="utf-8") as f:
-    for symbol, count in sorted(desireCount.items(), key=lambda x: x[1], reverse=True):
-        f.write(symbol + ',' + str(count) + '\n')
-
 # Generate desires without border
 writeCards(cards, 'traits-desires', style=styles['traits'].format('None', '100%', '100%'))
 
 # Generate trait cards with borders for each player
 for color, hex in crests.items():
     writeCards(cards, 'traits-{}'.format(color), style=styles['traits'].format(hex, '94%', '96%'))
+
+total = len(cards)
+
+cards = []
+# Generate table for distribution
+with open('desireTotal.csv', 'w', encoding="utf-8") as f:
+    for symbol, count in sorted(desireCount.items(), key=lambda x: x[1], reverse=True):
+        f.write(symbol + ',' + str(count) + '\n')
+
+row = 0
+for symbol, count in desireCount.items():
+    cards.append(symbol + ' <span>' + str(count) + '/' + str(total) + '</span>')
+    row += 1
+    if row % 2 == 0:
+        cards.extend(['']*4)
+writeCards(cards, 'distribution', style=styles['distribution'], sheetColumns=6, sheetRows=10)
 
 # Generate suited one offs (Rings)
 cards = ['<div id="{}"></div>'.format(color) for color in crests.keys()]
