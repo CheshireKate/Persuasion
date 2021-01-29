@@ -27,7 +27,7 @@ decks = [
         'name': 'Black Dog Proposal Trait',
         'description': proposalDescription.format('Black Dog'),
         'face': 'http://cloud-3.steamusercontent.com/ugc/1763690913107403801/DB2FEBE96052EE669456CDBBC0A90390533CDCB7/',
-        'back': 'http://cloud-3.steamusercontent.com/ugc/1656728318303095848/0A7AFF3697B60BA7CA97B64DD6C409BE9083F83A/'
+        'back': 'http://cloud-3.steamusercontent.com/ugc/1759187568538498026/962810ED4ED2F9B2E62FABD3C4C599978B30005C/'
     },
     {
         'deckID': 4,
@@ -43,7 +43,7 @@ decks = [
         'name': 'Blue Lion Proposal Trait',
         'description': proposalDescription.format('Blue Lion'),
         'face': 'http://cloud-3.steamusercontent.com/ugc/1763690913107404206/F8480D3C562779A1587A531EA7B2C0E7CCE93D99/',
-        'back': 'http://cloud-3.steamusercontent.com/ugc/1656728318303217985/F8CD11616ADF2BD97534E88EC4AACCD547120743/'
+        'back': 'http://cloud-3.steamusercontent.com/ugc/1759187568538498284/5FC4CBACF0F571ED430841C92E3754D8D6CE17F2/'
     },
     {
         'deckID': 6,
@@ -59,7 +59,7 @@ decks = [
         'name': 'Green Tree Proposal Trait',
         'description': proposalDescription.format('Green Tree'),
         'face': 'http://cloud-3.steamusercontent.com/ugc/1763690913107404760/6B1D4ADD210C9996BC762AEE2DD8E307FA16495B/',
-        'back': 'http://cloud-3.steamusercontent.com/ugc/1656728318303219997/6B4832110703E9D9AFDA8F0460CE849B90C170BE/'
+        'back': 'http://cloud-3.steamusercontent.com/ugc/1759187568538498539/1BAEDA08AA76C0ADBD9C139D682897EB6B2201EA/'
     },
     {
         'deckID': 8,
@@ -75,7 +75,7 @@ decks = [
         'name': 'Cyan Shield Proposal Trait',
         'description': proposalDescription.format('Cyan Shield'),
         'face': 'http://cloud-3.steamusercontent.com/ugc/1763690913107654864/C5AEAD3954958CC34A4D9728C0EBDE40C1061BCF/',
-        'back': 'http://cloud-3.steamusercontent.com/ugc/1656728318303223836/3806BBC397E987E184F11B5443CE7BEE64EA3527/'
+        'back': 'http://cloud-3.steamusercontent.com/ugc/1759187568538499363/C1DDBDC1172E0E5AB3004783DF89E448C9635BFF/'
     },
     {
         'deckID': 10,
@@ -91,7 +91,7 @@ decks = [
         'name': 'Yellow Sun Proposal Trait',
         'description': proposalDescription.format('Yellow Sun'),
         'face': 'http://cloud-3.steamusercontent.com/ugc/1763690913107408400/AE6D02702BA176F79C71477ADC35AF1FB8036CB3/',
-        'back': 'http://cloud-3.steamusercontent.com/ugc/1656728318303226537/BD2BBB72ADE5A3E06909B54A1971B9696C389719/'
+        'back': 'http://cloud-3.steamusercontent.com/ugc/1759187568538500065/3072E62FCB02DEB8520D8EA5A4379B581AFE417D/'
     },
     {
         'deckID': 12,
@@ -107,7 +107,7 @@ decks = [
         'name': 'Pink Horn Proposal Trait',
         'description': proposalDescription.format('Pink Horn'),
         'face': 'http://cloud-3.steamusercontent.com/ugc/1763690913107405463/428851A544E0C127686A1BF92B737768C1C3BE9E/',
-        'back': 'http://cloud-3.steamusercontent.com/ugc/1656728318303221269/266EE39298790D5C9FC6BA07628D5948D45A4C56/'
+        'back': 'http://cloud-3.steamusercontent.com/ugc/1759187568538498866/AB6C753CAE2B1CCCD9DC37317362AEC7A56170AC/'
     },
     {
         'deckID': 14,
@@ -123,7 +123,7 @@ decks = [
         'name': 'Purple Clover Proposal Trait',
         'description': proposalDescription.format('Purple Clover'),
         'face': 'http://cloud-3.steamusercontent.com/ugc/1763690913107405955/BD41BD8CD7C0130B23868B51B4157CCD6DD25691/',
-        'back': 'http://cloud-3.steamusercontent.com/ugc/1656728318303222594/156898DB26CD619099155063CE19F4987CD3365C/'
+        'back': 'http://cloud-3.steamusercontent.com/ugc/1759187568538499090/162CB1755035B4857B49FC344DD0059CAD1CEFA1/'
     },
     {
         'deckID': 16,
@@ -139,7 +139,7 @@ decks = [
         'name': 'White Horse Proposal Trait',
         'description': proposalDescription.format('White Horse'),
         'face': 'http://cloud-3.steamusercontent.com/ugc/1763690913107407864/4D4701ABF60D506EC1124101F5AC3989F7B84ADD/',
-        'back': 'http://cloud-3.steamusercontent.com/ugc/1656728318303225317/CF5F1D6DD0715981594F7B5B7147442146FB2C63/'
+        'back': 'http://cloud-3.steamusercontent.com/ugc/1759187568538499683/3D55C1D6D99E59A2834091B5409192C26230A372/'
     }
 ]
 
