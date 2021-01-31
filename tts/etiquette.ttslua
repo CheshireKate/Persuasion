@@ -1,3 +1,20 @@
+sortTimer = 4
+startOffset = 0.5
+
+trackerForward = 2.7
+trackerRight = -2.6
+trackerOffset = 0.7
+
+markerForward = 4.7
+markerRight = -2.6
+markerOffset = 1.1
+
+suitabilityForward = 5
+suitabilityRight = 0
+
+letterboxForward = 10
+letterboxRight = 0
+
 symbolMap = { {     title = 1,     passion = 1,     faith = -1 }, {     faith = 1,     passion = -1,     title = -1 }, {     title = 1,     passion = 1,     wealth = -1 }, {     wealth = 1,     passion = -1,     title = -1 }, {     title = 1,     passion = 1,     daring = -1 }, {     daring = 1,     title = -1,     passion = -1 }, {     title = 1,     faith = 1,     passion = -1 }, {     passion = 1,     faith = -1,     title = -1 }, {     faith = 1,     title = 1,     wealth = -1 }, {     wealth = 1,     faith = -1,     title = -1 }, {     title = 1,     faith = 1,     daring = -1 }, {     daring = 1,     faith = -1,     title = -1 }, {     title = 1,     daring = 1,     faith = -1 }, {     faith = 1,     daring = -1,     title = -1 }, {     title = 1,     daring = 1,     passion = -1 }, {     passion = 1,     daring = -1,     title = -1 }, {     title = 1,     daring = 1,     wealth = -1 }, {     wealth = 1,     daring = -1,     title = -1 }, {     wealth = 1,     title = 1,     faith = -1 }, {     faith = 1,     title = -1,     wealth = -1 }, {     wealth = 1,     title = 1,     passion = -1 }, {     passion = 1,     title = -1,     wealth = -1 }, {     wealth = 1,     title = 1,     daring = -1 }, {     daring = 1,     title = -1,     wealth = -1 }, {     faith = 1,     passion = 1,     wealth = -1 }, {     wealth = 1,     passion = -1,     faith = -1 }, {     faith = 1,     passion = 1,     title = -1 }, {     title = 1,     passion = -1,     faith = -1 }, {     faith = 1,     passion = 1,     daring = -1 }, {     daring = 1,     passion = -1,     faith = -1 }, {     passion = 1,     daring = 1,     faith = -1 }, {     faith = 1,     passion = -1,     daring = -1 }, {     passion = 1,     daring = 1,     wealth = -1 }, {     wealth = 1,     daring = -1,     passion = -1 }, {     passion = 1,     daring = 1,     title = -1 }, {     title = 1,     daring = -1,     passion = -1 }, {     wealth = 1,     passion = 1,     faith = -1 }, {     faith = 1,     passion = -1,     wealth = -1 }, {     wealth = 1,     passion = 1,     title = -1 }, {     title = 1,     passion = -1,     wealth = -1 }, {     wealth = 1,     passion = 1,     daring = -1 }, {     daring = 1,     passion = -1,     wealth = -1 }, {     faith = 1,     daring = 1,     wealth = -1 }, {     wealth = 1,     daring = -1,     faith = -1 }, {     faith = 1,     daring = 1,     passion = -1 }, {     passion = 1,     daring = -1,     faith = -1 }, {     daring = 1,     faith = 1,     title = -1 }, {     title = 1,     daring = -1,     faith = -1 }, {     wealth = 1,     faith = 1,     passion = -1 }, {     passion = 1,     faith = -1,     wealth = -1 }, {     wealth = 1,     faith = 1,     title = -1 }, {     title = 1,     faith = -1,     wealth = -1 }, {     wealth = 1,     faith = 1,     daring = -1 }, {     daring = 1,     faith = -1,     wealth = -1 }, {     wealth = 1,     daring = 1,     faith = -1 }, {     faith = 1,     daring = -1,     wealth = -1 }, {     wealth = 1,     daring = 1,     passion = -1 }, {     passion = 1,     daring = -1,     wealth = -1 }, {     wealth = 1,     daring = 1,     title = -1 }, {     title = 1,     daring = -1,     wealth = -1 } }
 
 crests = {
@@ -116,21 +133,6 @@ crests = {
 }
 
 deckGUID = "100000"
-traitCount = 5
-
-trackerForward = 2.7
-trackerRight = -2.6
-trackerOffset = 0.7
-
-markerForward = 4.7
-markerRight = -2.6
-markerOffset = 1.1
-
-suitabilityForward = 5
-suitabilityRight = 0
-
-letterboxForward = 10
-letterboxRight = 0
 
 traits = {
   White = {},
