@@ -219,6 +219,7 @@ end
 
 -- Sleeve cards then draw desires card
 function sleeveCards()
+  local deck = getObjectFromGUID(deckGUID)
   local players = getSeatedPlayers()
   local i = 1
   while players[i] != nil do
@@ -238,7 +239,25 @@ function sleeveCards()
   end
 
   -- Deal one desire card afterwards
-  getObjectFromGUID(deckGUID).deal(1)
+  deck.deal(1)
+  local rotation = deck.getRotation()
+
+  local count = #players
+  local discards = nil
+
+  -- Deal cards based on number of players
+  if count == 3 then
+    discards = deck.cut(21)[2]
+  elseif count == 4 then
+    discards = deck.cut(12)[2]
+  elseif count == 5 then
+    discards = deck.cut(5)[2]
+  end
+
+  if discards != nil then
+    discards.setPositionSmooth({1.23, 3.00, 0.11}, false, false)
+    discards.setRotation({0, 180, 180})
+  end
 
   -- Remove button afterwards
   self.destruct()
