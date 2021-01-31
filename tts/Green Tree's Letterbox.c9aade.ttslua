@@ -3,7 +3,11 @@
 wait_id = 0
 
 function onLoad(save_state)
-    wait_id = Wait.time(function() sortMail("Green") end, 1, -1)
+    wait_id = Wait.time(function() startSorter() end, 3 * startOffset)
+end
+
+function startSorter()
+    wait_id = Wait.time(function() sortMail("Green") end, sortTimer, -1)
 end
 
 function onDestroy()
