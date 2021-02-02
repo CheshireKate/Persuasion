@@ -266,6 +266,17 @@ desireCount = {
     '－🗡': 0
 }
 
+baseValue = 10101
+valueMap = {
+    '💎': 1,
+    '👑': 100,
+    '🙏': 10000,
+    '🌹':  0,
+    '🗡':  0
+}
+
+bitMap = []
+
 # Convert CSV to cards
 with open('resources/Persuasion - Trait Effects.csv', 'r', encoding="utf-8") as input:
     cardDetails = csv.DictReader(input)
@@ -284,6 +295,7 @@ with open('resources/Persuasion - Trait Effects.csv', 'r', encoding="utf-8") as 
             '🌹': '',
             '🗡': ''
         }
+        cardValue = baseValue
         for sign in ["＋", "－"]:
             first = True
             for symbol in row[sign]:
@@ -297,10 +309,107 @@ with open('resources/Persuasion - Trait Effects.csv', 'r', encoding="utf-8") as 
                     params['extras'] += val
                 if sign == "＋":
                     symbolMap[i].append(symbolTemplate.format(symbolNames[symbol], '1'))
+                    cardValue += valueMap[symbol]
                 else:
                     symbolMap[i].append(symbolTemplate.format(symbolNames[symbol], '-1'))
+                    cardValue -= valueMap[symbol]
+        bitMap.append(cardValue)
 
         cards.append(traitCard.format(**params))
+
+# Our test baseline desire card
+bitMap.remove(202)
+
+handSizes = [10, 9, 8, 7, 6, 5]
+
+# Write a lua object mapping cards to their desires characters
+with open('probability.txt', 'w', encoding="utf-8") as f:
+    for handSize in handSizes:
+        possibleHands = 0
+        singleMatch = 0
+        doubleMatch = 0
+        tripleMatch = 0
+        anyTwo = 0
+        anyOne = 0
+        almostSingle = 0
+        almostDouble = 0
+        almostTriple = 0
+        almostAnyTwo = 0
+        almostAnyOne = 0
+
+        for hand in combinations(bitMap, handSize):
+            possibleHands += 1
+            matches = [0, 0, 0]
+            almostMatches = [0, 0, 0]
+            total = sum(hand)
+            if (total - (total % 10000)) < (handSize * 10000):
+                matches[0] = 1
+            if (total - (total % 10000)) <= (handSize * 10000):
+                almostMatches[0] = 1
+            total = total % 10000
+            if (total - (total % 100)) > (handSize * 100):
+                matches[1] = 1
+            if (total - (total % 100)) >= (handSize * 100):
+                almostMatches[1] = 1
+            total = total % 100
+            if total > handSize:
+                matches[2] = 1
+            if total >= handSize:
+                almostMatches[2] = 1
+            if matches[0] > 0:
+                singleMatch += 1
+            if almostMatches[0] > 0:
+                almostSingle += 1
+            if matches[0] + matches[1] > 1:
+                doubleMatch += 1
+            if almostMatches[0] + almostMatches[1] > 1:
+                almostDouble += 1
+            total = sum(matches)
+            almostTotal = sum(almostMatches)
+            if total > 2:
+                tripleMatch += 1
+            if total > 1:
+                anyTwo += 1
+            if total > 0:
+                anyOne += 1
+
+            if almostTotal > 2:
+                almostTriple += 1
+            if almostTotal > 1:
+                almostAnyTwo += 1
+            if almostTotal > 0:
+                almostAnyOne += 1
+
+            if possibleHands % 100000000 == 0:
+                print("Hand size: {}".format(handSize))
+                print("   Calculated {} so far...".format(possibleHands))
+                print("   Triple: {:05.2f}% = {}/{}".format(((tripleMatch / possibleHands) * 100.0), tripleMatch, possibleHands))
+                print("   Double: {:05.2f}% = {}/{}".format(((doubleMatch / possibleHands) * 100.0), doubleMatch, possibleHands))
+                print("   Single: {:05.2f}% = {}/{}".format(((singleMatch / possibleHands) * 100.0), singleMatch, possibleHands))
+                print("   AnyTwo: {:05.2f}% = {}/{}".format(((anyTwo / possibleHands) * 100.0), anyTwo, possibleHands))
+                print("   AnyOne: {:05.2f}% = {}/{}".format(((anyOne / possibleHands) * 100.0), anyOne, possibleHands))
+                print("  The following are almost matches, off by one")
+                print("   Triple: {:05.2f}% = {}/{}".format(((almostTriple / possibleHands) * 100.0), almostTriple, possibleHands))
+                print("   Double: {:05.2f}% = {}/{}".format(((almostDouble / possibleHands) * 100.0), almostDouble, possibleHands))
+                print("   Single: {:05.2f}% = {}/{}".format(((almostSingle / possibleHands) * 100.0), almostSingle, possibleHands))
+                print("   AnyTwo: {:05.2f}% = {}/{}".format(((almostAnyTwo / possibleHands) * 100.0), almostAnyTwo, possibleHands))
+                print("   AnyOne: {:05.2f}% = {}/{}".format(((almostAnyOne / possibleHands) * 100.0), almostAnyOne, possibleHands))
+                print("")
+
+        f.write("Hand size: {}".format(handSize))
+        f.write("   Calculated {} total".format(possibleHands))
+        f.write("   Triple: {:05.2f}% = {}/{}".format(((tripleMatch / possibleHands) * 100.0), tripleMatch, possibleHands))
+        f.write("   Double: {:05.2f}% = {}/{}".format(((doubleMatch / possibleHands) * 100.0), doubleMatch, possibleHands))
+        f.write("   Single: {:05.2f}% = {}/{}".format(((singleMatch / possibleHands) * 100.0), singleMatch, possibleHands))
+        f.write("   AnyTwo: {:05.2f}% = {}/{}".format(((anyTwo / possibleHands) * 100.0), anyTwo, possibleHands))
+        f.write("   AnyOne: {:05.2f}% = {}/{}".format(((anyOne / possibleHands) * 100.0), anyOne, possibleHands))
+        f.write("  The following are almost matches, off by one")
+        f.write("   Triple: {:05.2f}% = {}/{}".format(((almostTriple / possibleHands) * 100.0), almostTriple, possibleHands))
+        f.write("   Double: {:05.2f}% = {}/{}".format(((almostDouble / possibleHands) * 100.0), almostDouble, possibleHands))
+        f.write("   Single: {:05.2f}% = {}/{}".format(((almostSingle / possibleHands) * 100.0), almostSingle, possibleHands))
+        f.write("   AnyTwo: {:05.2f}% = {}/{}".format(((almostAnyTwo / possibleHands) * 100.0), almostAnyTwo, possibleHands))
+        f.write("   AnyOne: {:05.2f}% = {}/{}".format(((almostAnyOne / possibleHands) * 100.0), almostAnyOne, possibleHands))
+        f.write("")
 
 # Write a lua object mapping cards to their desires characters
 with open('symbolMap.lua', 'w', encoding="utf-8") as f:
