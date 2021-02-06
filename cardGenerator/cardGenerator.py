@@ -88,12 +88,12 @@ crestSection = '''
 traitCard = '''<div class="container">
     <table class="innerTrait">
         <tr>
-            <td rowspan="5" class="contents">
-                <div class="symbols"><span class="desiresText">{desires}</span></div>
-                <div class="symbols"><span class="extrasText">{extras}</span></div>
-                <div class="title">{title}</div>
+            <td class="symbolColumn"><div class="symbolCalc">{💎}</div></td>
+            <td rowspan="5" class="contentsColumn">
+                <div class="contents">
+                    <div class="title">{title}</div>
+                </div>
             </td>
-            <td class="symbolCell"><div class="symbolCalc">{💎}</div></td>
         </tr>
         <tr><td class="symbolCell"><div class="symbolCalc">{👑}</div></td></tr>
         <tr><td class="symbolCell"><div class="symbolCalc">{🙏}</div></td></tr>
@@ -102,6 +102,13 @@ traitCard = '''<div class="container">
     </table>
 </div>'''
 
+desireCard = '''<div class="container">
+    <br/>
+    <br/>
+    <div class="title">{title}</div>
+    <div class="condition"><span class="fancy">Prim victory</span><br/>if you marry a suitor with a net<span class="symbol"> +{need} </span></div>
+    <div class="condition"><span class="fancy">Proper victory</span><br/>if you have both a<br/>net<span class="symbol"> +{need} </span>and net<span class="symbol"> +{ambition}</span></div>
+</div>'''
 
 styles = {
     'traits': '''
@@ -137,12 +144,19 @@ styles = {
           font-weight: bold;
           vertical-align: top;
           text-align: center;
-          font-size: 48;
+          font-size: 42;
+          padding-top: 15%;
+        }}
+
+        .contentsColumn {{
+          height: 100%;
+          width: 95%;
         }}
 
         .contents {{
           height: 100%;
-          width: 95%;
+          width: 100%;
+          margin-left: 4%;
         }}
 
         .desiresText {{
@@ -153,30 +167,79 @@ styles = {
 
         .symbolColumn {{
           width: 5%;
-          height: 95%;
-          margin-top: 5%;
+          height: 20%;
+          vertical-align: middle;
+          text-align: center;
         }}
 
         .symbolCell {{
           height: 20%;
-          width: 100%;
+          width: 5%;
           vertical-align: middle;
           text-align: center;
         }}
 
         .symbolCalc {{
-          margin-left: -100px;
-          margin-right: -80px;
-          margin-top: 30px;
+          margin-left: -60px;
+          margin-right: -100px;
+          margin-top: 10px;
           font-family: Symbola;
           vertical-align: middle;
 
           text-align: center;
-          font-size: 32;
+          font-size: 48;
 
-          transform: rotate(90deg);
+          transform: rotate(270deg);
         }}
         ''',
+
+    'desires': '''
+        }
+
+        .container {
+          width: 100%;
+          height: 100%;
+          margin: auto;
+
+          background:url("resources/traitFront.jpg") no-repeat center center ;
+        }
+
+        .title {
+          height: 23%;
+          font-family: Gentium Book Basic;
+          font-style: italic;
+          font-weight: bold;
+          vertical-align: top;
+          text-align: center;
+          font-size: 64;
+        }
+
+        .fancy {
+          font-weight: bolder;
+          font-size: 52;
+        }
+
+        .condition {
+          height: 38%;
+          margin-top: 4%;
+          margin-top: 2%;
+          font-family: Gentium Book Basic;
+          font-style: italic;
+          font-weight: bold;
+          vertical-align: top;
+          text-align: center;
+          font-size: 42;
+        }
+
+        .symbol {
+          font-family: Symbola;
+          font-style: normal;
+          font-weight: normal;
+          vertical-align: top;
+          text-align: center;
+          font-size: 46;
+        }
+    ''',
 
     'markers': '''
           background:url("resources/marker.jpg") no-repeat center center ;
@@ -228,7 +291,7 @@ def writeCards(originalCards, name, style=None, sheetColumns=10, sheetRows=5):
     pages = []
     cards = originalCards[:]
 
-    if len(cards) <= sheetColumns:
+    if len(cards) <= sheetColumns * 2:
         split = ceil(len(cards) / 2)
         cards = cards[:split] + [''] * (sheetColumns - split) + cards[split:]
 
@@ -253,18 +316,6 @@ symbolNames = {
     '🌹': 'passion',
     '🗡': 'daring'
 }
-desireCount = {
-    '＋💎': 0,
-    '－💎': 0,
-    '＋👑': 0,
-    '－👑': 0,
-    '＋🙏': 0,
-    '－🙏': 0,
-    '＋🌹': 0,
-    '－🌹': 0,
-    '＋🗡': 0,
-    '－🗡': 0
-}
 
 # Convert CSV to cards
 with open('resources/Persuasion - Trait Effects.csv', 'r', encoding="utf-8") as input:
@@ -274,9 +325,7 @@ with open('resources/Persuasion - Trait Effects.csv', 'r', encoding="utf-8") as 
             break
         symbolMap.append([])
         params = {
-            'desires': '',
             'modifiers': '',
-            'extras': '',
             'title': row['Name'],
             '💎': '',
             '👑': '',
@@ -285,20 +334,14 @@ with open('resources/Persuasion - Trait Effects.csv', 'r', encoding="utf-8") as 
             '🗡': ''
         }
         for sign in ["＋", "－"]:
-            first = True
             for symbol in row[sign]:
                 val = sign + symbol
-                params[symbol] = val
-                if first:
-                    first = False
-                    params['desires'] += val
-                    desireCount[val] += 1
-                else:
-                    params['extras'] += val
                 if sign == "＋":
                     symbolMap[i].append(symbolTemplate.format(symbolNames[symbol], '1'))
+                    params[symbol] = val
                 else:
                     symbolMap[i].append(symbolTemplate.format(symbolNames[symbol], '-1'))
+                    params[symbol] = val
 
         cards.append(traitCard.format(**params))
 
@@ -306,31 +349,50 @@ with open('resources/Persuasion - Trait Effects.csv', 'r', encoding="utf-8") as 
 with open('symbolMap.lua', 'w', encoding="utf-8") as f:
     f.write('symbolMap = { { ' + ' }, { '.join([', '.join(x) for x in symbolMap]) + ' } }')
 
-# Generate desires without border
-writeCards(cards, 'traits-desires', style=styles['traits'].format('None', '100%', '100%'))
+# Generate traits without border
+writeCards(cards, 'traits-unsleeved', style=styles['traits'].format('None', '100%', '100%'))
 
 # Generate trait cards with borders for each player
 for color, hex in crests.items():
     writeCards(cards, 'traits-{}'.format(color), style=styles['traits'].format(hex, '94%', '96%'))
 
-total = len(cards)
-
+desireCount = {
+    '💎': 4,
+    '👑': 4,
+    '🙏': 3,
+    '🌹': 2,
+    '🗡': 1,
+}
+total = 14
 cards = []
-# Generate table for distribution
-with open('desireTotal.csv', 'w', encoding="utf-8") as f:
-    for symbol, count in sorted(desireCount.items(), key=lambda x: x[1], reverse=True):
-        f.write(symbol + ',' + str(count) + '\n')
 
 row = 0
 for symbol, count in desireCount.items():
     cards.append(symbol + ' <span>' + str(count) + '/' + str(total) + '</span>')
-    row += 1
-    if row % 2 == 0:
-        cards.extend(['']*4)
+cards.extend(['']*16)
 writeCards(cards, 'distribution', style=styles['distribution'], sheetColumns=6, sheetRows=10)
 
-# Generate suited one offs (Rings)
+cards = []
+
+# Convert CSV to cards
+with open('resources/Persuasion - Desires.csv', 'r', encoding="utf-8") as input:
+    cardDetails = csv.DictReader(input)
+    for i, row in enumerate(cardDetails):
+        if i == total:
+            break
+        symbolMap.append([])
+        params = {
+            'title': 'Desires', #row['Name'],
+            'need': row['❤'],
+            'ambition': row['♤']
+        }
+        cards.append(desireCard.format(**params))
+
+# Generate traits without border
+writeCards(cards, 'desires')
+
 cards = ['<div id="{}"></div>'.format(color) for color in crests.keys()]
+# Generate suited one offs (Rings)
 
 for crestType in crestCards:
     styleSections = []
