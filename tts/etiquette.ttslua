@@ -1,7 +1,7 @@
 sortTimer = 4
 startOffset = 0.5
 
-trackerForward = 2.7
+trackerForward = 7.7
 trackerRight = -2.6
 trackerOffset = 0.7
 
@@ -20,8 +20,7 @@ symbolMap = { {     title = 1,     passion = 1,     faith = -1 }, {     faith = 
 crests = {
   White = {
     Name = "White Horse",
-    SleeveState = 16,
-    ProposeState = 17,
+    SleeveState = 9,
     TrackerIndex = 1,
     TrackerStacks = {"e98c5a", "b2deb6", "a932e6", "09d69a", "8edafd", "cf2c94", "62a5fc"},
     SuitabilityBoard = "b8922a",
@@ -34,8 +33,7 @@ crests = {
   },
   Pink = {
     Name = "Pink Horn",
-    SleeveState = 12,
-    ProposeState = 13,
+    SleeveState = 7,
     TrackerIndex = 1,
     TrackerStacks = {"19bd3c", "19aad4", "1c6d19", "657fbe", "cfbabc", "4e167f", "6577a9"},
     SuitabilityBoard = "824ff6",
@@ -48,8 +46,7 @@ crests = {
   },
   Purple = {
     Name = "Purple Clover",
-    SleeveState = 14,
-    ProposeState = 15,
+    SleeveState = 8,
     TrackerIndex = 1,
     TrackerStacks = {"db7ab8", "aa4ef2", "3367de", "22fcf4", "442da1", "6e9757", "d88ba8"},
     SuitabilityBoard = "404c17",
@@ -62,8 +59,7 @@ crests = {
   },
   Blue = {
     Name = "Blue Lion",
-    SleeveState = 4,
-    ProposeState = 5,
+    SleeveState = 3,
     TrackerIndex = 1,
     TrackerStacks = {"841aa1", "767dd5", "921e85", "9ae86f", "5edb67", "598c26", "78174c"},
     SuitabilityBoard = "7b89fc",
@@ -76,8 +72,7 @@ crests = {
   },
   Green = {
     Name = "Green Tree",
-    SleeveState = 6,
-    ProposeState = 7,
+    SleeveState = 4,
     TrackerIndex = 1,
     TrackerStacks = {"ecbd47", "bc3fc6", "8a77b1", "5d46d6", "987dce", "bb13ff", "21567e"},
     SuitabilityBoard = "b725ca",
@@ -90,8 +85,7 @@ crests = {
   },
   Yellow = {
     Name = "Yellow Lion",
-    SleeveState = 10,
-    ProposeState = 11,
+    SleeveState = 6,
     TrackerIndex = 1,
     TrackerStacks = {"60209b", "f86110", "7297ba", "ebc86b", "3b6a5f", "8588b2", "a9a3cc"},
     SuitabilityBoard = "875bb3",
@@ -105,7 +99,6 @@ crests = {
   Brown = {
     Name = "Black Dog",
     SleeveState = 2,
-    ProposeState = 3,
     TrackerIndex = 1,
     TrackerStacks = {"0f22e8", "0e5f1d", "257679", "30f8da", "33642d", "faefb3", "ce9c8d"},
     SuitabilityBoard = "62705e",
@@ -118,8 +111,7 @@ crests = {
   },
   Teal = {
     Name = "Cyan Shield",
-    SleeveState = 8,
-    ProposeState = 9,
+    SleeveState = 5,
     TrackerIndex = 1,
     TrackerStacks = {"01bdba", "f8ad83", "1b7610", "a93442", "06526d", "2412ea", "1f8e33"},
     SuitabilityBoard = "74a578",
@@ -133,6 +125,7 @@ crests = {
 }
 
 deckGUID = "100000"
+desireGUID = "195abd"
 
 traits = {
   White = {},
@@ -230,7 +223,7 @@ function sleeveCards()
     -- Sleeve all unsleeve cards in hand
     local j = 1
     while cards[j] != nil do
-      if cards[j].getName() == "Desire" then
+      if cards[j].getName() == "Trait" then
         cards[j].setState(crests[color]["SleeveState"])
       end
       j = j + 1
@@ -239,7 +232,8 @@ function sleeveCards()
   end
 
   -- Deal one desire card afterwards
-  deck.deal(1)
+  getObjectFromGUID(desireGUID).deal(1)
+
   local rotation = deck.getRotation()
 
   local count = #players
@@ -247,11 +241,17 @@ function sleeveCards()
 
   -- Deal cards based on number of players
   if count == 3 then
-    discards = deck.cut(21)[2]
+    discards = deck.cut(24)[2]
   elseif count == 4 then
-    discards = deck.cut(12)[2]
+    discards = deck.cut(16)[2]
   elseif count == 5 then
-    discards = deck.cut(5)[2]
+    discards = deck.cut(10)[2]
+  elseif count == 6 then
+    discards = deck.cut(6)[2]
+  elseif count == 7 then
+    discards = deck.cut(4)[2]
+  elseif count == 8 then
+    discards = deck.cut(4)[2]
   end
 
   if discards != nil then
@@ -283,7 +283,8 @@ function generateDominantSymbols()
     local j = 1
     while cards[j] != nil do
       local card = cards[j]
-      if card.getName() != "Desire" then
+      if card.getName() != "Desires" then
+        print(card.getGUID())
         for symbol, val in pairs(symbolMap[(card.getGUID() % 100) + 1]) do
             symbols[symbol] = symbols[symbol] + val
         end
@@ -299,7 +300,7 @@ function generateDominantSymbols()
         side = 0;
       end
 
-      if total != 0 then
+      if total > 0 then
         marker.setPosition({
           playerHand.pos_x + playerHand.trigger_forward_x * markerForward + playerHand.trigger_right_x * (markerRight + offset * markerOffset),
           playerHand.pos_y + playerHand.trigger_forward_y * markerForward + playerHand.trigger_right_y * (markerRight + offset * markerOffset),
@@ -311,49 +312,5 @@ function generateDominantSymbols()
       end
     end
     i = i + 1
-  end
-end
-
-function sortMail(owner)
-  local items = Physics.cast({
-      origin       = self.positionToWorld({1.00, 0.2, 0.1}),
-      direction    = self.getTransformUp(),
-      type         = 3,
-      size         = {1, 0.1, 1},
-      max_distance = 0.2,
-  })
-  local takeParams = {
-    position = self.positionToWorld({0.70, 0.2, 0.1}),
-      smooth = false
-  }
-  local stillLast = true
-  local otherCard = nil
-  for _, item in ipairs(items) do
-    if item.hit_object.tag == "Deck" then
-      local cards = item.hit_object.getObjects()
-      for i = #cards, 1, -1 do
-        local card = cards[i]
-        if card.gm_notes != owner and stillLast then
-          if #cards == 2 then
-            otherCard = card.guid
-          end
-          stillLast = false
-        elseif card.gm_notes == owner and not stillLast then
-          if otherCard == nil then
-            takeParams["guid"] = card.guid
-            item.hit_object.takeObject(takeParams)
-            item.hit_object.setPosition(self.positionToWorld({0.70, 0.3, 0.1}))
-          else
-            takeParams["guid"] = otherCard
-            takeParams["position"] = self.positionToWorld({0.70, 0.3, 0.1})
-            item.hit_object.takeObject(takeParams)
-          end
-          break
-        end
-      end
-    end
-    if not stillLast then
-      break
-    end
   end
 end
