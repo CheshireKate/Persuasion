@@ -284,7 +284,6 @@ function generateDominantSymbols()
     while cards[j] != nil do
       local card = cards[j]
       if card.getName() != "Desires" then
-        print(card.getGUID())
         for symbol, val in pairs(symbolMap[(card.getGUID() % 100) + 1]) do
             symbols[symbol] = symbols[symbol] + val
         end
