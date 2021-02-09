@@ -96,11 +96,10 @@ traitCard = '''<div class="container">
 </div>'''
 
 desireCard = '''<div class="container">
-    <br/>
-    <br/>
+    <div class="cornerSymbol {need}">{need}</div>
     <div class="title">{title}</div>
-    <div class="condition"><span class="fancy">Prim victory</span><br/>if you marry a suitor with <span class="symbol {need}">{need}{need}{need}</span></div>
-    <div class="condition"><span class="fancy">Proper victory</span><br/>if you personally have <br/><span class="symbol {need}">{need}{need}{need}{need}</span></div>
+    <div class="prim condition"><span class="fancy">Prim victory</span><br/>if you marry a suitor with <span class="symbol {need}">{need}{need}{need}</span></div>
+    <div class="proper condition"><span class="fancy">Proper victory</span><br/>if you personally have <br/><span class="symbol {need}">{need}{need}{need}{need}</span></div>
 </div>'''
 
 styles = {
@@ -184,6 +183,8 @@ styles = {
           vertical-align: top;
           text-align: center;
           font-size: 64;
+          margin-top: -7%;
+          margin-bottom: -7%;
         }
 
         .fancy {
@@ -193,14 +194,35 @@ styles = {
 
         .condition {
           height: 38%;
-          margin-top: 4%;
-          margin-top: 2%;
           font-family: Gentium Book Basic;
           font-style: italic;
           font-weight: bold;
           vertical-align: top;
           text-align: center;
           font-size: 42;
+        }
+
+        .prim {
+          margin-top: 6%;
+        }
+
+        .proper {
+          margin-top: 1%;
+        }
+
+        .cornerSymbol {
+          height: auto;
+          width: 100%;
+          margin-left: 3%;
+          vertical-align: top;
+          font-family: Symbola;
+          text-align: left;
+          font-size: 72;
+          text-shadow:
+            -2px -2px 0 #000,
+            2px -2px 0 #000,
+            -2px 2px 0 #000,
+            2px 2px 0 #000;
         }
 
         .symbol {

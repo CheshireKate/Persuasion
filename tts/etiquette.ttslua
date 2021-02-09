@@ -4,27 +4,19 @@ desireGUID = "798914"
 sortTimer = 4
 startOffset = 0.5
 
-trackerForward = 8.4
-trackerRight = -2.6
-trackerOffset = 0.7
-
-markerForward = 4.7
-markerRight = -2.6
-markerOffset = 1.1
-
-suitabilityForward = 5
-suitabilityRight = 0
-
-letterboxForward = 12
+letterboxForward = 8.5
 letterboxRight = 0
 
-ringForward = 12
+ringForward = 8.5
 ringRight = 2.8
 
-actionForward = 8.5
+heartTokenForward = 19
+heartTokenRight = 0
+
+actionForward = 5
 actionRight = 0
 
-stampForward = 15
+stampForward = 11
 stampRight = 0
 
 crests = {
@@ -32,10 +24,10 @@ crests = {
     Name = "White Horse",
     SleeveState = 9,
     StampStack = "970799",
-    ProprietyCard = "5de28b",
     LetterboxCard = "23507a",
     Ring = "f08f60",
-    ActionCard = "865e05",
+    ActionCard = "997e26",
+    HeartToken = "e9012e",
     wealth  = "c1c04f",
     title   = "f07491",
     passion = "776155"
@@ -45,10 +37,10 @@ crests = {
     SleeveState = 7,
     TrackerIndex = 1,
     StampStack = "251fe6",
-    ProprietyCard = "66db42",
     LetterboxCard = "ba099f",
     Ring = "dc100b",
-    ActionCard = "e8a7a7",
+    ActionCard = "941a1e",
+    HeartToken = "241ea6",
     wealth  = "e47bd7",
     title   = "6bc44d",
     passion = "ecb31d"
@@ -58,10 +50,10 @@ crests = {
     SleeveState = 8,
     TrackerIndex = 1,
     StampStack = "9d9905",
-    ProprietyCard = "99f216",
     LetterboxCard = "991302",
     Ring = "73a302",
-    ActionCard = "2ac261",
+    ActionCard = "ba61ea",
+    HeartToken = "66fcf6",
     wealth  = "7cd61c",
     title   = "bcc104",
     passion = "ec8b33"
@@ -71,10 +63,10 @@ crests = {
     SleeveState = 3,
     TrackerIndex = 1,
     StampStack = "acd122",
-    ProprietyCard = "1228d3",
     LetterboxCard = "8ff957",
     Ring = "b46ebf",
-    ActionCard = "b490e0",
+    ActionCard = "e127f7",
+    HeartToken = "07a310",
     wealth  = "96fa02",
     title   = "e345ba",
     passion = "0e3b43"
@@ -84,10 +76,10 @@ crests = {
     SleeveState = 4,
     TrackerIndex = 1,
     StampStack = "32f564",
-    ProprietyCard = "25f64f",
     LetterboxCard = "58862e",
     Ring = "096d0c",
-    ActionCard = "d5c025",
+    ActionCard = "ae2c76",
+    HeartToken = "ec9718",
     wealth  = "af762b",
     title   = "6e497d",
     passion = "5993a3"
@@ -97,10 +89,10 @@ crests = {
     SleeveState = 6,
     TrackerIndex = 1,
     StampStack = "b1cb03",
-    ProprietyCard = "0482c0",
     LetterboxCard = "07a2d4",
     Ring = "049e25",
-    ActionCard = "1385a3",
+    ActionCard = "523812",
+    HeartToken = "1ba7a2",
     wealth  = "b62dae",
     title   = "268774",
     passion = "caa75e"
@@ -110,10 +102,10 @@ crests = {
     SleeveState = 2,
     TrackerIndex = 1,
     StampStack = "05d788",
-    ProprietyCard = "fe8104",
     LetterboxCard = "94733d",
     Ring = "4c4495",
     ActionCard = "0390ce",
+    HeartToken = "45e8e2",
     wealth  = "7909f8",
     title   = "ff2b04",
     passion = "1f435d"
@@ -123,10 +115,10 @@ crests = {
     SleeveState = 5,
     TrackerIndex = 1,
     StampStack = "695718",
-    ProprietyCard = "153918",
     LetterboxCard = "ceddc1",
     Ring = "19cf1f",
-    ActionCard = "ae10a7",
+    ActionCard = "e7b01e",
+    HeartToken = "2a4b4f",
     wealth  = "2a7db3",
     title   = "e8e336",
     passion = "e9635a"
@@ -134,22 +126,17 @@ crests = {
 }
 
 notPlaying = { "White", "Pink", "Purple", "Blue", "Green", "Yellow", "Brown", "Teal" }
-toClean = { "ProprietyCard", "LetterboxCard", "Ring", "ActionCard", "wealth", "title", "passion" }
+toClean = { "LetterboxCard", "Ring", "ActionCard", "HeartToken", "wealth", "title", "passion" }
 
 function positionBoards()
   for color, data in pairs(crests) do
     local playerHand = Player[color].getPlayerHand()
-    local suitabilityBoard = getObjectFromGUID(data["ProprietyCard"])
     local letterboxBoard = getObjectFromGUID(data["LetterboxCard"])
     local actionCard = getObjectFromGUID(data["ActionCard"])
+    local heartToken = getObjectFromGUID(data["HeartToken"])
     local stampStack = getObjectFromGUID(data["StampStack"])
     local ring = getObjectFromGUID(data["Ring"])
 
-    suitabilityBoard.setPosition({
-        playerHand.pos_x + playerHand.trigger_forward_x * suitabilityForward + playerHand.trigger_right_x * suitabilityRight,
-        playerHand.pos_y + playerHand.trigger_forward_y * suitabilityForward + playerHand.trigger_right_y * suitabilityRight,
-        playerHand.pos_z + playerHand.trigger_forward_z * suitabilityForward + playerHand.trigger_right_z * suitabilityRight
-      })
     letterboxBoard.setPosition({
         playerHand.pos_x + playerHand.trigger_forward_x * letterboxForward + playerHand.trigger_right_x * letterboxRight,
         playerHand.pos_y + playerHand.trigger_forward_y * letterboxForward + playerHand.trigger_right_y * letterboxRight,
@@ -170,11 +157,16 @@ function positionBoards()
         playerHand.pos_y + playerHand.trigger_forward_y * ringForward + playerHand.trigger_right_y * ringRight,
         playerHand.pos_z + playerHand.trigger_forward_z * ringForward + playerHand.trigger_right_z * ringRight
       })
-    suitabilityBoard.setRotation({playerHand.rot_x, playerHand.rot_y + 180, playerHand.rot_z})
+    heartToken.setPosition({
+        playerHand.pos_x + playerHand.trigger_forward_x * heartTokenForward + playerHand.trigger_right_x * heartTokenRight,
+        playerHand.pos_y + playerHand.trigger_forward_y * heartTokenForward + playerHand.trigger_right_y * heartTokenRight,
+        playerHand.pos_z + playerHand.trigger_forward_z * heartTokenForward + playerHand.trigger_right_z * heartTokenRight
+      })
     letterboxBoard.setRotation({playerHand.rot_x, playerHand.rot_y + 180, playerHand.rot_z})
     actionCard.setRotation({playerHand.rot_x, playerHand.rot_y + 180, playerHand.rot_z})
     stampStack.setRotation({playerHand.rot_x, playerHand.rot_y, playerHand.rot_z})
     ring.setRotation({playerHand.rot_x, playerHand.rot_y, playerHand.rot_z})
+    heartToken.setRotation({playerHand.rot_x, playerHand.rot_y, playerHand.rot_z})
   end
 end
 
@@ -214,8 +206,8 @@ function setupTraits()
       j = j + 1
     end
 
-    -- Flip propriety cards
-    getObjectFromGUID(crests[color]["ProprietyCard"]).flip()
+    -- Position Heart Tokens
+    -- getObjectFromGUID(crests[color]["HeartToken"]).setPositionSmooth({0, 1+(i * 0.5), 0}, true, false)
 
     i = i + 1
   end
@@ -248,9 +240,6 @@ function sleeveCards()
       j = j + 1
     end
 
-    -- Lock propriety cards
-    getObjectFromGUID(crests[color]["ProprietyCard"]).setLock(true)
-
     i = i + 1
   end
 
@@ -278,8 +267,8 @@ function sleeveCards()
   end
 
   if discards != nil then
-    discards.setPositionSmooth({1.23, 3.00, 0.11}, false, false)
-    discards.setRotation({0, 180, 180})
+    discards.setPositionSmooth({1.88, 3.00, -7.77}, false, false)
+    discards.setRotation({0, 270, 180})
   end
 
   -- Remove desires deck
