@@ -27,10 +27,7 @@ crests = {
     LetterboxCard = "23507a",
     Ring = "f08f60",
     ActionCard = "997e26",
-    HeartToken = "e9012e",
-    wealth  = "c1c04f",
-    title   = "f07491",
-    passion = "776155"
+    HeartToken = "e9012e"
   },
   Pink = {
     Name = "Pink Horn",
@@ -40,10 +37,7 @@ crests = {
     LetterboxCard = "ba099f",
     Ring = "dc100b",
     ActionCard = "941a1e",
-    HeartToken = "241ea6",
-    wealth  = "e47bd7",
-    title   = "6bc44d",
-    passion = "ecb31d"
+    HeartToken = "241ea6"
   },
   Purple = {
     Name = "Purple Clover",
@@ -53,10 +47,7 @@ crests = {
     LetterboxCard = "991302",
     Ring = "73a302",
     ActionCard = "ba61ea",
-    HeartToken = "66fcf6",
-    wealth  = "7cd61c",
-    title   = "bcc104",
-    passion = "ec8b33"
+    HeartToken = "66fcf6"
   },
   Blue = {
     Name = "Blue Lion",
@@ -66,10 +57,7 @@ crests = {
     LetterboxCard = "8ff957",
     Ring = "b46ebf",
     ActionCard = "e127f7",
-    HeartToken = "07a310",
-    wealth  = "96fa02",
-    title   = "e345ba",
-    passion = "0e3b43"
+    HeartToken = "07a310"
   },
   Green = {
     Name = "Green Tree",
@@ -79,10 +67,7 @@ crests = {
     LetterboxCard = "58862e",
     Ring = "096d0c",
     ActionCard = "ae2c76",
-    HeartToken = "ec9718",
-    wealth  = "af762b",
-    title   = "6e497d",
-    passion = "5993a3"
+    HeartToken = "ec9718"
   },
   Yellow = {
     Name = "Yellow Lion",
@@ -92,10 +77,7 @@ crests = {
     LetterboxCard = "07a2d4",
     Ring = "049e25",
     ActionCard = "523812",
-    HeartToken = "1ba7a2",
-    wealth  = "b62dae",
-    title   = "268774",
-    passion = "caa75e"
+    HeartToken = "1ba7a2"
   },
   Brown = {
     Name = "Black Dog",
@@ -105,10 +87,7 @@ crests = {
     LetterboxCard = "94733d",
     Ring = "4c4495",
     ActionCard = "0390ce",
-    HeartToken = "45e8e2",
-    wealth  = "7909f8",
-    title   = "ff2b04",
-    passion = "1f435d"
+    HeartToken = "45e8e2"
   },
   Teal = {
     Name = "Cyan Shield",
@@ -118,15 +97,12 @@ crests = {
     LetterboxCard = "ceddc1",
     Ring = "19cf1f",
     ActionCard = "e7b01e",
-    HeartToken = "2a4b4f",
-    wealth  = "2a7db3",
-    title   = "e8e336",
-    passion = "e9635a"
+    HeartToken = "2a4b4f"
   }
 }
 
 notPlaying = { "White", "Pink", "Purple", "Blue", "Green", "Yellow", "Brown", "Teal" }
-toClean = { "LetterboxCard", "Ring", "ActionCard", "HeartToken", "wealth", "title", "passion" }
+toClean = { "LetterboxCard", "Ring", "ActionCard", "HeartToken", "StampStack" }
 
 function positionBoards()
   for color, data in pairs(crests) do
