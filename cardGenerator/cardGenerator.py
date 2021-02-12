@@ -2,7 +2,10 @@ import csv
 from itertools import combinations
 from math import floor, ceil
 
-suits = set(['💎', '👑', '🙏', '🌹', '🗡'])
+traitTotal = 57
+desireTotal = 9
+
+suits = set(['💎', '👑', '🌹'])
 
 crests = {
     'black': '#000000',
@@ -86,28 +89,17 @@ crestSection = '''
 '''
 
 traitCard = '''<div class="container">
-    <table class="innerTrait">
-        <tr>
-            <td class="symbolColumn"><div class="symbolCalc">{💎}</div></td>
-            <td rowspan="5" class="contentsColumn">
-                <div class="contents">
-                    <div class="title">{title}</div>
-                </div>
-            </td>
-        </tr>
-        <tr><td class="symbolCell"><div class="symbolCalc">{👑}</div></td></tr>
-        <tr><td class="symbolCell"><div class="symbolCalc">{🙏}</div></td></tr>
-        <tr><td class="symbolCell"><div class="symbolCalc">{🌹}</div></td></tr>
-        <tr><td class="symbolCell"><div class="symbolCalc">{🗡}</div></td></tr>
-    </table>
+    <div class="symbol {symbol}">{symbol}</div>
+    <div class="contents">
+        <div class="title">{title}</div>
+    </div>
 </div>'''
 
 desireCard = '''<div class="container">
-    <br/>
-    <br/>
+    <div class="cornerSymbol {need}">{need}</div>
     <div class="title">{title}</div>
-    <div class="condition"><span class="fancy">Prim victory</span><br/>if you marry a suitor with a net<span class="symbol"> +{need} </span></div>
-    <div class="condition"><span class="fancy">Proper victory</span><br/>if you have both a<br/>net<span class="symbol"> +{need} </span>and net<span class="symbol"> +{ambition}</span></div>
+    <div class="prim condition"><span class="fancy">Prim victory</span><br/>if you marry a suitor with <span class="symbol {need}">{need}{need}{need}</span></div>
+    <div class="proper condition"><span class="fancy">Proper victory</span><br/>if you personally have <br/><span class="symbol {need}">{need}{need}{need}{need}</span></div>
 </div>'''
 
 styles = {
@@ -130,12 +122,19 @@ styles = {
           background:url("resources/traitFront.jpg") no-repeat center center ;
         }}
 
-        .symbols {{
+        .symbol {{
           height: auto;
           width: 100%;
+          margin-left: 3%;
           vertical-align: top;
+          font-family: Symbola;
           text-align: left;
           font-size: 72;
+          text-shadow:
+            -2px -2px 0 #000,
+            2px -2px 0 #000,
+            -2px 2px 0 #000,
+            2px 2px 0 #000;
         }}
 
         .title {{
@@ -145,51 +144,23 @@ styles = {
           vertical-align: top;
           text-align: center;
           font-size: 42;
-          padding-top: 15%;
-        }}
-
-        .contentsColumn {{
-          height: 100%;
-          width: 95%;
         }}
 
         .contents {{
           height: 100%;
           width: 100%;
-          margin-left: 4%;
         }}
 
-        .desiresText {{
+        .💎 {{
+          color: #717BF3;
         }}
 
-        .extrasText {{
+        .👑 {{
+          color: #FFB544;
         }}
 
-        .symbolColumn {{
-          width: 5%;
-          height: 20%;
-          vertical-align: middle;
-          text-align: center;
-        }}
-
-        .symbolCell {{
-          height: 20%;
-          width: 5%;
-          vertical-align: middle;
-          text-align: center;
-        }}
-
-        .symbolCalc {{
-          margin-left: -60px;
-          margin-right: -100px;
-          margin-top: 10px;
-          font-family: Symbola;
-          vertical-align: middle;
-
-          text-align: center;
-          font-size: 48;
-
-          transform: rotate(270deg);
+        .🌹 {{
+          color: #FF0000;
         }}
         ''',
 
@@ -201,7 +172,7 @@ styles = {
           height: 100%;
           margin: auto;
 
-          background:url("resources/traitFront.jpg") no-repeat center center ;
+          background:url("resources/desireFront.jpg") no-repeat center center ;
         }
 
         .title {
@@ -212,6 +183,8 @@ styles = {
           vertical-align: top;
           text-align: center;
           font-size: 64;
+          margin-top: -7%;
+          margin-bottom: -7%;
         }
 
         .fancy {
@@ -221,14 +194,35 @@ styles = {
 
         .condition {
           height: 38%;
-          margin-top: 4%;
-          margin-top: 2%;
           font-family: Gentium Book Basic;
           font-style: italic;
           font-weight: bold;
           vertical-align: top;
           text-align: center;
           font-size: 42;
+        }
+
+        .prim {
+          margin-top: 6%;
+        }
+
+        .proper {
+          margin-top: 1%;
+        }
+
+        .cornerSymbol {
+          height: auto;
+          width: 100%;
+          margin-left: 3%;
+          vertical-align: top;
+          font-family: Symbola;
+          text-align: left;
+          font-size: 72;
+          text-shadow:
+            -2px -2px 0 #000,
+            2px -2px 0 #000,
+            -2px 2px 0 #000,
+            2px 2px 0 #000;
         }
 
         .symbol {
@@ -238,6 +232,23 @@ styles = {
           vertical-align: top;
           text-align: center;
           font-size: 46;
+          text-shadow:
+            -1px -1px 0 #000,
+            1px -1px 0 #000,
+            -1px 1px 0 #000,
+            1px 1px 0 #000;
+        }
+
+        .💎 {
+          color: #717BF3;
+        }
+
+        .👑 {
+          color: #FFB544;
+        }
+
+        .🌹{
+          color: #FF0000;
         }
     ''',
 
@@ -312,37 +323,22 @@ symbolTemplate = '    {} = {}'
 symbolNames = {
     '💎': 'wealth',
     '👑': 'title',
-    '🙏': 'faith',
-    '🌹': 'passion',
-    '🗡': 'daring'
+    '🌹': 'passion'
 }
 
 # Convert CSV to cards
-with open('resources/Persuasion - Trait Effects.csv', 'r', encoding="utf-8") as input:
+with open('resources/Persuasion - Traits.csv', 'r', encoding="utf-8") as input:
     cardDetails = csv.DictReader(input)
     for i, row in enumerate(cardDetails):
-        if i == 60:
+        if i == traitTotal:
             break
         symbolMap.append([])
         params = {
             'modifiers': '',
             'title': row['Name'],
-            '💎': '',
-            '👑': '',
-            '🙏': '',
-            '🌹': '',
-            '🗡': ''
+            'symbol': row['Suit']
         }
-        for sign in ["＋", "－"]:
-            for symbol in row[sign]:
-                val = sign + symbol
-                if sign == "＋":
-                    symbolMap[i].append(symbolTemplate.format(symbolNames[symbol], '1'))
-                    params[symbol] = val
-                else:
-                    symbolMap[i].append(symbolTemplate.format(symbolNames[symbol], '-1'))
-                    params[symbol] = val
-
+        symbolMap[i].append(symbolTemplate.format(symbolNames[row['Suit']], '1'))
         cards.append(traitCard.format(**params))
 
 # Write a lua object mapping cards to their desires characters
@@ -358,17 +354,14 @@ for color, hex in crests.items():
 
 desireCount = {
     '💎': 4,
-    '👑': 4,
-    '🙏': 3,
-    '🌹': 2,
-    '🗡': 1,
+    '👑': 3,
+    '🌹': 2
 }
-total = 14
 cards = []
 
 row = 0
 for symbol, count in desireCount.items():
-    cards.append(symbol + ' <span>' + str(count) + '/' + str(total) + '</span>')
+    cards.append(symbol + ' <span>' + str(count) + '/' + str(desireTotal) + '</span>')
 cards.extend(['']*16)
 writeCards(cards, 'distribution', style=styles['distribution'], sheetColumns=6, sheetRows=10)
 
@@ -378,7 +371,7 @@ cards = []
 with open('resources/Persuasion - Desires.csv', 'r', encoding="utf-8") as input:
     cardDetails = csv.DictReader(input)
     for i, row in enumerate(cardDetails):
-        if i == total:
+        if i == desireTotal:
             break
         symbolMap.append([])
         params = {

@@ -1,169 +1,130 @@
+deckGUID = "100000"
+desireGUID = "798914"
+
 sortTimer = 4
 startOffset = 0.5
 
-trackerForward = 8.4
-trackerRight = -2.6
-trackerOffset = 0.7
-
-markerForward = 4.7
-markerRight = -2.6
-markerOffset = 1.1
-
-suitabilityForward = 5
-suitabilityRight = 0
-
-letterboxForward = 10
+letterboxForward = 8.5
 letterboxRight = 0
 
-symbolMap = { {     title = 1,     passion = 1,     faith = -1 }, {     faith = 1,     passion = -1,     title = -1 }, {     title = 1,     passion = 1,     wealth = -1 }, {     wealth = 1,     passion = -1,     title = -1 }, {     title = 1,     passion = 1,     daring = -1 }, {     daring = 1,     title = -1,     passion = -1 }, {     title = 1,     faith = 1,     passion = -1 }, {     passion = 1,     faith = -1,     title = -1 }, {     faith = 1,     title = 1,     wealth = -1 }, {     wealth = 1,     faith = -1,     title = -1 }, {     title = 1,     faith = 1,     daring = -1 }, {     daring = 1,     faith = -1,     title = -1 }, {     title = 1,     daring = 1,     faith = -1 }, {     faith = 1,     daring = -1,     title = -1 }, {     title = 1,     daring = 1,     passion = -1 }, {     passion = 1,     daring = -1,     title = -1 }, {     title = 1,     daring = 1,     wealth = -1 }, {     wealth = 1,     daring = -1,     title = -1 }, {     wealth = 1,     title = 1,     faith = -1 }, {     faith = 1,     title = -1,     wealth = -1 }, {     wealth = 1,     title = 1,     passion = -1 }, {     passion = 1,     title = -1,     wealth = -1 }, {     wealth = 1,     title = 1,     daring = -1 }, {     daring = 1,     title = -1,     wealth = -1 }, {     faith = 1,     passion = 1,     wealth = -1 }, {     wealth = 1,     passion = -1,     faith = -1 }, {     faith = 1,     passion = 1,     title = -1 }, {     title = 1,     passion = -1,     faith = -1 }, {     faith = 1,     passion = 1,     daring = -1 }, {     daring = 1,     passion = -1,     faith = -1 }, {     passion = 1,     daring = 1,     faith = -1 }, {     faith = 1,     passion = -1,     daring = -1 }, {     passion = 1,     daring = 1,     wealth = -1 }, {     wealth = 1,     daring = -1,     passion = -1 }, {     passion = 1,     daring = 1,     title = -1 }, {     title = 1,     daring = -1,     passion = -1 }, {     wealth = 1,     passion = 1,     faith = -1 }, {     faith = 1,     passion = -1,     wealth = -1 }, {     wealth = 1,     passion = 1,     title = -1 }, {     title = 1,     passion = -1,     wealth = -1 }, {     wealth = 1,     passion = 1,     daring = -1 }, {     daring = 1,     passion = -1,     wealth = -1 }, {     faith = 1,     daring = 1,     wealth = -1 }, {     wealth = 1,     daring = -1,     faith = -1 }, {     faith = 1,     daring = 1,     passion = -1 }, {     passion = 1,     daring = -1,     faith = -1 }, {     daring = 1,     faith = 1,     title = -1 }, {     title = 1,     daring = -1,     faith = -1 }, {     wealth = 1,     faith = 1,     passion = -1 }, {     passion = 1,     faith = -1,     wealth = -1 }, {     wealth = 1,     faith = 1,     title = -1 }, {     title = 1,     faith = -1,     wealth = -1 }, {     wealth = 1,     faith = 1,     daring = -1 }, {     daring = 1,     faith = -1,     wealth = -1 }, {     wealth = 1,     daring = 1,     faith = -1 }, {     faith = 1,     daring = -1,     wealth = -1 }, {     wealth = 1,     daring = 1,     passion = -1 }, {     passion = 1,     daring = -1,     wealth = -1 }, {     wealth = 1,     daring = 1,     title = -1 }, {     title = 1,     daring = -1,     wealth = -1 } }
+ringForward = 8.5
+ringRight = 2.8
+
+actionForward = 5
+actionRight = 0
+
+stampForward = 11
+stampRight = 0
 
 crests = {
   White = {
     Name = "White Horse",
     SleeveState = 9,
-    TrackerIndex = 1,
-    TrackerStacks = {"e98c5a", "b2deb6", "a932e6", "09d69a", "8edafd", "cf2c94", "62a5fc"},
-    SuitabilityBoard = "37b211",
-    LetterboxBoard = "23507a",
+    StampStack = "970799",
+    LetterboxCard = "23507a",
     Ring = "f08f60",
-    ActionMarker = "5eb102",
-    wealth  = "c1c04f",
-    title   = "f07491",
-    faith   = "384a14",
-    passion = "776155",
-    daring  = "fa968d"
+    ActionCard = "997e26"
   },
   Pink = {
     Name = "Pink Horn",
     SleeveState = 7,
     TrackerIndex = 1,
-    TrackerStacks = {"19bd3c", "19aad4", "1c6d19", "657fbe", "cfbabc", "4e167f", "6577a9"},
-    SuitabilityBoard = "e4c623",
-    LetterboxBoard = "ba099f",
+    StampStack = "251fe6",
+    LetterboxCard = "ba099f",
     Ring = "dc100b",
-    ActionMarker = "7cbd9f",
-    wealth  = "e47bd7",
-    title   = "6bc44d",
-    faith   = "ecfdb5",
-    passion = "ecb31d",
-    daring  = "e0de38"
+    ActionCard = "941a1e"
   },
   Purple = {
     Name = "Purple Clover",
     SleeveState = 8,
     TrackerIndex = 1,
-    TrackerStacks = {"db7ab8", "aa4ef2", "3367de", "22fcf4", "442da1", "6e9757", "d88ba8"},
-    SuitabilityBoard = "719a52",
-    LetterboxBoard = "991302",
+    StampStack = "9d9905",
+    LetterboxCard = "991302",
     Ring = "73a302",
-    ActionMarker = "6864a0",
-    wealth  = "7cd61c",
-    title   = "bcc104",
-    faith   = "fb954a",
-    passion = "ec8b33",
-    daring  = "de9abb"
+    ActionCard = "ba61ea"
   },
   Blue = {
     Name = "Blue Lion",
     SleeveState = 3,
     TrackerIndex = 1,
-    TrackerStacks = {"841aa1", "767dd5", "921e85", "9ae86f", "5edb67", "598c26", "78174c"},
-    SuitabilityBoard = "a47e83",
-    LetterboxBoard = "8ff957",
+    StampStack = "acd122",
+    LetterboxCard = "8ff957",
     Ring = "b46ebf",
-    ActionMarker = "8d6253",
-    wealth  = "96fa02",
-    title   = "e345ba",
-    faith   = "25d94c",
-    passion = "0e3b43",
-    daring  = "d7055a"
+    ActionCard = "e127f7"
   },
   Green = {
     Name = "Green Tree",
     SleeveState = 4,
     TrackerIndex = 1,
-    TrackerStacks = {"ecbd47", "bc3fc6", "8a77b1", "5d46d6", "987dce", "bb13ff", "21567e"},
-    SuitabilityBoard = "7e4935",
-    LetterboxBoard = "58862e",
+    StampStack = "32f564",
+    LetterboxCard = "58862e",
     Ring = "096d0c",
-    ActionMarker = "b6afb6",
-    wealth  = "af762b",
-    title   = "6e497d",
-    faith   = "213881",
-    passion = "5993a3",
-    daring  = "7aef30"
+    ActionCard = "ae2c76"
   },
   Yellow = {
     Name = "Yellow Lion",
     SleeveState = 6,
     TrackerIndex = 1,
-    TrackerStacks = {"60209b", "f86110", "7297ba", "ebc86b", "3b6a5f", "8588b2", "a9a3cc"},
-    SuitabilityBoard = "b79321",
-    LetterboxBoard = "07a2d4",
+    StampStack = "b1cb03",
+    LetterboxCard = "07a2d4",
     Ring = "049e25",
-    ActionMarker = "1fc7d8",
-    wealth  = "b62dae",
-    title   = "268774",
-    faith   = "e0f2dc",
-    passion = "caa75e",
-    daring  = "e7d95c"
+    ActionCard = "523812"
   },
   Brown = {
     Name = "Black Dog",
     SleeveState = 2,
     TrackerIndex = 1,
-    TrackerStacks = {"0f22e8", "0e5f1d", "257679", "30f8da", "33642d", "faefb3", "ce9c8d"},
-    SuitabilityBoard = "566c9c",
-    LetterboxBoard = "94733d",
+    StampStack = "05d788",
+    LetterboxCard = "94733d",
     Ring = "4c4495",
-    ActionMarker = "783bc4",
-    wealth  = "7909f8",
-    title   = "ff2b04",
-    faith   = "3ef015",
-    passion = "1f435d",
-    daring  = "9d9de1"
+    ActionCard = "0390ce"
   },
   Teal = {
     Name = "Cyan Shield",
     SleeveState = 5,
     TrackerIndex = 1,
-    TrackerStacks = {"01bdba", "f8ad83", "1b7610", "a93442", "06526d", "2412ea", "1f8e33"},
-    SuitabilityBoard = "2d4211",
-    LetterboxBoard = "ceddc1",
+    StampStack = "695718",
+    LetterboxCard = "ceddc1",
     Ring = "19cf1f",
-    ActionMarker = "6b5bfe",
-    wealth  = "2a7db3",
-    title   = "e8e336",
-    faith   = "c73809",
-    passion = "e9635a",
-    daring  = "744b5a"
+    ActionCard = "e7b01e"
   }
 }
 
-deckGUID = "100000"
-desireGUID = "195abd"
-
 notPlaying = { "White", "Pink", "Purple", "Blue", "Green", "Yellow", "Brown", "Teal" }
-toClean = { "SuitabilityBoard", "LetterboxBoard", "Ring", "ActionMarker", "wealth", "title", "faith", "passion", "daring" }
+toClean = { "LetterboxCard", "Ring", "ActionCard", "StampStack" }
 
 function positionBoards()
   for color, data in pairs(crests) do
     local playerHand = Player[color].getPlayerHand()
-    local suitabilityBoard = getObjectFromGUID(data["SuitabilityBoard"])
-    local letterboxBoard = getObjectFromGUID(data["LetterboxBoard"])
+    local letterboxBoard = getObjectFromGUID(data["LetterboxCard"])
+    local actionCard = getObjectFromGUID(data["ActionCard"])
+    local stampStack = getObjectFromGUID(data["StampStack"])
+    local ring = getObjectFromGUID(data["Ring"])
 
-    suitabilityBoard.setPosition({
-        playerHand.pos_x + playerHand.trigger_forward_x * suitabilityForward + playerHand.trigger_right_x * suitabilityRight,
-        playerHand.pos_y + playerHand.trigger_forward_y * suitabilityForward + playerHand.trigger_right_y * suitabilityRight,
-        playerHand.pos_z + playerHand.trigger_forward_z * suitabilityForward + playerHand.trigger_right_z * suitabilityRight
-      })
     letterboxBoard.setPosition({
         playerHand.pos_x + playerHand.trigger_forward_x * letterboxForward + playerHand.trigger_right_x * letterboxRight,
         playerHand.pos_y + playerHand.trigger_forward_y * letterboxForward + playerHand.trigger_right_y * letterboxRight,
         playerHand.pos_z + playerHand.trigger_forward_z * letterboxForward + playerHand.trigger_right_z * letterboxRight
       })
-    suitabilityBoard.setRotation({playerHand.rot_x, playerHand.rot_y + 180, playerHand.rot_z})
+    actionCard.setPosition({
+        playerHand.pos_x + playerHand.trigger_forward_x * actionForward + playerHand.trigger_right_x * actionRight,
+        playerHand.pos_y + playerHand.trigger_forward_y * actionForward + playerHand.trigger_right_y * actionRight,
+        playerHand.pos_z + playerHand.trigger_forward_z * actionForward + playerHand.trigger_right_z * actionRight
+      })
+    stampStack.setPosition({
+        playerHand.pos_x + playerHand.trigger_forward_x * stampForward + playerHand.trigger_right_x * stampRight,
+        playerHand.pos_y + playerHand.trigger_forward_y * stampForward + playerHand.trigger_right_y * stampRight,
+        playerHand.pos_z + playerHand.trigger_forward_z * stampForward + playerHand.trigger_right_z * stampRight
+      })
+    ring.setPosition({
+        playerHand.pos_x + playerHand.trigger_forward_x * ringForward + playerHand.trigger_right_x * ringRight,
+        playerHand.pos_y + playerHand.trigger_forward_y * ringForward + playerHand.trigger_right_y * ringRight,
+        playerHand.pos_z + playerHand.trigger_forward_z * ringForward + playerHand.trigger_right_z * ringRight
+      })
     letterboxBoard.setRotation({playerHand.rot_x, playerHand.rot_y + 180, playerHand.rot_z})
+    actionCard.setRotation({playerHand.rot_x, playerHand.rot_y + 180, playerHand.rot_z})
+    stampStack.setRotation({playerHand.rot_x, playerHand.rot_y, playerHand.rot_z})
+    ring.setRotation({playerHand.rot_x, playerHand.rot_y, playerHand.rot_z})
   end
 end
 
@@ -171,46 +132,27 @@ end
 function setupTraits()
   local deck = getObjectFromGUID(deckGUID)
   local players = getSeatedPlayers()
-  local i = 1
   local count = #players
 
   -- Deal cards based on number of players
   if count == 3 then
-    deck.deal(10)
-  elseif count == 4 then
-    deck.deal(9)
-  elseif count == 5 then
-    deck.deal(8)
-  elseif count == 6 then
     deck.deal(7)
-  elseif count == 7 then
+  elseif count == 4 then
+    deck.deal(7)
+  elseif count == 5 then
     deck.deal(6)
+  elseif count == 6 then
+    deck.deal(6)
+  elseif count == 7 then
+    deck.deal(5)
   elseif count == 8 then
     deck.deal(5)
   end
 
-  -- Iterate through all players and grab other players crest trackers
+  -- Iterate through all players
+  local i = 1
   while players[i] != nil do
     local color = players[i]
-    local player = Player[color]
-    local playerHand = player.getPlayerHand()
-
-    local j = 1
-    local offset = 1
-    while players[j] != nil do
-      if players[j] != color then
-        local trackerStack = getObjectFromGUID(crests[players[j]]["TrackerStacks"][crests[players[j]]["TrackerIndex"]])
-        trackerStack.setPosition({
-            playerHand.pos_x + playerHand.trigger_forward_x * trackerForward + playerHand.trigger_right_x * (trackerRight + offset * trackerOffset),
-            playerHand.pos_y + playerHand.trigger_forward_y * trackerForward + playerHand.trigger_right_y * (trackerRight + offset * trackerOffset),
-            playerHand.pos_z + playerHand.trigger_forward_z * trackerForward + playerHand.trigger_right_z * (trackerRight + offset * trackerOffset)
-          })
-        -- trackerStack.setRotation({ playerHand.rot_x, playerHand.rot_y * 180, playerHand.rot_z })
-        crests[players[j]]["TrackerIndex"] = crests[players[j]]["TrackerIndex"] + 1
-        offset = offset + 1
-      end
-      j = j + 1
-    end
 
     -- Identify players to clean away
     local j = 1
@@ -229,10 +171,10 @@ function setupTraits()
     for _, item in ipairs(toClean) do
       getObjectFromGUID(crests[vacant][item]).destruct()
     end
-    for _, tracker in ipairs(crests[vacant]["TrackerStacks"]) do
-      getObjectFromGUID(tracker).destruct()
-    end
   end
+
+  -- Remove floating rules
+  getObjectFromGUID("da7463").destruct()
 
   Wait.frames(sleeveCards, 200)
 end
@@ -255,6 +197,7 @@ function sleeveCards()
       end
       j = j + 1
     end
+
     i = i + 1
   end
 
@@ -268,75 +211,26 @@ function sleeveCards()
 
   -- Deal cards based on number of players
   if count == 3 then
-    discards = deck.cut(24)[2]
+    discards = deck.cut(30)[2]
   elseif count == 4 then
-    discards = deck.cut(16)[2]
+    discards = deck.cut(21)[2]
   elseif count == 5 then
-    discards = deck.cut(10)[2]
+    discards = deck.cut(17)[2]
   elseif count == 6 then
-    discards = deck.cut(6)[2]
+    discards = deck.cut(9)[2]
   elseif count == 7 then
-    discards = deck.cut(4)[2]
+    discards = deck.cut(8)[2]
   elseif count == 8 then
-    discards = deck.cut(4)[2]
+    discards = deck.takeObject({index = 1})
   end
 
   if discards != nil then
-    discards.setPositionSmooth({1.23, 3.00, 0.11}, false, false)
-    discards.setRotation({0, 180, 180})
+    discards.destruct()
   end
+
+  -- Remove desires deck
+  getObjectFromGUID(desireGUID).destruct()
 
   -- Remove button afterwards
   self.destruct()
-end
-
--- Calculate player dominant symbols based on cards in hand.
-function generateDominantSymbols()
-  local players = getSeatedPlayers()
-  local i = 1
-  while players[i] != nil do
-    local color = players[i]
-    local cards = Player[color].getHandObjects()
-    local playerHand = Player[color].getPlayerHand()
-    local symbols = {
-        wealth = 0,
-        title = 0,
-        faith = 0,
-        passion = 0,
-        daring = 0
-    }
-
-    -- Add up all symbols, ignoring desires
-    local j = 1
-    while cards[j] != nil do
-      local card = cards[j]
-      if card.getName() != "Desires" then
-        for symbol, val in pairs(symbolMap[(card.getGUID() % 100) + 1]) do
-            symbols[symbol] = symbols[symbol] + val
-        end
-      end
-      j = j + 1
-    end
-    local offset = 1
-    for symbol, total in pairs(symbols) do
-      marker = getObjectFromGUID(crests[color][symbol])
-      if total > 0 then
-        side = 180;
-      elseif total < 0 then
-        side = 0;
-      end
-
-      if total > 0 then
-        marker.setPosition({
-          playerHand.pos_x + playerHand.trigger_forward_x * markerForward + playerHand.trigger_right_x * (markerRight + offset * markerOffset),
-          playerHand.pos_y + playerHand.trigger_forward_y * markerForward + playerHand.trigger_right_y * (markerRight + offset * markerOffset),
-          playerHand.pos_z + playerHand.trigger_forward_z * markerForward + playerHand.trigger_right_z * (markerRight + offset * markerOffset)
-        })
-        marker.setRotation({playerHand.rot_x, playerHand.rot_y + 180, playerHand.rot_z + side})
-        marker.setLock(true)
-        offset = offset + 1
-      end
-    end
-    i = i + 1
-  end
 end
