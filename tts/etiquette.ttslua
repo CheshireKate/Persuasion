@@ -10,9 +10,6 @@ letterboxRight = 0
 ringForward = 8.5
 ringRight = 2.8
 
-heartTokenForward = 19
-heartTokenRight = 0
-
 actionForward = 5
 actionRight = 0
 
@@ -26,8 +23,7 @@ crests = {
     StampStack = "970799",
     LetterboxCard = "23507a",
     Ring = "f08f60",
-    ActionCard = "997e26",
-    HeartToken = "e9012e"
+    ActionCard = "997e26"
   },
   Pink = {
     Name = "Pink Horn",
@@ -36,8 +32,7 @@ crests = {
     StampStack = "251fe6",
     LetterboxCard = "ba099f",
     Ring = "dc100b",
-    ActionCard = "941a1e",
-    HeartToken = "241ea6"
+    ActionCard = "941a1e"
   },
   Purple = {
     Name = "Purple Clover",
@@ -46,8 +41,7 @@ crests = {
     StampStack = "9d9905",
     LetterboxCard = "991302",
     Ring = "73a302",
-    ActionCard = "ba61ea",
-    HeartToken = "66fcf6"
+    ActionCard = "ba61ea"
   },
   Blue = {
     Name = "Blue Lion",
@@ -56,8 +50,7 @@ crests = {
     StampStack = "acd122",
     LetterboxCard = "8ff957",
     Ring = "b46ebf",
-    ActionCard = "e127f7",
-    HeartToken = "07a310"
+    ActionCard = "e127f7"
   },
   Green = {
     Name = "Green Tree",
@@ -66,8 +59,7 @@ crests = {
     StampStack = "32f564",
     LetterboxCard = "58862e",
     Ring = "096d0c",
-    ActionCard = "ae2c76",
-    HeartToken = "ec9718"
+    ActionCard = "ae2c76"
   },
   Yellow = {
     Name = "Yellow Lion",
@@ -76,8 +68,7 @@ crests = {
     StampStack = "b1cb03",
     LetterboxCard = "07a2d4",
     Ring = "049e25",
-    ActionCard = "523812",
-    HeartToken = "1ba7a2"
+    ActionCard = "523812"
   },
   Brown = {
     Name = "Black Dog",
@@ -86,8 +77,7 @@ crests = {
     StampStack = "05d788",
     LetterboxCard = "94733d",
     Ring = "4c4495",
-    ActionCard = "0390ce",
-    HeartToken = "45e8e2"
+    ActionCard = "0390ce"
   },
   Teal = {
     Name = "Cyan Shield",
@@ -96,20 +86,18 @@ crests = {
     StampStack = "695718",
     LetterboxCard = "ceddc1",
     Ring = "19cf1f",
-    ActionCard = "e7b01e",
-    HeartToken = "2a4b4f"
+    ActionCard = "e7b01e"
   }
 }
 
 notPlaying = { "White", "Pink", "Purple", "Blue", "Green", "Yellow", "Brown", "Teal" }
-toClean = { "LetterboxCard", "Ring", "ActionCard", "HeartToken", "StampStack" }
+toClean = { "LetterboxCard", "Ring", "ActionCard", "StampStack" }
 
 function positionBoards()
   for color, data in pairs(crests) do
     local playerHand = Player[color].getPlayerHand()
     local letterboxBoard = getObjectFromGUID(data["LetterboxCard"])
     local actionCard = getObjectFromGUID(data["ActionCard"])
-    local heartToken = getObjectFromGUID(data["HeartToken"])
     local stampStack = getObjectFromGUID(data["StampStack"])
     local ring = getObjectFromGUID(data["Ring"])
 
@@ -133,16 +121,10 @@ function positionBoards()
         playerHand.pos_y + playerHand.trigger_forward_y * ringForward + playerHand.trigger_right_y * ringRight,
         playerHand.pos_z + playerHand.trigger_forward_z * ringForward + playerHand.trigger_right_z * ringRight
       })
-    heartToken.setPosition({
-        playerHand.pos_x + playerHand.trigger_forward_x * heartTokenForward + playerHand.trigger_right_x * heartTokenRight,
-        playerHand.pos_y + playerHand.trigger_forward_y * heartTokenForward + playerHand.trigger_right_y * heartTokenRight,
-        playerHand.pos_z + playerHand.trigger_forward_z * heartTokenForward + playerHand.trigger_right_z * heartTokenRight
-      })
     letterboxBoard.setRotation({playerHand.rot_x, playerHand.rot_y + 180, playerHand.rot_z})
     actionCard.setRotation({playerHand.rot_x, playerHand.rot_y + 180, playerHand.rot_z})
     stampStack.setRotation({playerHand.rot_x, playerHand.rot_y, playerHand.rot_z})
     ring.setRotation({playerHand.rot_x, playerHand.rot_y, playerHand.rot_z})
-    heartToken.setRotation({playerHand.rot_x, playerHand.rot_y, playerHand.rot_z})
   end
 end
 
@@ -182,9 +164,6 @@ function setupTraits()
       j = j + 1
     end
 
-    -- Position Heart Tokens
-    -- getObjectFromGUID(crests[color]["HeartToken"]).setPositionSmooth({0, 1+(i * 0.5), 0}, true, false)
-
     i = i + 1
   end
 
@@ -193,6 +172,9 @@ function setupTraits()
       getObjectFromGUID(crests[vacant][item]).destruct()
     end
   end
+
+  -- Remove floating rules
+  getObjectFromGUID("da7463").destruct()
 
   Wait.frames(sleeveCards, 200)
 end
@@ -243,8 +225,7 @@ function sleeveCards()
   end
 
   if discards != nil then
-    discards.setPositionSmooth({1.88, 3.00, -7.77}, false, false)
-    discards.setRotation({0, 270, 180})
+    discards.destruct()
   end
 
   -- Remove desires deck
