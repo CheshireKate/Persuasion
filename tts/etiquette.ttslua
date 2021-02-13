@@ -1,4 +1,7 @@
-deckGUID = "100000"
+rosesGUID = "19e27b"
+crownsGUID = "a22fc4"
+diamondsGUID = "bf4599"
+
 desireGUID = "798914"
 
 sortTimer = 4
@@ -130,24 +133,36 @@ end
 
 -- Start by dealing traits
 function setupTraits()
-  local deck = getObjectFromGUID(deckGUID)
   local players = getSeatedPlayers()
   local count = #players
 
   -- Deal cards based on number of players
-  if count == 3 then
-    deck.deal(7)
-  elseif count == 4 then
-    deck.deal(7)
-  elseif count == 5 then
-    deck.deal(6)
-  elseif count == 6 then
-    deck.deal(6)
-  elseif count == 7 then
-    deck.deal(5)
-  elseif count == 8 then
-    deck.deal(5)
-  end
+  cardsUsed = (count * 7)
+  rareCount = math.floor(cardsUsed / 3.0)
+  roseCount = 19 - (math.floor(cardsUsed / 3.0) + (cardsUsed % 3))
+
+  diamonds = getObjectFromGUID(diamondsGUID).cut(rareCount)
+  crowns = getObjectFromGUID(crownsGUID).cut(rareCount)
+  roses = getObjectFromGUID(rosesGUID).cut(roseCount)
+
+  diamonds[1].destruct()
+  crowns[1].destruct()
+  roses[2].destruct()
+
+  diamonds[2].setPositionSmooth({-1.83, 2, 1.30}, false, true)
+  crowns[2].setPositionSmooth({-1.83, 3, 1.30}, false, true)
+
+  Wait.frames(dealTraits, 300)
+end
+
+function dealTraits()
+  local players = getSeatedPlayers()
+  local count = #players
+  cardsUsed = (count * 7)
+
+  traits = getObjectFromGUID(rosesGUID)
+  traits.shuffle()
+  traits.deal(5)
 
   -- Iterate through all players
   local i = 1
@@ -201,35 +216,9 @@ function sleeveCards()
     i = i + 1
   end
 
-  -- Deal one desire card afterwards
-  getObjectFromGUID(desireGUID).deal(1)
-
-  local rotation = deck.getRotation()
-
-  local count = #players
-  local discards = nil
-
-  -- Deal cards based on number of players
-  if count == 3 then
-    discards = deck.cut(30)[2]
-  elseif count == 4 then
-    discards = deck.cut(21)[2]
-  elseif count == 5 then
-    discards = deck.cut(17)[2]
-  elseif count == 6 then
-    discards = deck.cut(9)[2]
-  elseif count == 7 then
-    discards = deck.cut(8)[2]
-  elseif count == 8 then
-    discards = deck.takeObject({index = 1})
-  end
-
-  if discards != nil then
-    discards.destruct()
-  end
-
-  -- Remove desires deck
-  getObjectFromGUID(desireGUID).destruct()
+  desires = getObjectFromGUID(desireGUID)
+  desires.deal(1)
+  desires.destruct()
 
   -- Remove button afterwards
   self.destruct()
