@@ -1,6 +1,6 @@
-rosesGUID = "19e27b"
-crownsGUID = "a22fc4"
-diamondsGUID = "bf4599"
+rosesGUID = "c6a281"
+crownsGUID = "81b6b4"
+diamondsGUID = "bfbade"
 
 desiresDeck = "a079c4"
 midDesires = "434428"
@@ -68,7 +68,7 @@ crests = {
     ActionCard = "ae2c76"
   },
   Yellow = {
-    Name = "Yellow Lion",
+    Name = "Yellow Sun",
     SleeveState = 6,
     TrackerIndex = 1,
     StampStack = "b1cb03",
@@ -285,12 +285,28 @@ function cleanUp()
     desires.destruct()
   end
 
-  print(" * To resleeve cards, right click them, then select State.")
   print("")
-  print(" * It's recommended you set your Rotation Degrees (Upper right of GUI) to 45 degrees for this game!")
+  print("")
+  print(" *** Persuasion ***")
+  print("")
+  print("To resleeve cards, right click them, then select State.")
+  print("")
+  print("You can set a hotkey (Like V) to unsleeve and sleeve your own cards under Options -> Game Keys!")
+  print("")
+  print("It's recommended you set your Rotation Degrees (Upper right of GUI) to 45 degrees for this game!")
   print("")
   print("I hope you enjoy my game!  There is a feedback form link in the Notebook!   Much love!")
 
   -- Remove button afterwards
   self.destruct()
+end
+
+function resleeve(color, card, position, key_down)
+  if color != "Black" and color != "Grey" then
+    if card.getName() == "Trait" then
+      card.setState(crests[color]["SleeveState"])
+    elseif card.getName() == (crests[color]["Name"] .. " Trait") then
+      card.setState(1)
+    end
+  end
 end

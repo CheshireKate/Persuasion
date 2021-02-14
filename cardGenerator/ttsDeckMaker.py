@@ -7,7 +7,7 @@ base = {
     'tts_color': "None",
     'name': 'Trait',
     'description': traitDescription,
-    'face': 'http://cloud-3.steamusercontent.com/ugc/1760314284293465763/4E1220175F13293B8886B35D373D26D227E4E87B/',
+    'face': 'http://cloud-3.steamusercontent.com/ugc/1762566736536651247/80765C24EFC6524AC6354E7F01A66AF6EAE5AEAC/',
     'back': 'http://cloud-3.steamusercontent.com/ugc/1760314147747003169/3FA671000FC54F9E5820713587059A40F17D4ADD/'
 }
 
@@ -139,7 +139,7 @@ ttsObject = '''{{{{
           "Type": 0
         }}}}
       }}}},
-      "LuaScript": "function onLoad()\r\n  self.shuffle();\r\nend",
+      "LuaScript": "",
       "LuaScriptState": "",
       "XmlUI": "",
       "ContainedObjects": [

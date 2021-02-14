@@ -92,6 +92,7 @@ traitCard = '''<div class="container">
     <div class="symbol {symbol}">{symbol}</div>
     <div class="contents">
         <div class="title">{title}</div>
+        <div class="tips"><br/ >If you keep this card, resleeve it to your color by right clicking and selecting States, or set a Hotkey!</div>
     </div>
 </div>'''
 
@@ -119,7 +120,7 @@ styles = {
           height: {};
           margin: auto;
 
-          background:url("resources/traitFront.jpg") no-repeat center center ;
+          background:url("resources/{}Front.jpg") no-repeat center center ;
         }}
 
         .symbol {{
@@ -161,6 +162,16 @@ styles = {
 
         .🌹 {{
           color: #FF0000;
+        }}
+
+        .tips {{
+          margin: 10%;
+          width: 80%;
+          font-family: Gentium Book Basic;
+          vertical-align: middle;
+          text-align: center;
+          font-size: 36;
+          {}
         }}
         ''',
 
@@ -346,11 +357,11 @@ with open('symbolMap.lua', 'w', encoding="utf-8") as f:
     f.write('symbolMap = { { ' + ' }, { '.join([', '.join(x) for x in symbolMap]) + ' } }')
 
 # Generate traits without border
-writeCards(cards, 'traits-unsleeved', style=styles['traits'].format('None', '100%', '100%'))
+writeCards(cards, 'traits-unsleeved', style=styles['traits'].format('None', '100%', '100%', 'desire', ''))
 
 # Generate trait cards with borders for each player
 for color, hex in crests.items():
-    writeCards(cards, 'traits-{}'.format(color), style=styles['traits'].format(hex, '94%', '96%'))
+    writeCards(cards, 'traits-{}'.format(color), style=styles['traits'].format(hex, '94%', '96%', 'trait', 'display: none;'))
 
 desireCount = {
     '💎': 4,
