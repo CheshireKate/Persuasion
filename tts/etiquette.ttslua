@@ -2,22 +2,25 @@ rosesGUID = "19e27b"
 crownsGUID = "a22fc4"
 diamondsGUID = "bf4599"
 
-desireGUID = "798914"
+desiresDeck = "a079c4"
+midDesires = "434428"
+diamond1Desire = "ea24a1"
+diamond2Desire = "677e2a"
 
 sortTimer = 4
 startOffset = 0.5
 
-letterboxForward = 8.5
-letterboxRight = 0
-
-ringForward = 8.5
-ringRight = 2.8
-
-actionForward = 5
+actionForward = 6
 actionRight = 0
 
-stampForward = 11
-stampRight = 0
+letterboxForward = 3.5 + actionForward
+letterboxRight = 0
+
+ringForward = 3.5 + actionForward
+ringRight = 2.1
+
+stampForward = 2.4 + actionForward
+stampRight = -1.8
 
 crests = {
   White = {
@@ -126,8 +129,8 @@ function positionBoards()
       })
     letterboxBoard.setRotation({playerHand.rot_x, playerHand.rot_y + 180, playerHand.rot_z})
     actionCard.setRotation({playerHand.rot_x, playerHand.rot_y + 180, playerHand.rot_z})
-    stampStack.setRotation({playerHand.rot_x, playerHand.rot_y, playerHand.rot_z})
-    ring.setRotation({playerHand.rot_x, playerHand.rot_y, playerHand.rot_z})
+    stampStack.setRotation({playerHand.rot_x, playerHand.rot_y + 180, playerHand.rot_z})
+    ring.setRotation({playerHand.rot_x, playerHand.rot_y + 180, playerHand.rot_z})
   end
 end
 
@@ -136,21 +139,73 @@ function setupTraits()
   local players = getSeatedPlayers()
   local count = #players
 
+  -- Setup Traits Deck
+  local diamondsStack = getObjectFromGUID(diamondsGUID)
+  local crownsStack = getObjectFromGUID(crownsGUID)
+  local rosesStack = getObjectFromGUID(rosesGUID)
+  diamondsStack.shuffle()
+  crownsStack.shuffle()
+  rosesStack.shuffle()
+
   -- Deal cards based on number of players
-  cardsUsed = (count * 7)
-  rareCount = math.floor(cardsUsed / 3.0)
-  roseCount = 19 - (math.floor(cardsUsed / 3.0) + (cardsUsed % 3))
+  local cardsUsed = (count * 7)
+  local rareCount = math.ceil(cardsUsed / 3.0)
+  local roseCount = 19 - rareCount
 
-  diamonds = getObjectFromGUID(diamondsGUID).cut(rareCount)
-  crowns = getObjectFromGUID(crownsGUID).cut(rareCount)
-  roses = getObjectFromGUID(rosesGUID).cut(roseCount)
+  local diamonds = nil
+  local crowns = nil
+  local roses = nil
 
-  diamonds[1].destruct()
-  crowns[1].destruct()
-  roses[2].destruct()
+  if count < 8 then
+    diamonds = diamondsStack.cut(rareCount)
+    crowns = crownsStack.cut(rareCount)
+    roses = rosesStack.cut(roseCount)
 
-  diamonds[2].setPositionSmooth({-1.83, 2, 1.30}, false, true)
-  crowns[2].setPositionSmooth({-1.83, 3, 1.30}, false, true)
+    diamonds[1].destruct()
+    crowns[1].destruct()
+    roses[2].destruct()
+
+    diamonds = diamonds[2]
+    crowns = crowns[2]
+  else
+    diamonds = diamondsStack
+    crowns = crownsStack
+  end
+
+  diamonds.setPositionSmooth({-1.83, 2, 1.30}, false, true)
+  crowns.setPositionSmooth({-1.83, 3, 1.30}, false, true)
+  diamonds.setRotationSmooth({0, 270, 180}, false, true)
+  crowns.setRotationSmooth({0, 270, 180}, false, true)
+
+  -- The extra diamond at 7, 8 players
+  diamondsStack = getObjectFromGUID(diamond1Desire)
+  if count > 6 then
+    diamondsStack.setPositionSmooth({1.90, 2.2, 1.28}, false, true)
+    diamondsStack.setRotationSmooth({0, 270, 180}, false, true)
+  else
+    diamondsStack.destruct()
+  end
+
+  -- The extra crown and rose at 6 players or more
+  rosesStack = getObjectFromGUID(midDesires)
+  if count > 5 then
+    rosesStack.setPositionSmooth({1.90, 2, 1.28}, false, true)
+    rosesStack.setRotationSmooth({0, 270, 180}, false, true)
+  else
+    rosesStack.destruct()
+  end
+
+  -- The extra diamond at 5 or more players
+  diamondsStack = getObjectFromGUID(diamond2Desire)
+  if count > 4 then
+    diamondsStack.setPositionSmooth({1.90, 2.2, 1.28}, false, true)
+    diamondsStack.setRotationSmooth({0, 270, 180}, false, true)
+  else
+    diamondsStack.destruct()
+  end
+
+  -- Remove floating rules
+  getObjectFromGUID("da7463").destruct()
 
   Wait.frames(dealTraits, 300)
 end
@@ -188,9 +243,6 @@ function dealTraits()
     end
   end
 
-  -- Remove floating rules
-  getObjectFromGUID("da7463").destruct()
-
   Wait.frames(sleeveCards, 200)
 end
 
@@ -216,9 +268,28 @@ function sleeveCards()
     i = i + 1
   end
 
-  desires = getObjectFromGUID(desireGUID)
+  -- Deal desires
+  local desires = getObjectFromGUID(desiresDeck)
+  desires.shuffle()
   desires.deal(1)
   desires.destruct()
+
+  Wait.frames(cleanUp, 50)
+end
+
+function cleanUp()
+
+  -- Destroy desires deck if exist
+  local desires = getObjectFromGUID(desiresDeck)
+  if desires != nil then
+    desires.destruct()
+  end
+
+  print(" * To resleeve cards, right click them, then select State.")
+  print("")
+  print(" * It's recommended you set your Rotation Degrees (Upper right of GUI) to 45 degrees for this game!")
+  print("")
+  print("I hope you enjoy my game!  There is a feedback form link in the Notebook!   Much love!")
 
   -- Remove button afterwards
   self.destruct()
