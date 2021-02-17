@@ -6,6 +6,7 @@ base = {
     'deckID': 1,
     'tts_color': "None",
     'name': 'Trait',
+    'cardList': ', '.join([str(i) for i in range(100, 100 + cardCount)]),
     'description': traitDescription,
     'face': 'http://cloud-3.steamusercontent.com/ugc/1762566736536651247/80765C24EFC6524AC6354E7F01A66AF6EAE5AEAC/',
     'back': 'http://cloud-3.steamusercontent.com/ugc/1760314147747003169/3FA671000FC54F9E5820713587059A40F17D4ADD/'
@@ -127,7 +128,7 @@ ttsObject = '''{{{{
       "HideWhenFaceDown": true,
       "Hands": false,
       "SidewaysCard": false,
-      "DeckIDs": [ 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 139, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156 ],
+      "DeckIDs": [ {cardList} ],
       "CustomDeck": {{{{
         "1": {{{{
           "FaceURL": "{face}",
