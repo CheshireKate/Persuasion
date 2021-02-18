@@ -1,6 +1,6 @@
-rosesGUID = "c6a281"
-crownsGUID = "81b6b4"
-diamondsGUID = "bfbade"
+rosesGUID = "a41d74"
+crownsGUID = "91cf0f"
+diamondsGUID = "eaf8a9"
 
 desiresDeck = "a079c4"
 midDesires = "434428"
@@ -10,7 +10,10 @@ diamond2Desire = "677e2a"
 sortTimer = 4
 startOffset = 0.5
 
-actionForward = 6
+planForward = 5
+planRight = 0
+
+actionForward = 5 + planForward
 actionRight = 0
 
 letterboxForward = 3.5 + actionForward
@@ -26,78 +29,94 @@ crests = {
   White = {
     Name = "White Horse",
     SleeveState = 9,
+    HandZone = "9cb275",
     StampStack = "970799",
     LetterboxCard = "23507a",
     Ring = "f08f60",
+    PlanCard = "ae0f1e",
     ActionCard = "997e26"
   },
   Pink = {
     Name = "Pink Horn",
     SleeveState = 7,
     TrackerIndex = 1,
+    HandZone = "38ad08",
     StampStack = "251fe6",
     LetterboxCard = "ba099f",
     Ring = "dc100b",
+    PlanCard = "69bfe0",
     ActionCard = "941a1e"
   },
   Purple = {
     Name = "Purple Clover",
     SleeveState = 8,
     TrackerIndex = 1,
+    HandZone = "c3bd91",
     StampStack = "9d9905",
     LetterboxCard = "991302",
     Ring = "73a302",
+    PlanCard = "51a8f1",
     ActionCard = "ba61ea"
   },
   Blue = {
     Name = "Blue Lion",
     SleeveState = 3,
     TrackerIndex = 1,
+    HandZone = "e7cfd5",
     StampStack = "acd122",
     LetterboxCard = "8ff957",
     Ring = "b46ebf",
+    PlanCard = "a0b5d2",
     ActionCard = "e127f7"
   },
   Green = {
     Name = "Green Tree",
     SleeveState = 4,
     TrackerIndex = 1,
+    HandZone = "421f67",
     StampStack = "32f564",
     LetterboxCard = "58862e",
     Ring = "096d0c",
+    PlanCard = "a35510",
     ActionCard = "ae2c76"
   },
   Yellow = {
     Name = "Yellow Sun",
     SleeveState = 6,
     TrackerIndex = 1,
+    HandZone = "32db78",
     StampStack = "b1cb03",
     LetterboxCard = "07a2d4",
     Ring = "049e25",
+    PlanCard = "76461b",
     ActionCard = "523812"
   },
   Brown = {
     Name = "Black Dog",
     SleeveState = 2,
     TrackerIndex = 1,
+    HandZone = "a49a6b",
     StampStack = "05d788",
     LetterboxCard = "94733d",
     Ring = "4c4495",
+    PlanCard = "ca74f7",
     ActionCard = "0390ce"
   },
   Teal = {
     Name = "Cyan Shield",
     SleeveState = 5,
     TrackerIndex = 1,
+    HandZone = "51cc53",
     StampStack = "695718",
     LetterboxCard = "ceddc1",
     Ring = "19cf1f",
+    PlanCard = "68d371",
     ActionCard = "e7b01e"
   }
 }
 
 notPlaying = { "White", "Pink", "Purple", "Blue", "Green", "Yellow", "Brown", "Teal" }
-toClean = { "LetterboxCard", "Ring", "ActionCard", "StampStack" }
+toClean = { "LetterboxCard", "HandZone", "Ring", "PlanCard", "ActionCard", "StampStack" }
 
 function positionBoards()
   for color, data in pairs(crests) do
@@ -106,6 +125,7 @@ function positionBoards()
     local actionCard = getObjectFromGUID(data["ActionCard"])
     local stampStack = getObjectFromGUID(data["StampStack"])
     local ring = getObjectFromGUID(data["Ring"])
+    local plan = getObjectFromGUID(data["PlanCard"])
 
     letterboxBoard.setPosition({
         playerHand.pos_x + playerHand.trigger_forward_x * letterboxForward + playerHand.trigger_right_x * letterboxRight,
@@ -127,10 +147,16 @@ function positionBoards()
         playerHand.pos_y + playerHand.trigger_forward_y * ringForward + playerHand.trigger_right_y * ringRight,
         playerHand.pos_z + playerHand.trigger_forward_z * ringForward + playerHand.trigger_right_z * ringRight
       })
+    plan.setPosition({
+        playerHand.pos_x + playerHand.trigger_forward_x * planForward + playerHand.trigger_right_x * planRight,
+        playerHand.pos_y + playerHand.trigger_forward_y * planForward + playerHand.trigger_right_y * planRight,
+        playerHand.pos_z + playerHand.trigger_forward_z * planForward + playerHand.trigger_right_z * planRight
+      })
     letterboxBoard.setRotation({playerHand.rot_x, playerHand.rot_y + 180, playerHand.rot_z})
     actionCard.setRotation({playerHand.rot_x, playerHand.rot_y + 180, playerHand.rot_z})
     stampStack.setRotation({playerHand.rot_x, playerHand.rot_y + 180, playerHand.rot_z})
     ring.setRotation({playerHand.rot_x, playerHand.rot_y + 180, playerHand.rot_z})
+    plan.setRotation({playerHand.rot_x, playerHand.rot_y + 180, playerHand.rot_z})
   end
 end
 
@@ -172,15 +198,15 @@ function setupTraits()
     crowns = crownsStack
   end
 
-  diamonds.setPositionSmooth({-1.83, 2, 1.30}, false, true)
-  crowns.setPositionSmooth({-1.83, 3, 1.30}, false, true)
+  diamonds.setPositionSmooth({-1.87, 1.07, -0.07}, false, true)
+  crowns.setPositionSmooth({-1.87, 1.07, -0.07}, false, true)
   diamonds.setRotationSmooth({0, 270, 180}, false, true)
   crowns.setRotationSmooth({0, 270, 180}, false, true)
 
   -- The extra diamond at 7, 8 players
   diamondsStack = getObjectFromGUID(diamond1Desire)
   if count > 6 then
-    diamondsStack.setPositionSmooth({1.90, 2.2, 1.28}, false, true)
+    diamondsStack.setPositionSmooth({1.86, 1.01, -0.09}, false, true)
     diamondsStack.setRotationSmooth({0, 270, 180}, false, true)
   else
     diamondsStack.destruct()
