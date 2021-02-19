@@ -92,6 +92,7 @@ traitCard = '''<div class="container">
     <div class="symbol {symbol}">{symbol}</div>
     <div class="contents">
         <div class="title">{title}</div>
+        <div class="art">If you keep this card, resleeve it to your color by right clicking and selecting States, or set a Hotkey!</div>
         <div class="power">{power}</div>
     </div>
 </div>'''
@@ -118,9 +119,9 @@ styles = {
         .container {{
           width: {};
           height: {};
-          margin: auto;
+          margin: {};
 
-          background:url("resources/{}Front.jpg") no-repeat center center ;
+          background:url("resources/traitFront.jpg") no-repeat center center ;
         }}
 
         .symbol {{
@@ -136,15 +137,6 @@ styles = {
             2px -2px 0 #000,
             -2px 2px 0 #000,
             2px 2px 0 #000;
-        }}
-
-        .title {{
-          font-family: Gentium Book Basic;
-          font-style: italic;
-          font-weight: bold;
-          vertical-align: top;
-          text-align: center;
-          font-size: 42;
         }}
 
         .contents {{
@@ -164,14 +156,33 @@ styles = {
           color: #FF0000;
         }}
 
+        .title {{
+          font-family: Gentium Book Basic;
+          font-style: italic;
+          font-weight: bold;
+          vertical-align: top;
+          text-align: center;
+          font-size: 42;
+        }}
+
+        .art {{
+          height: 25%;
+          margin: 5% 10% 0% 10%;
+          width: 80%;
+          font-family: Gentium Book Basic;
+          vertical-align: middle;
+          text-align: center;
+          font-size: 28;
+          {}
+        }}
+
         .power {{
           margin: 10%;
           width: 80%;
           font-family: Gentium Book Basic;
           vertical-align: middle;
           text-align: center;
-          font-size: 36;
-          {}
+          font-size: 32;
         }}
         ''',
 
@@ -183,7 +194,7 @@ styles = {
           height: 100%;
           margin: auto;
 
-          background:url("resources/desireFront.jpg") no-repeat center center ;
+          background:url("resources/traitFront.jpg") no-repeat center center ;
         }
 
         .title {
@@ -348,11 +359,11 @@ with open('resources/Persuasion - Traits.csv', 'r', encoding="utf-8") as input:
         cards.append(traitCard.format(**params))
 
 # Generate traits without border
-writeCards(cards, 'traits-unsleeved', style=styles['traits'].format('None', '100%', '100%', 'desire', ''))
+writeCards(cards, 'traits-unsleeved', style=styles['traits'].format('None', '100%', '100%', '2% 3% 2% 3%', ''))
 
 # Generate trait cards with borders for each player
 for color, hex in crests.items():
-    writeCards(cards, 'traits-{}'.format(color), style=styles['traits'].format(hex, '94%', '96%', 'trait', 'display: none;'))
+    writeCards(cards, 'traits-{}'.format(color), style=styles['traits'].format(hex, '94%', '96%', 'auto', 'visibility: hidden;'))
 
 desireCount = {
     '💎': 4,
