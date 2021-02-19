@@ -31,7 +31,7 @@ crests = {
     SleeveState = 9,
     HandZone = "9cb275",
     StampStack = "970799",
-    LetterboxCard = "23507a",
+    LetterboxCard = "655402",
     Ring = "f08f60",
     PlanCard = "ae0f1e",
     ActionCard = "997e26"
@@ -42,7 +42,7 @@ crests = {
     TrackerIndex = 1,
     HandZone = "38ad08",
     StampStack = "251fe6",
-    LetterboxCard = "ba099f",
+    LetterboxCard = "901040",
     Ring = "dc100b",
     PlanCard = "69bfe0",
     ActionCard = "941a1e"
@@ -53,7 +53,7 @@ crests = {
     TrackerIndex = 1,
     HandZone = "c3bd91",
     StampStack = "9d9905",
-    LetterboxCard = "991302",
+    LetterboxCard = "bb77f7",
     Ring = "73a302",
     PlanCard = "51a8f1",
     ActionCard = "ba61ea"
@@ -64,7 +64,7 @@ crests = {
     TrackerIndex = 1,
     HandZone = "e7cfd5",
     StampStack = "acd122",
-    LetterboxCard = "8ff957",
+    LetterboxCard = "83d00e",
     Ring = "b46ebf",
     PlanCard = "a0b5d2",
     ActionCard = "e127f7"
@@ -75,7 +75,7 @@ crests = {
     TrackerIndex = 1,
     HandZone = "421f67",
     StampStack = "32f564",
-    LetterboxCard = "58862e",
+    LetterboxCard = "8ab4ab",
     Ring = "096d0c",
     PlanCard = "a35510",
     ActionCard = "ae2c76"
@@ -86,7 +86,7 @@ crests = {
     TrackerIndex = 1,
     HandZone = "32db78",
     StampStack = "b1cb03",
-    LetterboxCard = "07a2d4",
+    LetterboxCard = "8d3254",
     Ring = "049e25",
     PlanCard = "76461b",
     ActionCard = "523812"
@@ -97,7 +97,7 @@ crests = {
     TrackerIndex = 1,
     HandZone = "a49a6b",
     StampStack = "05d788",
-    LetterboxCard = "94733d",
+    LetterboxCard = "edc273",
     Ring = "4c4495",
     PlanCard = "ca74f7",
     ActionCard = "0390ce"
@@ -108,7 +108,7 @@ crests = {
     TrackerIndex = 1,
     HandZone = "51cc53",
     StampStack = "695718",
-    LetterboxCard = "ceddc1",
+    LetterboxCard = "837379",
     Ring = "19cf1f",
     PlanCard = "68d371",
     ActionCard = "e7b01e"
@@ -198,15 +198,15 @@ function setupTraits()
     crowns = crownsStack
   end
 
-  diamonds.setPositionSmooth({-1.87, 1.07, -0.07}, false, true)
-  crowns.setPositionSmooth({-1.87, 1.07, -0.07}, false, true)
+  diamonds.setPositionSmooth({-1.87, 2.07, -0.07}, false, true)
+  crowns.setPositionSmooth({-1.87, 3.07, -0.07}, false, true)
   diamonds.setRotationSmooth({0, 270, 180}, false, true)
   crowns.setRotationSmooth({0, 270, 180}, false, true)
 
   -- The extra diamond at 7, 8 players
   diamondsStack = getObjectFromGUID(diamond1Desire)
   if count > 6 then
-    diamondsStack.setPositionSmooth({1.86, 1.01, -0.09}, false, true)
+    diamondsStack.setPositionSmooth({1.86, 1.51, -0.09}, false, true)
     diamondsStack.setRotationSmooth({0, 270, 180}, false, true)
   else
     diamondsStack.destruct()
@@ -215,7 +215,7 @@ function setupTraits()
   -- The extra crown and rose at 6 players or more
   rosesStack = getObjectFromGUID(midDesires)
   if count > 5 then
-    rosesStack.setPositionSmooth({1.90, 2, 1.28}, false, true)
+    rosesStack.setPositionSmooth({1.86, 2.01, -0.09}, false, true)
     rosesStack.setRotationSmooth({0, 270, 180}, false, true)
   else
     rosesStack.destruct()
@@ -224,7 +224,7 @@ function setupTraits()
   -- The extra diamond at 5 or more players
   diamondsStack = getObjectFromGUID(diamond2Desire)
   if count > 4 then
-    diamondsStack.setPositionSmooth({1.90, 2.2, 1.28}, false, true)
+    diamondsStack.setPositionSmooth({1.86, 2.51, -0.09}, false, true)
     diamondsStack.setRotationSmooth({0, 270, 180}, false, true)
   else
     diamondsStack.destruct()
@@ -260,6 +260,9 @@ function dealTraits()
       j = j + 1
     end
 
+    -- Flip letterbox references
+    getObjectFromGUID(crests[color]["LetterboxCard"]).flip()
+
     i = i + 1
   end
 
@@ -290,6 +293,9 @@ function sleeveCards()
       end
       j = j + 1
     end
+
+    -- Lock letterboxes
+    getObjectFromGUID(crests[color]["LetterboxCard"]).setLock(true)
 
     i = i + 1
   end
