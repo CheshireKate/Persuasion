@@ -92,15 +92,15 @@ traitCard = '''<div class="container">
     <div class="symbol {symbol}">{symbol}</div>
     <div class="contents">
         <div class="title">{title}</div>
-        <div class="tips"><br/ >If you keep this card, resleeve it to your color by right clicking and selecting States, or set a Hotkey!</div>
+        <div class="power">{power}</div>
     </div>
 </div>'''
 
 desireCard = '''<div class="container">
-    <div class="cornerSymbol {need}">{need}</div>
     <div class="title">{title}</div>
-    <div class="prim condition"><span class="fancy">Prim victory</span><br/>if you marry a suitor with <span class="symbol {need}">{need}{need}{need}</span></div>
-    <div class="proper condition"><span class="fancy">Proper victory</span><br/>if you personally have <br/><span class="symbol {need}">{need}{need}{need}{need}</span></div>
+    <div class="prim condition"><span class="fancy">Prim victory</span><br/>if I marry a suitor with <span class="symbol {need}">{need}{need}{need}</span></div>
+    <div class="proper condition"><span class="fancy">Proper victory</span><br/>if I personally have <br/><span class="symbol {need}">{need}{need}{need}{need}</span></div>
+    <div class="bonus condition">{victory}</div>
 </div>'''
 
 styles = {
@@ -164,7 +164,7 @@ styles = {
           color: #FF0000;
         }}
 
-        .tips {{
+        .power {{
           margin: 10%;
           width: 80%;
           font-family: Gentium Book Basic;
@@ -329,32 +329,23 @@ def writeCards(originalCards, name, style=None, sheetColumns=10, sheetRows=5):
 # Generate traits deck
 cards = []
 
-symbolMap = []
-symbolTemplate = '    {} = {}'
-symbolNames = {
-    '💎': 'wealth',
-    '👑': 'title',
-    '🌹': 'passion'
-}
-
+subTotal = 0
 # Convert CSV to cards
 with open('resources/Persuasion - Traits.csv', 'r', encoding="utf-8") as input:
     cardDetails = csv.DictReader(input)
-    for i, row in enumerate(cardDetails):
-        if i == traitTotal:
+    for subTotal, row in enumerate(cardDetails):
+        # Skip lines that aren't ready or have a power written
+        if subTotal == traitTotal:
             break
-        symbolMap.append([])
+        if row['Ready?'] == '❌' or len(row['Effect']) < 3:
+            continue
         params = {
-            'modifiers': '',
+            'modifiers': '', # row['Mods']
             'title': row['Name'],
-            'symbol': row['Suit']
+            'symbol': row['Suit'],
+            'power': row['Effect']
         }
-        symbolMap[i].append(symbolTemplate.format(symbolNames[row['Suit']], '1'))
         cards.append(traitCard.format(**params))
-
-# Write a lua object mapping cards to their desires characters
-with open('symbolMap.lua', 'w', encoding="utf-8") as f:
-    f.write('symbolMap = { { ' + ' }, { '.join([', '.join(x) for x in symbolMap]) + ' } }')
 
 # Generate traits without border
 writeCards(cards, 'traits-unsleeved', style=styles['traits'].format('None', '100%', '100%', 'desire', ''))
@@ -382,13 +373,14 @@ cards = []
 with open('resources/Persuasion - Desires.csv', 'r', encoding="utf-8") as input:
     cardDetails = csv.DictReader(input)
     for i, row in enumerate(cardDetails):
+        if row['Ready?'] == '❌' or len(row['Victory']) < 3:
+            continue
         if i == desireTotal:
             break
-        symbolMap.append([])
         params = {
-            'title': 'Desires', #row['Name'],
+            'title': row['Name'] + " Desires",
             'need': row['❤'],
-            'ambition': row['♤']
+            'victory': row['Victory']
         }
         cards.append(desireCard.format(**params))
 
