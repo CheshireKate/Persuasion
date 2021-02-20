@@ -120,8 +120,8 @@ traitCard = '''<div class="container">
 
 desireCard = '''<div class="container">
     <div class="title">{title}</div>
-    <div class="prim condition"><span class="fancy">Prim Victory</span><br/>if my fiance has <span class="bigSymbol {need}">{need}{need}{need}</span><br/>in their Commitments</div>
-    <div class="proper condition"><span class="fancy">Proper Victory</span><br/>if I have <span class="bigSymbol {need}">{need}{need}{need}{need}</span><br/>in my Commitments</div>
+    <div class="prim condition"><span class="fancy">Prim Victory</span><br/>if my fiance committed <span class="bigSymbol {need}">{need}{need}{need}</span></div>
+    <div class="proper condition"><span class="fancy">Proper Victory</span><br/>if I committed <span class="bigSymbol {need}">{need}{need}{need}{need}</span></div>
     <div class="bonus condition"><span class="fancy">{victory}</div>
 </div>'''
 

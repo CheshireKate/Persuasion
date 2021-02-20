@@ -9,7 +9,7 @@ base = {
     'cardList': ', '.join([str(i) for i in range(100, 100 + cardCount)]),
     'height': str(ceil(cardCount/10.0)),
     'description': traitDescription,
-    'face': 'http://cloud-3.steamusercontent.com/ugc/1762567303610929161/E80610595A4E9B7F16C9921AE6E2F41C75AAA9D1/',
+    'face': 'http://cloud-3.steamusercontent.com/ugc/1762567360939882924/85820BFE02674A5483CE246645E6D37B1E6789E4/',
     'back': 'http://cloud-3.steamusercontent.com/ugc/1760314147747003169/3FA671000FC54F9E5820713587059A40F17D4ADD/'
 }
 
@@ -19,7 +19,7 @@ decks = [
         'tts_color': "Brown",
         'name': 'Black Dog Trait',
         'description': traitDescription,
-        'face': 'http://cloud-3.steamusercontent.com/ugc/1762567303610930323/B143F0FA1222A74CD27075EBA6937A50F2EC556D/',
+        'face': 'http://cloud-3.steamusercontent.com/ugc/1762567360939883297/54B51409190595E3897C558E423981BC8135C7F9/',
         'back': 'http://cloud-3.steamusercontent.com/ugc/1656728318303124139/3386D885EC1630D77C835EA6C49FA6B6C64C8952/'
     },
     {
@@ -27,7 +27,7 @@ decks = [
         'tts_color': "Blue",
         'name': 'Blue Lion Trait',
         'description': traitDescription,
-        'face': 'http://cloud-3.steamusercontent.com/ugc/1762567303610930760/3783878756FB8B06C8D872E0C520CF0BAADC0D07/',
+        'face': 'http://cloud-3.steamusercontent.com/ugc/1762567360939883654/4EF128AD0671E44C4F36A16E5E658A2DCF815E55/',
         'back': 'http://cloud-3.steamusercontent.com/ugc/1656728318303214207/F6C545671C5D9E26A8587061ADE177DD0240D2B0/'
     },
     {
@@ -35,7 +35,7 @@ decks = [
         'tts_color': "Green",
         'name': 'Green Tree Trait',
         'description': traitDescription,
-        'face': 'http://cloud-3.steamusercontent.com/ugc/1762567303610931285/51BFCF32FBCADD846FB7549AE8CB998DD695BB2F/',
+        'face': 'http://cloud-3.steamusercontent.com/ugc/1762567360939884042/C9821E40A15544478312B3417E66B5DBCF86DBA3/',
         'back': 'http://cloud-3.steamusercontent.com/ugc/1656728318303219676/E43B426C0EC6E5C4828774496FA767B4D9FD2810/'
     },
     {
@@ -43,7 +43,7 @@ decks = [
         'tts_color': "Teal",
         'name': 'Cyan Shield Trait',
         'description': traitDescription,
-        'face': 'http://cloud-3.steamusercontent.com/ugc/1762567303610933078/45A200EC81CBB1EC55864D2CE6D8F1D8792E04EC/',
+        'face': 'http://cloud-3.steamusercontent.com/ugc/1762567360939885784/272EAEA88C11C6757BC524D4732617BE604AC1FC/',
         'back': 'http://cloud-3.steamusercontent.com/ugc/1656728318303223441/26EBC8436FCDFF59041E702E58506D1E068985AE/'
     },
     {
@@ -51,7 +51,7 @@ decks = [
         'tts_color': "Yellow",
         'name': 'Yellow Sun Trait',
         'description': traitDescription,
-        'face': 'http://cloud-3.steamusercontent.com/ugc/1762567303611410144/6BA0AB8737EA89EDB71DC09FB45D8466F22C5656/',
+        'face': 'http://cloud-3.steamusercontent.com/ugc/1762567360939892948/515376D95F8503FE59C2E4070A30AA4F3B7DC9EC/',
         'back': 'http://cloud-3.steamusercontent.com/ugc/1656728318303226151/8173A6620818B8C3A202227FF9B6198F64A1AA13/'
     },
     {
@@ -59,7 +59,7 @@ decks = [
         'tts_color': "Pink",
         'name': 'Pink Horn Trait',
         'description': traitDescription,
-        'face': 'http://cloud-3.steamusercontent.com/ugc/1762567303610931906/F5FEE517C77DAC9BBBFB77BC9D47F4634C2641CF/',
+        'face': 'http://cloud-3.steamusercontent.com/ugc/1762567360939884664/5A68C36D886E50E76858E9597593EFC4269A2B2E/',
         'back': 'http://cloud-3.steamusercontent.com/ugc/1656728318303220938/68722CE40FB18FE8CFAC5D06AB8E00D53BCA4A33/'
     },
     {
@@ -67,7 +67,7 @@ decks = [
         'tts_color': "Purple",
         'name': 'Purple Clover Trait',
         'description': traitDescription,
-        'face': 'http://cloud-3.steamusercontent.com/ugc/1762567303610932450/1D3492B2618F73DAEF4AF420BAEA36B009479F20/',
+        'face': 'http://cloud-3.steamusercontent.com/ugc/1762567360939885160/6748BC3DF58CC75C943448C35F452AFF64F5BD65/',
         'back': 'http://cloud-3.steamusercontent.com/ugc/1656728318303222134/F7EA4278B2C0EC7640592E7804317356071B0788/'
     },
     {
@@ -75,7 +75,7 @@ decks = [
         'tts_color': "White",
         'name': 'White Horse Trait',
         'description': traitDescription,
-        'face': 'http://cloud-3.steamusercontent.com/ugc/1762567303611409757/2CC5DF282DD011CD807FB37FB435090EC67C8243/',
+        'face': 'http://cloud-3.steamusercontent.com/ugc/1762567360939892623/A0B379AA2FA0DE3E99D42A6385A7568FF7F2B692/',
         'back': 'http://cloud-3.steamusercontent.com/ugc/1656728318303224897/771F94BB2FA229907293E17D9AC8310D6617C6B0/'
     }
 ]
