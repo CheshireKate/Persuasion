@@ -1,11 +1,18 @@
-rosesGUID = "a41d74"
-crownsGUID = "91cf0f"
-diamondsGUID = "eaf8a9"
+rosesGUID = "04ace1"
+crownsGUID = "7a10f0"
+diamondsGUID = "00d544"
 
-desiresDeck = "a079c4"
-midDesires = "434428"
-diamond1Desire = "ea24a1"
-diamond2Desire = "677e2a"
+rosesDesires = "fd5e40"
+crownsDesires = "fb2e7a"
+diamondsDesires = "49a005"
+
+traitBoxPos = {-0.79, 1, 47.32}
+desireBoxPos = {-3.51, 1, 45.45}
+
+traitBox = nil
+desireBox = nil
+traitDeck = nil
+desiresDeck = nil
 
 sortTimer = 4
 startOffset = 0.5
@@ -160,75 +167,65 @@ function positionBoards()
   end
 end
 
+function split(deck, count, destination, trash, delay)
+  local size = #deck.getObjects()
+
+  if size == count then
+    deck.setPositionSmooth(destination, false, true)
+    deck.setRotationSmooth({0, 270, 180}, false, true)
+  elseif count == (size - 1) then
+    deck.setPositionSmooth(destination, false, true)
+    deck.setRotationSmooth({0, 270, 180}, false, true)
+    deck.takeObject({position = trash})
+  elseif count == 1 then
+    deck.setPositionSmooth(trash, false, true)
+    deck.takeObject({position = destination,
+                     rotation = {0, 270, 180}})
+    return deck
+  else
+    local decks = deck.cut(size-count)
+    decks[2].setPositionSmooth(trash, false, true)
+    decks[1].setPositionSmooth(destination, false, true)
+    decks[1].setRotationSmooth({0, 270, 180}, false, true)
+    return decks[2]
+  end
+  return nil
+end
+
 -- Start by dealing traits
 function setupTraits()
   local players = getSeatedPlayers()
   local count = #players
 
-  -- Setup Traits Deck
-  local diamondsStack = getObjectFromGUID(diamondsGUID)
-  local crownsStack = getObjectFromGUID(crownsGUID)
-  local rosesStack = getObjectFromGUID(rosesGUID)
-  diamondsStack.shuffle()
-  crownsStack.shuffle()
-  rosesStack.shuffle()
-
-  -- Deal cards based on number of players
+  -- Cards used based on number of players
   local cardsUsed = (count * 7)
-  local rareCount = math.ceil(cardsUsed / 3.0)
-  local roseCount = 19 - rareCount
+  local suitCount = math.ceil(cardsUsed / 3.0)
 
-  local diamonds = nil
-  local crowns = nil
-  local roses = nil
+  -- Construct traits
+  local diamonds = getObjectFromGUID(diamondsGUID)
+  local crowns = getObjectFromGUID(crownsGUID)
+  local roses = getObjectFromGUID(rosesGUID)
 
-  if count < 8 then
-    diamonds = diamondsStack.cut(rareCount)
-    crowns = crownsStack.cut(rareCount)
-    roses = rosesStack.cut(roseCount)
+  diamonds.shuffle()
+  crowns.shuffle()
+  roses.shuffle()
 
-    diamonds[1].destruct()
-    crowns[1].destruct()
-    roses[2].destruct()
+  traitBox = split(diamonds, suitCount, {-1.87, 1.5, -0.07}, traitBoxPos)
+  split(crowns, suitCount, {-1.87, 2, -0.07}, traitBoxPos)
+  split(roses, suitCount, {-1.87, 2.5, -0.07}, traitBoxPos)
 
-    diamonds = diamonds[2]
-    crowns = crowns[2]
-  else
-    diamonds = diamondsStack
-    crowns = crownsStack
-  end
+  -- Construct desires
+  diamonds = getObjectFromGUID(diamondsDesires)
+  crowns = getObjectFromGUID(crownsDesires)
+  roses = getObjectFromGUID(rosesDesires)
 
-  diamonds.setPositionSmooth({-1.87, 2.07, -0.07}, false, true)
-  crowns.setPositionSmooth({-1.87, 3.07, -0.07}, false, true)
-  diamonds.setRotationSmooth({0, 270, 180}, false, true)
-  crowns.setRotationSmooth({0, 270, 180}, false, true)
+  diamonds.shuffle()
+  crowns.shuffle()
+  roses.shuffle()
 
-  -- The extra diamond at 7, 8 players
-  diamondsStack = getObjectFromGUID(diamond1Desire)
-  if count > 6 then
-    diamondsStack.setPositionSmooth({1.86, 1.51, -0.09}, false, true)
-    diamondsStack.setRotationSmooth({0, 270, 180}, false, true)
-  else
-    diamondsStack.destruct()
-  end
-
-  -- The extra crown and rose at 6 players or more
-  rosesStack = getObjectFromGUID(midDesires)
-  if count > 5 then
-    rosesStack.setPositionSmooth({1.86, 2.01, -0.09}, false, true)
-    rosesStack.setRotationSmooth({0, 270, 180}, false, true)
-  else
-    rosesStack.destruct()
-  end
-
-  -- The extra diamond at 5 or more players
-  diamondsStack = getObjectFromGUID(diamond2Desire)
-  if count > 4 then
-    diamondsStack.setPositionSmooth({1.86, 2.51, -0.09}, false, true)
-    diamondsStack.setRotationSmooth({0, 270, 180}, false, true)
-  else
-    diamondsStack.destruct()
-  end
+  desireBox = split(diamonds, math.ceil(count / 2.0), {1.86, 1.5, -0.09}, desireBoxPos)
+  --split(crowns, math.floor(count / 3.0) + 2, {1.86, 2, -0.09}, desireBoxPos)
+  --split(roses, math.floor(count / 3.0) + 1, {-1.87, 2.5, -0.07}, desireBoxPos)
 
   -- Remove floating rules
   getObjectFromGUID("da7463").destruct()
@@ -241,7 +238,9 @@ function dealTraits()
   local count = #players
   cardsUsed = (count * 7)
 
-  traits = getObjectFromGUID(rosesGUID)
+  traitBox.shuffle()
+  getObjectFromGUID(diamondsDesires).shuffle()
+  local traits = getObjectFromGUID(diamondsGUID)
   traits.shuffle()
   traits.deal(5)
 
@@ -301,22 +300,15 @@ function sleeveCards()
   end
 
   -- Deal desires
-  local desires = getObjectFromGUID(desiresDeck)
-  desires.shuffle()
-  desires.deal(1)
-  desires.destruct()
-
-  Wait.frames(cleanUp, 50)
-end
-
-function cleanUp()
-
-  -- Destroy desires deck if exist
-  local desires = getObjectFromGUID(desiresDeck)
-  if desires != nil then
-    desires.destruct()
+  local desires = getObjectFromGUID(diamondsDesires)
+  local size = #desires.getObjects()
+  if size == (#players + 1) then
+    desires.takeObject({position = desireBoxPos})
   end
-
+  desires.deal(1)
+  print(desires)
+  Wait.frames(function() print(desires) end, 50)
+  -- desires.setPositionSmooth(desireBoxPos, false, true)
   print("")
   print("")
   print(" *** Persuasion ***")
