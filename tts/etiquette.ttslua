@@ -1,11 +1,13 @@
-rosesGUID = "a41d74"
-crownsGUID = "91cf0f"
-diamondsGUID = "eaf8a9"
+rosesGUID = "5a191e"
+crownsGUID = "6ba45a"
+diamondsGUID = "98c8fc"
 
-desiresDeck = "a079c4"
-midDesires = "434428"
-diamond1Desire = "ea24a1"
-diamond2Desire = "677e2a"
+rosesDesires = "19184a"
+crownsDesires = "a22c52"
+diamondsDesires = "432fc2"
+
+traitDeck = nil
+desiresDeck = nil
 
 sortTimer = 4
 startOffset = 0.5
@@ -19,25 +21,20 @@ letterboxRight = 0
 ringForward = 3.5 + actionForward
 ringRight = 2.1
 
-stampForward = 2.4 + actionForward
-stampRight = -1.8
-
 crests = {
   White = {
     Name = "White Horse",
     SleeveState = 9,
     HandZone = "9cb275",
-    StampStack = "970799",
     LetterboxCard = "21ab1b",
     Ring = "f08f60",
     ActionCard = "997e26"
   },
   Pink = {
-    Name = "Pink Horn",
+    Name = "Pink Song",
     SleeveState = 7,
     TrackerIndex = 1,
     HandZone = "38ad08",
-    StampStack = "251fe6",
     LetterboxCard = "a629b7",
     Ring = "dc100b",
     ActionCard = "941a1e"
@@ -47,7 +44,6 @@ crests = {
     SleeveState = 8,
     TrackerIndex = 1,
     HandZone = "c3bd91",
-    StampStack = "9d9905",
     LetterboxCard = "108a7e",
     Ring = "73a302",
     ActionCard = "ba61ea"
@@ -57,7 +53,6 @@ crests = {
     SleeveState = 3,
     TrackerIndex = 1,
     HandZone = "e7cfd5",
-    StampStack = "acd122",
     LetterboxCard = "c92497",
     Ring = "b46ebf",
     ActionCard = "e127f7"
@@ -67,7 +62,6 @@ crests = {
     SleeveState = 4,
     TrackerIndex = 1,
     HandZone = "421f67",
-    StampStack = "32f564",
     LetterboxCard = "48c25c",
     Ring = "096d0c",
     ActionCard = "ae2c76"
@@ -77,7 +71,6 @@ crests = {
     SleeveState = 6,
     TrackerIndex = 1,
     HandZone = "32db78",
-    StampStack = "b1cb03",
     LetterboxCard = "f69365",
     Ring = "049e25",
     ActionCard = "523812"
@@ -87,7 +80,6 @@ crests = {
     SleeveState = 2,
     TrackerIndex = 1,
     HandZone = "a49a6b",
-    StampStack = "05d788",
     LetterboxCard = "4fcbc6",
     Ring = "4c4495",
     ActionCard = "0390ce"
@@ -97,7 +89,6 @@ crests = {
     SleeveState = 5,
     TrackerIndex = 1,
     HandZone = "51cc53",
-    StampStack = "695718",
     LetterboxCard = "39fbd4",
     Ring = "19cf1f",
     ActionCard = "e7b01e"
@@ -105,14 +96,13 @@ crests = {
 }
 
 notPlaying = { "White", "Pink", "Purple", "Blue", "Green", "Yellow", "Brown", "Teal" }
-toClean = { "LetterboxCard", "HandZone", "Ring", "ActionCard", "StampStack" }
+toClean = { "LetterboxCard", "HandZone", "Ring", "ActionCard" }
 
 function positionBoards()
   for color, data in pairs(crests) do
     local playerHand = Player[color].getPlayerHand()
     local letterboxBoard = getObjectFromGUID(data["LetterboxCard"])
     local actionCard = getObjectFromGUID(data["ActionCard"])
-    local stampStack = getObjectFromGUID(data["StampStack"])
     local ring = getObjectFromGUID(data["Ring"])
 
     letterboxBoard.setPosition({
@@ -125,11 +115,6 @@ function positionBoards()
         playerHand.pos_y + playerHand.trigger_forward_y * actionForward + playerHand.trigger_right_y * actionRight,
         playerHand.pos_z + playerHand.trigger_forward_z * actionForward + playerHand.trigger_right_z * actionRight
       })
-    stampStack.setPosition({
-        playerHand.pos_x + playerHand.trigger_forward_x * stampForward + playerHand.trigger_right_x * stampRight,
-        playerHand.pos_y + playerHand.trigger_forward_y * stampForward + playerHand.trigger_right_y * stampRight,
-        playerHand.pos_z + playerHand.trigger_forward_z * stampForward + playerHand.trigger_right_z * stampRight
-      })
     ring.setPosition({
         playerHand.pos_x + playerHand.trigger_forward_x * ringForward + playerHand.trigger_right_x * ringRight,
         playerHand.pos_y + playerHand.trigger_forward_y * ringForward + playerHand.trigger_right_y * ringRight,
@@ -137,85 +122,57 @@ function positionBoards()
       })
     letterboxBoard.setRotation({playerHand.rot_x, playerHand.rot_y + 180, playerHand.rot_z})
     actionCard.setRotation({playerHand.rot_x, playerHand.rot_y + 180, playerHand.rot_z})
-    stampStack.setRotation({playerHand.rot_x, playerHand.rot_y + 180, playerHand.rot_z})
     ring.setRotation({playerHand.rot_x, playerHand.rot_y + 180, playerHand.rot_z})
   end
 end
 
+function split(deckGUID, count, destination, trash)
+  deck = getObjectFromGUID(deckGUID)
+  deck.shuffle()
+
+  local size = #deck.getObjects()
+  if size == count then
+    deck.setPosition(destination)
+  elseif count == (size - 1) then
+    deck.setPosition(destination)
+    deck.takeObject({position = trash, smooth = false})
+  elseif count == 1 then
+    deck.setPosition(trash)
+    deck.takeObject({position = destination, rotation={0, 270, 180}, smooth = false})
+    return deck
+  else
+    local decks = deck.cut(size-count)
+    decks[2].setPositionSmooth(trash, false, true)
+    decks[1].setPositionSmooth(destination, false, true)
+    return decks[2]
+  end
+  return nil
+end
+
+count = nil
 -- Start by dealing traits
 function setupTraits()
   local players = getSeatedPlayers()
-  local count = #players
+  count = #players
 
-  -- Setup Traits Deck
-  local diamondsStack = getObjectFromGUID(diamondsGUID)
-  local crownsStack = getObjectFromGUID(crownsGUID)
-  local rosesStack = getObjectFromGUID(rosesGUID)
-  diamondsStack.shuffle()
-  crownsStack.shuffle()
-  rosesStack.shuffle()
-
-  -- Deal cards based on number of players
+  -- Cards used based on number of players
   local cardsUsed = (count * 7)
-  local rareCount = math.ceil(cardsUsed / 3.0)
-  local roseCount = 19 - rareCount
+  local suitCount = math.ceil(cardsUsed / 3.0)
 
-  local diamonds = nil
-  local crowns = nil
-  local roses = nil
+  -- Construct traits
+  split(diamondsGUID, suitCount, {-1.87, 1.5, -0.07}, {-1.14, 0.5, 49.84})
+  split(crownsGUID, suitCount, {-1.87, 2, -0.07}, {-1.14, 1.5, 49.84})
+  split(rosesGUID, suitCount, {-1.87, 2.5, -0.07}, {-1.14, 2.5, 49.84})
 
-  if count < 8 then
-    diamonds = diamondsStack.cut(rareCount)
-    crowns = crownsStack.cut(rareCount)
-    roses = rosesStack.cut(roseCount)
-
-    diamonds[1].destruct()
-    crowns[1].destruct()
-    roses[2].destruct()
-
-    diamonds = diamonds[2]
-    crowns = crowns[2]
-  else
-    diamonds = diamondsStack
-    crowns = crownsStack
-  end
-
-  diamonds.setPositionSmooth({-1.87, 2.07, -0.07}, false, true)
-  crowns.setPositionSmooth({-1.87, 3.07, -0.07}, false, true)
-  diamonds.setRotationSmooth({0, 270, 180}, false, true)
-  crowns.setRotationSmooth({0, 270, 180}, false, true)
-
-  -- The extra diamond at 7, 8 players
-  diamondsStack = getObjectFromGUID(diamond1Desire)
-  if count > 6 then
-    diamondsStack.setPositionSmooth({1.86, 1.51, -0.09}, false, true)
-    diamondsStack.setRotationSmooth({0, 270, 180}, false, true)
-  else
-    diamondsStack.destruct()
-  end
-
-  -- The extra crown and rose at 6 players or more
-  rosesStack = getObjectFromGUID(midDesires)
-  if count > 5 then
-    rosesStack.setPositionSmooth({1.86, 2.01, -0.09}, false, true)
-    rosesStack.setRotationSmooth({0, 270, 180}, false, true)
-  else
-    rosesStack.destruct()
-  end
-
-  -- The extra diamond at 5 or more players
-  diamondsStack = getObjectFromGUID(diamond2Desire)
-  if count > 4 then
-    diamondsStack.setPositionSmooth({1.86, 2.51, -0.09}, false, true)
-    diamondsStack.setRotationSmooth({0, 270, 180}, false, true)
-  else
-    diamondsStack.destruct()
-  end
+  -- Construct desires
+  split(diamondsDesires, math.ceil(count / 2.0), {1.86, 1.5, -0.09}, {1.13, 0.5, 49.84})
+  split(crownsDesires, math.floor(count / 3.0) + 1, {1.86, 2, -0.09}, {1.13, 1.0, 49.84})
+  split(rosesDesires, math.floor(count / 3.0) + 0, {1.86, 2, -0.09}, {1.13, 1.5, 49.84})
 
   -- Remove floating rules
   getObjectFromGUID("da7463").destruct()
 
-  Wait.frames(dealTraits, 300)
+  Wait.frames(dealTraits, 100)
 end
 
 function dealTraits()
@@ -223,7 +180,9 @@ function dealTraits()
   local count = #players
   cardsUsed = (count * 7)
 
-  traits = getObjectFromGUID(rosesGUID)
+  -- traitBox.shuffle()
+  getObjectFromGUID(diamondsDesires).shuffle()
+  local traits = getObjectFromGUID(diamondsGUID)
   traits.shuffle()
   traits.deal(5)
 
@@ -283,22 +242,25 @@ function sleeveCards()
   end
 
   -- Deal desires
-  local desires = getObjectFromGUID(desiresDeck)
-  desires.shuffle()
-  desires.deal(1)
-  desires.destruct()
+  local desires = getObjectFromGUID(diamondsDesires)
+  local size = #desires.getObjects()
 
-  Wait.frames(cleanUp, 50)
-end
-
-function cleanUp()
-
-  -- Destroy desires deck if exist
-  local desires = getObjectFromGUID(desiresDeck)
-  if desires != nil then
-    desires.destruct()
+  -- If there's going to be one leftover, move it to the box
+  if size == (#players + 1) then
+    desires.takeObject({position = {1.13, 0.5, 49.84}, smooth = false})
   end
 
+  -- Deal 1
+  getObjectFromGUID(diamondsDesires).deal(1)
+  --Wait.frames(function() getObjectFromGUID(diamondsDesires).deal(1) end, 50)
+
+  -- Move remaining cards to box
+  if size != #players then
+    Wait.frames(function() getObjectFromGUID(diamondsDesires).setPosition({1.13, 0.5, 49.84}) end, 100)
+    Wait.frames(function() getObjectFromGUID(diamondsDesires).setRotation({0.00, 0.00, 180.00}) end, 150)
+  end
+
+  -- desires
   print("")
   print("")
   print(" *** Persuasion ***")

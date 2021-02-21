@@ -56,7 +56,7 @@ decks = [
     {
         'deckID': 7,
         'tts_color': "Pink",
-        'name': 'Pink Horn Trait',
+        'name': 'Pink Song Trait',
         'description': traitDescription,
         'face': 'http://cloud-3.steamusercontent.com/ugc/1760314284293467574/8D53F0CA194352DA384F37CEB4A21AAC375582E5/',
         'back': 'http://cloud-3.steamusercontent.com/ugc/1656728318303220938/68722CE40FB18FE8CFAC5D06AB8E00D53BCA4A33/'

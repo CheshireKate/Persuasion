@@ -3,7 +3,7 @@ from itertools import combinations
 from math import floor, ceil
 
 traitTotal = 57
-desireTotal = 9
+desireTotal = 10
 
 suits = set(['💎', '👑', '🌹'])
 
@@ -99,8 +99,7 @@ traitCard = '''<div class="container">
 desireCard = '''<div class="container">
     <div class="cornerSymbol {need}">{need}</div>
     <div class="title">{title}</div>
-    <div class="prim condition"><span class="fancy">Prim victory</span><br/>if you marry a suitor with <span class="symbol {need}">{need}{need}{need}</span></div>
-    <div class="proper condition"><span class="fancy">Proper victory</span><br/>if you personally have <br/><span class="symbol {need}">{need}{need}{need}{need}</span></div>
+    <div class="prim condition"><span class="fancy">Win</span><br/>if you marry a suitor with <b><i>more</i></b> <span class="symbol {need}">{need}</span> than <span class="symbol {hate}">{hate}</span></div>
 </div>'''
 
 styles = {
@@ -214,7 +213,7 @@ styles = {
         }
 
         .prim {
-          margin-top: 6%;
+          margin-top: 12%;
         }
 
         .proper {
@@ -229,6 +228,7 @@ styles = {
           font-family: Symbola;
           text-align: left;
           font-size: 72;
+          visibility: hidden;
           text-shadow:
             -2px -2px 0 #000,
             2px -2px 0 #000,
@@ -388,7 +388,7 @@ with open('resources/Persuasion - Desires.csv', 'r', encoding="utf-8") as input:
         params = {
             'title': 'Desires', #row['Name'],
             'need': row['❤'],
-            'ambition': row['♤']
+            'hate': row['♤']
         }
         cards.append(desireCard.format(**params))
 
