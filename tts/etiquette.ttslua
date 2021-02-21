@@ -1,10 +1,10 @@
-rosesGUID = "04ace1"
-crownsGUID = "7a10f0"
-diamondsGUID = "00d544"
+rosesGUID = "21a5be"
+crownsGUID = "5a27a2"
+diamondsGUID = "c55fe4"
 
-rosesDesires = "fd5e40"
-crownsDesires = "fb2e7a"
-diamondsDesires = "49a005"
+rosesDesires = "739aa7"
+crownsDesires = "e676a3"
+diamondsDesires = "167dc5"
 
 traitBoxPos = {-0.79, 1, 47.32}
 desireBoxPos = {-3.51, 1, 45.45}
@@ -149,70 +149,59 @@ function positionBoards()
   end
 end
 
-function split(deck, count, destination, trash, delay)
-  local size = #deck.getObjects()
+currentDeck = nil
+currentTrash = nil
+currentDestination = nil
+function split(incomingDeck, count, destination, trash)
+  currentDeck = incomingDeck
+  currentTrash = trash
+  currentDestination = destination
+  deck = getObjectFromGUID(currentDeck)
+  deck.shuffle()
 
+  local size = #deck.getObjects()
   if size == count then
-    deck.setPositionSmooth(destination, false, true)
-    deck.setRotationSmooth({0, 270, 180}, false, true)
+    deck.setPosition(destination)
   elseif count == (size - 1) then
-    deck.setPositionSmooth(destination, false, true)
-    deck.setRotationSmooth({0, 270, 180}, false, true)
-    deck.takeObject({position = trash})
+    deck.setPosition(destination)
+    deck.takeObject({position = currentTrash, smooth = false})
   elseif count == 1 then
-    deck.setPositionSmooth(trash, false, true)
-    deck.takeObject({position = destination,
-                     rotation = {0, 270, 180}})
+    deck.setPosition(trash)
+    deck.takeObject({position = currentDestination, rotation={0, 270, 180}, smooth = false})
     return deck
   else
     local decks = deck.cut(size-count)
     decks[2].setPositionSmooth(trash, false, true)
     decks[1].setPositionSmooth(destination, false, true)
-    decks[1].setRotationSmooth({0, 270, 180}, false, true)
     return decks[2]
   end
   return nil
 end
 
+count = nil
 -- Start by dealing traits
 function setupTraits()
   local players = getSeatedPlayers()
-  local count = #players
+  count = #players
 
   -- Cards used based on number of players
   local cardsUsed = (count * 7)
   local suitCount = math.ceil(cardsUsed / 3.0)
 
   -- Construct traits
-  local diamonds = getObjectFromGUID(diamondsGUID)
-  local crowns = getObjectFromGUID(crownsGUID)
-  local roses = getObjectFromGUID(rosesGUID)
+  traitBox = split(diamondsGUID, suitCount, {-1.87, 1.5, -0.07}, traitBoxPos)
+  split(crownsGUID, suitCount, {-1.87, 2, -0.07}, traitBoxPos)
+  split(rosesGUID, suitCount, {-1.87, 2.5, -0.07}, traitBoxPos)
 
-  diamonds.shuffle()
-  crowns.shuffle()
-  roses.shuffle()
-
-  traitBox = split(diamonds, suitCount, {-1.87, 1.5, -0.07}, traitBoxPos)
-  split(crowns, suitCount, {-1.87, 2, -0.07}, traitBoxPos)
-  split(roses, suitCount, {-1.87, 2.5, -0.07}, traitBoxPos)
-
-  -- Construct desires
-  diamonds = getObjectFromGUID(diamondsDesires)
-  crowns = getObjectFromGUID(crownsDesires)
-  roses = getObjectFromGUID(rosesDesires)
-
-  diamonds.shuffle()
-  crowns.shuffle()
-  roses.shuffle()
-
-  desireBox = split(diamonds, math.ceil(count / 2.0), {1.86, 1.5, -0.09}, desireBoxPos)
-  --split(crowns, math.floor(count / 3.0) + 2, {1.86, 2, -0.09}, desireBoxPos)
-  --split(roses, math.floor(count / 3.0) + 1, {-1.87, 2.5, -0.07}, desireBoxPos)
+  -- Construct desires slowly (more issues here)
+  desireBox = split(diamondsDesires, math.ceil(count / 2.0), {1.86, 1.5, -0.09}, desireBoxPos)
+  split(crownsDesires, math.floor(count / 3.0) + 1, {1.86, 2, -0.09}, desireBoxPos)
+  split(rosesDesires, math.floor(count / 3.0) + 0, {1.86, 2, -0.09}, desireBoxPos)
 
   -- Remove floating rules
   getObjectFromGUID("da7463").destruct()
 
-  Wait.frames(dealTraits, 300)
+  Wait.frames(dealTraits, 100)
 end
 
 function dealTraits()
@@ -220,7 +209,7 @@ function dealTraits()
   local count = #players
   cardsUsed = (count * 7)
 
-  traitBox.shuffle()
+  -- traitBox.shuffle()
   getObjectFromGUID(diamondsDesires).shuffle()
   local traits = getObjectFromGUID(diamondsGUID)
   traits.shuffle()
@@ -284,13 +273,21 @@ function sleeveCards()
   -- Deal desires
   local desires = getObjectFromGUID(diamondsDesires)
   local size = #desires.getObjects()
+
+  -- If there's going to be one leftover, move it to the box
   if size == (#players + 1) then
     desires.takeObject({position = desireBoxPos})
   end
-  desires.deal(1)
-  print(desires)
-  Wait.frames(function() print(desires) end, 50)
-  -- desires.setPositionSmooth(desireBoxPos, false, true)
+
+  -- Deal 1
+  Wait.frames(function() getObjectFromGUID(diamondsDesires).deal(1) end, 50)
+
+  -- Move remaining cards to box
+  if size != #players then
+    Wait.frames(function() getObjectFromGUID(diamondsDesires).setPositionSmooth(desireBoxPos, false, true) end, 100)
+  end
+
+  -- desires
   print("")
   print("")
   print(" *** Persuasion ***")
