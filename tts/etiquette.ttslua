@@ -2,7 +2,7 @@ rosesGUID = "5a191e"
 crownsGUID = "6ba45a"
 diamondsGUID = "98c8fc"
 
-rosesDesires = "19184a"
+rosesDesires = "ef6fa7"
 crownsDesires = "a22c52"
 diamondsDesires = "432fc2"
 
@@ -28,7 +28,7 @@ crests = {
     HandZone = "9cb275",
     LetterboxCard = "21ab1b",
     Ring = "f08f60",
-    ActionCard = "997e26"
+    ActionCard = "38f338"
   },
   Pink = {
     Name = "Pink Song",
@@ -37,7 +37,7 @@ crests = {
     HandZone = "38ad08",
     LetterboxCard = "a629b7",
     Ring = "dc100b",
-    ActionCard = "941a1e"
+    ActionCard = "46cc53"
   },
   Purple = {
     Name = "Purple Clover",
@@ -46,7 +46,7 @@ crests = {
     HandZone = "c3bd91",
     LetterboxCard = "108a7e",
     Ring = "73a302",
-    ActionCard = "ba61ea"
+    ActionCard = "c82861"
   },
   Blue = {
     Name = "Blue Lion",
@@ -55,7 +55,7 @@ crests = {
     HandZone = "e7cfd5",
     LetterboxCard = "c92497",
     Ring = "b46ebf",
-    ActionCard = "e127f7"
+    ActionCard = "3d34fa"
   },
   Green = {
     Name = "Green Tree",
@@ -64,7 +64,7 @@ crests = {
     HandZone = "421f67",
     LetterboxCard = "48c25c",
     Ring = "096d0c",
-    ActionCard = "ae2c76"
+    ActionCard = "ae7210"
   },
   Yellow = {
     Name = "Yellow Sun",
@@ -73,7 +73,7 @@ crests = {
     HandZone = "32db78",
     LetterboxCard = "f69365",
     Ring = "049e25",
-    ActionCard = "523812"
+    ActionCard = "be00ad"
   },
   Brown = {
     Name = "Black Dog",
@@ -82,7 +82,7 @@ crests = {
     HandZone = "a49a6b",
     LetterboxCard = "4fcbc6",
     Ring = "4c4495",
-    ActionCard = "0390ce"
+    ActionCard = "8ab56e"
   },
   Teal = {
     Name = "Cyan Shield",
@@ -91,7 +91,7 @@ crests = {
     HandZone = "51cc53",
     LetterboxCard = "39fbd4",
     Ring = "19cf1f",
-    ActionCard = "e7b01e"
+    ActionCard = "f1b139"
   }
 }
 

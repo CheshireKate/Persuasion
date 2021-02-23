@@ -99,7 +99,7 @@ traitCard = '''<div class="container">
 desireCard = '''<div class="container">
     <div class="cornerSymbol {need}">{need}</div>
     <div class="title">{title}</div>
-    <div class="prim condition"><span class="fancy">Win</span><br/>if you marry a suitor with <b><i>more</i></b> <span class="symbol {need}">{need}</span> than <span class="symbol {hate}">{hate}</span></div>
+    <div class="prim condition"><span class="fancy">Win</span><br/>if your spouse's sealed letters have<br/><b><i>more</i></b> <span class="symbol {need}">{need}</span> than <span class="symbol {hate}">{hate}</span><br/><br/>All letters are returned<br/>to owners at matrimony!</div>
 </div>'''
 
 styles = {
@@ -213,7 +213,7 @@ styles = {
         }
 
         .prim {
-          margin-top: 12%;
+          margin-top: 5%;
         }
 
         .proper {
