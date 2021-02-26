@@ -78,7 +78,7 @@
           },
           "Nickname": "Trait",
           "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-          "GMNotes": "None",
+          "GMNotes": "gem",
           "ColorDiffuse": {
             "r": 0.713235259,
             "g": 0.713235259,
@@ -129,7 +129,7 @@
               },
               "Nickname": "Black Dog Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Brown",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -179,7 +179,7 @@
               },
               "Nickname": "Blue Lion Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Blue",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -229,7 +229,7 @@
               },
               "Nickname": "Green Tree Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Green",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -279,7 +279,7 @@
               },
               "Nickname": "Cyan Shield Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Teal",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -329,7 +329,7 @@
               },
               "Nickname": "Yellow Sun Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Yellow",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -379,7 +379,7 @@
               },
               "Nickname": "Pink Song Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Pink",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -429,7 +429,7 @@
               },
               "Nickname": "Purple Clover Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Purple",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -479,7 +479,7 @@
               },
               "Nickname": "White Horse Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "White",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -531,7 +531,7 @@
           },
           "Nickname": "Trait",
           "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-          "GMNotes": "None",
+          "GMNotes": "gem",
           "ColorDiffuse": {
             "r": 0.713235259,
             "g": 0.713235259,
@@ -582,7 +582,7 @@
               },
               "Nickname": "Black Dog Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Brown",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -632,7 +632,7 @@
               },
               "Nickname": "Blue Lion Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Blue",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -682,7 +682,7 @@
               },
               "Nickname": "Green Tree Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Green",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -732,7 +732,7 @@
               },
               "Nickname": "Cyan Shield Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Teal",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -782,7 +782,7 @@
               },
               "Nickname": "Yellow Sun Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Yellow",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -832,7 +832,7 @@
               },
               "Nickname": "Pink Song Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Pink",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -882,7 +882,7 @@
               },
               "Nickname": "Purple Clover Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Purple",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -932,7 +932,7 @@
               },
               "Nickname": "White Horse Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "White",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -984,7 +984,7 @@
           },
           "Nickname": "Trait",
           "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-          "GMNotes": "None",
+          "GMNotes": "gem",
           "ColorDiffuse": {
             "r": 0.713235259,
             "g": 0.713235259,
@@ -1035,7 +1035,7 @@
               },
               "Nickname": "Black Dog Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Brown",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -1085,7 +1085,7 @@
               },
               "Nickname": "Blue Lion Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Blue",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -1135,7 +1135,7 @@
               },
               "Nickname": "Green Tree Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Green",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -1185,7 +1185,7 @@
               },
               "Nickname": "Cyan Shield Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Teal",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -1235,7 +1235,7 @@
               },
               "Nickname": "Yellow Sun Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Yellow",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -1285,7 +1285,7 @@
               },
               "Nickname": "Pink Song Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Pink",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -1335,7 +1335,7 @@
               },
               "Nickname": "Purple Clover Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Purple",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -1385,7 +1385,7 @@
               },
               "Nickname": "White Horse Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "White",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -1437,7 +1437,7 @@
           },
           "Nickname": "Trait",
           "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-          "GMNotes": "None",
+          "GMNotes": "gem",
           "ColorDiffuse": {
             "r": 0.713235259,
             "g": 0.713235259,
@@ -1488,7 +1488,7 @@
               },
               "Nickname": "Black Dog Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Brown",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -1538,7 +1538,7 @@
               },
               "Nickname": "Blue Lion Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Blue",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -1588,7 +1588,7 @@
               },
               "Nickname": "Green Tree Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Green",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -1638,7 +1638,7 @@
               },
               "Nickname": "Cyan Shield Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Teal",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -1688,7 +1688,7 @@
               },
               "Nickname": "Yellow Sun Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Yellow",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -1738,7 +1738,7 @@
               },
               "Nickname": "Pink Song Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Pink",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -1788,7 +1788,7 @@
               },
               "Nickname": "Purple Clover Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Purple",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -1838,7 +1838,7 @@
               },
               "Nickname": "White Horse Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "White",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -1890,7 +1890,7 @@
           },
           "Nickname": "Trait",
           "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-          "GMNotes": "None",
+          "GMNotes": "gem",
           "ColorDiffuse": {
             "r": 0.713235259,
             "g": 0.713235259,
@@ -1941,7 +1941,7 @@
               },
               "Nickname": "Black Dog Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Brown",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -1991,7 +1991,7 @@
               },
               "Nickname": "Blue Lion Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Blue",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -2041,7 +2041,7 @@
               },
               "Nickname": "Green Tree Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Green",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -2091,7 +2091,7 @@
               },
               "Nickname": "Cyan Shield Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Teal",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -2141,7 +2141,7 @@
               },
               "Nickname": "Yellow Sun Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Yellow",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -2191,7 +2191,7 @@
               },
               "Nickname": "Pink Song Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Pink",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -2241,7 +2241,7 @@
               },
               "Nickname": "Purple Clover Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Purple",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -2291,7 +2291,7 @@
               },
               "Nickname": "White Horse Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "White",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -2343,7 +2343,7 @@
           },
           "Nickname": "Trait",
           "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-          "GMNotes": "None",
+          "GMNotes": "gem",
           "ColorDiffuse": {
             "r": 0.713235259,
             "g": 0.713235259,
@@ -2394,7 +2394,7 @@
               },
               "Nickname": "Black Dog Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Brown",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -2444,7 +2444,7 @@
               },
               "Nickname": "Blue Lion Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Blue",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -2494,7 +2494,7 @@
               },
               "Nickname": "Green Tree Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Green",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -2544,7 +2544,7 @@
               },
               "Nickname": "Cyan Shield Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Teal",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -2594,7 +2594,7 @@
               },
               "Nickname": "Yellow Sun Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Yellow",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -2644,7 +2644,7 @@
               },
               "Nickname": "Pink Song Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Pink",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -2694,7 +2694,7 @@
               },
               "Nickname": "Purple Clover Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Purple",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -2744,7 +2744,7 @@
               },
               "Nickname": "White Horse Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "White",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -2796,7 +2796,7 @@
           },
           "Nickname": "Trait",
           "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-          "GMNotes": "None",
+          "GMNotes": "gem",
           "ColorDiffuse": {
             "r": 0.713235259,
             "g": 0.713235259,
@@ -2847,7 +2847,7 @@
               },
               "Nickname": "Black Dog Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Brown",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -2897,7 +2897,7 @@
               },
               "Nickname": "Blue Lion Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Blue",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -2947,7 +2947,7 @@
               },
               "Nickname": "Green Tree Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Green",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -2997,7 +2997,7 @@
               },
               "Nickname": "Cyan Shield Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Teal",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -3047,7 +3047,7 @@
               },
               "Nickname": "Yellow Sun Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Yellow",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -3097,7 +3097,7 @@
               },
               "Nickname": "Pink Song Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Pink",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -3147,7 +3147,7 @@
               },
               "Nickname": "Purple Clover Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Purple",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -3197,7 +3197,7 @@
               },
               "Nickname": "White Horse Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "White",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -3249,7 +3249,7 @@
           },
           "Nickname": "Trait",
           "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-          "GMNotes": "None",
+          "GMNotes": "gem",
           "ColorDiffuse": {
             "r": 0.713235259,
             "g": 0.713235259,
@@ -3300,7 +3300,7 @@
               },
               "Nickname": "Black Dog Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Brown",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -3350,7 +3350,7 @@
               },
               "Nickname": "Blue Lion Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Blue",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -3400,7 +3400,7 @@
               },
               "Nickname": "Green Tree Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Green",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -3450,7 +3450,7 @@
               },
               "Nickname": "Cyan Shield Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Teal",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -3500,7 +3500,7 @@
               },
               "Nickname": "Yellow Sun Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Yellow",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -3550,7 +3550,7 @@
               },
               "Nickname": "Pink Song Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Pink",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -3600,7 +3600,7 @@
               },
               "Nickname": "Purple Clover Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Purple",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -3650,7 +3650,7 @@
               },
               "Nickname": "White Horse Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "White",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -3702,7 +3702,7 @@
           },
           "Nickname": "Trait",
           "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-          "GMNotes": "None",
+          "GMNotes": "gem",
           "ColorDiffuse": {
             "r": 0.713235259,
             "g": 0.713235259,
@@ -3753,7 +3753,7 @@
               },
               "Nickname": "Black Dog Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Brown",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -3803,7 +3803,7 @@
               },
               "Nickname": "Blue Lion Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Blue",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -3853,7 +3853,7 @@
               },
               "Nickname": "Green Tree Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Green",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -3903,7 +3903,7 @@
               },
               "Nickname": "Cyan Shield Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Teal",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -3953,7 +3953,7 @@
               },
               "Nickname": "Yellow Sun Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Yellow",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -4003,7 +4003,7 @@
               },
               "Nickname": "Pink Song Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Pink",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -4053,7 +4053,7 @@
               },
               "Nickname": "Purple Clover Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Purple",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -4103,7 +4103,7 @@
               },
               "Nickname": "White Horse Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "White",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -4155,7 +4155,7 @@
           },
           "Nickname": "Trait",
           "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-          "GMNotes": "None",
+          "GMNotes": "gem",
           "ColorDiffuse": {
             "r": 0.713235259,
             "g": 0.713235259,
@@ -4206,7 +4206,7 @@
               },
               "Nickname": "Black Dog Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Brown",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -4256,7 +4256,7 @@
               },
               "Nickname": "Blue Lion Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Blue",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -4306,7 +4306,7 @@
               },
               "Nickname": "Green Tree Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Green",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -4356,7 +4356,7 @@
               },
               "Nickname": "Cyan Shield Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Teal",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -4406,7 +4406,7 @@
               },
               "Nickname": "Yellow Sun Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Yellow",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -4456,7 +4456,7 @@
               },
               "Nickname": "Pink Song Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Pink",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -4506,7 +4506,7 @@
               },
               "Nickname": "Purple Clover Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Purple",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -4556,7 +4556,7 @@
               },
               "Nickname": "White Horse Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "White",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -4608,7 +4608,7 @@
           },
           "Nickname": "Trait",
           "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-          "GMNotes": "None",
+          "GMNotes": "gem",
           "ColorDiffuse": {
             "r": 0.713235259,
             "g": 0.713235259,
@@ -4659,7 +4659,7 @@
               },
               "Nickname": "Black Dog Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Brown",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -4709,7 +4709,7 @@
               },
               "Nickname": "Blue Lion Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Blue",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -4759,7 +4759,7 @@
               },
               "Nickname": "Green Tree Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Green",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -4809,7 +4809,7 @@
               },
               "Nickname": "Cyan Shield Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Teal",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -4859,7 +4859,7 @@
               },
               "Nickname": "Yellow Sun Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Yellow",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -4909,7 +4909,7 @@
               },
               "Nickname": "Pink Song Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Pink",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -4959,7 +4959,7 @@
               },
               "Nickname": "Purple Clover Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Purple",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -5009,7 +5009,7 @@
               },
               "Nickname": "White Horse Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "White",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -5061,7 +5061,7 @@
           },
           "Nickname": "Trait",
           "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-          "GMNotes": "None",
+          "GMNotes": "gem",
           "ColorDiffuse": {
             "r": 0.713235259,
             "g": 0.713235259,
@@ -5112,7 +5112,7 @@
               },
               "Nickname": "Black Dog Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Brown",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -5162,7 +5162,7 @@
               },
               "Nickname": "Blue Lion Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Blue",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -5212,7 +5212,7 @@
               },
               "Nickname": "Green Tree Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Green",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -5262,7 +5262,7 @@
               },
               "Nickname": "Cyan Shield Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Teal",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -5312,7 +5312,7 @@
               },
               "Nickname": "Yellow Sun Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Yellow",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -5362,7 +5362,7 @@
               },
               "Nickname": "Pink Song Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Pink",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -5412,7 +5412,7 @@
               },
               "Nickname": "Purple Clover Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Purple",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -5462,7 +5462,7 @@
               },
               "Nickname": "White Horse Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "White",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -5514,7 +5514,7 @@
           },
           "Nickname": "Trait",
           "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-          "GMNotes": "None",
+          "GMNotes": "gem",
           "ColorDiffuse": {
             "r": 0.713235259,
             "g": 0.713235259,
@@ -5565,7 +5565,7 @@
               },
               "Nickname": "Black Dog Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Brown",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -5615,7 +5615,7 @@
               },
               "Nickname": "Blue Lion Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Blue",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -5665,7 +5665,7 @@
               },
               "Nickname": "Green Tree Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Green",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -5715,7 +5715,7 @@
               },
               "Nickname": "Cyan Shield Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Teal",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -5765,7 +5765,7 @@
               },
               "Nickname": "Yellow Sun Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Yellow",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -5815,7 +5815,7 @@
               },
               "Nickname": "Pink Song Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Pink",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -5865,7 +5865,7 @@
               },
               "Nickname": "Purple Clover Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Purple",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -5915,7 +5915,7 @@
               },
               "Nickname": "White Horse Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "White",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -5967,7 +5967,7 @@
           },
           "Nickname": "Trait",
           "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-          "GMNotes": "None",
+          "GMNotes": "gem",
           "ColorDiffuse": {
             "r": 0.713235259,
             "g": 0.713235259,
@@ -6018,7 +6018,7 @@
               },
               "Nickname": "Black Dog Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Brown",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -6068,7 +6068,7 @@
               },
               "Nickname": "Blue Lion Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Blue",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -6118,7 +6118,7 @@
               },
               "Nickname": "Green Tree Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Green",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -6168,7 +6168,7 @@
               },
               "Nickname": "Cyan Shield Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Teal",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -6218,7 +6218,7 @@
               },
               "Nickname": "Yellow Sun Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Yellow",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -6268,7 +6268,7 @@
               },
               "Nickname": "Pink Song Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Pink",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -6318,7 +6318,7 @@
               },
               "Nickname": "Purple Clover Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Purple",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -6368,7 +6368,7 @@
               },
               "Nickname": "White Horse Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "White",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -6420,7 +6420,7 @@
           },
           "Nickname": "Trait",
           "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-          "GMNotes": "None",
+          "GMNotes": "gem",
           "ColorDiffuse": {
             "r": 0.713235259,
             "g": 0.713235259,
@@ -6471,7 +6471,7 @@
               },
               "Nickname": "Black Dog Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Brown",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -6521,7 +6521,7 @@
               },
               "Nickname": "Blue Lion Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Blue",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -6571,7 +6571,7 @@
               },
               "Nickname": "Green Tree Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Green",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -6621,7 +6621,7 @@
               },
               "Nickname": "Cyan Shield Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Teal",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -6671,7 +6671,7 @@
               },
               "Nickname": "Yellow Sun Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Yellow",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -6721,7 +6721,7 @@
               },
               "Nickname": "Pink Song Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Pink",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -6771,7 +6771,7 @@
               },
               "Nickname": "Purple Clover Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Purple",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -6821,7 +6821,7 @@
               },
               "Nickname": "White Horse Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "White",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -6873,7 +6873,7 @@
           },
           "Nickname": "Trait",
           "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-          "GMNotes": "None",
+          "GMNotes": "gem",
           "ColorDiffuse": {
             "r": 0.713235259,
             "g": 0.713235259,
@@ -6924,7 +6924,7 @@
               },
               "Nickname": "Black Dog Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Brown",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -6974,7 +6974,7 @@
               },
               "Nickname": "Blue Lion Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Blue",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -7024,7 +7024,7 @@
               },
               "Nickname": "Green Tree Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Green",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -7074,7 +7074,7 @@
               },
               "Nickname": "Cyan Shield Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Teal",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -7124,7 +7124,7 @@
               },
               "Nickname": "Yellow Sun Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Yellow",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -7174,7 +7174,7 @@
               },
               "Nickname": "Pink Song Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Pink",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -7224,7 +7224,7 @@
               },
               "Nickname": "Purple Clover Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Purple",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -7274,7 +7274,7 @@
               },
               "Nickname": "White Horse Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "White",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -7326,7 +7326,7 @@
           },
           "Nickname": "Trait",
           "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-          "GMNotes": "None",
+          "GMNotes": "gem",
           "ColorDiffuse": {
             "r": 0.713235259,
             "g": 0.713235259,
@@ -7377,7 +7377,7 @@
               },
               "Nickname": "Black Dog Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Brown",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -7427,7 +7427,7 @@
               },
               "Nickname": "Blue Lion Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Blue",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -7477,7 +7477,7 @@
               },
               "Nickname": "Green Tree Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Green",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -7527,7 +7527,7 @@
               },
               "Nickname": "Cyan Shield Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Teal",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -7577,7 +7577,7 @@
               },
               "Nickname": "Yellow Sun Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Yellow",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -7627,7 +7627,7 @@
               },
               "Nickname": "Pink Song Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Pink",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -7677,7 +7677,7 @@
               },
               "Nickname": "Purple Clover Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Purple",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -7727,7 +7727,7 @@
               },
               "Nickname": "White Horse Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "White",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -7779,7 +7779,7 @@
           },
           "Nickname": "Trait",
           "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-          "GMNotes": "None",
+          "GMNotes": "gem",
           "ColorDiffuse": {
             "r": 0.713235259,
             "g": 0.713235259,
@@ -7830,7 +7830,7 @@
               },
               "Nickname": "Black Dog Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Brown",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -7880,7 +7880,7 @@
               },
               "Nickname": "Blue Lion Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Blue",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -7930,7 +7930,7 @@
               },
               "Nickname": "Green Tree Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Green",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -7980,7 +7980,7 @@
               },
               "Nickname": "Cyan Shield Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Teal",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -8030,7 +8030,7 @@
               },
               "Nickname": "Yellow Sun Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Yellow",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -8080,7 +8080,7 @@
               },
               "Nickname": "Pink Song Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Pink",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -8130,7 +8130,7 @@
               },
               "Nickname": "Purple Clover Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Purple",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -8180,7 +8180,7 @@
               },
               "Nickname": "White Horse Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "White",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -8232,7 +8232,7 @@
           },
           "Nickname": "Trait",
           "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-          "GMNotes": "None",
+          "GMNotes": "gem",
           "ColorDiffuse": {
             "r": 0.713235259,
             "g": 0.713235259,
@@ -8283,7 +8283,7 @@
               },
               "Nickname": "Black Dog Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Brown",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -8333,7 +8333,7 @@
               },
               "Nickname": "Blue Lion Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Blue",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -8383,7 +8383,7 @@
               },
               "Nickname": "Green Tree Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Green",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -8433,7 +8433,7 @@
               },
               "Nickname": "Cyan Shield Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Teal",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -8483,7 +8483,7 @@
               },
               "Nickname": "Yellow Sun Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Yellow",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -8533,7 +8533,7 @@
               },
               "Nickname": "Pink Song Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Pink",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -8583,7 +8583,7 @@
               },
               "Nickname": "Purple Clover Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Purple",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -8633,7 +8633,7 @@
               },
               "Nickname": "White Horse Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "White",
+              "GMNotes": "gem",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -8685,7 +8685,7 @@
           },
           "Nickname": "Trait",
           "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-          "GMNotes": "None",
+          "GMNotes": "crown",
           "ColorDiffuse": {
             "r": 0.713235259,
             "g": 0.713235259,
@@ -8736,7 +8736,7 @@
               },
               "Nickname": "Black Dog Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Brown",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -8786,7 +8786,7 @@
               },
               "Nickname": "Blue Lion Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Blue",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -8836,7 +8836,7 @@
               },
               "Nickname": "Green Tree Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Green",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -8886,7 +8886,7 @@
               },
               "Nickname": "Cyan Shield Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Teal",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -8936,7 +8936,7 @@
               },
               "Nickname": "Yellow Sun Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Yellow",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -8986,7 +8986,7 @@
               },
               "Nickname": "Pink Song Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Pink",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -9036,7 +9036,7 @@
               },
               "Nickname": "Purple Clover Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Purple",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -9086,7 +9086,7 @@
               },
               "Nickname": "White Horse Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "White",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -9138,7 +9138,7 @@
           },
           "Nickname": "Trait",
           "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-          "GMNotes": "None",
+          "GMNotes": "crown",
           "ColorDiffuse": {
             "r": 0.713235259,
             "g": 0.713235259,
@@ -9189,7 +9189,7 @@
               },
               "Nickname": "Black Dog Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Brown",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -9239,7 +9239,7 @@
               },
               "Nickname": "Blue Lion Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Blue",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -9289,7 +9289,7 @@
               },
               "Nickname": "Green Tree Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Green",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -9339,7 +9339,7 @@
               },
               "Nickname": "Cyan Shield Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Teal",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -9389,7 +9389,7 @@
               },
               "Nickname": "Yellow Sun Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Yellow",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -9439,7 +9439,7 @@
               },
               "Nickname": "Pink Song Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Pink",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -9489,7 +9489,7 @@
               },
               "Nickname": "Purple Clover Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Purple",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -9539,7 +9539,7 @@
               },
               "Nickname": "White Horse Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "White",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -9591,7 +9591,7 @@
           },
           "Nickname": "Trait",
           "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-          "GMNotes": "None",
+          "GMNotes": "crown",
           "ColorDiffuse": {
             "r": 0.713235259,
             "g": 0.713235259,
@@ -9642,7 +9642,7 @@
               },
               "Nickname": "Black Dog Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Brown",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -9692,7 +9692,7 @@
               },
               "Nickname": "Blue Lion Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Blue",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -9742,7 +9742,7 @@
               },
               "Nickname": "Green Tree Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Green",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -9792,7 +9792,7 @@
               },
               "Nickname": "Cyan Shield Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Teal",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -9842,7 +9842,7 @@
               },
               "Nickname": "Yellow Sun Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Yellow",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -9892,7 +9892,7 @@
               },
               "Nickname": "Pink Song Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Pink",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -9942,7 +9942,7 @@
               },
               "Nickname": "Purple Clover Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Purple",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -9992,7 +9992,7 @@
               },
               "Nickname": "White Horse Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "White",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -10044,7 +10044,7 @@
           },
           "Nickname": "Trait",
           "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-          "GMNotes": "None",
+          "GMNotes": "crown",
           "ColorDiffuse": {
             "r": 0.713235259,
             "g": 0.713235259,
@@ -10095,7 +10095,7 @@
               },
               "Nickname": "Black Dog Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Brown",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -10145,7 +10145,7 @@
               },
               "Nickname": "Blue Lion Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Blue",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -10195,7 +10195,7 @@
               },
               "Nickname": "Green Tree Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Green",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -10245,7 +10245,7 @@
               },
               "Nickname": "Cyan Shield Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Teal",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -10295,7 +10295,7 @@
               },
               "Nickname": "Yellow Sun Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Yellow",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -10345,7 +10345,7 @@
               },
               "Nickname": "Pink Song Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Pink",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -10395,7 +10395,7 @@
               },
               "Nickname": "Purple Clover Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Purple",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -10445,7 +10445,7 @@
               },
               "Nickname": "White Horse Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "White",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -10497,7 +10497,7 @@
           },
           "Nickname": "Trait",
           "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-          "GMNotes": "None",
+          "GMNotes": "crown",
           "ColorDiffuse": {
             "r": 0.713235259,
             "g": 0.713235259,
@@ -10548,7 +10548,7 @@
               },
               "Nickname": "Black Dog Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Brown",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -10598,7 +10598,7 @@
               },
               "Nickname": "Blue Lion Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Blue",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -10648,7 +10648,7 @@
               },
               "Nickname": "Green Tree Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Green",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -10698,7 +10698,7 @@
               },
               "Nickname": "Cyan Shield Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Teal",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -10748,7 +10748,7 @@
               },
               "Nickname": "Yellow Sun Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Yellow",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -10798,7 +10798,7 @@
               },
               "Nickname": "Pink Song Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Pink",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -10848,7 +10848,7 @@
               },
               "Nickname": "Purple Clover Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Purple",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -10898,7 +10898,7 @@
               },
               "Nickname": "White Horse Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "White",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -10950,7 +10950,7 @@
           },
           "Nickname": "Trait",
           "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-          "GMNotes": "None",
+          "GMNotes": "crown",
           "ColorDiffuse": {
             "r": 0.713235259,
             "g": 0.713235259,
@@ -11001,7 +11001,7 @@
               },
               "Nickname": "Black Dog Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Brown",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -11051,7 +11051,7 @@
               },
               "Nickname": "Blue Lion Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Blue",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -11101,7 +11101,7 @@
               },
               "Nickname": "Green Tree Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Green",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -11151,7 +11151,7 @@
               },
               "Nickname": "Cyan Shield Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Teal",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -11201,7 +11201,7 @@
               },
               "Nickname": "Yellow Sun Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Yellow",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -11251,7 +11251,7 @@
               },
               "Nickname": "Pink Song Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Pink",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -11301,7 +11301,7 @@
               },
               "Nickname": "Purple Clover Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Purple",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -11351,7 +11351,7 @@
               },
               "Nickname": "White Horse Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "White",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -11403,7 +11403,7 @@
           },
           "Nickname": "Trait",
           "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-          "GMNotes": "None",
+          "GMNotes": "crown",
           "ColorDiffuse": {
             "r": 0.713235259,
             "g": 0.713235259,
@@ -11454,7 +11454,7 @@
               },
               "Nickname": "Black Dog Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Brown",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -11504,7 +11504,7 @@
               },
               "Nickname": "Blue Lion Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Blue",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -11554,7 +11554,7 @@
               },
               "Nickname": "Green Tree Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Green",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -11604,7 +11604,7 @@
               },
               "Nickname": "Cyan Shield Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Teal",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -11654,7 +11654,7 @@
               },
               "Nickname": "Yellow Sun Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Yellow",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -11704,7 +11704,7 @@
               },
               "Nickname": "Pink Song Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Pink",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -11754,7 +11754,7 @@
               },
               "Nickname": "Purple Clover Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Purple",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -11804,7 +11804,7 @@
               },
               "Nickname": "White Horse Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "White",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -11856,7 +11856,7 @@
           },
           "Nickname": "Trait",
           "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-          "GMNotes": "None",
+          "GMNotes": "crown",
           "ColorDiffuse": {
             "r": 0.713235259,
             "g": 0.713235259,
@@ -11907,7 +11907,7 @@
               },
               "Nickname": "Black Dog Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Brown",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -11957,7 +11957,7 @@
               },
               "Nickname": "Blue Lion Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Blue",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -12007,7 +12007,7 @@
               },
               "Nickname": "Green Tree Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Green",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -12057,7 +12057,7 @@
               },
               "Nickname": "Cyan Shield Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Teal",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -12107,7 +12107,7 @@
               },
               "Nickname": "Yellow Sun Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Yellow",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -12157,7 +12157,7 @@
               },
               "Nickname": "Pink Song Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Pink",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -12207,7 +12207,7 @@
               },
               "Nickname": "Purple Clover Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Purple",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -12257,7 +12257,7 @@
               },
               "Nickname": "White Horse Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "White",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -12309,7 +12309,7 @@
           },
           "Nickname": "Trait",
           "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-          "GMNotes": "None",
+          "GMNotes": "crown",
           "ColorDiffuse": {
             "r": 0.713235259,
             "g": 0.713235259,
@@ -12360,7 +12360,7 @@
               },
               "Nickname": "Black Dog Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Brown",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -12410,7 +12410,7 @@
               },
               "Nickname": "Blue Lion Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Blue",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -12460,7 +12460,7 @@
               },
               "Nickname": "Green Tree Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Green",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -12510,7 +12510,7 @@
               },
               "Nickname": "Cyan Shield Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Teal",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -12560,7 +12560,7 @@
               },
               "Nickname": "Yellow Sun Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Yellow",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -12610,7 +12610,7 @@
               },
               "Nickname": "Pink Song Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Pink",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -12660,7 +12660,7 @@
               },
               "Nickname": "Purple Clover Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Purple",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -12710,7 +12710,7 @@
               },
               "Nickname": "White Horse Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "White",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -12762,7 +12762,7 @@
           },
           "Nickname": "Trait",
           "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-          "GMNotes": "None",
+          "GMNotes": "crown",
           "ColorDiffuse": {
             "r": 0.713235259,
             "g": 0.713235259,
@@ -12813,7 +12813,7 @@
               },
               "Nickname": "Black Dog Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Brown",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -12863,7 +12863,7 @@
               },
               "Nickname": "Blue Lion Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Blue",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -12913,7 +12913,7 @@
               },
               "Nickname": "Green Tree Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Green",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -12963,7 +12963,7 @@
               },
               "Nickname": "Cyan Shield Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Teal",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -13013,7 +13013,7 @@
               },
               "Nickname": "Yellow Sun Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Yellow",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -13063,7 +13063,7 @@
               },
               "Nickname": "Pink Song Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Pink",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -13113,7 +13113,7 @@
               },
               "Nickname": "Purple Clover Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Purple",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -13163,7 +13163,7 @@
               },
               "Nickname": "White Horse Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "White",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -13215,7 +13215,7 @@
           },
           "Nickname": "Trait",
           "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-          "GMNotes": "None",
+          "GMNotes": "crown",
           "ColorDiffuse": {
             "r": 0.713235259,
             "g": 0.713235259,
@@ -13266,7 +13266,7 @@
               },
               "Nickname": "Black Dog Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Brown",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -13316,7 +13316,7 @@
               },
               "Nickname": "Blue Lion Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Blue",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -13366,7 +13366,7 @@
               },
               "Nickname": "Green Tree Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Green",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -13416,7 +13416,7 @@
               },
               "Nickname": "Cyan Shield Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Teal",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -13466,7 +13466,7 @@
               },
               "Nickname": "Yellow Sun Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Yellow",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -13516,7 +13516,7 @@
               },
               "Nickname": "Pink Song Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Pink",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -13566,7 +13566,7 @@
               },
               "Nickname": "Purple Clover Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Purple",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -13616,7 +13616,7 @@
               },
               "Nickname": "White Horse Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "White",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -13668,7 +13668,7 @@
           },
           "Nickname": "Trait",
           "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-          "GMNotes": "None",
+          "GMNotes": "crown",
           "ColorDiffuse": {
             "r": 0.713235259,
             "g": 0.713235259,
@@ -13719,7 +13719,7 @@
               },
               "Nickname": "Black Dog Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Brown",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -13769,7 +13769,7 @@
               },
               "Nickname": "Blue Lion Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Blue",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -13819,7 +13819,7 @@
               },
               "Nickname": "Green Tree Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Green",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -13869,7 +13869,7 @@
               },
               "Nickname": "Cyan Shield Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Teal",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -13919,7 +13919,7 @@
               },
               "Nickname": "Yellow Sun Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Yellow",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -13969,7 +13969,7 @@
               },
               "Nickname": "Pink Song Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Pink",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -14019,7 +14019,7 @@
               },
               "Nickname": "Purple Clover Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Purple",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -14069,7 +14069,7 @@
               },
               "Nickname": "White Horse Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "White",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -14121,7 +14121,7 @@
           },
           "Nickname": "Trait",
           "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-          "GMNotes": "None",
+          "GMNotes": "crown",
           "ColorDiffuse": {
             "r": 0.713235259,
             "g": 0.713235259,
@@ -14172,7 +14172,7 @@
               },
               "Nickname": "Black Dog Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Brown",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -14222,7 +14222,7 @@
               },
               "Nickname": "Blue Lion Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Blue",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -14272,7 +14272,7 @@
               },
               "Nickname": "Green Tree Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Green",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -14322,7 +14322,7 @@
               },
               "Nickname": "Cyan Shield Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Teal",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -14372,7 +14372,7 @@
               },
               "Nickname": "Yellow Sun Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Yellow",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -14422,7 +14422,7 @@
               },
               "Nickname": "Pink Song Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Pink",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -14472,7 +14472,7 @@
               },
               "Nickname": "Purple Clover Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Purple",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -14522,7 +14522,7 @@
               },
               "Nickname": "White Horse Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "White",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -14574,7 +14574,7 @@
           },
           "Nickname": "Trait",
           "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-          "GMNotes": "None",
+          "GMNotes": "crown",
           "ColorDiffuse": {
             "r": 0.713235259,
             "g": 0.713235259,
@@ -14625,7 +14625,7 @@
               },
               "Nickname": "Black Dog Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Brown",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -14675,7 +14675,7 @@
               },
               "Nickname": "Blue Lion Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Blue",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -14725,7 +14725,7 @@
               },
               "Nickname": "Green Tree Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Green",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -14775,7 +14775,7 @@
               },
               "Nickname": "Cyan Shield Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Teal",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -14825,7 +14825,7 @@
               },
               "Nickname": "Yellow Sun Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Yellow",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -14875,7 +14875,7 @@
               },
               "Nickname": "Pink Song Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Pink",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -14925,7 +14925,7 @@
               },
               "Nickname": "Purple Clover Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Purple",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -14975,7 +14975,7 @@
               },
               "Nickname": "White Horse Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "White",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -15027,7 +15027,7 @@
           },
           "Nickname": "Trait",
           "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-          "GMNotes": "None",
+          "GMNotes": "crown",
           "ColorDiffuse": {
             "r": 0.713235259,
             "g": 0.713235259,
@@ -15078,7 +15078,7 @@
               },
               "Nickname": "Black Dog Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Brown",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -15128,7 +15128,7 @@
               },
               "Nickname": "Blue Lion Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Blue",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -15178,7 +15178,7 @@
               },
               "Nickname": "Green Tree Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Green",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -15228,7 +15228,7 @@
               },
               "Nickname": "Cyan Shield Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Teal",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -15278,7 +15278,7 @@
               },
               "Nickname": "Yellow Sun Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Yellow",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -15328,7 +15328,7 @@
               },
               "Nickname": "Pink Song Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Pink",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -15378,7 +15378,7 @@
               },
               "Nickname": "Purple Clover Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Purple",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -15428,7 +15428,7 @@
               },
               "Nickname": "White Horse Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "White",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -15480,7 +15480,7 @@
           },
           "Nickname": "Trait",
           "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-          "GMNotes": "None",
+          "GMNotes": "crown",
           "ColorDiffuse": {
             "r": 0.713235259,
             "g": 0.713235259,
@@ -15531,7 +15531,7 @@
               },
               "Nickname": "Black Dog Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Brown",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -15581,7 +15581,7 @@
               },
               "Nickname": "Blue Lion Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Blue",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -15631,7 +15631,7 @@
               },
               "Nickname": "Green Tree Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Green",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -15681,7 +15681,7 @@
               },
               "Nickname": "Cyan Shield Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Teal",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -15731,7 +15731,7 @@
               },
               "Nickname": "Yellow Sun Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Yellow",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -15781,7 +15781,7 @@
               },
               "Nickname": "Pink Song Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Pink",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -15831,7 +15831,7 @@
               },
               "Nickname": "Purple Clover Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Purple",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -15881,7 +15881,7 @@
               },
               "Nickname": "White Horse Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "White",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -15933,7 +15933,7 @@
           },
           "Nickname": "Trait",
           "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-          "GMNotes": "None",
+          "GMNotes": "crown",
           "ColorDiffuse": {
             "r": 0.713235259,
             "g": 0.713235259,
@@ -15984,7 +15984,7 @@
               },
               "Nickname": "Black Dog Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Brown",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -16034,7 +16034,7 @@
               },
               "Nickname": "Blue Lion Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Blue",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -16084,7 +16084,7 @@
               },
               "Nickname": "Green Tree Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Green",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -16134,7 +16134,7 @@
               },
               "Nickname": "Cyan Shield Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Teal",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -16184,7 +16184,7 @@
               },
               "Nickname": "Yellow Sun Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Yellow",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -16234,7 +16234,7 @@
               },
               "Nickname": "Pink Song Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Pink",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -16284,7 +16284,7 @@
               },
               "Nickname": "Purple Clover Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Purple",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -16334,7 +16334,7 @@
               },
               "Nickname": "White Horse Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "White",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -16386,7 +16386,7 @@
           },
           "Nickname": "Trait",
           "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-          "GMNotes": "None",
+          "GMNotes": "crown",
           "ColorDiffuse": {
             "r": 0.713235259,
             "g": 0.713235259,
@@ -16437,7 +16437,7 @@
               },
               "Nickname": "Black Dog Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Brown",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -16487,7 +16487,7 @@
               },
               "Nickname": "Blue Lion Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Blue",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -16537,7 +16537,7 @@
               },
               "Nickname": "Green Tree Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Green",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -16587,7 +16587,7 @@
               },
               "Nickname": "Cyan Shield Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Teal",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -16637,7 +16637,7 @@
               },
               "Nickname": "Yellow Sun Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Yellow",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -16687,7 +16687,7 @@
               },
               "Nickname": "Pink Song Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Pink",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -16737,7 +16737,7 @@
               },
               "Nickname": "Purple Clover Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Purple",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -16787,7 +16787,7 @@
               },
               "Nickname": "White Horse Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "White",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -16839,7 +16839,7 @@
           },
           "Nickname": "Trait",
           "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-          "GMNotes": "None",
+          "GMNotes": "crown",
           "ColorDiffuse": {
             "r": 0.713235259,
             "g": 0.713235259,
@@ -16890,7 +16890,7 @@
               },
               "Nickname": "Black Dog Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Brown",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -16940,7 +16940,7 @@
               },
               "Nickname": "Blue Lion Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Blue",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -16990,7 +16990,7 @@
               },
               "Nickname": "Green Tree Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Green",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -17040,7 +17040,7 @@
               },
               "Nickname": "Cyan Shield Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Teal",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -17090,7 +17090,7 @@
               },
               "Nickname": "Yellow Sun Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Yellow",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -17140,7 +17140,7 @@
               },
               "Nickname": "Pink Song Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Pink",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -17190,7 +17190,7 @@
               },
               "Nickname": "Purple Clover Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Purple",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -17240,7 +17240,7 @@
               },
               "Nickname": "White Horse Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "White",
+              "GMNotes": "crown",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -17292,7 +17292,7 @@
           },
           "Nickname": "Trait",
           "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-          "GMNotes": "None",
+          "GMNotes": "rose",
           "ColorDiffuse": {
             "r": 0.713235259,
             "g": 0.713235259,
@@ -17343,7 +17343,7 @@
               },
               "Nickname": "Black Dog Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Brown",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -17393,7 +17393,7 @@
               },
               "Nickname": "Blue Lion Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Blue",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -17443,7 +17443,7 @@
               },
               "Nickname": "Green Tree Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Green",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -17493,7 +17493,7 @@
               },
               "Nickname": "Cyan Shield Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Teal",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -17543,7 +17543,7 @@
               },
               "Nickname": "Yellow Sun Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Yellow",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -17593,7 +17593,7 @@
               },
               "Nickname": "Pink Song Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Pink",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -17643,7 +17643,7 @@
               },
               "Nickname": "Purple Clover Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Purple",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -17693,7 +17693,7 @@
               },
               "Nickname": "White Horse Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "White",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -17745,7 +17745,7 @@
           },
           "Nickname": "Trait",
           "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-          "GMNotes": "None",
+          "GMNotes": "rose",
           "ColorDiffuse": {
             "r": 0.713235259,
             "g": 0.713235259,
@@ -17796,7 +17796,7 @@
               },
               "Nickname": "Black Dog Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Brown",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -17846,7 +17846,7 @@
               },
               "Nickname": "Blue Lion Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Blue",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -17896,7 +17896,7 @@
               },
               "Nickname": "Green Tree Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Green",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -17946,7 +17946,7 @@
               },
               "Nickname": "Cyan Shield Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Teal",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -17996,7 +17996,7 @@
               },
               "Nickname": "Yellow Sun Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Yellow",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -18046,7 +18046,7 @@
               },
               "Nickname": "Pink Song Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Pink",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -18096,7 +18096,7 @@
               },
               "Nickname": "Purple Clover Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Purple",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -18146,7 +18146,7 @@
               },
               "Nickname": "White Horse Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "White",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -18198,7 +18198,7 @@
           },
           "Nickname": "Trait",
           "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-          "GMNotes": "None",
+          "GMNotes": "rose",
           "ColorDiffuse": {
             "r": 0.713235259,
             "g": 0.713235259,
@@ -18249,7 +18249,7 @@
               },
               "Nickname": "Black Dog Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Brown",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -18299,7 +18299,7 @@
               },
               "Nickname": "Blue Lion Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Blue",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -18349,7 +18349,7 @@
               },
               "Nickname": "Green Tree Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Green",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -18399,7 +18399,7 @@
               },
               "Nickname": "Cyan Shield Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Teal",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -18449,7 +18449,7 @@
               },
               "Nickname": "Yellow Sun Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Yellow",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -18499,7 +18499,7 @@
               },
               "Nickname": "Pink Song Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Pink",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -18549,7 +18549,7 @@
               },
               "Nickname": "Purple Clover Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Purple",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -18599,7 +18599,7 @@
               },
               "Nickname": "White Horse Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "White",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -18651,7 +18651,7 @@
           },
           "Nickname": "Trait",
           "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-          "GMNotes": "None",
+          "GMNotes": "rose",
           "ColorDiffuse": {
             "r": 0.713235259,
             "g": 0.713235259,
@@ -18702,7 +18702,7 @@
               },
               "Nickname": "Black Dog Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Brown",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -18752,7 +18752,7 @@
               },
               "Nickname": "Blue Lion Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Blue",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -18802,7 +18802,7 @@
               },
               "Nickname": "Green Tree Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Green",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -18852,7 +18852,7 @@
               },
               "Nickname": "Cyan Shield Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Teal",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -18902,7 +18902,7 @@
               },
               "Nickname": "Yellow Sun Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Yellow",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -18952,7 +18952,7 @@
               },
               "Nickname": "Pink Song Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Pink",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -19002,7 +19002,7 @@
               },
               "Nickname": "Purple Clover Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Purple",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -19052,7 +19052,7 @@
               },
               "Nickname": "White Horse Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "White",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -19104,7 +19104,7 @@
           },
           "Nickname": "Trait",
           "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-          "GMNotes": "None",
+          "GMNotes": "rose",
           "ColorDiffuse": {
             "r": 0.713235259,
             "g": 0.713235259,
@@ -19155,7 +19155,7 @@
               },
               "Nickname": "Black Dog Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Brown",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -19205,7 +19205,7 @@
               },
               "Nickname": "Blue Lion Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Blue",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -19255,7 +19255,7 @@
               },
               "Nickname": "Green Tree Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Green",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -19305,7 +19305,7 @@
               },
               "Nickname": "Cyan Shield Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Teal",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -19355,7 +19355,7 @@
               },
               "Nickname": "Yellow Sun Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Yellow",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -19405,7 +19405,7 @@
               },
               "Nickname": "Pink Song Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Pink",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -19455,7 +19455,7 @@
               },
               "Nickname": "Purple Clover Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Purple",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -19505,7 +19505,7 @@
               },
               "Nickname": "White Horse Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "White",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -19557,7 +19557,7 @@
           },
           "Nickname": "Trait",
           "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-          "GMNotes": "None",
+          "GMNotes": "rose",
           "ColorDiffuse": {
             "r": 0.713235259,
             "g": 0.713235259,
@@ -19608,7 +19608,7 @@
               },
               "Nickname": "Black Dog Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Brown",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -19658,7 +19658,7 @@
               },
               "Nickname": "Blue Lion Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Blue",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -19708,7 +19708,7 @@
               },
               "Nickname": "Green Tree Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Green",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -19758,7 +19758,7 @@
               },
               "Nickname": "Cyan Shield Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Teal",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -19808,7 +19808,7 @@
               },
               "Nickname": "Yellow Sun Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Yellow",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -19858,7 +19858,7 @@
               },
               "Nickname": "Pink Song Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Pink",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -19908,7 +19908,7 @@
               },
               "Nickname": "Purple Clover Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Purple",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -19958,7 +19958,7 @@
               },
               "Nickname": "White Horse Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "White",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -20010,7 +20010,7 @@
           },
           "Nickname": "Trait",
           "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-          "GMNotes": "None",
+          "GMNotes": "rose",
           "ColorDiffuse": {
             "r": 0.713235259,
             "g": 0.713235259,
@@ -20061,7 +20061,7 @@
               },
               "Nickname": "Black Dog Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Brown",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -20111,7 +20111,7 @@
               },
               "Nickname": "Blue Lion Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Blue",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -20161,7 +20161,7 @@
               },
               "Nickname": "Green Tree Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Green",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -20211,7 +20211,7 @@
               },
               "Nickname": "Cyan Shield Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Teal",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -20261,7 +20261,7 @@
               },
               "Nickname": "Yellow Sun Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Yellow",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -20311,7 +20311,7 @@
               },
               "Nickname": "Pink Song Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Pink",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -20361,7 +20361,7 @@
               },
               "Nickname": "Purple Clover Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Purple",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -20411,7 +20411,7 @@
               },
               "Nickname": "White Horse Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "White",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -20463,7 +20463,7 @@
           },
           "Nickname": "Trait",
           "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-          "GMNotes": "None",
+          "GMNotes": "rose",
           "ColorDiffuse": {
             "r": 0.713235259,
             "g": 0.713235259,
@@ -20514,7 +20514,7 @@
               },
               "Nickname": "Black Dog Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Brown",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -20564,7 +20564,7 @@
               },
               "Nickname": "Blue Lion Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Blue",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -20614,7 +20614,7 @@
               },
               "Nickname": "Green Tree Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Green",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -20664,7 +20664,7 @@
               },
               "Nickname": "Cyan Shield Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Teal",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -20714,7 +20714,7 @@
               },
               "Nickname": "Yellow Sun Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Yellow",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -20764,7 +20764,7 @@
               },
               "Nickname": "Pink Song Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Pink",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -20814,7 +20814,7 @@
               },
               "Nickname": "Purple Clover Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Purple",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -20864,7 +20864,7 @@
               },
               "Nickname": "White Horse Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "White",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -20916,7 +20916,7 @@
           },
           "Nickname": "Trait",
           "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-          "GMNotes": "None",
+          "GMNotes": "rose",
           "ColorDiffuse": {
             "r": 0.713235259,
             "g": 0.713235259,
@@ -20967,7 +20967,7 @@
               },
               "Nickname": "Black Dog Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Brown",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -21017,7 +21017,7 @@
               },
               "Nickname": "Blue Lion Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Blue",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -21067,7 +21067,7 @@
               },
               "Nickname": "Green Tree Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Green",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -21117,7 +21117,7 @@
               },
               "Nickname": "Cyan Shield Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Teal",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -21167,7 +21167,7 @@
               },
               "Nickname": "Yellow Sun Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Yellow",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -21217,7 +21217,7 @@
               },
               "Nickname": "Pink Song Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Pink",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -21267,7 +21267,7 @@
               },
               "Nickname": "Purple Clover Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Purple",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -21317,7 +21317,7 @@
               },
               "Nickname": "White Horse Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "White",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -21369,7 +21369,7 @@
           },
           "Nickname": "Trait",
           "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-          "GMNotes": "None",
+          "GMNotes": "rose",
           "ColorDiffuse": {
             "r": 0.713235259,
             "g": 0.713235259,
@@ -21420,7 +21420,7 @@
               },
               "Nickname": "Black Dog Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Brown",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -21470,7 +21470,7 @@
               },
               "Nickname": "Blue Lion Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Blue",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -21520,7 +21520,7 @@
               },
               "Nickname": "Green Tree Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Green",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -21570,7 +21570,7 @@
               },
               "Nickname": "Cyan Shield Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Teal",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -21620,7 +21620,7 @@
               },
               "Nickname": "Yellow Sun Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Yellow",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -21670,7 +21670,7 @@
               },
               "Nickname": "Pink Song Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Pink",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -21720,7 +21720,7 @@
               },
               "Nickname": "Purple Clover Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Purple",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -21770,7 +21770,7 @@
               },
               "Nickname": "White Horse Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "White",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -21822,7 +21822,7 @@
           },
           "Nickname": "Trait",
           "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-          "GMNotes": "None",
+          "GMNotes": "rose",
           "ColorDiffuse": {
             "r": 0.713235259,
             "g": 0.713235259,
@@ -21873,7 +21873,7 @@
               },
               "Nickname": "Black Dog Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Brown",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -21923,7 +21923,7 @@
               },
               "Nickname": "Blue Lion Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Blue",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -21973,7 +21973,7 @@
               },
               "Nickname": "Green Tree Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Green",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -22023,7 +22023,7 @@
               },
               "Nickname": "Cyan Shield Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Teal",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -22073,7 +22073,7 @@
               },
               "Nickname": "Yellow Sun Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Yellow",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -22123,7 +22123,7 @@
               },
               "Nickname": "Pink Song Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Pink",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -22173,7 +22173,7 @@
               },
               "Nickname": "Purple Clover Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Purple",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -22223,7 +22223,7 @@
               },
               "Nickname": "White Horse Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "White",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -22275,7 +22275,7 @@
           },
           "Nickname": "Trait",
           "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-          "GMNotes": "None",
+          "GMNotes": "rose",
           "ColorDiffuse": {
             "r": 0.713235259,
             "g": 0.713235259,
@@ -22326,7 +22326,7 @@
               },
               "Nickname": "Black Dog Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Brown",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -22376,7 +22376,7 @@
               },
               "Nickname": "Blue Lion Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Blue",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -22426,7 +22426,7 @@
               },
               "Nickname": "Green Tree Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Green",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -22476,7 +22476,7 @@
               },
               "Nickname": "Cyan Shield Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Teal",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -22526,7 +22526,7 @@
               },
               "Nickname": "Yellow Sun Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Yellow",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -22576,7 +22576,7 @@
               },
               "Nickname": "Pink Song Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Pink",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -22626,7 +22626,7 @@
               },
               "Nickname": "Purple Clover Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Purple",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -22676,7 +22676,7 @@
               },
               "Nickname": "White Horse Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "White",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -22728,7 +22728,7 @@
           },
           "Nickname": "Trait",
           "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-          "GMNotes": "None",
+          "GMNotes": "rose",
           "ColorDiffuse": {
             "r": 0.713235259,
             "g": 0.713235259,
@@ -22779,7 +22779,7 @@
               },
               "Nickname": "Black Dog Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Brown",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -22829,7 +22829,7 @@
               },
               "Nickname": "Blue Lion Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Blue",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -22879,7 +22879,7 @@
               },
               "Nickname": "Green Tree Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Green",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -22929,7 +22929,7 @@
               },
               "Nickname": "Cyan Shield Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Teal",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -22979,7 +22979,7 @@
               },
               "Nickname": "Yellow Sun Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Yellow",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -23029,7 +23029,7 @@
               },
               "Nickname": "Pink Song Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Pink",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -23079,7 +23079,7 @@
               },
               "Nickname": "Purple Clover Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Purple",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -23129,7 +23129,7 @@
               },
               "Nickname": "White Horse Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "White",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -23181,7 +23181,7 @@
           },
           "Nickname": "Trait",
           "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-          "GMNotes": "None",
+          "GMNotes": "rose",
           "ColorDiffuse": {
             "r": 0.713235259,
             "g": 0.713235259,
@@ -23232,7 +23232,7 @@
               },
               "Nickname": "Black Dog Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Brown",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -23282,7 +23282,7 @@
               },
               "Nickname": "Blue Lion Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Blue",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -23332,7 +23332,7 @@
               },
               "Nickname": "Green Tree Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Green",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -23382,7 +23382,7 @@
               },
               "Nickname": "Cyan Shield Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Teal",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -23432,7 +23432,7 @@
               },
               "Nickname": "Yellow Sun Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Yellow",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -23482,7 +23482,7 @@
               },
               "Nickname": "Pink Song Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Pink",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -23532,7 +23532,7 @@
               },
               "Nickname": "Purple Clover Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Purple",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -23582,7 +23582,7 @@
               },
               "Nickname": "White Horse Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "White",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -23634,7 +23634,7 @@
           },
           "Nickname": "Trait",
           "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-          "GMNotes": "None",
+          "GMNotes": "rose",
           "ColorDiffuse": {
             "r": 0.713235259,
             "g": 0.713235259,
@@ -23685,7 +23685,7 @@
               },
               "Nickname": "Black Dog Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Brown",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -23735,7 +23735,7 @@
               },
               "Nickname": "Blue Lion Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Blue",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -23785,7 +23785,7 @@
               },
               "Nickname": "Green Tree Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Green",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -23835,7 +23835,7 @@
               },
               "Nickname": "Cyan Shield Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Teal",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -23885,7 +23885,7 @@
               },
               "Nickname": "Yellow Sun Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Yellow",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -23935,7 +23935,7 @@
               },
               "Nickname": "Pink Song Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Pink",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -23985,7 +23985,7 @@
               },
               "Nickname": "Purple Clover Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Purple",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -24035,7 +24035,7 @@
               },
               "Nickname": "White Horse Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "White",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -24087,7 +24087,7 @@
           },
           "Nickname": "Trait",
           "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-          "GMNotes": "None",
+          "GMNotes": "rose",
           "ColorDiffuse": {
             "r": 0.713235259,
             "g": 0.713235259,
@@ -24138,7 +24138,7 @@
               },
               "Nickname": "Black Dog Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Brown",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -24188,7 +24188,7 @@
               },
               "Nickname": "Blue Lion Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Blue",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -24238,7 +24238,7 @@
               },
               "Nickname": "Green Tree Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Green",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -24288,7 +24288,7 @@
               },
               "Nickname": "Cyan Shield Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Teal",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -24338,7 +24338,7 @@
               },
               "Nickname": "Yellow Sun Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Yellow",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -24388,7 +24388,7 @@
               },
               "Nickname": "Pink Song Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Pink",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -24438,7 +24438,7 @@
               },
               "Nickname": "Purple Clover Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Purple",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -24488,7 +24488,7 @@
               },
               "Nickname": "White Horse Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "White",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -24540,7 +24540,7 @@
           },
           "Nickname": "Trait",
           "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-          "GMNotes": "None",
+          "GMNotes": "rose",
           "ColorDiffuse": {
             "r": 0.713235259,
             "g": 0.713235259,
@@ -24591,7 +24591,7 @@
               },
               "Nickname": "Black Dog Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Brown",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -24641,7 +24641,7 @@
               },
               "Nickname": "Blue Lion Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Blue",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -24691,7 +24691,7 @@
               },
               "Nickname": "Green Tree Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Green",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -24741,7 +24741,7 @@
               },
               "Nickname": "Cyan Shield Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Teal",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -24791,7 +24791,7 @@
               },
               "Nickname": "Yellow Sun Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Yellow",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -24841,7 +24841,7 @@
               },
               "Nickname": "Pink Song Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Pink",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -24891,7 +24891,7 @@
               },
               "Nickname": "Purple Clover Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Purple",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -24941,7 +24941,7 @@
               },
               "Nickname": "White Horse Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "White",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -24993,7 +24993,7 @@
           },
           "Nickname": "Trait",
           "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-          "GMNotes": "None",
+          "GMNotes": "rose",
           "ColorDiffuse": {
             "r": 0.713235259,
             "g": 0.713235259,
@@ -25044,7 +25044,7 @@
               },
               "Nickname": "Black Dog Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Brown",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -25094,7 +25094,7 @@
               },
               "Nickname": "Blue Lion Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Blue",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -25144,7 +25144,7 @@
               },
               "Nickname": "Green Tree Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Green",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -25194,7 +25194,7 @@
               },
               "Nickname": "Cyan Shield Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Teal",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -25244,7 +25244,7 @@
               },
               "Nickname": "Yellow Sun Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Yellow",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -25294,7 +25294,7 @@
               },
               "Nickname": "Pink Song Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Pink",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -25344,7 +25344,7 @@
               },
               "Nickname": "Purple Clover Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Purple",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -25394,7 +25394,7 @@
               },
               "Nickname": "White Horse Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "White",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -25446,7 +25446,7 @@
           },
           "Nickname": "Trait",
           "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-          "GMNotes": "None",
+          "GMNotes": "rose",
           "ColorDiffuse": {
             "r": 0.713235259,
             "g": 0.713235259,
@@ -25497,7 +25497,7 @@
               },
               "Nickname": "Black Dog Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Brown",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -25547,7 +25547,7 @@
               },
               "Nickname": "Blue Lion Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Blue",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -25597,7 +25597,7 @@
               },
               "Nickname": "Green Tree Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Green",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -25647,7 +25647,7 @@
               },
               "Nickname": "Cyan Shield Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Teal",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -25697,7 +25697,7 @@
               },
               "Nickname": "Yellow Sun Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Yellow",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -25747,7 +25747,7 @@
               },
               "Nickname": "Pink Song Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Pink",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -25797,7 +25797,7 @@
               },
               "Nickname": "Purple Clover Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "Purple",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -25847,7 +25847,7 @@
               },
               "Nickname": "White Horse Trait",
               "Description": "To resleeve, right click, select State, then pick the relevant sleeve",
-              "GMNotes": "White",
+              "GMNotes": "rose",
               "ColorDiffuse": {
                 "r": 0.713235259,
                 "g": 0.713235259,

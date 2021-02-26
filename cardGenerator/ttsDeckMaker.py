@@ -1,10 +1,11 @@
+from math import floor
 
 traitDescription = 'To resleeve, right click, select State, then pick the relevant sleeve'
 cardCount = 57
+suits = [(19, 'gem'), (38, 'crown'), (57, 'rose')]
 
 base = {
     'deckID': 1,
-    'tts_color': "None",
     'name': 'Trait',
     'cardList': ', '.join([str(i) for i in range(100, 100 + cardCount)]),
     'description': traitDescription,
@@ -15,7 +16,6 @@ base = {
 decks = [
     {
         'deckID': 2,
-        'tts_color': "Brown",
         'name': 'Black Dog Trait',
         'description': traitDescription,
         'face': 'http://cloud-3.steamusercontent.com/ugc/1760314284293466165/A79DF3F6EADECF055822DEAFA4DC91B6A1E7AAD0/',
@@ -23,7 +23,6 @@ decks = [
     },
     {
         'deckID': 3,
-        'tts_color': "Blue",
         'name': 'Blue Lion Trait',
         'description': traitDescription,
         'face': 'http://cloud-3.steamusercontent.com/ugc/1760314284293466587/1D7FCD7CF8A0A9580C73B92B5770E9D22B12DC4C/',
@@ -31,7 +30,6 @@ decks = [
     },
     {
         'deckID': 4,
-        'tts_color': "Green",
         'name': 'Green Tree Trait',
         'description': traitDescription,
         'face': 'http://cloud-3.steamusercontent.com/ugc/1760314284293466942/43C47C3EB4AC6A3CCD552CEEDABAFFF96976009A/',
@@ -39,7 +37,6 @@ decks = [
     },
     {
         'deckID': 5,
-        'tts_color': "Teal",
         'name': 'Cyan Shield Trait',
         'description': traitDescription,
         'face': 'http://cloud-3.steamusercontent.com/ugc/1760314284293468547/A9E903129F51F545360F475FCF13E1B8825501C5/',
@@ -47,7 +44,6 @@ decks = [
     },
     {
         'deckID': 6,
-        'tts_color': "Yellow",
         'name': 'Yellow Sun Trait',
         'description': traitDescription,
         'face': 'http://cloud-3.steamusercontent.com/ugc/1760314284293469375/BA39485AC11ACB73FAA9093AED85DF034B249DCE/',
@@ -55,7 +51,6 @@ decks = [
     },
     {
         'deckID': 7,
-        'tts_color': "Pink",
         'name': 'Pink Song Trait',
         'description': traitDescription,
         'face': 'http://cloud-3.steamusercontent.com/ugc/1760314284293467574/8D53F0CA194352DA384F37CEB4A21AAC375582E5/',
@@ -63,7 +58,6 @@ decks = [
     },
     {
         'deckID': 8,
-        'tts_color': "Purple",
         'name': 'Purple Clover Trait',
         'description': traitDescription,
         'face': 'http://cloud-3.steamusercontent.com/ugc/1760314284293468002/6AA4C46972FB468C78AA1EF817457EE4465AC82C/',
@@ -71,7 +65,6 @@ decks = [
     },
     {
         'deckID': 9,
-        'tts_color': "White",
         'name': 'White Horse Trait',
         'description': traitDescription,
         'face': 'http://cloud-3.steamusercontent.com/ugc/1760314284293468958/48D92DB959671749E71667C82CF5570FBCB75874/',
@@ -170,7 +163,7 @@ card = '''{{
           }},
           "Nickname": "{name}",
           "Description": "{description}",
-          "GMNotes": "{tts_color}",
+          "GMNotes": "{suit}",
           "ColorDiffuse": {{
             "r": 0.713235259,
             "g": 0.713235259,
@@ -226,7 +219,7 @@ state = '''"{deckID:d}": {{
               }},
               "Nickname": "{name}",
               "Description": "{description}",
-              "GMNotes": "{tts_color}",
+              "GMNotes": "{suit}",
               "ColorDiffuse": {{
                 "r": 0.713235259,
                 "g": 0.713235259,
@@ -265,13 +258,21 @@ state = '''"{deckID:d}": {{
 
 # Generate combinations
 cards = []
+suitIndex = 0
+suit = suits[0][1]
 for cardID in range(cardCount):
+    if cardID >= suits[suitIndex][0]:
+        suitIndex += 1
+        suit = suits[suitIndex][1]
+
     states = []
     for deck in decks:
         deck['cardID'] = deck['deckID'] * 100 + cardID
+        deck['suit'] = suit
         states.append(state.format(**deck))
 
     base['cardID'] = base['deckID'] * 100 + cardID
+    base['suit'] = suit
     base['states'] = ','.join(states);
 
     cards.append(card.format(**base))
