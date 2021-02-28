@@ -159,12 +159,12 @@ function setupTraits()
   -- Cards used based on number of players
   local suitCount = nil
 
-  if count <= 4 then
+  if count == 3 then
+    suitCount = 5
+  elseif count == 4 then
+    suitCount = 7
+  elseif count >= 5 then
     suitCount = count * 2
-  elseif count == 5 then
-    suitCount = 11
-  elseif count >= 6 then
-    suitCount = (count * 2) + 2
   end
 
   -- Construct traits
@@ -194,6 +194,7 @@ function dealTraits()
   -- Shuffle and deal traits
   local traits = getObjectFromGUID(rosesGUID)
   traits.shuffle()
+  traits.setPosition({-1.14, 2.50, 49.84})
   traits.deal(5)
 
   -- Iterate through all players
@@ -211,9 +212,6 @@ function dealTraits()
       j = j + 1
     end
 
-    -- Flip letterbox references
-    getObjectFromGUID(crests[color]["LetterboxCard"]).flip()
-
     i = i + 1
   end
 
@@ -228,7 +226,6 @@ end
 
 -- Sleeve cards then draw desires card
 function sleeveCards()
-  local deck = getObjectFromGUID(rosesGUID)
   local players = getSeatedPlayers()
   local i = 1
   while players[i] != nil do
@@ -250,9 +247,6 @@ function sleeveCards()
 
     i = i + 1
   end
-
-  -- Box traits
-  deck.setPositionSmooth({-1.14, 0.50, 49.84}, false, true)
 
   -- Deal desires
   local desires = getObjectFromGUID(diamondsDesires)
