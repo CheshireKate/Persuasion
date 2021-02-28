@@ -5,7 +5,28 @@ from math import floor, ceil
 traitTotal = 57
 desireTotal = 10
 
-suits = set(['💎', '👑', '🌹'])
+conversions = {
+    '💖': '<span class="symbol"><b>♡</b></span>',
+    '✍': '<span class="symbol" style="font-size:40">✍</span>',
+    '☼': '<span class="symbol">☼</span>',
+    '☽': '<span class="symbol"><b>🌙</b></span>',
+    '🌙': '<span class="symbol"><b>🌙</b></span>',
+    '🗝': '<span class="symbol">🔑</span>',
+    '🔓': '<span class="symbol">🔓</span>',
+    '💎': '<span class="symbol addShadow 💎">💎</span>',
+    '👑': '<span class="symbol addShadow 👑">👑</span>',
+    '🌹': '<span class="symbol addShadow 🌹">🌹</span>',
+    '🐦': '<span class="symbol" style="font-size:40">🐦</span>',
+    'Write': '<b><i>Write</i></b>',
+    'Influence': '<b><i>Influence</i></b>',
+    'Reflection': '<b><i>Reflection</i></b>',
+    'reward ': '<b><i>reward</i></b> ',
+    'rewards ': '<b><i>rewards</i></b> ',
+    'rewarding': '<b><i>rewarding</i></b>',
+    'prevent ': '<b><i>prevent</i></b> ',
+    'preventing': '<b><i>preventing</i></b> ',
+    'Matrimony': '<b><i>Matrimony</i></b>'
+}
 
 crests = {
     'black': '#000000',
@@ -89,17 +110,18 @@ crestSection = '''
 '''
 
 traitCard = '''<div class="container">
-    <div class="symbol {symbol}">{symbol}</div>
+    <div class="bigSymbol {symbol}">{symbol}</div>
     <div class="contents">
         <div class="title">{title}</div>
-        <div class="tips"><br/ >If you keep this card, resleeve it to your color by right clicking and selecting States, or set a Hotkey!</div>
+        <div class="art">If you keep this card, resleeve it to your color by right clicking and selecting States, or set a Hotkey!</div>
+        <div class="power">{power}</div>
     </div>
 </div>'''
 
 desireCard = '''<div class="container">
-    <div class="cornerSymbol {need}">{need}</div>
     <div class="title">{title}</div>
     <div class="prim condition"><span class="fancy">Win</span><br/>if your spouse's sealed letters have<br/><b><i>more</i></b> <span class="symbol {need}">{need}</span> than <span class="symbol {hate}">{hate}</span><br/><br/>All letters are returned<br/>to owners at matrimony!</div>
+    <div class="bonus condition"><span class="fancy">{victory}</div>
 </div>'''
 
 styles = {
@@ -117,17 +139,19 @@ styles = {
         .container {{
           width: {};
           height: {};
-          margin: auto;
+          margin: {};
 
-          background:url("resources/{}Front.jpg") no-repeat center center ;
+          background:url("resources/traitFront.jpg") no-repeat center center ;
         }}
 
-        .symbol {{
+        .bigSymbol {{
           height: auto;
           width: 100%;
           margin-left: 3%;
           vertical-align: top;
           font-family: Symbola;
+          font-style: normal;
+          font-weight: normal;
           text-align: left;
           font-size: 72;
           text-shadow:
@@ -137,13 +161,18 @@ styles = {
             2px 2px 0 #000;
         }}
 
-        .title {{
-          font-family: Gentium Book Basic;
-          font-style: italic;
-          font-weight: bold;
-          vertical-align: top;
-          text-align: center;
-          font-size: 42;
+        .symbol {{
+          font-family: Symbola;
+          font-style: normal;
+          font-weight: normal;
+        }}
+
+        .addShadow {{
+          text-shadow:
+            -1px -1px 0 #000,
+            1px -1px 0 #000,
+            -1px 1px 0 #000,
+            1px 1px 0 #000;
         }}
 
         .contents {{
@@ -163,14 +192,34 @@ styles = {
           color: #FF0000;
         }}
 
-        .tips {{
+        .title {{
+          font-family: Gentium Book Basic;
+          font-style: italic;
+          font-weight: bold;
+          vertical-align: top;
+          text-align: center;
+          font-size: 42;
+        }}
+
+        .art {{
+          height: 25%;
+          margin: 5% 10% 0% 10%;
+          width: 80%;
+          font-family: Gentium Book Basic;
+          vertical-align: middle;
+          text-align: center;
+          font-size: 28;
+          {}
+        }}
+
+        .power {{
           margin: 10%;
           width: 80%;
           font-family: Gentium Book Basic;
           vertical-align: middle;
           text-align: center;
-          font-size: 36;
-          {}
+          font-size: 28;
+          line-height: 1.2;
         }}
         ''',
 
@@ -182,34 +231,33 @@ styles = {
           height: 100%;
           margin: auto;
 
-          background:url("resources/desireFront.jpg") no-repeat center center ;
+          background:url("resources/traitFront.jpg") no-repeat center center ;
         }
 
         .title {
-          height: 23%;
+          height: 10%;
           font-family: Gentium Book Basic;
           font-style: italic;
           font-weight: bold;
           vertical-align: top;
           text-align: center;
-          font-size: 64;
-          margin-top: -7%;
-          margin-bottom: -7%;
+          font-size: 48;
+          padding-top: 8%;
         }
 
         .fancy {
           font-weight: bolder;
-          font-size: 52;
+          font-size: 42;
         }
 
         .condition {
-          height: 38%;
+          height: 30%;
           font-family: Gentium Book Basic;
           font-style: italic;
           font-weight: bold;
           vertical-align: top;
           text-align: center;
-          font-size: 42;
+          font-size: 28;
         }
 
         .prim {
@@ -217,6 +265,10 @@ styles = {
         }
 
         .proper {
+          margin-top: -6%;
+        }
+
+        .bonus {
           margin-top: 1%;
         }
 
@@ -236,13 +288,22 @@ styles = {
             2px 2px 0 #000;
         }
 
+        .bigSymbol {
+          font-family: Symbola;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 42;
+          text-shadow:
+            -1px -1px 0 #000,
+            1px -1px 0 #000,
+            -1px 1px 0 #000,
+            1px 1px 0 #000;
+        }
+
         .symbol {
           font-family: Symbola;
           font-style: normal;
           font-weight: normal;
-          vertical-align: top;
-          text-align: center;
-          font-size: 46;
           text-shadow:
             -1px -1px 0 #000,
             1px -1px 0 #000,
@@ -326,55 +387,46 @@ def writeCards(originalCards, name, style=None, sheetColumns=10, sheetRows=5):
     with open('{}.html'.format(name), 'w', encoding="utf-8") as f:
         f.write(html.format(floor(100 / sheetColumns), floor(100 / sheetRows), style, ''.join(pages)))
 
+def formatText(text):
+    if text.startswith('At start'):
+        text = '<b><i>At start</i></b>' + text[8:]
+    elif ':' in text:
+        boldPart, theRest = text.split(':', 1)
+        text = "<b><i>" + boldPart + "</i></b>: " + theRest
+
+    for formatFrom, formatTo in conversions.items():
+        text = text.replace(formatFrom, formatTo)
+
+    return text
+
+
 # Generate traits deck
 cards = []
 
-symbolMap = []
-symbolTemplate = '    {} = {}'
-symbolNames = {
-    '💎': 'wealth',
-    '👑': 'title',
-    '🌹': 'passion'
-}
-
+subTotal = 0
 # Convert CSV to cards
 with open('resources/Persuasion - Traits.csv', 'r', encoding="utf-8") as input:
     cardDetails = csv.DictReader(input)
-    for i, row in enumerate(cardDetails):
-        if i == traitTotal:
+    for subTotal, row in enumerate(cardDetails):
+        # Skip lines that aren't ready or have a power written
+        if subTotal == traitTotal:
             break
-        symbolMap.append([])
+        if row['Ready?'] != '✅':
+            continue
         params = {
-            'modifiers': '',
+            'modifiers': '', # row['Mods']
             'title': row['Name'],
-            'symbol': row['Suit']
+            'symbol': row['Suit'],
+            'power': formatText(row['Effect'])
         }
-        symbolMap[i].append(symbolTemplate.format(symbolNames[row['Suit']], '1'))
         cards.append(traitCard.format(**params))
 
-# Write a lua object mapping cards to their desires characters
-with open('symbolMap.lua', 'w', encoding="utf-8") as f:
-    f.write('symbolMap = { { ' + ' }, { '.join([', '.join(x) for x in symbolMap]) + ' } }')
-
 # Generate traits without border
-writeCards(cards, 'traits-unsleeved', style=styles['traits'].format('None', '100%', '100%', 'desire', ''))
+writeCards(cards, 'traits-unsleeved', style=styles['traits'].format('None', '100%', '100%', 'auto', ''))
 
 # Generate trait cards with borders for each player
 for color, hex in crests.items():
-    writeCards(cards, 'traits-{}'.format(color), style=styles['traits'].format(hex, '94%', '96%', 'trait', 'display: none;'))
-
-desireCount = {
-    '💎': 4,
-    '👑': 3,
-    '🌹': 2
-}
-cards = []
-
-row = 0
-for symbol, count in desireCount.items():
-    cards.append(symbol + ' <span>' + str(count) + '/' + str(desireTotal) + '</span>')
-cards.extend(['']*16)
-writeCards(cards, 'distribution', style=styles['distribution'], sheetColumns=6, sheetRows=10)
+    writeCards(cards, 'traits-{}'.format(color), style=styles['traits'].format(hex, '94%', '96%', 'auto', 'visibility: hidden;'))
 
 cards = []
 
@@ -384,11 +436,14 @@ with open('resources/Persuasion - Desires.csv', 'r', encoding="utf-8") as input:
     for i, row in enumerate(cardDetails):
         if i == desireTotal:
             break
-        symbolMap.append([])
+        if row['Ready?'] != '✅':
+            continue
+        bonusTitle, bonusCondition = row['Victory'].split('Victory', 1)
         params = {
-            'title': 'Desires', #row['Name'],
+            'title': row['Name'] + " Desires",
             'need': row['❤'],
-            'hate': row['♤']
+            'hate': row['♤'],
+            'victory': bonusTitle + " Victory</span><br/>" + formatText(bonusCondition)
         }
         cards.append(desireCard.format(**params))
 
@@ -405,13 +460,3 @@ for crestType in crestCards:
 
     style = styles['crests'].format(''.join(styleSections))
     writeCards(cards, crestType, style=style)
-
-# Generate symbol markers
-for modifier in [('＋', 'plusSide'), ('－', 'minusSide')]:
-    cards = []
-    for i, suit in enumerate(suits):
-        cards.append('{}{}'.format(modifier[0], suit))
-        if i == 2:
-            cards.extend([''] * 2)
-
-    writeCards(cards, modifier[1], style=styles['markers'], sheetColumns=5, sheetRows=4)

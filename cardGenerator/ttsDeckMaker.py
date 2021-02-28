@@ -1,15 +1,16 @@
-from math import floor
+from math import floor, ceil
 
 traitDescription = 'To resleeve, right click, select State, then pick the relevant sleeve'
-cardCount = 57
-suits = [(19, 'gem'), (38, 'crown'), (57, 'rose')]
+cardCount = 30
+suits = [(10, 'gem'), (20, 'crown'), (30, 'rose')]
 
 base = {
     'deckID': 1,
     'name': 'Trait',
     'cardList': ', '.join([str(i) for i in range(100, 100 + cardCount)]),
+    'height': str(ceil(cardCount/10.0)),
     'description': traitDescription,
-    'face': 'http://cloud-3.steamusercontent.com/ugc/1762566736536651247/80765C24EFC6524AC6354E7F01A66AF6EAE5AEAC/',
+    'face': 'http://cloud-3.steamusercontent.com/ugc/1762567360939882924/85820BFE02674A5483CE246645E6D37B1E6789E4/',
     'back': 'http://cloud-3.steamusercontent.com/ugc/1760314147747003169/3FA671000FC54F9E5820713587059A40F17D4ADD/'
 }
 
@@ -18,56 +19,56 @@ decks = [
         'deckID': 2,
         'name': 'Black Dog Trait',
         'description': traitDescription,
-        'face': 'http://cloud-3.steamusercontent.com/ugc/1760314284293466165/A79DF3F6EADECF055822DEAFA4DC91B6A1E7AAD0/',
+        'face': 'http://cloud-3.steamusercontent.com/ugc/1762567360939883297/54B51409190595E3897C558E423981BC8135C7F9/',
         'back': 'http://cloud-3.steamusercontent.com/ugc/1656728318303124139/3386D885EC1630D77C835EA6C49FA6B6C64C8952/'
     },
     {
         'deckID': 3,
         'name': 'Blue Lion Trait',
         'description': traitDescription,
-        'face': 'http://cloud-3.steamusercontent.com/ugc/1760314284293466587/1D7FCD7CF8A0A9580C73B92B5770E9D22B12DC4C/',
+        'face': 'http://cloud-3.steamusercontent.com/ugc/1762567360939883654/4EF128AD0671E44C4F36A16E5E658A2DCF815E55/',
         'back': 'http://cloud-3.steamusercontent.com/ugc/1656728318303214207/F6C545671C5D9E26A8587061ADE177DD0240D2B0/'
     },
     {
         'deckID': 4,
         'name': 'Green Tree Trait',
         'description': traitDescription,
-        'face': 'http://cloud-3.steamusercontent.com/ugc/1760314284293466942/43C47C3EB4AC6A3CCD552CEEDABAFFF96976009A/',
+        'face': 'http://cloud-3.steamusercontent.com/ugc/1762567360939884042/C9821E40A15544478312B3417E66B5DBCF86DBA3/',
         'back': 'http://cloud-3.steamusercontent.com/ugc/1656728318303219676/E43B426C0EC6E5C4828774496FA767B4D9FD2810/'
     },
     {
         'deckID': 5,
         'name': 'Cyan Shield Trait',
         'description': traitDescription,
-        'face': 'http://cloud-3.steamusercontent.com/ugc/1760314284293468547/A9E903129F51F545360F475FCF13E1B8825501C5/',
+        'face': 'http://cloud-3.steamusercontent.com/ugc/1762567360939885784/272EAEA88C11C6757BC524D4732617BE604AC1FC/',
         'back': 'http://cloud-3.steamusercontent.com/ugc/1656728318303223441/26EBC8436FCDFF59041E702E58506D1E068985AE/'
     },
     {
         'deckID': 6,
         'name': 'Yellow Sun Trait',
         'description': traitDescription,
-        'face': 'http://cloud-3.steamusercontent.com/ugc/1760314284293469375/BA39485AC11ACB73FAA9093AED85DF034B249DCE/',
+        'face': 'http://cloud-3.steamusercontent.com/ugc/1762567360939892948/515376D95F8503FE59C2E4070A30AA4F3B7DC9EC/',
         'back': 'http://cloud-3.steamusercontent.com/ugc/1656728318303226151/8173A6620818B8C3A202227FF9B6198F64A1AA13/'
     },
     {
         'deckID': 7,
         'name': 'Pink Song Trait',
         'description': traitDescription,
-        'face': 'http://cloud-3.steamusercontent.com/ugc/1760314284293467574/8D53F0CA194352DA384F37CEB4A21AAC375582E5/',
+        'face': 'http://cloud-3.steamusercontent.com/ugc/1762567360939884664/5A68C36D886E50E76858E9597593EFC4269A2B2E/',
         'back': 'http://cloud-3.steamusercontent.com/ugc/1656728318303220938/68722CE40FB18FE8CFAC5D06AB8E00D53BCA4A33/'
     },
     {
         'deckID': 8,
         'name': 'Purple Clover Trait',
         'description': traitDescription,
-        'face': 'http://cloud-3.steamusercontent.com/ugc/1760314284293468002/6AA4C46972FB468C78AA1EF817457EE4465AC82C/',
+        'face': 'http://cloud-3.steamusercontent.com/ugc/1762567360939885160/6748BC3DF58CC75C943448C35F452AFF64F5BD65/',
         'back': 'http://cloud-3.steamusercontent.com/ugc/1656728318303222134/F7EA4278B2C0EC7640592E7804317356071B0788/'
     },
     {
         'deckID': 9,
         'name': 'White Horse Trait',
         'description': traitDescription,
-        'face': 'http://cloud-3.steamusercontent.com/ugc/1760314284293468958/48D92DB959671749E71667C82CF5570FBCB75874/',
+        'face': 'http://cloud-3.steamusercontent.com/ugc/1762567360939892623/A0B379AA2FA0DE3E99D42A6385A7568FF7F2B692/',
         'back': 'http://cloud-3.steamusercontent.com/ugc/1656728318303224897/771F94BB2FA229907293E17D9AC8310D6617C6B0/'
     }
 ]
@@ -127,7 +128,7 @@ ttsObject = '''{{{{
           "FaceURL": "{face}",
           "BackURL": "{back}",
           "NumWidth": 10,
-          "NumHeight": 6,
+          "NumHeight": {height},
           "BackIsHidden": true,
           "UniqueBack": false,
           "Type": 0
@@ -188,7 +189,7 @@ card = '''{{
               "FaceURL": "{face}",
               "BackURL": "{back}",
               "NumWidth": 10,
-              "NumHeight": 6,
+              "NumHeight": {height},
               "BackIsHidden": true,
               "UniqueBack": false,
               "Type": 0
@@ -244,7 +245,7 @@ state = '''"{deckID:d}": {{
                   "FaceURL": "{face}",
                   "BackURL": "{back}",
                   "NumWidth": 10,
-                  "NumHeight": 6,
+                  "NumHeight": {height},
                   "BackIsHidden": true,
                   "UniqueBack": false,
                   "Type": 0
@@ -269,6 +270,7 @@ for cardID in range(cardCount):
     for deck in decks:
         deck['cardID'] = deck['deckID'] * 100 + cardID
         deck['suit'] = suit
+        deck['height'] = base['height']
         states.append(state.format(**deck))
 
     base['cardID'] = base['deckID'] * 100 + cardID
