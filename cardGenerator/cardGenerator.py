@@ -7,25 +7,39 @@ desireTotal = 10
 
 conversions = {
     '💖': '<span class="symbol"><b>♡</b></span>',
-    '✍': '<span class="symbol" style="font-size:40">✍</span>',
     '☼': '<span class="symbol">☼</span>',
     '☽': '<span class="symbol"><b>🌙</b></span>',
     '🌙': '<span class="symbol"><b>🌙</b></span>',
+    '✍': '<span class="symbol" style="font-size:40">✍</span>',
     '🗝': '<span class="symbol">🔑</span>',
+    '👒': '<span class="symbol" style="font-size:40">👒</span>',
+    '🐦': '<span class="symbol" style="font-size:40">🐦</span>',
     '🔓': '<span class="symbol">🔓</span>',
     '💎': '<span class="symbol addShadow 💎">💎</span>',
     '👑': '<span class="symbol addShadow 👑">👑</span>',
     '🌹': '<span class="symbol addShadow 🌹">🌹</span>',
-    '🐦': '<span class="symbol" style="font-size:40">🐦</span>',
+    'write': '<b><i>Write</i></b>',
     'Write': '<b><i>Write</i></b>',
-    'Influence': '<b><i>Influence</i></b>',
-    'Reflection': '<b><i>Reflection</i></b>',
-    'reward ': '<b><i>reward</i></b> ',
-    'rewards ': '<b><i>rewards</i></b> ',
-    'rewarding': '<b><i>rewarding</i></b>',
+    'gossip': '<b><i>Gossip</i></b>',
+    'Gossip': '<b><i>Gossip</i></b>',
+    'reflect': '<b><i>Reflect</i></b>',
+    'Reflect': '<b><i>Reflect</i></b>',
+    'propose': '<b><i>Propose</i></b>',
+    'Propose': '<b><i>Propose</i></b>',
+    'break up': '<b><i>Break Up</i></b>',
+    'Break up': '<b><i>Break Up</i></b>',
+    'matrimony': '<b><i>Matrimony</i></b>',
+    'Matrimony': '<b><i>Matrimony</i></b>',
+    'preface': '<b><i>Preface</i></b>',
+    'Preface': '<b><i>Preface</i></b>',
+    'engaged': '<b><i>engaged</i></b>',
+    'engage': '<b><i>engage</i></b>',
+    'detested': '<b><i>detested</i></b>',
+    'swap': '<b><i>swap</i></b>',
     'prevent ': '<b><i>prevent</i></b> ',
-    'preventing': '<b><i>preventing</i></b> ',
-    'Matrimony': '<b><i>Matrimony</i></b>'
+    'preventing': '<b><i>preventing</i></b>',
+    '(': '<i>(',
+    ')': ')</i>'
 }
 
 crests = {
@@ -120,8 +134,10 @@ traitCard = '''<div class="container">
 
 desireCard = '''<div class="container">
     <div class="title">{title}</div>
-    <div class="prim condition"><span class="fancy">Win</span><br/>if your spouse's sealed letters have<br/><b><i>more</i></b> <span class="symbol {need}">{need}</span> than <span class="symbol {hate}">{hate}</span><br/><br/>All letters are returned<br/>to owners at matrimony!</div>
+    <div class="prim condition"><span class="fancy">Desired Win</span><br/>if your spouse's sealed letters have<br/><b><i>more</i></b> <span class="symbol {need}">{need}</span> than <span class="symbol {hate}">{hate}</span></div>
     <div class="bonus condition"><span class="fancy">{victory}</div>
+    <div class="note condition"><b>All letters are returned<br/>to owners at matrimony!</b></div>
+
 </div>'''
 
 styles = {
@@ -213,7 +229,7 @@ styles = {
         }}
 
         .power {{
-          margin: 10%;
+          margin: 0% 10% 0% 10%;
           width: 80%;
           font-family: Gentium Book Basic;
           vertical-align: middle;
@@ -241,7 +257,7 @@ styles = {
           font-weight: bold;
           vertical-align: top;
           text-align: center;
-          font-size: 48;
+          font-size: 56;
           padding-top: 8%;
         }
 
@@ -254,22 +270,23 @@ styles = {
           height: 30%;
           font-family: Gentium Book Basic;
           font-style: italic;
-          font-weight: bold;
           vertical-align: top;
           text-align: center;
-          font-size: 28;
         }
 
         .prim {
-          margin-top: 5%;
-        }
-
-        .proper {
-          margin-top: -6%;
+          margin-top: 8%;
+          font-size: 28;
         }
 
         .bonus {
-          margin-top: 1%;
+          margin-top: -2%;
+          font-size: 28;
+        }
+
+        .note {
+          margin-top: -4%;
+          font-size: 38;
         }
 
         .cornerSymbol {
@@ -388,8 +405,13 @@ def writeCards(originalCards, name, style=None, sheetColumns=10, sheetRows=5):
         f.write(html.format(floor(100 / sheetColumns), floor(100 / sheetRows), style, ''.join(pages)))
 
 def formatText(text):
-    if text.startswith('At start'):
-        text = '<b><i>At start</i></b>' + text[8:]
+    lines = []
+    if '\n' in text:
+        for chunk in text.split('\n'):
+            if ':' in chunk:
+                boldPart, theRest = chunk.split(':', 1)
+                lines.append("<b><i>" + boldPart + "</i></b>: " + theRest)
+        text = '<br/>'.join(lines)
     elif ':' in text:
         boldPart, theRest = text.split(':', 1)
         text = "<b><i>" + boldPart + "</i></b>: " + theRest
@@ -438,12 +460,12 @@ with open('resources/Persuasion - Desires.csv', 'r', encoding="utf-8") as input:
             break
         if row['Ready?'] != '✅':
             continue
-        bonusTitle, bonusCondition = row['Victory'].split('Victory', 1)
+        bonusTitle, bonusCondition = row['Victory'].split('Win', 1)
         params = {
-            'title': row['Name'] + " Desires",
+            'title': row['Name'],
             'need': row['❤'],
             'hate': row['♤'],
-            'victory': bonusTitle + " Victory</span><br/>" + formatText(bonusCondition)
+            'victory': bonusTitle + " Win</span><br/>" + formatText(bonusCondition)
         }
         cards.append(desireCard.format(**params))
 

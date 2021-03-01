@@ -1,19 +1,19 @@
 ❤,♤,Name,Mods,Ready?,Victory,,Count,Odds,,,Players,3 Symbols,2 Symbols,Hand Size,Deck Size,Discards,,,Sender intention,heart state,desired card,takes stamp,Sender Action,Receiver Action
-💎,👑,Narcissist,🗡,✅,Fatale Victory if my fiance achieves no victories.,,1,0.8801219745,0.3349533067,,3,0.489237913,0.9059083415,7,6,29,,,,None,no,no,Set broken heart side,
-💎,👑,Outlaw,,✅,Secure Victory if my fiance and I committed <b>at most</b><br/>👑👑👑 <b>combined</b>.,,2,0.5451686678,0.3445234011,,4,0.5917199082,0.9572041656,7,8,20,,,,Broken,no,no,Set heart state,
-💎,🌹,Indebted,,✅,Fairytale Victory if my fiance and I committed <b>at least</b><br/>🌹🌹🌹 and 💎💎💎 <b>combined</b>.,,3,0.2006452667,0.1626916061,,5,0.6736393761,0.9805351136,6,10,16,,,,Set,no,no,Break Heart,Receiver reflects
+💎,👑,Outlaw,,✅,Secure Win if my fiance and I <b>combined</b><br/>have <b>at most</b> 👑👑👑.,,1,0.8801219745,0.3349533067,,3,0.489237913,0.9059083415,7,6,29,,,,None,no,no,Set broken heart side,
+💎,👑,Indebted,,✅,Fairytale Win if my fiance and I <b>combined</b><br/>have <b>at least</b> 🌹🌹 and 💎💎.,,2,0.5451686678,0.3445234011,,4,0.5917199082,0.9572041656,7,8,20,,,,Broken,no,no,Set heart state,
+💎,🌹,Narcissist,🗡,✅,Fatale Win if my fiance fails<br/>to achieve a <b><i>Desired Win</b></i>.,,3,0.2006452667,0.1626916061,,5,0.6736393761,0.9805351136,6,10,16,,,,Set,no,no,Break Heart,Receiver reflects
 💎,🌹,,,,,,4,0.0379536606,0.03517656348,,6,0.7391220905,0.9911467598,6,12,8,,,,None,yes,no,Set broken heart side,
-👑,💎,Matchmaker,,✅,Cupid Victory if my left neighbor marries my right neighbor.,,5,0.002777097117,0.002777097117,,7,0.7914660082,0.995973269,5,14,7,,,,Broken,yes,no,Set heart state,
-👑,💎,Ambitious,,✅,Royal Victory if my fiance or I commited <b>at least</b><br/>👑👑👑👑👑 .,,6,0,#NUM!,,8,0.8333073666,0.9981685166,5,16,0,,,,Set,yes,no,Break Heart,Receiver reflects
-👑,🌹,Heart Broken,🗡,✅,Bitter Victory if no suitors achieve a prim victory.,,7,0,#NUM!,,,,,,,,,,,None,no,yes,Sender set's heart side,
+👑,💎,Matchmaker,,✅,Cupid Win if my left neighbor<br/>marries my right neighbor.,,5,0.002777097117,0.002777097117,,7,0.7914660082,0.995973269,5,14,7,,,,Broken,yes,no,Set heart state,
+👑,💎,,,,,,6,0,#NUM!,,8,0.8333073666,0.9981685166,5,16,0,,,,Set,yes,no,Break Heart,Receiver reflects
+👑,🌹,Heart Broken,,✅,Independent Win if you discard all <b>but one</b><br/> of your own letters.,,7,0,#NUM!,,,,,,,,,,,None,no,yes,Sender set's heart side,
 👑,🌹,,,,,,8,0,#NUM!,,,,,,,,,,,Broken,no,yes,Sender set's heart side,
-🌹,💎,Romantic,,✅,First Sight Victory if I marry the first suitor I Write to.,,9,0,#NUM!,,,,,,,,,,,Set,no,yes,Sender set's heart side,
-🌹,👑,Codependent,🗡,✅,Accommodating Victory if my fiance achieves a prim victory.,,10,0,#NUM!,,,,,,,,,,,None,yes,yes,,
+🌹,💎,Empath,,✅,Accommodating Win if my fiance achieves a <b><i>Desired Win</b></i>.,,9,0,#NUM!,,,,,,,,,,,Set,no,yes,Sender set's heart side,
+🌹,👑,Romantic,,✅,First Sight Win if I marry the first suitor I Write to.,,10,0,#NUM!,,,,,,,,,,,None,yes,yes,,
 ,,,,,,,,,,,,,,,,,,,,Broken,yes,yes,,
-Unassigned,,Remaining=,2,,,,Hand Size,5,,,,,,,,,,,,Set,yes,yes,,
-,1,,,,,,Suits,3,,,,,,,,,,,,,,,,
-,2,,,,,,Cards per suit,19,,,,,,,,,,,,,,,,
-,,,,,,,Total cards,57,,,,,,,,,,,,,,,,
+Unassigned,,Remaining=,3,,,,Hand Size,5,,,,,,,,,,,,Set,yes,yes,,
+,1,Ambitious,,,Royal Win if my fiance and I <b>combined</b><b>at least</b><br/>👑👑👑👑👑 .,,Suits,3,,,,,,,,,,,,,,,,
+,2,Heart Broken,,,Bitter Win if no suitors achieve a prim victory.,,Cards per suit,19,,,,,,,,,,,,,,,,
+,3,,,,,,Total cards,57,,,,,,,,,,,,,,,,
 ,,,,,,,Leftover Cards,1,,,,,,,,,,,,,,,,
 ,,,,,,,Desires,9,6,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,
