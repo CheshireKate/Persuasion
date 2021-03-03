@@ -10,7 +10,7 @@ base = {
     'cardList': ', '.join([str(i) for i in range(100, 100 + cardCount)]),
     'height': str(ceil(cardCount/10.0)),
     'description': traitDescription,
-    'face': 'http://cloud-3.steamusercontent.com/ugc/1761442119640590613/424422D6A46176C6EC93194D0C7AE606826ECF24/',
+    'face': 'http://cloud-3.steamusercontent.com/ugc/1758064695936996344/87DA37E5181E8666617482BEE490BF2A302B75DF/',
     'back': 'http://cloud-3.steamusercontent.com/ugc/1760314147747003169/3FA671000FC54F9E5820713587059A40F17D4ADD/'
 }
 
@@ -19,56 +19,56 @@ decks = [
         'deckID': 2,
         'name': 'Black Dog Trait',
         'description': traitDescription,
-        'face': 'http://cloud-3.steamusercontent.com/ugc/1761442119640595505/FF1330276591D7FEBC55A4C051A05A3D27C89526/',
+        'face': 'http://cloud-3.steamusercontent.com/ugc/1758064695936991916/3865E734A80682B8475C80DF6CFD006C4FDCE7EF/',
         'back': 'http://cloud-3.steamusercontent.com/ugc/1656728318303124139/3386D885EC1630D77C835EA6C49FA6B6C64C8952/'
     },
     {
         'deckID': 3,
         'name': 'Blue Lion Trait',
         'description': traitDescription,
-        'face': 'http://cloud-3.steamusercontent.com/ugc/1761442119640591105/90FE77D1BD4B4EAF90954EF050C271400E16C041/',
+        'face': 'http://cloud-3.steamusercontent.com/ugc/1758064695936992319/DEC257F3DC0C87ACE3230D5B3AA999A75D7905EA/',
         'back': 'http://cloud-3.steamusercontent.com/ugc/1656728318303214207/F6C545671C5D9E26A8587061ADE177DD0240D2B0/'
     },
     {
         'deckID': 4,
         'name': 'Green Tree Trait',
         'description': traitDescription,
-        'face': 'http://cloud-3.steamusercontent.com/ugc/1761442119640591892/FFF2DC5A39E32EE89E215CFA6E156E92E943F5E8/',
+        'face': 'http://cloud-3.steamusercontent.com/ugc/1758064695936993033/C1C3FF9DC0D29781CBD78E9538C24D107D3AD6B4/',
         'back': 'http://cloud-3.steamusercontent.com/ugc/1656728318303219676/E43B426C0EC6E5C4828774496FA767B4D9FD2810/'
     },
     {
         'deckID': 5,
         'name': 'Cyan Shield Trait',
         'description': traitDescription,
-        'face': 'http://cloud-3.steamusercontent.com/ugc/1761442119640593728/71554DE83978BD33B6B090AC85E0FB52A250DC7F/',
+        'face': 'http://cloud-3.steamusercontent.com/ugc/1758064695936994862/C49AC5B375F4B4C5499E6C5323D475C9DDDC852A/',
         'back': 'http://cloud-3.steamusercontent.com/ugc/1656728318303223441/26EBC8436FCDFF59041E702E58506D1E068985AE/'
     },
     {
         'deckID': 6,
         'name': 'Yellow Sun Trait',
         'description': traitDescription,
-        'face': 'http://cloud-3.steamusercontent.com/ugc/1761442119640594582/F82CDD8BD34FA264F34250864482E62DC0FCE351/',
+        'face': 'http://cloud-3.steamusercontent.com/ugc/1758064695936995731/748B1AF955587DD7A13E94B6CF412A0952FDFB40/',
         'back': 'http://cloud-3.steamusercontent.com/ugc/1656728318303226151/8173A6620818B8C3A202227FF9B6198F64A1AA13/'
     },
     {
         'deckID': 7,
         'name': 'Pink Song Trait',
         'description': traitDescription,
-        'face': 'http://cloud-3.steamusercontent.com/ugc/1761442119640592927/031F4B3C87107A2A46691652A73026333031FC18/',
+        'face': 'http://cloud-3.steamusercontent.com/ugc/1758064695936993594/9C1ED6D04F0804F1BAA3F3D65AC18456833070A1/',
         'back': 'http://cloud-3.steamusercontent.com/ugc/1656728318303220938/68722CE40FB18FE8CFAC5D06AB8E00D53BCA4A33/'
     },
     {
         'deckID': 8,
         'name': 'Purple Clover Trait',
         'description': traitDescription,
-        'face': 'http://cloud-3.steamusercontent.com/ugc/1761442119640593283/4FFF0B439CF32FD768A944D62EE4C4A64E7A151F/',
+        'face': 'http://cloud-3.steamusercontent.com/ugc/1758064695936994337/2DA622C444722DD8D05E62CCD17A60BD26D87979/',
         'back': 'http://cloud-3.steamusercontent.com/ugc/1656728318303222134/F7EA4278B2C0EC7640592E7804317356071B0788/'
     },
     {
         'deckID': 9,
         'name': 'White Horse Trait',
         'description': traitDescription,
-        'face': 'http://cloud-3.steamusercontent.com/ugc/1761442119640594205/A97097841D5E5F3FE5BDAA2F4D9A13F54C2FF14F/',
+        'face': 'http://cloud-3.steamusercontent.com/ugc/1758064695936995379/FFDEE778A5E684168B21ECAA37F8372E08AB5C25/',
         'back': 'http://cloud-3.steamusercontent.com/ugc/1656728318303224897/771F94BB2FA229907293E17D9AC8310D6617C6B0/'
     }
 ]

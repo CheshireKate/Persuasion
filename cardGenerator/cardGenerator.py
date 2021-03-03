@@ -6,10 +6,6 @@ traitTotal = 57
 desireTotal = 10
 
 conversions = {
-    '💖': '<span class="symbol"><b>♡</b></span>',
-    '☼': '<span class="symbol">☼</span>',
-    '☽': '<span class="symbol"><b>🌙</b></span>',
-    '🌙': '<span class="symbol"><b>🌙</b></span>',
     '✍': '<span class="symbol" style="font-size:40">✍</span>',
     '🗝': '<span class="symbol">🔑</span>',
     '👒': '<span class="symbol" style="font-size:40">👒</span>',
@@ -20,6 +16,10 @@ conversions = {
     '🌹': '<span class="symbol addShadow 🌹">🌹</span>',
     'write': '<b><i>Write</i></b>',
     'Write': '<b><i>Write</i></b>',
+    'writing': '<b><i>Writing</i></b>',
+    'Writing': '<b><i>Writing</i></b>',
+    'Gossipping': '<b><i>Gossipping</i></b>',
+    'gossipping': '<b><i>Gossipping</i></b>',
     'gossip': '<b><i>Gossip</i></b>',
     'Gossip': '<b><i>Gossip</i></b>',
     'reflect': '<b><i>Reflect</i></b>',
@@ -34,6 +34,8 @@ conversions = {
     'Preface': '<b><i>Preface</i></b>',
     'engaged': '<b><i>engaged</i></b>',
     'engage': '<b><i>engage</i></b>',
+    'arrival': '<b><i>arrival</i></b>',
+    'Arrival': '<b><i>arrival</i></b>',
     'detested': '<b><i>detested</i></b>',
     'swap': '<b><i>swap</i></b>',
     'prevent ': '<b><i>prevent</i></b> ',
@@ -134,8 +136,9 @@ traitCard = '''<div class="container">
 
 desireCard = '''<div class="container">
     <div class="title">{title}</div>
-    <div class="prim condition"><span class="fancy">Desired Win</span><br/>if your spouse's sealed letters have<br/><b><i>more</i></b> <span class="symbol {need}">{need}</span> than <span class="symbol {hate}">{hate}</span></div>
+    <div class="prim condition"><span class="fancy">Desired Win</span><br/>if your fiance's sealed letters have<br/><b><i>more</i></b> <span class="symbol {need}">{need}</span> than <span class="symbol {hate}">{hate}</span></div>
     <div class="bonus condition"><span class="fancy">{victory}</div>
+    <div class="proper condition"><span class="fancy">Independent Win</span><br/>if you discard your ring and <b>all</b> unengaged suitors have <b>no </b><span class="symbol {need}">{need}</span></div>
     <div class="note condition"><b>All letters are returned<br/>to owners at matrimony!</b></div>
 
 </div>'''
@@ -251,14 +254,14 @@ styles = {
         }
 
         .title {
-          height: 10%;
+          height: 6%;
           font-family: Gentium Book Basic;
           font-style: italic;
           font-weight: bold;
           vertical-align: top;
           text-align: center;
           font-size: 56;
-          padding-top: 8%;
+          padding-top: 4%;
         }
 
         .fancy {
@@ -267,7 +270,7 @@ styles = {
         }
 
         .condition {
-          height: 30%;
+          height: 23%;
           font-family: Gentium Book Basic;
           font-style: italic;
           vertical-align: top;
@@ -275,17 +278,22 @@ styles = {
         }
 
         .prim {
-          margin-top: 8%;
+          margin-top: 10%;
           font-size: 28;
         }
 
         .bonus {
-          margin-top: -2%;
+          margin-top: 0%;
+          font-size: 28;
+        }
+
+        .proper {
+          margin-top: 0%;
           font-size: 28;
         }
 
         .note {
-          margin-top: -4%;
+          margin-top: 0%;
           font-size: 38;
         }
 
