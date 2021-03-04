@@ -350,10 +350,13 @@ styles = {
     ''',
 
     'markers': '''
-          background:url("resources/marker.jpg") no-repeat center center ;
           vertical-align: middle;
           text-align: center;
-          font-size: 288;
+
+          font-family: Symbola;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 1000;
         }
         ''',
 
@@ -490,3 +493,7 @@ for crestType in crestCards:
 
     style = styles['crests'].format(''.join(styleSections))
     writeCards(cards, crestType, style=style)
+
+cards = [ '✍', '🗝', '👒', '🐦', '🔓' ]
+
+writeCards(cards, 'symbols', style=styles['markers'], sheetColumns=3, sheetRows=2)
