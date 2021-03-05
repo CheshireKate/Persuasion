@@ -494,6 +494,6 @@ for crestType in crestCards:
     style = styles['crests'].format(''.join(styleSections))
     writeCards(cards, crestType, style=style)
 
-cards = [ '✍', '🗝', '👒', '🐦', '🔓' ]
+cards = [ '✍', '🗝', '👒', '🐦', '🔓', '🪞', '💌', '✉', '📤', '📥', '📦', '📨', '📩', '📭', '📮' ]
 
-writeCards(cards, 'symbols', style=styles['markers'], sheetColumns=3, sheetRows=2)
+writeCards(cards, 'symbols', style=styles['markers'], sheetColumns=4, sheetRows=3)
