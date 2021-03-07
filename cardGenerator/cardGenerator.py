@@ -252,6 +252,23 @@ styles = {
           font-style: italic;
         }}
 
+        .powerName {{
+          width: 100%;
+          font-family: Gentium Book Basic;
+          vertical-align: middle;
+          text-align: center;
+          font-size: 32;
+          font-weight: bold;
+          font-style: italic;
+          line-height: 1.2;
+        }}
+
+        .powerSub {{
+          font-weight: normal;
+          font-style: italic;
+          font-size: 28;
+        }}
+
         .power {{
           height: 36%;
           margin: 0% 5% 0% 5%;
@@ -450,16 +467,23 @@ def writeCards(originalCards, name, style=None, sheetColumns=10, sheetRows=5):
         f.write(html.format(floor(100 / sheetColumns), floor(100 / sheetRows), style, ''.join(pages)))
 
 def formatText(text):
+    formatting = '<div class="powerName">{}</div>{}'
+    leftSub = '<scan class="powerSub">('
+    rightSub = ')</scan>'
     lines = []
     if '\n' in text:
         for chunk in text.split('\n'):
             if ':' in chunk:
                 boldPart, theRest = chunk.split(':', 1)
-                lines.append("<b><i>" + boldPart + "</i></b>:<br/>" + theRest)
+                boldPart = boldPart.replace('(', leftSub)
+                boldPart = boldPart.replace(')', rightSub)
+                lines.append(formatting.format(boldPart, theRest))
         text = '<br/>'.join(lines)
     elif ':' in text:
         boldPart, theRest = text.split(':', 1)
-        text = "<b><i>" + boldPart + "</i></b>:<br/>" + theRest
+        boldPart = boldPart.replace('(', leftSub)
+        boldPart = boldPart.replace(')', rightSub)
+        text = formatting.format(boldPart, theRest)
 
     for formatFrom, formatTo in conversions.items():
         text = text.replace(formatFrom, formatTo)
@@ -498,7 +522,7 @@ with open('resources/Persuasion - Traits.csv', 'r', encoding="utf-8") as input:
             'modifiers': row['Mods'],
             'title': row['Name'],
             'symbol': row['Suit'],
-            'art': '<div class="greeting">Dear,</div>',
+            'art': '<div class="greeting">Dear</div>',
             'power': formatText(row['Effect']),
             'signed': formatSignature(row['Signed'])
         }

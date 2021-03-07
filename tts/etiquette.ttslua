@@ -1,10 +1,6 @@
-rosesGUID = "36e5d5"
-crownsGUID = "6425ab"
-diamondsGUID = "100000"
+deckGUID = "100000"
 
-rosesDesires = "ef6fa7"
-crownsDesires = "a22c52"
-diamondsDesires = "432fc2"
+desiresGUID = "ef6fa7"
 
 traitDeck = nil
 desiresDeck = nil
@@ -28,7 +24,7 @@ crests = {
     HandZone = "9cb275",
     LetterboxCard = "21ab1b",
     Ring = "f08f60",
-    ActionCard = "26b5aa"
+    ActionCard = "772756"
   },
   Pink = {
     Name = "Pink Song",
@@ -37,7 +33,7 @@ crests = {
     HandZone = "38ad08",
     LetterboxCard = "a629b7",
     Ring = "dc100b",
-    ActionCard = "92f494"
+    ActionCard = "58a9ae"
   },
   Purple = {
     Name = "Purple Clover",
@@ -46,7 +42,7 @@ crests = {
     HandZone = "c3bd91",
     LetterboxCard = "108a7e",
     Ring = "73a302",
-    ActionCard = "5294c4"
+    ActionCard = "b832c7"
   },
   Blue = {
     Name = "Blue Lion",
@@ -55,7 +51,7 @@ crests = {
     HandZone = "e7cfd5",
     LetterboxCard = "c92497",
     Ring = "b46ebf",
-    ActionCard = "876d4d"
+    ActionCard = "8e5bbe"
   },
   Green = {
     Name = "Green Tree",
@@ -64,7 +60,7 @@ crests = {
     HandZone = "421f67",
     LetterboxCard = "48c25c",
     Ring = "096d0c",
-    ActionCard = "ffea76"
+    ActionCard = "5c2438"
   },
   Yellow = {
     Name = "Yellow Sun",
@@ -73,7 +69,7 @@ crests = {
     HandZone = "32db78",
     LetterboxCard = "f69365",
     Ring = "049e25",
-    ActionCard = "1403bd"
+    ActionCard = "ec0879"
   },
   Brown = {
     Name = "Black Dog",
@@ -82,7 +78,7 @@ crests = {
     HandZone = "a49a6b",
     LetterboxCard = "4fcbc6",
     Ring = "4c4495",
-    ActionCard = "557bab"
+    ActionCard = "7802a3"
   },
   Teal = {
     Name = "Cyan Shield",
@@ -91,7 +87,7 @@ crests = {
     HandZone = "51cc53",
     LetterboxCard = "39fbd4",
     Ring = "19cf1f",
-    ActionCard = "d77bb9"
+    ActionCard = "53a54b"
   }
 }
 
@@ -156,46 +152,22 @@ function setupTraits()
   local players = getSeatedPlayers()
   count = #players
 
-  -- Cards used based on number of players
-  local suitCount = nil
+  -- Shuffle and deal traits
+  local cards = getObjectFromGUID(deckGUID)
+  cards.shuffle()
+  cards.setPosition({-1.14, 2.50, 49.84})
+  cards.setRotation({0.00, 180.00, 180.00})
+  cards.deal(5)
 
-  if count == 3 then
-    suitCount = 5
-  elseif count == 4 then
-    suitCount = 7
-  elseif count >= 5 then
-    suitCount = count * 2
-  end
-
-  -- Construct traits
-  split(rosesGUID, suitCount, {-1.87, 1.5, 4.32}, {-1.14, 0.50, 49.84})
-  split(crownsGUID, suitCount, {-1.87, 2.0, 4.32}, {-1.14, 1.00, 49.84})
-  split(diamondsGUID, suitCount, {-1.87, 2.5, 4.32}, {-1.14, 1.50, 49.84})
-  -- deck.setPositionSmooth({-1.14, 0.50, 49.84}, false, true)
-
-  -- Construct desires
-  split(diamondsDesires, math.ceil(count / 2.0), {1.86, 1.5, -0.09}, {1.13, 0.5, 49.84})
-  split(crownsDesires, math.floor(count / 3.0) + 1, {1.86, 2, -0.09}, {1.13, 1.0, 49.84})
-  split(rosesDesires, math.floor(count / 3.0) + 0, {1.86, 2, -0.09}, {1.13, 1.5, 49.84})
+  -- Shuffle and deal desires
+  cards = getObjectFromGUID(desiresGUID)
+  cards.shuffle()
+  cards.setPosition({1.13, 0.5, 49.84})
+  cards.setRotation({0.00, 180.00, 180.00})
+  cards.deal(1)
 
   -- Remove floating rules
   getObjectFromGUID("da7463").destruct()
-
-  Wait.frames(dealTraits, 100)
-end
-
-function dealTraits()
-  local players = getSeatedPlayers()
-  local count = #players
-
-  -- Shuffle desires
-  getObjectFromGUID(diamondsDesires).shuffle()
-
-  -- Shuffle and deal traits
-  local traits = getObjectFromGUID(rosesGUID)
-  traits.shuffle()
-  traits.setPosition({-1.14, 2.50, 49.84})
-  traits.deal(5)
 
   -- Iterate through all players
   local i = 1
@@ -242,32 +214,9 @@ function sleeveCards()
       j = j + 1
     end
 
-    -- Lock letterboxes
-    getObjectFromGUID(crests[color]["LetterboxCard"]).setLock(true)
-
     i = i + 1
   end
 
-  -- Deal desires
-  local desires = getObjectFromGUID(diamondsDesires)
-  local size = #desires.getObjects()
-
-  -- If there's going to be one leftover, move it to the box
-  if size == (#players + 1) then
-    desires.takeObject({position = {1.13, 0.5, 49.84}, smooth = false})
-  end
-
-  -- Deal 1
-  getObjectFromGUID(diamondsDesires).deal(1)
-  --Wait.frames(function() getObjectFromGUID(diamondsDesires).deal(1) end, 50)
-
-  -- Move remaining cards to box
-  if size != #players then
-    Wait.frames(function() getObjectFromGUID(diamondsDesires).setPosition({1.13, 0.5, 49.84}) end, 100)
-    Wait.frames(function() getObjectFromGUID(diamondsDesires).setRotation({0.00, 0.00, 180.00}) end, 150)
-  end
-
-  -- desires
   print("")
   print("")
   print(" *** Persuasion ***")
