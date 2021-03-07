@@ -47,6 +47,8 @@ conversions = {
     ')': ')</i>'
 }
 
+noBold = set( ['your', 'yours', 'friend', 'a', 'an', 'and'] )
+
 crests = {
     'black': '#000000',
     'blue': '#332288',
@@ -130,16 +132,17 @@ crestSection = '''
 
 traitCard = '''<div class="container">
     <div class="bigSymbol {symbol}">{symbol}</div>
+    <div class="modifiers">{modifiers}</div>
     <div class="contents">
-        <div class="title">{title}</div>
-        <div class="art">If you keep this card, resleeve it to your color by right clicking and selecting States, or set a Hotkey!</div>
+        <div class="art">{art}</div>
         <div class="power">{power}</div>
+        <div class="signed">{signed}</div>
     </div>
 </div>'''
 
 desireCard = '''<div class="container">
     <div class="title">{title}</div>
-    <div class="prim condition"><span class="fancy">Desired Win</span><br/>if your fiance's sealed letters have<br/><b><i>more</i></b> <span class="symbol {need}">{need}</span> than <span class="symbol {hate}">{hate}</span></div>
+    <div class="prim condition"><span class="fancy">Desired Win</span><br/>if your fiance's sealed letters have<br/><b><i>more</i></b> <span class="symbol {need}">{need}</span> <i style="font-size: 22">(desired)</i> than <span class="symbol {hate}">{hate}</span> <i style="font-size: 22">(detested)</i></div>
     <div class="bonus condition"><span class="fancy">{victory}</div>
     <div class="proper condition"><span class="fancy">Independent Win</span><br/>if you discard your ring and <b>all</b> unengaged suitors have <b>no </b><span class="symbol {need}">{need}</span></div>
     <div class="note condition"><b>All letters are returned<br/>to owners at matrimony!</b></div>
@@ -159,6 +162,7 @@ styles = {
         }}
 
         .container {{
+          position: relative;
           width: {};
           height: {};
           margin: {};
@@ -167,10 +171,9 @@ styles = {
         }}
 
         .bigSymbol {{
-          height: auto;
-          width: 100%;
-          margin-left: 3%;
-          vertical-align: top;
+          position: absolute;
+          left: 3%;
+          top: 0%;
           font-family: Symbola;
           font-style: normal;
           font-weight: normal;
@@ -181,6 +184,17 @@ styles = {
             2px -2px 0 #000,
             -2px 2px 0 #000,
             2px 2px 0 #000;
+        }}
+
+        .modifiers {{
+          position: absolute;
+          right: 1%;
+          bottom: 1%;
+          font-family: Symbola;
+          font-style: normal;
+          font-weight: bold;
+          text-align: left;
+          font-size: 24;
         }}
 
         .symbol {{
@@ -224,25 +238,42 @@ styles = {
         }}
 
         .art {{
-          height: 25%;
-          margin: 5% 10% 0% 10%;
-          width: 80%;
+          display: flex;
+          justify-content: flex-start;
+          align-items: flex-end;
+          height: 44%;
+          margin: 0% 5% 10% 5%;
+          width: 90%;
           font-family: Gentium Book Basic;
-          vertical-align: middle;
-          text-align: center;
-          font-size: 28;
-          {}
+          vertical-align: bottom;
+          text-align: left;
+          font-size: 42;
+          font-weight: bold;
+          font-style: italic;
         }}
 
         .power {{
-          margin: 0% 10% 0% 10%;
-          width: 80%;
+          height: 36%;
+          margin: 0% 5% 0% 5%;
+          width: 90%;
           font-family: Gentium Book Basic;
           vertical-align: middle;
-          text-align: center;
+          text-align: left;
           font-size: 28;
           line-height: 1.2;
         }}
+
+        .signed {{
+          height: 10%;
+          width: 90%;
+          margin: 0% 5% 0% 5%;
+          font-family: Segoe Script;
+          font-style: italic;
+          vertical-align: bottom;
+          text-align: right;
+          font-size: 28;
+        }}
+
         ''',
 
     'desires': '''
@@ -424,16 +455,30 @@ def formatText(text):
         for chunk in text.split('\n'):
             if ':' in chunk:
                 boldPart, theRest = chunk.split(':', 1)
-                lines.append("<b><i>" + boldPart + "</i></b>: " + theRest)
+                lines.append("<b><i>" + boldPart + "</i></b>:<br/>" + theRest)
         text = '<br/>'.join(lines)
     elif ':' in text:
         boldPart, theRest = text.split(':', 1)
-        text = "<b><i>" + boldPart + "</i></b>: " + theRest
+        text = "<b><i>" + boldPart + "</i></b>:<br/>" + theRest
 
     for formatFrom, formatTo in conversions.items():
         text = text.replace(formatFrom, formatTo)
 
     return text
+
+
+def formatSignature(text):
+    words = []
+    if ' ' in text:
+        for word in text.split(' '):
+            if word.lower() in noBold:
+                words.append(word)
+            else:
+                words.append('<b>{}</b>'.format(word))
+    else:
+        words.append('<b>{}</b>'.format(text))
+
+    return '- {}'.format(' '.join(words))
 
 
 # Generate traits deck
@@ -450,19 +495,21 @@ with open('resources/Persuasion - Traits.csv', 'r', encoding="utf-8") as input:
         if row['Ready?'] != '✅':
             continue
         params = {
-            'modifiers': '', # row['Mods']
+            'modifiers': row['Mods'],
             'title': row['Name'],
             'symbol': row['Suit'],
-            'power': formatText(row['Effect'])
+            'art': '<div class="greeting">Dear,</div>',
+            'power': formatText(row['Effect']),
+            'signed': formatSignature(row['Signed'])
         }
         cards.append(traitCard.format(**params))
 
 # Generate traits without border
-writeCards(cards, 'traits-unsleeved', style=styles['traits'].format('None', '100%', '100%', 'auto', ''))
+writeCards(cards, 'traits-unsleeved', style=styles['traits'].format('None', '100%', '100%', 'auto'))
 
 # Generate trait cards with borders for each player
 for color, hex in crests.items():
-    writeCards(cards, 'traits-{}'.format(color), style=styles['traits'].format(hex, '94%', '96%', 'auto', 'visibility: hidden;'))
+    writeCards(cards, 'traits-{}'.format(color), style=styles['traits'].format(hex, '94%', '96%', 'auto'))
 
 cards = []
 
@@ -479,7 +526,7 @@ with open('resources/Persuasion - Desires.csv', 'r', encoding="utf-8") as input:
             'title': row['Name'],
             'need': row['❤'],
             'hate': row['♤'],
-            'victory': bonusTitle + " Win</span><br/>" + formatText(bonusCondition)
+            'victory': bonusTitle + " Win</span><br/>" + formatText(bonusCondition),
         }
         cards.append(desireCard.format(**params))
 
