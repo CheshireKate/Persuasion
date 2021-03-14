@@ -1,13 +1,13 @@
 Suit,Name,Ready?,Mods,Ref,Effect,Signed,Salutation,Desired,Detested,Knives
 💎,,,,,,,,,,
-💎,Charitable,✅,,,"Promote: Just before Matrimony, I may swap this letter and its seal with a held suitor's 🌹.",Yours generously,,,,
-💎,Baron,✅,,,"Influence: During Matrimony, I may discard this to count a chosen letter of my own twice for Desired Wins.",Yours lavishly,,,,
+💎,Charitable,✅,,,"Promote: Just before Matrimony, I may swap this letter's seal with a held suitor's 🌹.",Yours generously,,,,
+💎,Baron,✅,,,"Influence: After revealing letters for Matrimony, I may discard this to count a chosen letter of my own twice for Desired Wins.",Yours lavishly,,,,
 💎,Dangerous,✅,,,"🗫 Envy: If I send this to you, I may discard another suitor's letter from your hand (Envy fails if a 🔒 diary is picked).",Yours hopelessly,,,,
 💎,Charlatan,✅,,,"Feign: If I discard this, I may take back any number of discarded letters with my seal.",Your trustworthy pal,,,,
 💎,,,,,,,,,,
 💎,,,,,,,,,,🗡
 💎,,,,,,,,,,
-💎,Decadent,✅,,,"Ostentatious: If I discard this, all suitors must send me one letter.",Yours luxuriously,,,,
+💎,Decadent,✅,,,"Ostentatious: If I discard this, all suitors may send me one of their own letters.",Yours luxuriously,,,,
 💎,Rogue,✅,,,"Pilfer: If I discard this, I may take any one letter from a suitor's hand.",Your dashing friend,,,,🗡
 💎,Vindictive,📦,,+4👥,"🗯️ Blackmail: If you're engaged, then you must break up or take back all discarded letters with your seal then discard this letter.",Disappointingly yours,,,,
 💎,Heir,💔,🔒,,"Inheritance: If I am not the first to be engaged, then I must discard this letter during Matrimony.",Yours conditionally,,,,
@@ -16,7 +16,7 @@ Suit,Name,Ready?,Mods,Ref,Effect,Signed,Salutation,Desired,Detested,Knives
 💎,Facade,💔,🔒,,"Facade:  After returning letters during Matrimony, I must discard 1 own 🌹, if able.",Your actual admirer,,,,
 💎,Influential,📦,,+4👥,"Waver: If I discard this while engaged, then I may return my fiance's ring and take back my own ring, breaking the engagement.",Yours capriciously,,,,🗡
 💎,Free Spirit,,,,"Pass: After revealing letters for Matrimony, I may discard this to discard one letter from each unengaged suitor.",a free spirit,,,,
-💎,Nosey,✅,,,"🗫  Snoop: If I send this to you, I may peek at one letter in your hand.",Yours curiously,,,,
+💎,Nosey,✅,,,"🗫  Snoop: If I send this to you, I may pick one letter in your hand for you to reveal to me.",Yours curiously,,,,
 💎,Childhood Friends,📦,,,"🗝 🐦 Wayback: During preface, I must send a second letter to 1 neighbor, and you must send me a second letter as well.
 👒 Platonic: I cannot engage this neighbor.",,,,,
 👑,Repressed,📦,,,"🗝 🐦 Epiphany:  If I hold 4 🌹, I must swap this letter, then may swap any of my other letters, with random letters from the box.",,,,,
@@ -40,7 +40,7 @@ Suit,Name,Ready?,Mods,Ref,Effect,Signed,Salutation,Desired,Detested,Knives
 👑,Indebted,💔,🔒,,"Indebted:  After returning letters during Matrimony, I must discard 1 own 💎, if able.",Yours inscrutably,,,,
 👑,Taken Ill,✅,,,"🗫 Tend: If I send this to you, you may discard this to send me one of your own letters.",Your recovering friend,,,,
 🌹,Naive,,,,"✍:  If you hold this letter, you may keep my letters without rewarding 💖s (Including this letter).",,,,,
-🌹,Outspoken,✅,,,"🗫 Rumor mill: If I send this to you, you may give me a suitor letter to take a suitor letter I hold.",Your confidant,,,,
+🌹,Outspoken,✅,,,"🗫 Rumor mill: If I send this to you, you may give me a suitor letter to take a suitor letter I hold<br/>(Send effects do not trigger).",Your confidant,,,,
 🌹,Submissive,,,,"🔓 👒 Order: You can take hearts from me when sending me a letter, then I must keep that letter",,,,,🗡
 🌹,Principled,✅,,,"🗫 Promise: While you hold this, my letters do not count towards the 2 suitor letter limit.",Yours devotedly,,,,
 🌹,,,,,,,,,,
@@ -85,10 +85,10 @@ Desired Win: if I marry a suitor holding<br/>more 🌹 than 👑.",,,🌹,👑,
 💎,,✅,🔒,🎭,Arriviste Win: if there are more discarded suitor letters than there are suitors.,,,,,
 💎,,,🔒,🎭,,,,,,
 👑,,✅,🔒,🎭,Catty Win: if my left neighbor fails to achieve a Desired Win.,,,,,
-👑,,✅,🔒,🎭,"Meddler Win: if just before matrimony, I hold at least two suitor 🔒 diaries.",,,,,
+👑,,✅,🔒,🎭,"Meddler Win: if just before matrimony, I hold at least one suitor 🔒 diary.",,,,,
 👑,,,🔒,🎭,,,,,,
-🌹,,✅,🔒,🎭,First Sight Win: if I marry my left neighbor.,,,,,
-🌹,,✅,🔒,🎭,Cupid Win: if my left neighbor marries my right neighbor.,,,,,
+🌹,,✅,🔒,🎭 +4👥,First Sight Win: if I marry my left neighbor.,,,,,
+🌹,,✅,🔒,🎭 +5👥,Cupid Win: if my left neighbor marries my right neighbor.,,,,,
 🌹,,,🔒,🎭,,,,,,
 ,,🚏,,,,,,,,
 24,<-Goal | Remaining->,0,,,,,Test Count,21,,

@@ -12,7 +12,7 @@ conversions = {
     '💎': '<span class="symbol addShadow 💎">💎</span>',
     '👑': '<span class="symbol addShadow 👑">👑</span>',
     '🌹': '<span class="symbol addShadow 🌹">🌹</span>',
-    '🎭': '<span class="symbol">🎭</span>',
+    '🎭': '<span class="symbol" style="font-weight: normal">🎭</span>',
     '♡': '<span class="symbol">♡</span>',
     '🗫': '<span class="symbol">🗫</span>',
     'revealing': '<b><i>revealing</i></b>',
@@ -186,7 +186,7 @@ styles = {
           bottom: 1%;
           font-family: Symbola;
           font-style: normal;
-          font-weight: bold;
+          font-weight: normal;
           text-align: left;
           font-size: 36;
         }}
