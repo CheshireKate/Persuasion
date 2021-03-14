@@ -1,11 +1,9 @@
-deckGUID = "100000"
+deckGUID = "79e10e"
+desiresGUID = "ef80d8"
+dramaGUID = "b4061a"
 
-desiresGUID = "ef6fa7"
+traitCount = 4
 
-traitDeck = nil
-desiresDeck = nil
-
-sortTimer = 4
 startOffset = 0.5
 
 actionForward = 6
@@ -157,10 +155,17 @@ function setupTraits()
   cards.shuffle()
   cards.setPosition({-1.14, 2.50, 49.84})
   cards.setRotation({0.00, 180.00, 180.00})
-  cards.deal(5)
+  cards.deal(traitCount)
 
   -- Shuffle and deal desires
   cards = getObjectFromGUID(desiresGUID)
+  cards.shuffle()
+  cards.setPosition({1.13, 0.5, 49.84})
+  cards.setRotation({0.00, 180.00, 180.00})
+  cards.deal(1)
+
+  -- Shuffle and deal dramas
+  cards = getObjectFromGUID(dramaGUID)
   cards.shuffle()
   cards.setPosition({1.13, 0.5, 49.84})
   cards.setRotation({0.00, 180.00, 180.00})
