@@ -2,47 +2,34 @@ import csv
 from itertools import combinations
 from math import floor, ceil
 
-traitTotal = 57
-desireTotal = 10
-
 conversions = {
     '✍': '<span class="symbol" style="font-size:40">✍</span>',
     '🗝': '<span class="symbol">🔑</span>',
     '👒': '<span class="symbol" style="font-size:40">👒</span>',
     '🐦': '<span class="symbol" style="font-size:40">🐦</span>',
     '🔓': '<span class="symbol">🔓</span>',
+    '🔒': '<span class="symbol">🔒</span>',
     '💎': '<span class="symbol addShadow 💎">💎</span>',
     '👑': '<span class="symbol addShadow 👑">👑</span>',
     '🌹': '<span class="symbol addShadow 🌹">🌹</span>',
+    '🎭': '<span class="symbol">🎭</span>',
+    '♡': '<span class="symbol">♡</span>',
+    '🗫': '<span class="symbol">🗫</span>',
     'revealing': '<b><i>revealing</i></b>',
     'reveals': '<b><i>reveals</i></b>',
     'reveal': '<b><i>reveal</i></b>',
-    'write': '<b><i>Write</i></b>',
-    'Write': '<b><i>Write</i></b>',
-    'writing': '<b><i>Writing</i></b>',
-    'Writing': '<b><i>Writing</i></b>',
-    'Gossipping': '<b><i>Gossipping</i></b>',
-    'gossipping': '<b><i>Gossipping</i></b>',
-    'gossip': '<b><i>Gossip</i></b>',
-    'Gossip': '<b><i>Gossip</i></b>',
-    'reflect': '<b><i>Reflect</i></b>',
-    'Reflect': '<b><i>Reflect</i></b>',
-    'propose': '<b><i>Propose</i></b>',
-    'Propose': '<b><i>Propose</i></b>',
-    'break up': '<b><i>Break Up</i></b>',
-    'Break up': '<b><i>Break Up</i></b>',
     'matrimony': '<b><i>Matrimony</i></b>',
     'Matrimony': '<b><i>Matrimony</i></b>',
-    'preface': '<b><i>Preface</i></b>',
-    'Preface': '<b><i>Preface</i></b>',
     'engaged': '<b><i>engaged</i></b>',
     'engage': '<b><i>engage</i></b>',
-    'arrival': '<b><i>arrival</i></b>',
-    'Arrival': '<b><i>arrival</i></b>',
-    'detested': '<b><i>detested</i></b>',
+    'diary': '<i>diary</i>',
+    'diaries': '<i>diaries</i>',
+    'Desired Wins': '<b><i>Desired Wins</i></b>',
+    'Desired Win': '<b><i>Desired Win</i></b>',
+    'If I send this to you': '<b><i>If I send this to you</i></b>',
+    'If I discard this': '<b><i>If I discard this</i></b>',
+    'While you hold this': '<b><i>While you hold this</i></b>',
     'swap': '<b><i>swap</i></b>',
-    'prevent ': '<b><i>prevent</i></b> ',
-    'preventing': '<b><i>preventing</i></b>',
     '(': '<i>(',
     ')': ')</i>'
 }
@@ -130,23 +117,15 @@ crestSection = '''
         }}
 '''
 
-traitCard = '''<div class="container">
+traitCard = '''<div class="container {modifiers}">
     <div class="bigSymbol {symbol}">{symbol}</div>
     <div class="modifiers">{modifiers}</div>
+    <div class="reference">{reference}</div>
     <div class="contents">
         <div class="art">{art}</div>
         <div class="power">{power}</div>
         <div class="signed">{signed}</div>
     </div>
-</div>'''
-
-desireCard = '''<div class="container">
-    <div class="title">{title}</div>
-    <div class="prim condition"><span class="fancy">Desired Win</span><br/>if your fiance's sealed letters have<br/><b><i>more</i></b> <span class="symbol {need}">{need}</span> <i style="font-size: 22">(desired)</i> than <span class="symbol {hate}">{hate}</span> <i style="font-size: 22">(detested)</i></div>
-    <div class="bonus condition"><span class="fancy">{victory}</div>
-    <div class="proper condition"><span class="fancy">Independent Win</span><br/>if you discard your ring and <b>all</b> unengaged suitors have <b>no </b><span class="symbol {need}">{need}</span></div>
-    <div class="note condition"><b>All letters are returned<br/>to owners at matrimony!</b></div>
-
 </div>'''
 
 styles = {
@@ -170,6 +149,10 @@ styles = {
           background:url("resources/traitFront.jpg") no-repeat center center ;
         }}
 
+        .🔒 {{
+          background:url("resources/diaryFront.jpg") no-repeat center center ;
+        }}
+
         .bigSymbol {{
           position: absolute;
           left: 3%;
@@ -188,16 +171,33 @@ styles = {
 
         .modifiers {{
           position: absolute;
-          right: 1%;
+          left: 7%;
+          top: 12%;
+          font-family: Symbola;
+          font-style: normal;
+          font-weight: bolder;
+          text-align: left;
+          font-size: 48;
+        }}
+
+        .reference {{
+          position: absolute;
+          left: 1%;
           bottom: 1%;
           font-family: Symbola;
           font-style: normal;
           font-weight: bold;
           text-align: left;
-          font-size: 24;
+          font-size: 36;
         }}
 
         .symbol {{
+          font-family: Symbola;
+          font-style: normal;
+          font-weight: normal;
+        }}
+
+        .symbol scan {{
           font-family: Symbola;
           font-style: normal;
           font-weight: normal;
@@ -241,10 +241,11 @@ styles = {
           display: flex;
           justify-content: flex-start;
           align-items: flex-end;
-          height: 44%;
-          margin: 0% 5% 10% 5%;
+          height: 46%;
+          margin: 0% 5% 8% 5%;
           width: 90%;
-          font-family: Gentium Book Basic;
+          /* font-family: Gentium Book Basic; */
+          font-family: Segoe Script;
           vertical-align: bottom;
           text-align: left;
           font-size: 42;
@@ -275,7 +276,7 @@ styles = {
           width: 90%;
           font-family: Gentium Book Basic;
           vertical-align: middle;
-          text-align: left;
+          text-align: center;
           font-size: 28;
           line-height: 1.2;
         }}
@@ -292,113 +293,6 @@ styles = {
         }}
 
         ''',
-
-    'desires': '''
-        }
-
-        .container {
-          width: 100%;
-          height: 100%;
-          margin: auto;
-
-          background:url("resources/traitFront.jpg") no-repeat center center ;
-        }
-
-        .title {
-          height: 6%;
-          font-family: Gentium Book Basic;
-          font-style: italic;
-          font-weight: bold;
-          vertical-align: top;
-          text-align: center;
-          font-size: 56;
-          padding-top: 4%;
-        }
-
-        .fancy {
-          font-weight: bolder;
-          font-size: 42;
-        }
-
-        .condition {
-          height: 23%;
-          font-family: Gentium Book Basic;
-          font-style: italic;
-          vertical-align: top;
-          text-align: center;
-        }
-
-        .prim {
-          margin-top: 10%;
-          font-size: 28;
-        }
-
-        .bonus {
-          margin-top: 0%;
-          font-size: 28;
-        }
-
-        .proper {
-          margin-top: 0%;
-          font-size: 28;
-        }
-
-        .note {
-          margin-top: 0%;
-          font-size: 38;
-        }
-
-        .cornerSymbol {
-          height: auto;
-          width: 100%;
-          margin-left: 3%;
-          vertical-align: top;
-          font-family: Symbola;
-          text-align: left;
-          font-size: 72;
-          visibility: hidden;
-          text-shadow:
-            -2px -2px 0 #000,
-            2px -2px 0 #000,
-            -2px 2px 0 #000,
-            2px 2px 0 #000;
-        }
-
-        .bigSymbol {
-          font-family: Symbola;
-          font-style: normal;
-          font-weight: normal;
-          font-size: 42;
-          text-shadow:
-            -1px -1px 0 #000,
-            1px -1px 0 #000,
-            -1px 1px 0 #000,
-            1px 1px 0 #000;
-        }
-
-        .symbol {
-          font-family: Symbola;
-          font-style: normal;
-          font-weight: normal;
-          text-shadow:
-            -1px -1px 0 #000,
-            1px -1px 0 #000,
-            -1px 1px 0 #000,
-            1px 1px 0 #000;
-        }
-
-        .💎 {
-          color: #717BF3;
-        }
-
-        .👑 {
-          color: #FFB544;
-        }
-
-        .🌹{
-          color: #FF0000;
-        }
-    ''',
 
     'markers': '''
           vertical-align: middle;
@@ -466,32 +360,34 @@ def writeCards(originalCards, name, style=None, sheetColumns=10, sheetRows=5):
     with open('{}.html'.format(name), 'w', encoding="utf-8") as f:
         f.write(html.format(floor(100 / sheetColumns), floor(100 / sheetRows), style, ''.join(pages)))
 
-def formatText(text):
+def formatLine(text):
     formatting = '<div class="powerName">{}</div>{}'
     leftSub = '<scan class="powerSub">('
     rightSub = ')</scan>'
-    lines = []
-    if '\n' in text:
-        for chunk in text.split('\n'):
-            if ':' in chunk:
-                boldPart, theRest = chunk.split(':', 1)
-                boldPart = boldPart.replace('(', leftSub)
-                boldPart = boldPart.replace(')', rightSub)
-                lines.append(formatting.format(boldPart, theRest))
-        text = '<br/>'.join(lines)
-    elif ':' in text:
+    if ':' in text:
         boldPart, theRest = text.split(':', 1)
         boldPart = boldPart.replace('(', leftSub)
         boldPart = boldPart.replace(')', rightSub)
-        text = formatting.format(boldPart, theRest)
+        return formatting.format(boldPart, theRest)
+
+def formatText(text):
+    lines = []
+    if '\n' in text:
+        for chunk in text.split('\n'):
+            lines.append(formatLine(chunk))
+        text = '<br/><br/>'.join(lines)
+    elif ':' in text:
+        text = formatLine(text)
 
     for formatFrom, formatTo in conversions.items():
         text = text.replace(formatFrom, formatTo)
 
     return text
 
-
 def formatSignature(text):
+    if len(text) == 0:
+        return ''
+
     words = []
     if ' ' in text:
         for word in text.split(' '):
@@ -508,21 +404,27 @@ def formatSignature(text):
 # Generate traits deck
 cards = []
 
-subTotal = 0
 # Convert CSV to cards
 with open('resources/Persuasion - Traits.csv', 'r', encoding="utf-8") as input:
     cardDetails = csv.DictReader(input)
-    for subTotal, row in enumerate(cardDetails):
+    for row in cardDetails:
         # Skip lines that aren't ready or have a power written
-        if subTotal == traitTotal:
+        if row['Ready?'] == '🚏':
             break
-        if row['Ready?'] != '✅':
+        elif row['Ready?'] != '✅':
             continue
+
+        if row['Mods'] == '🔒':
+            greeting = '<div class="greeting">Dear diary,</div>'
+        else:
+            greeting = '<div class="greeting">Dear</div>'
+
         params = {
-            'modifiers': row['Mods'],
             'title': row['Name'],
             'symbol': row['Suit'],
-            'art': '<div class="greeting">Dear</div>',
+            'modifiers': row['Mods'],
+            'reference': row['Ref'],
+            'art': greeting,
             'power': formatText(row['Effect']),
             'signed': formatSignature(row['Signed'])
         }
@@ -535,28 +437,6 @@ writeCards(cards, 'traits-unsleeved', style=styles['traits'].format('None', '100
 for color, hex in crests.items():
     writeCards(cards, 'traits-{}'.format(color), style=styles['traits'].format(hex, '94%', '96%', 'auto'))
 
-cards = []
-
-# Convert CSV to cards
-with open('resources/Persuasion - Desires.csv', 'r', encoding="utf-8") as input:
-    cardDetails = csv.DictReader(input)
-    for i, row in enumerate(cardDetails):
-        if i == desireTotal:
-            break
-        if row['Ready?'] != '✅':
-            continue
-        bonusTitle, bonusCondition = row['Victory'].split('Win', 1)
-        params = {
-            'title': row['Name'],
-            'need': row['❤'],
-            'hate': row['♤'],
-            'victory': bonusTitle + " Win</span><br/>" + formatText(bonusCondition),
-        }
-        cards.append(desireCard.format(**params))
-
-# Generate traits without border
-writeCards(cards, 'desires')
-
 cards = ['<div id="{}"></div>'.format(color) for color in crests.keys()]
 # Generate suited one offs (Rings)
 
@@ -568,6 +448,6 @@ for crestType in crestCards:
     style = styles['crests'].format(''.join(styleSections))
     writeCards(cards, crestType, style=style)
 
-cards = [ '✍', '🗝', '👒', '🐦', '🔓', '🪞', '💌', '✉', '📤', '📥', '📦', '📨', '📩', '📭', '📮', '🎭', '🗯️', '💬' ]
+cards = [ '✍', '🗝', '👒', '🐦', '🔓', '🪞', '💌', '✉', '📤', '📥', '📦', '📨', '📩', '📭', '📮', '🎭', '🗯️', '💬', '🗫', '🔒' ]
 
 writeCards(cards, 'symbols', style=styles['markers'], sheetColumns=4, sheetRows=3)

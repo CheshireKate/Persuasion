@@ -1,8 +1,8 @@
 from math import floor, ceil
 
 traitDescription = 'To resleeve, right click, select State, then pick the relevant sleeve'
-cardCount = 30
-suits = [(10, 'gem'), (20, 'crown'), (30, 'rose')]
+cardCount = 40
+suits = [(24, 'trait'), (34, 'desires'), (40, 'dramas')]
 
 base = {
     'deckID': 1,
